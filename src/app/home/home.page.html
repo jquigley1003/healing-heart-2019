@@ -1,44 +1,184 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<!--<ion-header translucent="true" no-border>-->
+  <!--<ion-toolbar>-->
+    <!--<ion-buttons slot="start">-->
 
-<ion-content>
-    <ion-card class="welcome-card">
-      <ion-img src="/assets/shapes.svg"></ion-img>
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://beta.ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://beta.ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://beta.ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://beta.ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+    <!--</ion-buttons>-->
+    <!--<ion-title>-->
+      <!--Home-->
+    <!--</ion-title>-->
+  <!--</ion-toolbar>-->
+<!--</ion-header>-->
+
+<ion-content fullscreen>
+  <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
+    <ion-menu-button></ion-menu-button>
+    <ion-row>
+      <ion-col size-xs="12" size-lg="6">
+        <ion-img src="/assets/hhc-logo-deva.png"></ion-img>
+      </ion-col>
+      <ion-col size-xs="12" size-lg="6">
+        <p style="text-align: center; font-size: 2em;">I wish I could show you when you are lonely or in the darkness the astonishing
+        light of your own being.<br>~ Hafiz</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="welcome-card">
+          <ion-img src="/assets/forest-pathway.jpg"></ion-img>
+          <ion-row class="rotating-logo" justify-content-center>
+            <ion-col size="8">
+              <img src="/assets/hhcc-logo-tree-purple.png">
+            </ion-col>
+          </ion-row>
+          <ion-card-title>
+            Time for Change?<br>Unscramble your life...
+          </ion-card-title>
+          <ion-button expand="block" color="light">Receive Deva Joy's Newsletter</ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="home-section">
+          <h2>Books and Publications by Deva Joy Gouss</h2>
+          <ion-row>
+            <ion-col>
+              <a href="https://www.amazon.com/gp/product/1530067499/ref=dbs_a_def_rwt_bibl_vppi_i0"
+                 target="_blank">
+                <img src="/assets/re-arranged-cover-website.png">
+                <p style="text-align:center">Buy Now</p></a>
+            </ion-col>
+            <ion-col>
+              <a href="https://www.amazon.com/gp/product/1545164096/ref=dbs_a_def_rwt_hsch_vapi_taft_p1_i1"
+                 target="_blank">
+                <img src="/assets/toolbox-cover-website.png">
+                <p style="text-align:center">Buy Now</p></a>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="home-section">
+          <h2>Videos by Deva Joy Gouss</h2>
+          <ion-row>
+            <ion-col>
+              <p><a href="https://vimeo.com/128218524" target="_blank">Living with
+                Arthur: My Life with<br>Chronic Illness</a></p>
+              <div class="embed-responsive embed-responsive-4by3" >
+                <iframe src="https://player.vimeo.com/video/128218524" class="embed-responsive-image" allowfullscreen></iframe>
+              </div>
+            </ion-col>
+            <ion-col>
+              <p class="text-center"><a href="https://vimeo.com/31941044" target="_blank">Path of
+                Psychotherapy with<br>Deva Joy</a></p>
+              <div class="embed-responsive embed-responsive-4by3">
+                <iframe src="https://player.vimeo.com/video/31941044?autoplay=0" class="embed-responsive-image" allowfullscreen></iframe>
+              </div>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="home-section">
+          <h2>Articles by Deva Joy Gouss</h2>
+          <ion-row>
+            <ion-col size-xl="4" size-lg="6" size="12">
+            <ion-item (click)="articleSix()" button>
+              <ion-thumbnail slot="start">
+                <img src="/assets/GBP.jpg">
+              </ion-thumbnail>
+              <ion-label text-wrap>
+                <h2>The Goodness Breath Project</h2>
+                <h3>HealingHeartCommunications.blogspot.com</h3>
+                <p>March 11, 2019</p>
+              </ion-label>
+              <ion-button slot="end">
+                <ion-icon slot="icon-only" name="book"></ion-icon>
+              </ion-button>
+            </ion-item>
+            </ion-col>
+            <ion-col size-xl="4" size-lg="6" size="12">
+              <ion-item (click)="articleFive()" button>
+                <ion-thumbnail slot="start">
+                  <img src="/assets/abundance.jpg">
+                </ion-thumbnail>
+                <ion-label text-wrap>
+                  <h2>Love Your Life: Actualize Dreams into Realities</h2>
+                  <h3>HealingHeartCommunications.blogspot.com</h3>
+                  <p>September 5, 2018</p>
+                </ion-label>
+                <ion-button slot="end">
+                  <ion-icon slot="icon-only" name="book"></ion-icon>
+                </ion-button>
+              </ion-item>
+            </ion-col>
+            <ion-col size-xl="4" size-lg="6" size="12">
+              <ion-item (click)="articleFour()" button>
+                <ion-thumbnail slot="start">
+                  <img src="/assets/ManBombardedByNews.jpg">
+                </ion-thumbnail>
+                <ion-label text-wrap>
+                  <h2>Practicing "Centering" in These Times of Stress and Chaos</h2>
+                  <h3>HealingHeartCommunications.blogspot.com</h3>
+                  <p>August 19, 2018</p>
+                </ion-label>
+                <ion-button slot="end">
+                  <ion-icon slot="icon-only" name="book"></ion-icon>
+                </ion-button>
+              </ion-item>
+            </ion-col>
+            <ion-col size-xl="4" size-lg="6" size="12">
+              <ion-item (click)="articleThree()" button>
+                <ion-thumbnail slot="start">
+                  <img src="/assets/WomanHidingEyes.jpg">
+                </ion-thumbnail>
+                <ion-label text-wrap>
+                  <h2>How to Fight Online Dating Fatigue</h2>
+                  <h3>Zoosk.com</h3>
+                  <p>June 18, 2018</p>
+                </ion-label>
+                <ion-button slot="end">
+                  <ion-icon slot="icon-only" name="book"></ion-icon>
+                </ion-button>
+              </ion-item>
+            </ion-col>
+            <ion-col size-xl="4" size-lg="6" size="12">
+              <ion-item (click)="articleTwo()" button>
+                <ion-thumbnail slot="start">
+                  <img src="/assets/SmilingWoman.jpg">
+                </ion-thumbnail>
+                <ion-label text-wrap>
+                  <h2>Inner Steps to Take Before Approaching Effective Conflict</h2>
+                  <h3>ProfessorsHouse.com</h3>
+                  <p>May 11, 2018</p>
+                </ion-label>
+                <ion-button slot="end">
+                  <ion-icon slot="icon-only" name="book"></ion-icon>
+                </ion-button>
+              </ion-item>
+            </ion-col>
+            <ion-col size-xl="4" size-lg="6" size="12">
+              <ion-item (click)="articleOne()" button>
+                <ion-thumbnail slot="start">
+                  <img src="/assets/WomanOnPorch.jpg">
+                </ion-thumbnail>
+                <ion-label text-wrap>
+                  <h2>What to Keep in Mind and Close to Your Heart as You Grieve</h2>
+                  <h3>Wellness.com</h3>
+                  <p>May 2, 2018</p>
+                </ion-label>
+                <ion-button slot="end">
+                  <ion-icon slot="icon-only" name="book"></ion-icon>
+                </ion-button>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

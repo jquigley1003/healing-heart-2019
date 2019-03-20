@@ -9,3 +9,86 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+/* custom background color change animation */
+
+/* The animation code */
+@keyframes changecolor {
+  0%  {--background: #ce76e4;} /* purple */
+  17% {--background: #4fe0ed;} /* blue-aqua */
+  33% {--background: #42e317;} /* lime-green */
+  49% {--background: #9e48b3;} /* dk-purple */
+  65% {--background: #e890ee;} /* pink */
+  81% {--background: #68bad8;} /* lt-blue */
+  100% {--background: #ce76e4;} /* purple */
+}
+
+.trnsp-white-bkgrnd {
+  background-color: #ffffff;
+  border: solid 10px #ffffff;
+  border-radius: 25px;
+  opacity: 0.5;
+  padding: 5px 20px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.left-column {
+  margin-bottom: 20px;
+}
+
+.right-column {
+
+}
+
+.right-column .top-section {
+  height: 43vh;
+  margin: 0px 5px 10px 0px;
+  padding: 0px;
+}
+
+.right-column .bottom-section {
+  height: 32vh;
+  margin: 0px 5px 12px 0px;
+}
+
+.image-cropper {
+  position: relative;
+  overflow: hidden;
+  border: solid 5px rgba(255, 255, 255, .5);
+  border-radius: 25px;
+}
+
+.image-cropper img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centered {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* flying bird formatting */
+.tree-bird {
+  position: relative;
+  height: 15vh;
+}
+
+.tree-bird .tree-img {
+  postion: absolute;
+
+  justify-content: center;
+  z-index: 9;
+}
+
+.tree-bird .bird-img {
+  position: absolute;
+
+  justify-content: center;
+  z-index: 10;
+}
+

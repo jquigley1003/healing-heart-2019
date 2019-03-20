@@ -1,0 +1,68 @@
+<!--<ion-header>-->
+  <!--<ion-toolbar>-->
+    <!--<ion-title>About Me</ion-title>-->
+  <!--</ion-toolbar>-->
+<!--</ion-header>-->
+
+<ion-content fullscreen>
+  <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
+    <ion-menu-button></ion-menu-button>
+    <ion-row>
+      <ion-col size-xs="12" size-lg="6">
+        <ion-img src="/assets/hhc-logo-deva.png"></ion-img>
+      </ion-col>
+      <ion-col size-xs="12" size-lg="6">
+        <p style="text-align: center; font-size: 2em;">I wish I could show you when you are lonely or in the darkness the astonishing
+          light of your own being.<br>~ Hafiz</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-lg="6" size-xs="12" class="left-column trnsp-white-bkgrnd font-20">
+        <h1>About Me</h1>
+        <p>Because I love being a psychotherapist, I naturally offer a welcoming spirit to each person I sit with.
+          I bring interest and inquiry to your present day life situations, your relationships, and the transformations you are longing to bring about.</p>
+        <p>When I agree to work with someone, I enter into a deep commitment to you and and to our
+          relationship that is designed to serve as a vehicle for healing. As a seasoned
+          psychotherapist, I have experience in a wide variety of issues and life-situations.
+          Although I believe the most important aspect in a therapeutic relationship is the safety
+          and sense of connection between therapist and client, I also bring my own “personal
+          toolbox” that has grown rather extensive through the years, including experiential
+          approaches such as Psychomotor Therapy, Transactional analysis, Trauma Resiliency Method,
+          Emotional Freedom Technique, EMDR and Brain Spotting, Mindfulness practice, Energy medicine
+          work, Movement therapy, etc. I facilitate many workshops and trainings. Some of these are
+          Transformational Integrative Experiential Group Psychotherapy Institute: The Nature of The
+          Grieving Process; How to Deepen through Illness; Marrying Yourself Journey: Tribal Time;
+          Council for All Beings, Reverence for all of Life; The Power of Sacred Rituals; Inner
+          Parent Training; Embracing Your Shadow; Goddess Archetypes; The Art of Enjoyment; and
+          Celebration of Movement.</p>
+      </ion-col>
+      <ion-col size-lg="6" size-xs="12" class="right-column font-20">
+        <ion-row>
+          <ion-col size="12" class="top-section image-cropper">
+            <img src="../assets/devajoy-3.jpg" class="centered">
+          </ion-col>
+          <ion-col size="12" class="bottom-section trnsp-white-bkgrnd">
+            <h2>More About Me</h2>
+            <ion-row class="ion-justify-content-center">
+              <ion-col size="3">
+                <img src="../assets/more-info.png">
+              </ion-col>
+              <ion-col size="2">
+                <img src="../assets/bird-left.png">
+              </ion-col>
+            </ion-row>
+            <ion-row text-center>
+              <ion-col size="12">
+                <p style="font-weight:bold;">Deva Joy Gouss, L.C.S.W.<br>Healing Heart Communications, Inc.</p>
+              </ion-col>
+              <ion-col size="12">
+                <p>Atlanta, GA 30306 | 404-892-1476 | devajoy@me.com</p>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
