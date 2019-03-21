@@ -9,6 +9,12 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+@font-face {
+  font-family: "Tempus Sans ITC";
+  src: url(/assets/fonts/TEMPSITC.ttf) format("truetype");
+}
+
 /* custom background color change animation */
 
 /* The animation code */
@@ -22,12 +28,29 @@
   100% {--background: #ce76e4;} /* purple */
 }
 
+ion-toolbar {
+  --background: transparent;
+  --min-height: 1em;
+}
+
+.quote-font {
+  text-align: center;
+  margin: 20px 0px 0px 0px;
+  font-family: 'Tempus Sans ITC', sans-serif;
+  font-size: 2em;
+  color: #000000;
+}
+
 .trnsp-white-bkgrnd {
   background-color: #ffffff;
   border: solid 10px #ffffff;
   border-radius: 25px;
   opacity: 0.5;
   padding: 5px 20px;
+}
+
+.adjust-height {
+  height: 100vh;
 }
 
 .font-20 {
@@ -74,21 +97,23 @@
 
 /* flying bird formatting */
 .tree-bird {
+  cursor: pointer;
   position: relative;
-  height: 15vh;
+  margin: 0px auto;
+  //height: 15vh;
 }
 
-.tree-bird .tree-img {
+.tree-img {
   postion: absolute;
-
-  justify-content: center;
+  left: 50%;
+  transform: translateY(20%);
   z-index: 9;
 }
 
-.tree-bird .bird-img {
+.bird-img {
   position: absolute;
-
-  justify-content: center;
+  left: 50%;
+  top: 0px;
   z-index: 10;
 }
 

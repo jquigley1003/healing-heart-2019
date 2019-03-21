@@ -1,18 +1,19 @@
-<!--<ion-header>-->
-  <!--<ion-toolbar>-->
-    <!--<ion-title>About Me</ion-title>-->
-  <!--</ion-toolbar>-->
-<!--</ion-header>-->
-
+<ion-header translucent="true" no-border>
+  <ion-toolbar>
+    <ion-menu-button slot="start" color="primary"></ion-menu-button>
+    <ion-title color="primary">
+      About Me
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content fullscreen>
   <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
-    <ion-menu-button></ion-menu-button>
     <ion-row>
       <ion-col size-xs="12" size-lg="6">
         <ion-img src="/assets/hhc-logo-deva.png"></ion-img>
       </ion-col>
-      <ion-col size-xs="12" size-lg="6">
-        <p style="text-align: center; font-size: 2em;">I wish I could show you when you are lonely or in the darkness the astonishing
+      <ion-col size-xs="12" size-lg="6" class="ion-align-self-center">
+        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
           light of your own being.<br>~ Hafiz</p>
       </ion-col>
     </ion-row>
@@ -43,12 +44,22 @@
           </ion-col>
           <ion-col size="12" class="bottom-section trnsp-white-bkgrnd">
             <h2>More About Me</h2>
-            <ion-row class="ion-justify-content-center">
-              <ion-col size="3">
-                <img src="../assets/more-info.png">
+            <ion-row (click)="flyAway()">
+              <ion-col>
+
               </ion-col>
-              <ion-col size="2">
-                <img src="../assets/bird-left.png">
+              <ion-col>
+                <div class="tree-bird">
+                  <div class="tree-img">
+                    <img src="../assets/more-info.png">
+                  </div>
+                  <div class="bird-img" *ngIf="birdPresent" [@birdState]="flyAwayState">
+                    <img src="../assets/bird-right.png">
+                  </div>
+                </div>
+              </ion-col>
+              <ion-col>
+
               </ion-col>
             </ion-row>
             <ion-row text-center>

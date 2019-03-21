@@ -1,0 +1,60 @@
+<ion-header translucent="true" no-border>
+  <ion-toolbar>
+    <ion-menu-button slot="start" color="primary"></ion-menu-button>
+    <ion-title color="primary">
+      More About Me
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
+    <ion-row>
+      <ion-col size-xs="12" size-lg="6">
+        <ion-img src="/assets/hhc-logo-deva.png"></ion-img>
+      </ion-col>
+      <ion-col size-xs="12" size-lg="6" class="ion-align-self-center">
+        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
+          light of your own being.<br>~ Hafiz</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+
+      </ion-col>
+      <ion-col size="11" size-xl="5" class="trnsp-white-bkgrnd font-20">
+        <h1>More About Me</h1>
+        <p>I received my Masters in Social Work from Tulane University in 1980 and went into
+          private practice almost immediately. I studied Psychomotor Therapy with Al Pesso and
+          Jacquie Damgaard, Ph.D., my primary teacher and mentor for years. I have been in
+          private practice as a clinical social worker for 30 years now, and leading experiential
+          groups for 25 of those years.  (Yikes, time does fly!)
+        </p>
+        <p>I knew I wanted to be a "clinical social worker" ever since I was a child. I always felt blessed with an ability to see people's beauty and light -- and an ease in nurturing the core strength in others as well as confronting what is out-of-alignment.</p>
+        <p>In high school, I read Ram Das's’ book <cite class="book-title">The Only Dance There Is</cite>, and was exposed to a principle that I knew would guide my work in the helping field for the rest of my life: "The only thing we can offer another is our own state of consciousness."  This simple but profound insight continues to inspire me to nurture my own spirit as my first priority, and be fully committed to taking care of my own body, heart and mind, so that I can bring the best of myself to my clients.</p>
+        <p>When I was diagnosed with crippling arthritis at the age of fourteen, I found myself inescapably thrust “into the deep end” of my own path of self-exploration and discovery. I called my illness “Arthur,” and “Arthur” became the diving board into my own inner work, and into a life-long exploration and study of what it means to live “healthfully” (diet, nutrition, movement, yoga, self-talk, meditation – any and all approaches to facilitating physical and emotional healing). “Arthur” has taught me about the importance of perseverance, determination, courage and commitment – especially the need to stretch beyond one’s conditioned fears and doubts. “Arthur” has been my number one teacher in life, and thus deeply informs what I have to offer my clients.</p>
+        <ion-row (click)="flyAway()">
+          <ion-col>
+
+          </ion-col>
+          <ion-col>
+            <div class="tree-bird">
+              <div class="tree-img">
+                <img src="../assets/go-back.png">
+              </div>
+              <div class="bird-img" *ngIf="birdPresent" [@birdState]="flyAwayState">
+                <img src="../assets/bird-left.png">
+              </div>
+            </div>
+          </ion-col>
+          <ion-col>
+
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

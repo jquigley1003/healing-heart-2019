@@ -1,0 +1,63 @@
+<ion-header translucent="true" no-border>
+  <ion-toolbar>
+    <ion-menu-button slot="start" color="primary"></ion-menu-button>
+    <ion-title color="primary">
+      More About Psychotherapy
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
+    <ion-row>
+      <ion-col size-xs="12" size-lg="6">
+        <ion-img src="/assets/hhc-logo-deva.png"></ion-img>
+      </ion-col>
+      <ion-col size-xs="12" size-lg="6" class="ion-align-self-center">
+        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
+          light of your own being.<br>~ Hafiz</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+
+      </ion-col>
+      <ion-col size="11" size-xl="5" class="trnsp-white-bkgrnd font-20">
+        <h1>More About Psychotherapy</h1>
+        <p>Psychotherapy opens the door for us to explore what we truly feel and think; but even more importantly, psychotherapy helps us to learn how to respond to ourselves with more compassion and curiosity, rather than judgment or self-avoidance.
+        </p>
+        <p>I approach psychotherapy as a sacred contract between therapist and client. Within the sanctum of our relationship, I invite you to learn how to be courageously honest with yourself – which includes recognizing and re-connecting with your inner strengths and capabilities.
+        </p>
+        <p>Though deep listening is foundational, I take an active role in offering feedback and teaching you tools for shifting your inner and outer realties.
+        </p>
+        <p>I aim to help you to learn how to listen to your body, to feel more deeply into your own true heart, and to train your mind to be your ally -- rather than your enemy.
+        </p>
+        <p>My desire is to make every session count, so that you consistently leave with something new to work with.  My intention is that with each meeting, your self-awareness deepens, your “tool box” expands and you grow to feel freer to express your authentic self.
+        </p>
+        <p>We are not meant to do this by ourselves -- we never were.
+        </p>
+        <ion-row (click)="flyAway()">
+          <ion-col>
+
+          </ion-col>
+          <ion-col>
+            <div class="tree-bird">
+              <div class="tree-img">
+                <img src="../assets/go-back.png">
+              </div>
+              <div class="bird-img" *ngIf="birdPresent" [@birdState]="flyAwayState">
+                <img src="../assets/bird-left.png">
+              </div>
+            </div>
+          </ion-col>
+          <ion-col>
+
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

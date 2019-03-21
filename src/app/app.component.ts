@@ -21,9 +21,9 @@ export class AppComponent {
       icon: 'body'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Psychotherapy',
+      url: '/psychotherapy',
+      icon: 'eye'
     }
   ];
 

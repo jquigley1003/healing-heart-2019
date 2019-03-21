@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
 import { Router } from '@angular/router';
 
-import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
-
 @Component({
-  selector: 'app-about-me',
-  templateUrl: './about-me.page.html',
-  styleUrls: ['./about-me.page.scss'],
+  selector: 'app-more-psychotherapy',
+  templateUrl: './more-psychotherapy.page.html',
+  styleUrls: ['./more-psychotherapy.page.scss'],
   animations: [
     trigger('colorChange', [
       state('true', style({
@@ -30,7 +29,7 @@ import { animate, keyframes, state, style, transition, trigger } from '@angular/
     trigger('birdState', [
       state('flyAway', style({
         opacity: '0',
-        transform: 'scale(0.5) translateY(-1000%) translateX(1000%)'
+        transform: 'scale(0.5) translateY(-1000%) translateX(-1000%)'
       })),
       state('flyBack', style({
         opacity: '1',
@@ -39,14 +38,13 @@ import { animate, keyframes, state, style, transition, trigger } from '@angular/
       transition('* => flyAway', animate('2s linear')),
       transition('* => flyBack', animate('200ms linear')),
       transition('void => *', [
-        style({transform: 'translateX(-300%)'}),
+        style({transform: 'translateX(300%)'}),
         animate('300ms ease-in-out')
       ])
     ])
   ]
 })
-
-export class AboutMePage implements OnInit {
+export class MorePsychotherapyPage implements OnInit {
 
   isDone = true;
   birdPresent = false;
@@ -67,7 +65,7 @@ export class AboutMePage implements OnInit {
   flyAway() {
     this.flyAwayState = 'flyAway';
     setTimeout(() => {
-      this.router.navigate(['/more-about-me']);
+      this.router.navigate(['/psychotherapy']);
       this.flyAwayState = 'flyBack';
     },2000);
   }
