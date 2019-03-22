@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
+
+import { NewsletterModalComponent } from '../modals/newsletter-modal/newsletter-modal.component';
 
 @Component({
   selector: 'app-home',
@@ -30,6 +33,8 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
 export class HomePage {
   isDone = true;
 
+  constructor(private modalCtrl: ModalController) {}
+
   onAnimationEvent (event: AnimationEvent ) {
     this.isDone = !this.isDone;
   }
@@ -58,4 +63,11 @@ export class HomePage {
     window.open('https://www.wellness.com/blog/13288760/what-to-keep-in-mind-and-close-to-your-heart-as-you-grieve/deva-joy-gouss', '_blank');
   }
 
+  async presentNewsletterModal() {
+    const modal = await this.modalCtrl.create({
+      component: NewsletterModalComponent,
+      componentProps: {}
+    });
+    return await modal.present();
+  }
 }

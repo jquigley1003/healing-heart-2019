@@ -67,7 +67,7 @@ export class AboutMePage implements OnInit {
   flyAway() {
     this.flyAwayState = 'flyAway';
     setTimeout(() => {
-      this.router.navigate(['/more-about-me']);
+      this.router.navigate(['/about-me/more']);
       this.flyAwayState = 'flyBack';
     },2000);
   }

@@ -29,7 +29,9 @@
           <ion-card-title>
             Time for Change?<br>Unscramble your life...
           </ion-card-title>
-          <ion-button expand="block" color="light">Receive Deva Joy's Newsletter</ion-button>
+          <ion-button expand="block" color="light" (click)="presentNewsletterModal()">
+            <ion-icon slot="start" name="open"></ion-icon>
+            Receive Deva Joy's Newsletter</ion-button>
         </ion-card>
       </ion-col>
     </ion-row>
@@ -38,17 +40,17 @@
         <div class="home-section">
           <h2>Books and Publications by Deva Joy Gouss</h2>
           <ion-row>
-            <ion-col>
+            <ion-col text-center>
               <a href="https://www.amazon.com/gp/product/1530067499/ref=dbs_a_def_rwt_bibl_vppi_i0"
                  target="_blank">
                 <img src="/assets/re-arranged-cover-website.png">
-                <p style="text-align:center">Buy Now</p></a>
+                <p>Buy Now</p></a>
             </ion-col>
-            <ion-col>
+            <ion-col text-center>
               <a href="https://www.amazon.com/gp/product/1545164096/ref=dbs_a_def_rwt_hsch_vapi_taft_p1_i1"
                  target="_blank">
                 <img src="/assets/toolbox-cover-website.png">
-                <p style="text-align:center">Buy Now</p></a>
+                <p>Buy Now</p></a>
             </ion-col>
           </ion-row>
         </div>

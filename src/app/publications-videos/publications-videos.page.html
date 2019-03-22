@@ -1,0 +1,100 @@
+<ion-header translucent="true" no-border>
+  <ion-toolbar>
+    <ion-menu-button slot="start" color="primary"></ion-menu-button>
+    <ion-title color="primary">
+      Publications &amp; Videos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
+    <ion-row>
+      <ion-col size-xs="12" size-lg="6">
+        <ion-img src="/assets/hhc-logo-deva.png" [routerLink]="['/home']"></ion-img>
+      </ion-col>
+      <ion-col size-xs="12" size-lg="6" class="ion-align-self-center">
+        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
+          light of your own being.<br>~ Hafiz</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-lg="6" size-xs="12" class="left-column trnsp-bkgrnd font-20 white-border">
+        <h1>Publications &amp; Videos</h1>
+        <h3 class="book-title">Re-arranged, Never The Same: The Nature of Grief</h3>
+        <p>An extensive overview of themes that arise when grieving, how to navigate through grief and how to explore
+          ways to staying in "current relationship" with the loved one who has departed.</p>
+        <h3 class="book-title">Toolbox of Hope: For When Your Body Doesn't Work</h3>
+        <p>An interactive workbook for people living with illness and disability. It is the book I would have liked
+          as a child when I was diagnosed with Rheumatoid Arthritis. Its purpose is to help children and their
+          families deal with the changes and feelings that occur when living with disease. Adults also benefit from
+          this experiential approach to making friends with one's illness.</p>
+        <ion-row justify-content-center>
+          <ion-col text-center>
+            <div>
+              <iframe src="https://player.vimeo.com/video/128218524" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center"><a href="https://vimeo.com/128218524" target="_blank">Living with
+              Arthur: My Life with Chronic Illness</a></h3>
+          </ion-col>
+          <ion-col text-center>
+            <div>
+              <iframe src="https://player.vimeo.com/video/31941044?autoplay=0" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center"><a href="https://vimeo.com/31941044" target="_blank">Path of
+              Psychotherapy with Deva Joy</a></h3>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size-lg="6" size-xs="12" class="right-column font-20">
+        <ion-row>
+          <ion-col size="12" class="top-section trnsp-bkgrnd white-border">
+            <h2>Purchase a Book</h2>
+            <ion-row>
+              <ion-col text-center>
+                <a href="https://www.amazon.com/gp/product/1530067499/ref=dbs_a_def_rwt_bibl_vppi_i0"
+                   target="_blank">
+                  <img src="/assets/re-arranged-cover-website.png">
+                  <p>Buy Now</p></a>
+              </ion-col>
+              <ion-col text-center>
+                <a href="https://www.amazon.com/gp/product/1545164096/ref=dbs_a_def_rwt_hsch_vapi_taft_p1_i1"
+                   target="_blank">
+                  <img src="/assets/toolbox-cover-website.png">
+                  <p>Buy Now</p></a>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="12" class="bottom-section trnsp-bkgrnd white-border">
+            <h2>More Publications</h2>
+            <ion-row (click)="flyAway()">
+              <ion-col>
+
+              </ion-col>
+              <ion-col>
+                <div class="tree-bird">
+                  <div class="tree-img">
+                    <img src="../assets/more-info.png">
+                  </div>
+                  <div class="bird-img" *ngIf="birdPresent" [@birdState]="flyAwayState">
+                    <img src="../assets/bird-right.png">
+                  </div>
+                </div>
+              </ion-col>
+              <ion-col>
+
+              </ion-col>
+            </ion-row>
+            <ion-row text-center>
+              <ion-col size="12">
+                <p style="font-weight:bold;">Deva Joy Gouss, L.C.S.W.<br>Healing Heart Communications, Inc.</p>
+              </ion-col>
+              <ion-col size="12">
+                <p>Atlanta, GA 30306 | 404-892-1476 | devajoy@me.com</p>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

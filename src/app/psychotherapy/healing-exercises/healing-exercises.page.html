@@ -1,0 +1,240 @@
+<<ion-header translucent="true" no-border>
+  <ion-toolbar>
+    <ion-menu-button slot="start" color="primary"></ion-menu-button>
+    <ion-title color="primary">
+      Healing Exercises
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
+    <ion-row>
+      <ion-col size-xs="12" size-lg="6">
+        <ion-img src="/assets/hhc-logo-deva.png" [routerLink]="['/home']"></ion-img>
+      </ion-col>
+      <ion-col size-xs="12" size-lg="6" class="ion-align-self-center">
+        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
+          light of your own being.<br>~ Hafiz</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+
+      </ion-col>
+      <ion-col size="11" class="trnsp-bkgrnd font-20" text-center>
+        <h1>Healing Exercises with Deva Joy</h1>
+        <p>Hi! Please first listen to the introduction video in order to understand the purpose of the many other
+          one-to-three minute videos posted here to serve you.</p>
+        <p>If you have any questions or comments, feel free to ask me or share at devajoy@me.com. I would love to
+          know which exercises you love and find helpful.</p>
+        <p>May you deepen with yourself, empower yourself, and enjoy (in-joy) yourself.</p>
+        <p>With love and respect, I share these healing exercises with you. 💜</p>
+        <p>Lovefully,</p>
+        <p>Deva Joy Gouss, LCSW</p>
+        <ion-row class="white-font">
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe src="https://www.youtube.com/embed/kd14Y26hzZg" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Introduction to Healing Exercises</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe src="https://www.youtube.com/embed/GWIhP1_75p4" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Explaining the Commitment Mudra Flow</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe src="https://www.youtube.com/embed/aeKYip-sBjM" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Commitment Mudra Flow</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe src="https://www.youtube.com/embed/6K6_Rkrq4U0" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Chopping the Karmic Logs</h3>
+          </ion-col>
+        </ion-row>
+        <ion-row class="white-font">
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe src="https://www.youtube.com/embed/-jc8tacP520" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Shhhhh...</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe src="https://www.youtube.com/embed/zM7R75TNQNs" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Infinity Forever</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe src="https://www.youtube.com/embed/D4HxOinvaos" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Vertical Alignment</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe src="https://www.youtube.com/embed/eTP0nVUBGDs" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">I Love Vertical Alignment</h3>
+          </ion-col>
+        </ion-row>
+        <ion-row class="white-font">
+        <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+          <div>
+            <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/cQDOEzw9pTY" allowfullscreen></iframe>
+          </div>
+          <h3 class="text-center">Invocation</h3>
+        </ion-col>
+        <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+          <div>
+            <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/nS9aMiAhGYI" allowfullscreen></iframe>
+          </div>
+          <h3 class="text-center">Do You Hear Me?</h3>
+        </ion-col>
+        <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+          <div>
+            <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/g4YwvpzDM7Y" allowfullscreen></iframe>
+          </div>
+          <h3 class="text-center">Head Cradle</h3>
+        </ion-col>
+        <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+          <div>
+            <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/vs8XK6DM6hE" allowfullscreen></iframe>
+          </div>
+          <h3 class="text-center">Invoking Discernment</h3>
+        </ion-col>
+        </ion-row>
+        <ion-row class="white-font">
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/z5PymkMh0bo" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">The Power of Mumbo Jumbo</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/ynVTqHYg5A4" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">The Zip Up</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/gEv-lfi6vY0" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Shake It Out!</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/FrD8QXmeol0" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Rainbow Visualization</h3>
+          </ion-col>
+        </ion-row>
+        <ion-row class="white-font">
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/ybQwiEKPiu8" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Exploring the Sphere</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/k4F7dzyGqnE" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Mantra -- OM NAMAH SHIYAVA</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/QfpXSa3Au6I" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Clear Out Your Energy Field</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/KnXKqCmFBTw" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Breath of Joy</h3>
+          </ion-col>
+        </ion-row>
+        <ion-row class="white-font">
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/hcWHaKVD3BI" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Activate Into Flight</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/bK3BJD67OBA" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Heart Balancing</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/NOnodqC0HLs" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Crown Pull</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/jMcUwDfZpLA" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Extreme Passionate Gratitude! "EPG!"</h3>
+          </ion-col>
+        </ion-row>
+        <ion-row class="white-font">
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/7kmTVjjpUpw" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Just a Reminder of My Love For You 💕💞💗</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/2qY_fncNoSI" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Energize With Love</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/KSRhBlenJj0" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Living the Exclamation Mark!!</h3>
+          </ion-col>
+          <ion-col size-xl="3" size-lg="6" size-md="6" size-sm="6" size-xs="12">
+            <div>
+              <iframe class="embed-responsive-image" src="https://www.youtube.com/embed/EHw170UPsyk" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-center">Cross Lateral</h3>
+          </ion-col>
+        </ion-row>
+        <ion-row (click)="flyAway()">
+          <ion-col>
+
+          </ion-col>
+          <ion-col>
+            <div class="tree-bird">
+              <div class="tree-img">
+                <img src="../assets/go-back.png">
+              </div>
+              <div class="bird-img" *ngIf="birdPresent" [@birdState]="flyAwayState">
+                <img src="../assets/bird-left.png">
+              </div>
+            </div>
+          </ion-col>
+          <ion-col>
+
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

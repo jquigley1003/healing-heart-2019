@@ -1,0 +1,43 @@
+<ion-header translucent="true" no-border>
+  <ion-toolbar>
+    <ion-menu-button slot="start" color="primary"></ion-menu-button>
+    <ion-title color="primary">
+      Blog
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
+    <ion-row>
+      <ion-col size-xs="12" size-lg="6">
+        <ion-img src="/assets/hhc-logo-deva.png" [routerLink]="['/home']"></ion-img>
+      </ion-col>
+      <ion-col size-xs="12" size-lg="6" class="ion-align-self-center">
+        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
+          light of your own being.<br>~ Hafiz</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+
+      </ion-col>
+      <ion-col size="11" class="trnsp-bkgrnd font-20" style="height:100vh;">
+        <h1>Blog</h1>
+        <ion-item lines="none" (click)="goToBlogger()" class="cursor-pointer">
+          <ion-thumbnail slot="start">
+            <ion-img src="/assets/blogger-logo.png"></ion-img>
+          </ion-thumbnail>
+          <ion-label>
+            <h2>Click Here to View on Blogger</h2>
+          </ion-label>
+        </ion-item>
+        <iframe style="height:85%; width: 100%;" name="main" src="https://healingheartcommunications.blogspot.com/">
+        </iframe>
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

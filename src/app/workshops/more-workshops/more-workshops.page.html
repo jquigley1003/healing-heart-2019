@@ -1,0 +1,101 @@
+<ion-header translucent="true" no-border>
+  <ion-toolbar>
+    <ion-menu-button slot="start" color="primary"></ion-menu-button>
+    <ion-title color="primary">
+      Current Workshops
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
+    <ion-row>
+      <ion-col size-xs="12" size-lg="6">
+        <ion-img src="/assets/hhc-logo-deva.png" [routerLink]="['/home']"></ion-img>
+      </ion-col>
+      <ion-col size-xs="12" size-lg="6" class="ion-align-self-center">
+        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
+          light of your own being.<br>~ Hafiz</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+
+      </ion-col>
+      <ion-col size="11" size-xl="5" class="trnsp-bkgrnd font-20">
+        <h1>Current Workshops</h1>
+        <p><span class="workshop-title">Transformational Integrative Group Psychotherapy Training for
+          Psychotherapists</span> ~~ A seven month training, meeting once a month, in the dynamics of experiential
+          therapy -- from the baseline of the conceptual framework for experiential work, exposure to the work in the
+          client role, and then eventually learning how to facilitate the work as a therapist. CEU credits are
+          offered to LCSW, LPC, MSW.</p><br>
+        <p><span class="workshop-title">Marry Yourself Journey</span> ~~ Marry Yourself Journey meets
+          once every 40 days, over an eight month period of time. It is a commitment process in
+          growing to know and love yourself, release what doesn't serve you, learn to set boundaries,
+          claim what you really want, balance feminine and masculine energy, and live into passionate
+          fulfillment with yourself. This process will lead to taking vows with yourself in a wedding
+          ceremony -- a marriage that holds no possiblity for divorce. This journey is about
+          cultivating a sound and unfaltering commitment to yourself that can not be taken away by
+          anyone or anything. This gathering begins on June 5th, 2016 (2.5 hours each time of
+          meeting). If you are interested, immediately contact me.</p><br>
+        <p><span class="workshop-title">Tribal Time</span> ~~ A year commitment to monthly gatherings
+          centered around personal growth themes, using ritual, movement, meditation, yoga, dance,
+          and experiential exploration. Yearly themes of the past have included: Sacred Embodiment,
+          Endless love; Surprise: Embodying the Higher Frequency; Loving Into This.</p><br>
+        <p><span class="workshop-title">Self-Parenting Trainings</span> ~~ Course work designed to
+          train in positive parent functioning and have opportunities to imprint the development of
+          healthy ways to respond to oneself on a foundational level.</p><br>
+        <p><span class="workshop-title">Conscious Grieving and The Power of Love</span> ~~ This
+          workshop offers guidance and support for the bereavement process, rituals for honoring loss
+          as well as ways to discover how love never dies and ways to stay connected to loved ones
+          who have departed.</p><br>
+        <p><span class="workshop-title">Nourishing Your Love: Basic Training in Spiritual Partnership</span> ~~
+          Co-led with my husband of 32 years, we have distilled a tremendous
+          amount of informations and tools to what we believe really makes a difference. This is an
+          intensive training that is aimed at teaching skills to clear out the pipes of built up
+          resentments and hurts and to offer communication tools for healthy conflict resolution and
+          developing positive regard for one another. We introduce the skill or method, demonstrate
+          it using our own material from our relationship, and give you time to practice each skill
+          together with your partner.</p><br>
+        <p><span class="workshop-title">Laughter Yoga</span> ~~ This workshop is based on
+          body-mind exercises that create powerful positive changes in your body, mind and emotions.
+          This is a fun new exercise system sweeping the world, developed by Dr. Kataria, an Indian
+          medical doctor who studied the positive healing effects of laughter. You don't need a
+          reason to laugh or even a good sense of humor. Nor do you need to feel happy to engage in
+          laughter therapy. It has been scientifically proven that the body does not know the
+          difference between real laughter and artificial laughter and thus, receives beneficial
+          physical healing from both. Laughter yoga cultivates playfulness and joy, lightening up,
+          and physiological positive healing changes.</p><br>
+        <p><span class="workshop-title">Council For All Beings</span> ~~ Based on Joanna Macy’s
+          Deep Ecology work, this series of gatherings focuses on group exercises that increase
+          awareness of our interconnections, leading to more reverence for the sacredness of all beings.
+        </p><br>
+        <p><span class="workshop-title">Transformational Integrative Group Psychotherapy Institute</span> ~~ A
+          training in experiential group psychotherapy based on the integration
+          of Psychomotor Therapy, Resilient Trauma Method, Inner Family Work, and other body-oriented
+          therapies.</p>
+        <ion-row (click)="flyAway()">
+          <ion-col>
+
+          </ion-col>
+          <ion-col>
+            <div class="tree-bird">
+              <div class="tree-img">
+                <img src="../assets/go-back.png">
+              </div>
+              <div class="bird-img" *ngIf="birdPresent" [@birdState]="flyAwayState">
+                <img src="../assets/bird-left.png">
+              </div>
+            </div>
+          </ion-col>
+          <ion-col>
+
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

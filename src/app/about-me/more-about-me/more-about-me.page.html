@@ -10,7 +10,7 @@
   <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
     <ion-row>
       <ion-col size-xs="12" size-lg="6">
-        <ion-img src="/assets/hhc-logo-deva.png"></ion-img>
+        <ion-img src="/assets/hhc-logo-deva.png" [routerLink]="['/home']"></ion-img>
       </ion-col>
       <ion-col size-xs="12" size-lg="6" class="ion-align-self-center">
         <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
@@ -21,7 +21,7 @@
       <ion-col>
 
       </ion-col>
-      <ion-col size="11" size-xl="5" class="trnsp-white-bkgrnd font-20">
+      <ion-col size="11" size-xl="5" class="trnsp-bkgrnd font-20">
         <h1>More About Me</h1>
         <p>I received my Masters in Social Work from Tulane University in 1980 and went into
           private practice almost immediately. I studied Psychomotor Therapy with Al Pesso and

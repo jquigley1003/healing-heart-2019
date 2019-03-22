@@ -24,6 +24,21 @@ export class AppComponent {
       title: 'Psychotherapy',
       url: '/psychotherapy',
       icon: 'eye'
+    },
+    {
+      title: 'Workshops',
+      url: '/workshops',
+      icon: 'construct'
+    },
+    {
+      title: 'Publications & Videos',
+      url: '/publications-videos',
+      icon: 'journal'
+    },
+    {
+      title: 'Blog',
+      url: '/blog',
+      icon: 'laptop'
     }
   ];
 

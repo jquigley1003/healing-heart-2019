@@ -1,0 +1,64 @@
+<ion-header translucent="true" no-border>
+<ion-toolbar>
+  <ion-menu-button slot="start" color="primary"></ion-menu-button>
+  <ion-title color="primary">
+    Couples Therapy
+  </ion-title>
+</ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
+    <ion-row>
+      <ion-col size-xs="12" size-lg="6">
+        <ion-img src="/assets/hhc-logo-deva.png" [routerLink]="['/home']"></ion-img>
+      </ion-col>
+      <ion-col size-xs="12" size-lg="6" class="ion-align-self-center">
+        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
+          light of your own being.<br>~ Hafiz</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+
+      </ion-col>
+      <ion-col size="11" size-xl="5" class="trnsp-bkgrnd font-20">
+        <h1>Couples Therapy</h1>
+        <p>Couples Therapy offers a safe container and guidance for clearing out the “gunk” that is in the way of
+          feeling the connection between partners. In a sense, couples therapy is emotional plumbing for the
+          coupleship as a whole and both partners individually. Relationships, by nature, are designed to bring up
+          what is unresolved in people’s psyches and from childhood. Beloved relationships begin with enough
+          chemistry to jumpstart the process of clearing out old pain and then it inevitably becomes essential to
+          learn new ways of relating to keep the flow alive. Approached in a conscious way, with guidance and new
+          tools, relationships are opportunities for healing one's self and each other. I like to say that the
+          primary beloved relationship is not a neutral force; at some point, it usually becomes sandpaper to the
+          original wound and rips off the scab — and then, with guidance, it can become the most effective medicine
+          that helps to bring true healing. Struggle and conflict are not the issue — these are inevitable in
+          relationship. The key is how a couple learns to approach the conflicts and how to repair and bridge so that
+          both people feel held by the other with respect and a sense of positive regard. I welcome all couples:
+          LGBT, fluid, polyamorous, heterosexual, monogamous, etc.</p>
+        <ion-row (click)="flyAway()">
+          <ion-col>
+
+          </ion-col>
+          <ion-col>
+            <div class="tree-bird">
+              <div class="tree-img">
+                <img src="../assets/go-back.png">
+              </div>
+              <div class="bird-img" *ngIf="birdPresent" [@birdState]="flyAwayState">
+                <img src="../assets/bird-left.png">
+              </div>
+            </div>
+          </ion-col>
+          <ion-col>
+
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

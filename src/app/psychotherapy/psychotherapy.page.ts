@@ -65,7 +65,7 @@ export class PsychotherapyPage implements OnInit {
   flyAway() {
     this.flyAwayState = 'flyAway';
     setTimeout(() => {
-      this.router.navigate(['/more-psychotherapy']);
+      this.router.navigate(['/psychotherapy/more']);
       this.flyAwayState = 'flyBack';
     },2000);
   }

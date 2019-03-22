@@ -1,0 +1,66 @@
+<ion-header translucent="true" no-border>
+  <ion-toolbar>
+    <ion-menu-button slot="start" color="primary"></ion-menu-button>
+    <ion-title color="primary">
+      Life Coaching
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
+    <ion-row>
+      <ion-col size-xs="12" size-lg="6">
+        <ion-img src="/assets/hhc-logo-deva.png" [routerLink]="['/home']"></ion-img>
+      </ion-col>
+      <ion-col size-xs="12" size-lg="6" class="ion-align-self-center">
+        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
+          light of your own being.<br>~ Hafiz</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+
+      </ion-col>
+      <ion-col size="11" size-xl="5" class="trnsp-bkgrnd font-20">
+        <h1>Life Coaching</h1>
+        <p>Healing Heart Coaching provides an integrative coaching approach that is dedicated to enhancing your
+          quality of life by helping you to move forward toward actualizing
+          your visions into realities.</p>
+        <p>It is an interactive, engaging process that opens you to the field
+          of possibilities, helps you to clarify your objectives, upgrade your
+          relationships with yourself and others, manifest what you really think, feel and want and develop your
+          skill set to manifest your personal and professional goals.</p>
+        <p>Healing Heart Coaching sheds light on how to unplug from dysfunctional, self-sabotaging patterns of
+          behavior – and how to replace them with functional, proactive tools, grounded in self-esteem, self-respect
+          and self-love.</p>
+        <p>In Healing Heart Coaching, we construct a plan for you to work with between sessions, utilizing  exercises
+          and behavior contracts to enhance your sense of well-being and help you to meet your goals. My intention is
+          to help you to expand your tool box to ultimately experience your sense of wholeness, which I see as your
+          birthright. Some of the tools you may learn include mindfulness practices, “energy medicine” tools, body
+          awareness and movement, communication skills, relationship training, resiliency training, the Emotional
+          Freedom Technique (EFT), and concrete practical actions that help you to manifest your desires.</p>
+        <ion-row (click)="flyAway()">
+          <ion-col>
+
+          </ion-col>
+          <ion-col>
+            <div class="tree-bird">
+              <div class="tree-img">
+                <img src="../assets/go-back.png">
+              </div>
+              <div class="bird-img" *ngIf="birdPresent" [@birdState]="flyAwayState">
+                <img src="../assets/bird-left.png">
+              </div>
+            </div>
+          </ion-col>
+          <ion-col>
+
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

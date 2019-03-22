@@ -1,0 +1,72 @@
+<ion-header translucent="true" no-border>
+  <ion-toolbar>
+    <ion-menu-button slot="start" color="primary"></ion-menu-button>
+    <ion-title color="primary">
+      More Publications
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
+    <ion-row>
+      <ion-col size-xs="12" size-lg="6">
+        <ion-img src="/assets/hhc-logo-deva.png" [routerLink]="['/home']"></ion-img>
+      </ion-col>
+      <ion-col size-xs="12" size-lg="6" class="ion-align-self-center">
+        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
+          light of your own being.<br>~ Hafiz</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+
+      </ion-col>
+      <ion-col size="11" size-xl="5" class="trnsp-bkgrnd font-20">
+        <h1>More Publications</h1>
+        <ion-row>
+          <ion-col text-center>
+            <img src="../../../assets/sola-isms-cover-website.png">
+          </ion-col>
+        </ion-row>
+        <h3 class="book-title">Sola-isms</h3>
+        <p>Fifty five axioms that I learned in 55 years to offer to my community as some of the most important things
+          I have learned in my living through the years. “Sola” is the word that came to me when I asked the
+          “Universe” for a name that would help me to tap into the Goddess woman within me who is fully aligned with
+          her wisdom and divine nature, and who can guide the rest of me when in need.</p>
+        <h3 class="book-title">Stripped to the Core</h3>
+        <p>A detailed memoir of my mother’s descent and transition that addresses the depth of grief and how it
+          changes us forever, taking us into the depths of sorrow as well as opportunities for transcendence. Helpful
+          for those experiencing the grieving process and has been used to help train hospice workers in preparation
+          to work with their bereaved clients.</p>
+        <h3 class="book-title">Be The Alpha To Your Mind</h3>
+        <p>A workbook in progress aimed at teaching skills on how to be the alpha to your mind, to make sure that it
+          doesn't take you anywhere it wants to go but rather you learn how to tame it and train it to be your ally
+          and walk the path that serves you.</p>
+        <h3 class="book-title">The Poetry of Ice Cream</h3>
+        <p>A novel in progress, about bisexual love and the intricacies of love relationships.</p>
+        <ion-row (click)="flyAway()">
+          <ion-col>
+
+          </ion-col>
+          <ion-col>
+            <div class="tree-bird">
+              <div class="tree-img">
+                <img src="../assets/go-back.png">
+              </div>
+              <div class="bird-img" *ngIf="birdPresent" [@birdState]="flyAwayState">
+                <img src="../assets/bird-left.png">
+              </div>
+            </div>
+          </ion-col>
+          <ion-col>
+
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

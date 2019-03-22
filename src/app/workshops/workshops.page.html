@@ -1,0 +1,80 @@
+<ion-header translucent="true" no-border>
+  <ion-toolbar>
+    <ion-menu-button slot="start" color="primary"></ion-menu-button>
+    <ion-title color="primary">
+      Workshops
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
+    <ion-row>
+      <ion-col size-xs="12" size-lg="6">
+        <ion-img src="/assets/hhc-logo-deva.png" [routerLink]="['/home']"></ion-img>
+      </ion-col>
+      <ion-col size-xs="12" size-lg="6" class="ion-align-self-center">
+        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
+          light of your own being.<br>~ Hafiz</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-lg="6" size-xs="12" class="left-column trnsp-white-bkgrnd font-20">
+        <h1>Workshops</h1>
+        <p>One of my greatest passions in life is to facilitate trainings and workshops.</p>
+        <p>I offer workshops at national conventions, based upon my book, <span class="book-title">Toolbox of Hope: When My Body Doesn't Feel Good</span></p>
+        <p>As well as many other trainings, I am also available to give workshops based upon my book, <span class="book-title">Re-arranged, Never the Same; The Nature of Grief.</span></p>
+        <h3>Current Workshops</h3>
+        <p [routerLink]="['/workshops/more']" class="workshop-title">Transformational Integrative Group
+          Psychotherapy Training for Psychotherapists</p>
+        <p [routerLink]="['/workshops/more']" class="workshop-title">Marry Yourself Journey</p>
+        <p [routerLink]="['/workshops/more']" class="workshop-title">Tribal Time</p>
+        <p [routerLink]="['/workshops/more']" class="workshop-title">Self-Parenting Trainings</p>
+        <p [routerLink]="['/workshops/more']" class="workshop-title">Conscious Grieving and The Power of
+          Love</p>
+        <p [routerLink]="['/workshops/more']" class="workshop-title">Nourishing Your Love: Basic
+        Training in
+          Spiritual Partnership</p>
+        <p [routerLink]="['/workshops/more']" class="workshop-title">Laughter Yoga</p>
+        <p [routerLink]="['/workshops/more']" class="workshop-title">Council For All Beings</p>
+        <p [routerLink]="['/workshops/more']" class="workshop-title">Transformational Integrative Group
+          Psychotherapy Institute</p>
+      </ion-col>
+      <ion-col size-lg="6" size-xs="12" class="right-column font-20">
+        <ion-row>
+          <ion-col size="12" no-padding class="top-section image-cropper">
+            <img src="../assets/waiting-room-3.jpg" class="centered">
+          </ion-col>
+          <ion-col size="12" class="bottom-section trnsp-white-bkgrnd">
+            <h2>Workshop Descriptions</h2>
+            <ion-row (click)="flyAway()">
+              <ion-col>
+
+              </ion-col>
+              <ion-col>
+                <div class="tree-bird">
+                  <div class="tree-img">
+                    <img src="../assets/more-info.png">
+                  </div>
+                  <div class="bird-img" *ngIf="birdPresent" [@birdState]="flyAwayState">
+                    <img src="../assets/bird-right.png">
+                  </div>
+                </div>
+              </ion-col>
+              <ion-col>
+
+              </ion-col>
+            </ion-row>
+            <ion-row text-center>
+              <ion-col size="12">
+                <p style="font-weight:bold;">Deva Joy Gouss, L.C.S.W.<br>Healing Heart Communications, Inc.</p>
+              </ion-col>
+              <ion-col size="12">
+                <p>Atlanta, GA 30306 | 404-892-1476 | devajoy@me.com</p>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

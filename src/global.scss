@@ -41,6 +41,13 @@ ion-toolbar {
   color: #000000;
 }
 
+.trnsp-bkgrnd {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: solid 5px rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 5px 20px;
+}
+
 .trnsp-white-bkgrnd {
   background-color: #ffffff;
   border: solid 10px #ffffff;
@@ -57,6 +64,11 @@ ion-toolbar {
   font-size: 20px;
 }
 
+.white-font {
+  color: #ffffff;
+  text-shadow: 3px 3px 8px #000000;
+}
+
 .left-column {
   margin-bottom: 20px;
 }
@@ -68,7 +80,6 @@ ion-toolbar {
 .right-column .top-section {
   height: 43vh;
   margin: 0px 5px 10px 0px;
-  padding: 0px;
 }
 
 .right-column .bottom-section {
@@ -117,3 +128,6 @@ ion-toolbar {
   z-index: 10;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}

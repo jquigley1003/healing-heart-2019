@@ -1,0 +1,64 @@
+<ion-header translucent="true" no-border>
+  <ion-toolbar>
+    <ion-menu-button slot="start" color="primary"></ion-menu-button>
+    <ion-title color="primary">
+      Group Psychotherapy
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
+    <ion-row>
+      <ion-col size-xs="12" size-lg="6">
+        <ion-img src="/assets/hhc-logo-deva.png" [routerLink]="['/home']"></ion-img>
+      </ion-col>
+      <ion-col size-xs="12" size-lg="6" class="ion-align-self-center">
+        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
+          light of your own being.<br>~ Hafiz</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+
+      </ion-col>
+      <ion-col size="11" size-xl="5" class="trnsp-bkgrnd font-20">
+        <h1>Transformational Integrative Group Psychotherapy</h1>
+        <p>Transformational Integrative Group Psychotherapy is the name that I have given to a dynamic, experiential
+          approach to healing that takes you beyond just "talking about" the situations and stressors in your life.
+          This method engages your body/heart/mind/spirit in experiential processes that help you to embody the
+          changes you are growing into.</p>
+        <p>Transformational Integrative Group Psychotherapy offers a format to re-work your internalized scripting by
+          enacting it with the help of other people or objects enrolled as parts of your psyche or life
+          circumstances. These enactments provide opportunities to reconstruct the original, historic blueprint from
+          family of origin dynamics. By doing so, there is a freeing up from old wiring of past conditioning and
+          beliefs along with a re-wiring of new imprints for healthy emotional experiences. The result is a
+          foundational transformation. Integrative Self Enactments are most effective in group settings,* but can
+          also be utilized in individual sessions.</p>
+        <p>*Group Settings -- Transformational Integrative Group Psychotherapy generally take place in a closed
+          circle of no more than nine people. The groups meet weekly and call for an ongoing commitment from all
+          group participants. The group offers a sense of community (which I often refer to as “tribe”) in service to
+          the work of personal and interpersonal transformation.</p>
+        <ion-row (click)="flyAway()">
+          <ion-col>
+
+          </ion-col>
+          <ion-col>
+            <div class="tree-bird">
+              <div class="tree-img">
+                <img src="../assets/go-back.png">
+              </div>
+              <div class="bird-img" *ngIf="birdPresent" [@birdState]="flyAwayState">
+                <img src="../assets/bird-left.png">
+              </div>
+            </div>
+          </ion-col>
+          <ion-col>
+
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
