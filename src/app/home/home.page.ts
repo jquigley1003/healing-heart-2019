@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { ModalController } from '@ionic/angular';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
+
+import { ModalController } from '@ionic/angular';
 
 import { NewsletterModalComponent } from '../modals/newsletter-modal/newsletter-modal.component';
 

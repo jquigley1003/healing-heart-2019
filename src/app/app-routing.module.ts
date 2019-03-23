@@ -34,7 +34,8 @@ const routes: Routes = [
   { path: 'workshops/more', loadChildren: './workshops/more-workshops/more-workshops.module#MoreWorkshopsPageModule' },
   { path: 'publications-videos', loadChildren: './publications-videos/publications-videos.module#PublicationsVideosPageModule' },
   { path: 'publications-videos/more', loadChildren: './publications-videos/more-publications-videos/more-publications-videos.module#MorePublicationsVideosPageModule' },
-  { path: 'blog', loadChildren: './blog/blog.module#BlogPageModule' }
+  { path: 'blog', loadChildren: './blog/blog.module#BlogPageModule' },
+  { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' }
 ];
 
 @NgModule({

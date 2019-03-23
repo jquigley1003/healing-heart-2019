@@ -1,0 +1,46 @@
+<<ion-header translucent="true" no-border>
+  <ion-toolbar>
+    <ion-menu-button slot="start" color="primary"></ion-menu-button>
+    <ion-title color="primary">
+      Contact
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
+    <ion-row>
+      <ion-col size-xs="12" size-lg="6">
+        <ion-img src="/assets/hhc-logo-deva.png" [routerLink]="['/home']"></ion-img>
+      </ion-col>
+      <ion-col size-xs="12" size-lg="6" class="ion-align-self-center">
+        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
+          light of your own being.<br>~ Hafiz</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-lg="6" size-xs="12" class="left-column trnsp-white-bkgrnd font-20">
+        <h1>Contact</h1>
+        <p style="font-weight:bold;">Deva Joy Gouss, L.C.S.W.<br>Healing Heart Communications, Inc.<br>
+          Atlanta, GA 30306<br>404-892-1476<br>devajoy@me.com</p>
+        <ion-button expand="block" (click)="presentNewsletterModal()">
+          Subscribe to My Newsletter</ion-button>
+      </ion-col>
+      <ion-col size-lg="6" size-xs="12" class="right-column font-20">
+        <ion-row>
+          <ion-col size="12" no-padding class="top-section image-cropper">
+            <img src="../assets/heart-path-2.jpg" class="centered">
+          </ion-col>
+          <ion-col size="12" class="bottom-section trnsp-white-bkgrnd">
+            <h2>Forms to Download</h2>
+            <ion-button expand="block" (click)="getClientForm()">
+              Client Information Form</ion-button>
+            <ion-button expand="block" (click)="getInformedForm()">
+              Informed Consent Form</ion-button>
+            <ion-button expand="block" (click)="getLifeForm()">
+              Life Script Questionarre</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

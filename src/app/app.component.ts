@@ -39,6 +39,11 @@ export class AppComponent {
       title: 'Blog',
       url: '/blog',
       icon: 'laptop'
+    },
+    {
+      title: 'Contact',
+      url: '/contact',
+      icon: 'contact'
     }
   ];
 
