@@ -35,8 +35,8 @@ import { Router } from '@angular/router';
         opacity: '1',
         transform: 'scale(1) translateY(0%) translateX(0%)'
       })),
-      transition('* => flyAway', animate('2s linear')),
-      transition('* => flyBack', animate('300ms linear')),
+      transition('* => flyAway', animate('3s linear')),
+      transition('* => flyBack', animate('400ms linear')),
       transition('void => *', [
         style({transform: 'translateX(-300%)'}),
         animate('300ms ease-in-out')
@@ -62,11 +62,20 @@ export class PsychotherapyPage implements OnInit {
     this.isDone = !this.isDone;
   }
 
-  flyAway() {
+  // flyAway() {
+  //   this.flyAwayState = 'flyAway';
+  //   setTimeout(() => {
+  //     this.router.navigate(['/psychotherapy/more']);
+  //     this.flyAwayState = 'flyBack';
+  //   },2000);
+  // }
+
+  async flyAway() {
     this.flyAwayState = 'flyAway';
-    setTimeout(() => {
+    let finalresult = await setTimeout(() => {
       this.router.navigate(['/psychotherapy/more']);
       this.flyAwayState = 'flyBack';
     },2000);
+    return finalresult;
   }
 }

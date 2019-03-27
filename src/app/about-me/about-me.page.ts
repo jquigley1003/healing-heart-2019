@@ -64,11 +64,20 @@ export class AboutMePage implements OnInit {
     this.isDone = !this.isDone;
   }
 
-  flyAway() {
+  // flyAway() {
+  //   this.flyAwayState = 'flyAway';
+  //   setTimeout(() => {
+  //     this.router.navigate(['/about-me/more']);
+  //     this.flyAwayState = 'flyBack';
+  //   },2000);
+  // }
+
+  async flyAway() {
     this.flyAwayState = 'flyAway';
-    setTimeout(() => {
+    let finalresult = await setTimeout(() => {
       this.router.navigate(['/about-me/more']);
       this.flyAwayState = 'flyBack';
-    },2000);
+      },2000);
+    return finalresult;
   }
 }
