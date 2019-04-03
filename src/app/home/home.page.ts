@@ -40,6 +40,10 @@ export class HomePage {
     this.isDone = !this.isDone;
   }
 
+  articleSeven() {
+    window.open('http://healingheartcommunications.blogspot.com/2019/04/forty-sixth-invitation.html', '_blank');
+  }
+
   articleSix() {
     window.open('http://healingheartcommunications.blogspot.com/2019/03/forty-fifth-invitation_11.html', '_blank');
   }
