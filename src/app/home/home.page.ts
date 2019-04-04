@@ -40,8 +40,12 @@ export class HomePage {
     this.isDone = !this.isDone;
   }
 
-  articleSeven() {
+  articleEight() {
     window.open('http://healingheartcommunications.blogspot.com/2019/04/forty-sixth-invitation.html', '_blank');
+  }
+
+  articleSeven() {
+    window.open('https://thriveglobal.com/stories/energy-hygiene-practice-for-maintaining-your-vibrance/', '_blank');
   }
 
   articleSix() {
