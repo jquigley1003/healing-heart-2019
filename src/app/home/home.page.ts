@@ -39,6 +39,9 @@ export class HomePage {
   onAnimationEvent (event: AnimationEvent ) {
     this.isDone = !this.isDone;
   }
+  articleNine() {
+    window.open('https://thriveglobal.com/stories/the-invitation-to-practice-awareness-of-our-oneness/', '_blank');
+  }
 
   articleEight() {
     window.open('http://healingheartcommunications.blogspot.com/2019/04/forty-sixth-invitation.html', '_blank');
