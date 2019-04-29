@@ -77,3 +77,155 @@ ion-card ion-item {
 .home-section ion-item h2 {
   text-shadow: none;
 }
+
+/* Bubble Animation */
+.bubble-container {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.touch-bubbles {
+  position: relative;
+  top: -50px;
+  transform:translate(50% -50%);
+  overflow:visible;
+  z-index: 10;
+  font-size: 5px;
+  height: 3em;
+  margin: 0 20%;
+  color: #cc97da;
+  border: solid 2px #cc97da;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.touch-bubbles-overlay2 {
+  position: absolute;
+  top: 15%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 15%;
+  width: 100%;
+  border: solid 2px #cc97da;
+  border-radius: 15px;
+  background-color: rgba(255,255,255, 0.8);
+  z-index: 20;
+}
+
+.touch-bubbles-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(/assets/touch-bubbles.png);
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+  z-index: 20;
+}
+
+//.overlay-text {
+//  color: #cc97da;
+//  font-size: 30px;
+//  position: absolute;
+//  top: 50%;
+//  left: 50%;
+//  transform: translate(-50%, -50%);
+//  -ms-transform: translate(-50%, -50%);
+//  text-align: center;
+//}
+
+.bubble-am {
+  position: absolute;
+  top: 0px;
+  left: -50px;
+  z-index: 2;
+}
+
+.bubble-psy {
+  position: absolute;
+  top: 50%;
+  left: 110vw;
+  z-index: 2;
+}
+
+.bubble-ws {
+  position: absolute;
+  top: -25vh;
+  left: 45vw;
+  z-index: 2;
+}
+
+.bubble-book-vid {
+  position: absolute;
+  top: -250px;
+  left: 50%;
+  z-index: 2;
+}
+
+#pop-bubble {
+  visibility:hidden;
+}
+
+#bubble01 {
+  position: absolute;
+  top:-200px;
+  left:-250px;
+  z-index: 10;
+
+  -webkit-animation: mymove 8s infinite;
+  -webkit-animation-timing-function: linear;
+
+  animation: mymove 8s infinite;
+  animation-timing-function: linear;
+}
+
+#bubble02 {
+  position: absolute;
+  top:-250px;
+  left:100px;
+  z-index: 10;
+
+  -webkit-animation: mymove 12s infinite;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-timing-function: linear;
+
+  animation: mymove 12s infinite;
+  animation-delay: 2s;
+  animation-timing-function: linear;
+}
+
+$n: 100;
+$m: 5;
+
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+  0% {transform: translate3d(random($n * 3 / $m) + px);
+    animation-timing-function: linear;}
+  10%  {transform: rotateZ(30deg);
+    animation-timing-function: linear;}
+  50% {transform: translate3d(100px, 300px, 0px);
+    animation-timing-function: linear;}
+  100% {transform: translate3d(1000px, 1000px, 0px);}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+  0% {transform: translate3d(random($n * 3 / $m) + px);
+    animation-timing-function: linear;}
+  10%  {transform: rotateZ(30deg);
+    animation-timing-function: linear;}
+  50% {transform: translate3d(100px, 300px, 0px);
+    animation-timing-function: linear;}
+  100% {transform: translate3d(1000px, 1000px, 0px);}
+}
+
+/* End Bubble Animation */

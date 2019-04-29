@@ -7,6 +7,17 @@
   </ion-toolbar>
 </ion-header>
 <ion-content fullscreen>
+  <div class="bubble-container" [@bubbleState]="bubbleIsDone ? 'true' : 'false'"
+       (@bubbleState.done)="onBubbleEvent($event)">
+    <a (click)="bubblePopAM()"><ion-img src="/assets/am-bubble.png" alt="About Me"
+                                        class="bubble-am"></ion-img></a>
+    <a (click)="bubblePopP()"><img src="/assets/pt-bubble.png" alt="Psychotherapy"
+                                   class="bubble-psy"></a>
+    <a (click)="bubblePopWS()"><img src="/assets/ws-bubble.png" alt="Workshops"
+                                    class="bubble-ws"></a>
+    <a (click)="bubblePopBV()"><img src="/assets/bv-bubble.png" alt="Publications and Videos"
+                                    class="bubble-book-vid"></a>
+  </div>
   <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
     <ion-row>
       <ion-col size-xs="12" size-lg="6">

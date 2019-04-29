@@ -54,7 +54,7 @@ export class PsychotherapyPage implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-      this.birdPresent = true
+      this.birdPresent = true;
     },2000);
   }
 
@@ -62,20 +62,20 @@ export class PsychotherapyPage implements OnInit {
     this.isDone = !this.isDone;
   }
 
-  // flyAway() {
-  //   this.flyAwayState = 'flyAway';
-  //   setTimeout(() => {
-  //     this.router.navigate(['/psychotherapy/more']);
-  //     this.flyAwayState = 'flyBack';
-  //   },2000);
-  // }
-
-  async flyAway() {
+  flyAway() {
     this.flyAwayState = 'flyAway';
-    let finalresult = await setTimeout(() => {
+    setTimeout(() => {
       this.router.navigate(['/psychotherapy/more']);
       this.flyAwayState = 'flyBack';
     },2000);
-    return finalresult;
   }
+
+  // async flyAway() {
+  //   this.flyAwayState = 'flyAway';
+  //   let finalresult = await setTimeout(() => {
+  //     this.router.navigate(['/psychotherapy/more']);
+  //     this.flyAwayState = 'flyBack';
+  //   },2000);
+  //   return finalresult;
+  // }
 }

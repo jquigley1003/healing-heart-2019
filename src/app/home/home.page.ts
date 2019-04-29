@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
+import { Router } from '@angular/router';
+import { trigger, state, style, group, transition, query, animate, keyframes } from '@angular/animations';
 
 import { ModalController } from '@ionic/angular';
 
@@ -28,17 +29,69 @@ import { NewsletterModalComponent } from '../modals/newsletter-modal/newsletter-
           style({ backgroundColor: '#ce76e4', offset: 1.0})/* purple */
         ]))
       ])
+    ]),
+    trigger('bubbleState', [
+      // state('false', style({
+      //   opacity: '0',
+      //   transform: 'scale(0.5) translateY(-1000%) translateX(-1000%)'
+      // })),
+      // state('true', style({
+      //   opacity: '1',
+      //   transform: 'scale(1) translateY(0%) translateX(0%)'
+      // })),
+      transition('* <=> *', [
+        group([
+          query('.bubble-am', [
+            style({
+              transform: 'translateX(-200px) translateY(200px)'
+            }),
+            animate('14s linear', style({transform: 'translateX(110vw'}))
+          ]),
+          query('.bubble-psy', [
+            style({
+              transform: 'translateX(0px) translateY(-150px)'
+            }),
+            animate('14s linear', style({transform: 'translateX(-180vw'}))
+          ]),
+          query('.bubble-ws', [
+            style({
+              transform: 'translateX(0px) translateY(0px)'
+            }),
+            animate('14s linear', style({transform: 'translateY(150vh'}))
+          ])
+        ])
+      ])
     ])
   ]
 })
 export class HomePage {
   isDone = true;
+  bubbleIsDone = true;
 
-  constructor(private modalCtrl: ModalController) {}
+  constructor(private modalCtrl: ModalController,
+              private router: Router) {}
 
-  onAnimationEvent (event: AnimationEvent ) {
+  onAnimationEvent (event: AnimationEvent) {
     this.isDone = !this.isDone;
   }
+
+  onBubbleEvent (event: AnimationEvent) {
+    this.bubbleIsDone = !this.bubbleIsDone;
+  }
+
+  bubblePopAM() {
+    this.router.navigate(['/about-me']);
+  }
+
+  bubblePopP() {
+    this.router.navigate(['/psychotherapy']);
+  }
+
+  bubblePopWS() {
+    this.router.navigate(['/workshops']);
+  }
+
+
   articleNine() {
     window.open('https://thriveglobal.com/stories/the-invitation-to-practice-awareness-of-our-oneness/', '_blank');
   }
