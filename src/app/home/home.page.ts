@@ -31,34 +31,32 @@ import { NewsletterModalComponent } from '../modals/newsletter-modal/newsletter-
       ])
     ]),
     trigger('bubbleState', [
-      // state('false', style({
-      //   opacity: '0',
-      //   transform: 'scale(0.5) translateY(-1000%) translateX(-1000%)'
-      // })),
-      // state('true', style({
-      //   opacity: '1',
-      //   transform: 'scale(1) translateY(0%) translateX(0%)'
-      // })),
-      transition('* <=> *', [
+      transition('true <=> false', [
         group([
-          query('.bubble-am', [
-            style({
-              transform: 'translateX(-200px) translateY(200px)'
-            }),
-            animate('14s linear', style({transform: 'translateX(110vw'}))
-          ]),
           query('.bubble-psy', [
             style({
-              transform: 'translateX(0px) translateY(-150px)'
+              transform: 'scale(1)'
             }),
-            animate('14s linear', style({transform: 'translateX(-180vw'}))
+            animate('18s linear', style({transform: 'scale(1.5) translateX(-130vw) translateY(-150px)'}))
+          ]),
+          query('.bubble-am', [
+            style({
+              transform: 'scale(0.8)'
+            }),
+            animate('20s linear', style({transform: 'translateX(170vw) translateY(30vh)'}))
           ]),
           query('.bubble-ws', [
             style({
-              transform: 'translateX(0px) translateY(0px)'
+              transform: 'scale(0.5)'
             }),
-            animate('14s linear', style({transform: 'translateY(150vh'}))
+            animate('20s linear', style({transform: 'scale(1.3) translateX(10vw) translateY(150vh)'}))
           ])
+        ]),
+        query('.bubble-book-vid', [
+          style({
+            transform: 'scale(1.0)'
+          }),
+          animate('15s ease-in', style({transform: 'scale(1.5) translateX(50vw) translateY(-150vh)'}))
         ])
       ])
     ])
@@ -89,6 +87,10 @@ export class HomePage {
 
   bubblePopWS() {
     this.router.navigate(['/workshops']);
+  }
+
+  bubblePopBV() {
+    this.router.navigate(['/publications-videos']);
   }
 
 
