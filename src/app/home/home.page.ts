@@ -93,6 +93,13 @@ export class HomePage {
     this.router.navigate(['/publications-videos']);
   }
 
+  articleEleven() {
+    window.open('https://thriveglobal.com/stories/love-your-life-as-it-is/?utm_source=Newsletter_Publish&utm_medium=Thrive', '_blank');
+  }
+
+  articleTen() {
+    window.open('https://thriveglobal.com/stories/channel-your-goodness-as-a-spiritual-practice/', '_blank');
+  }
 
   articleNine() {
     window.open('https://thriveglobal.com/stories/the-invitation-to-practice-awareness-of-our-oneness/', '_blank');
