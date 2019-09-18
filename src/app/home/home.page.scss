@@ -11,7 +11,7 @@ ion-card {
 ion-card ion-card-title {
   position: absolute;
   top: 40%;
-  font-size: 5vw;
+  font-size: 2.5vw;
   text-shadow: 2px 2px 3px #000000;
   font-weight: bold;
   width: 100%;
@@ -44,9 +44,16 @@ ion-card ion-item {
 
 }
 
+.quote-font-card {
+  text-align: center;
+  margin: .3em .3em 0em .3em;
+  font-family: 'Tempus Sans ITC', sans-serif;
+  font-size: 2em;
+}
+
 .rotating-logo {
   position: absolute;
-  top: 5%;
+  top: 4%;
   text-align: center;
   width: 100%;
 }
