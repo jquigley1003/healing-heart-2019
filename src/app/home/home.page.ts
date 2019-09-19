@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { trigger, state, style, group, transition, query, animate, keyframes } from '@angular/animations';
+import { growImgTrigger, slideTitleRightTrigger } from '../shared/components/animations/animations.component';
 
 import { ModalController } from '@ionic/angular';
 
@@ -37,29 +38,31 @@ import { NewsletterModalComponent } from '../modals/newsletter-modal/newsletter-
             style({
               transform: 'scale(1)'
             }),
-            animate('18s linear', style({transform: 'scale(1.5) translateX(-130vw) translateY(-150px)'}))
+            animate('18s 3000ms linear', style({transform: 'scale(1.5) translateX(-130vw) translateY(-150px)'}))
           ]),
           query('.bubble-am', [
             style({
               transform: 'scale(0.8)'
             }),
-            animate('20s linear', style({transform: 'translateX(170vw) translateY(30vh)'}))
+            animate('20s 3000ms linear', style({transform: 'translateX(170vw) translateY(30vh)'}))
           ]),
           query('.bubble-ws', [
             style({
               transform: 'scale(0.5)'
             }),
-            animate('20s linear', style({transform: 'scale(1.3) translateX(10vw) translateY(150vh)'}))
+            animate('20s 3000ms linear', style({transform: 'scale(1.3) translateX(10vw) translateY(150vh)'}))
           ])
         ]),
         query('.bubble-book-vid', [
           style({
             transform: 'scale(1.0)'
           }),
-          animate('15s ease-in', style({transform: 'scale(1.5) translateX(50vw) translateY(-150vh)'}))
+          animate('15s 1000ms ease-in', style({transform: 'scale(1.5) translateX(50vw) translateY(-150vh)'}))
         ])
       ])
-    ])
+    ]),
+    slideTitleRightTrigger,
+    growImgTrigger
   ]
 })
 export class HomePage {

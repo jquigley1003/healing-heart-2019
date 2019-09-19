@@ -73,7 +73,7 @@ export class WorkshopsPage implements OnInit {
   async flyAway() {
     this.flyAwayState = 'flyAway';
     let finalresult = await setTimeout(() => {
-      this.router.navigate(['/about-me/more']);
+      this.router.navigate(['/workshops/more']);
       this.flyAwayState = 'flyBack';
     },2000);
     return finalresult;
