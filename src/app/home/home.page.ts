@@ -96,6 +96,10 @@ export class HomePage {
     this.router.navigate(['/publications-videos']);
   }
 
+  articleTwelve() {
+    window.open('https://podcasts.apple.com/us/podcast/being-friends-with-your-illness-with-deva-joy/id1456306837?i=1000460510318', '_blank');
+  }
+
   articleEleven() {
     window.open('https://thriveglobal.com/stories/love-your-life-as-it-is/?utm_source=Newsletter_Publish&utm_medium=Thrive', '_blank');
   }
