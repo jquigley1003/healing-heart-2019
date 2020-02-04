@@ -96,6 +96,10 @@ export class HomePage {
     this.router.navigate(['/publications-videos']);
   }
 
+  articleThirteen() {
+    window.open('https://thriveglobal.com/stories/2020-vision/', '_blank');
+  }
+
   articleTwelve() {
     window.open('https://podcasts.apple.com/us/podcast/being-friends-with-your-illness-with-deva-joy/id1456306837?i=1000460510318', '_blank');
   }
