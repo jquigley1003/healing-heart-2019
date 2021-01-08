@@ -96,6 +96,14 @@ export class HomePage {
     this.router.navigate(['/publications-videos']);
   }
 
+  articleFifteen() {
+    window.open('http://healingheartcommunications.blogspot.com/2021/01/fifty-fourth-invitation.html', '_blank');
+  }
+
+  articleFourteen() {
+    window.open('http://healingheartcommunications.blogspot.com/2020/08/healing-heart-communications-inc.html', '_blank');
+  }
+
   articleThirteen() {
     window.open('https://thriveglobal.com/stories/2020-vision/', '_blank');
   }
