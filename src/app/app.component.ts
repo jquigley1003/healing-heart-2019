@@ -43,7 +43,7 @@ export class AppComponent {
     {
       title: 'Contact',
       url: '/contact',
-      icon: 'contact'
+      icon: 'person-circle'
     }
   ];
 
