@@ -9,71 +9,71 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: './home/home.module#HomePageModule'
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
     path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
+    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
   },
   {
     path: 'about-me',
-    loadChildren: './about-me/about-me.module#AboutMePageModule'
+    loadChildren: () => import('./about-me/about-me.module').then(m => m.AboutMePageModule)
   },
   {
     path: 'about-me/more',
-    loadChildren: './about-me/more-about-me/more-about-me.module#MoreAboutMePageModule'
+    loadChildren: () => import('./about-me/more-about-me/more-about-me.module').then(m => m.MoreAboutMePageModule)
   },
   {
     path: 'psychotherapy',
-    loadChildren: './psychotherapy/psychotherapy.module#PsychotherapyPageModule'
+    loadChildren: () => import('./psychotherapy/psychotherapy.module').then(m => m.PsychotherapyPageModule)
   },
   {
     path: 'psychotherapy/more',
-    loadChildren: './psychotherapy/more-psychotherapy/more-psychotherapy.module#MorePsychotherapyPageModule'
+    loadChildren: () => import('./psychotherapy/more-psychotherapy/more-psychotherapy.module').then(m => m.MorePsychotherapyPageModule)
   },
   {
     path: 'psychotherapy/individual',
-    loadChildren: './psychotherapy/individual/individual.module#IndividualPageModule'
+    loadChildren: () => import('./psychotherapy/individual/individual.module').then(m => m.IndividualPageModule)
   },
   {
     path: 'psychotherapy/couples',
-    loadChildren: './psychotherapy/couples/couples.module#CouplesPageModule'
+    loadChildren: () => import('./psychotherapy/couples/couples.module').then(m => m.CouplesPageModule)
   },
   {
     path: 'psychotherapy/group',
-    loadChildren: './psychotherapy/group/group.module#GroupPageModule'
+    loadChildren: () => import('./psychotherapy/group/group.module').then(m => m.GroupPageModule)
   },
   {
     path: 'psychotherapy/healing-exercises',
-    loadChildren: './psychotherapy/healing-exercises/healing-exercises.module#HealingExercisesPageModule'
+    loadChildren: () => import('./psychotherapy/healing-exercises/healing-exercises.module').then(m => m.HealingExercisesPageModule)
   },
   {
     path: 'psychotherapy/life-coaching',
-    loadChildren: './psychotherapy/life-coaching/life-coaching.module#LifeCoachingPageModule'
+    loadChildren: () => import('./psychotherapy/life-coaching/life-coaching.module').then(m => m.LifeCoachingPageModule)
   },
   {
     path: 'workshops',
-    loadChildren: './workshops/workshops.module#WorkshopsPageModule'
+    loadChildren: () => import('./workshops/workshops.module').then(m => m.WorkshopsPageModule)
   },
   {
     path: 'workshops/more',
-    loadChildren: './workshops/more-workshops/more-workshops.module#MoreWorkshopsPageModule'
+    loadChildren: () => import('./workshops/more-workshops/more-workshops.module').then(m => m.MoreWorkshopsPageModule)
   },
   {
     path: 'publications-videos',
-    loadChildren: './publications-videos/publications-videos.module#PublicationsVideosPageModule'
+    loadChildren: () => import('./publications-videos/publications-videos.module').then(m => m.PublicationsVideosPageModule)
   },
   {
     path: 'publications-videos/more',
-    loadChildren: './publications-videos/more-publications-videos/more-publications-videos.module#MorePublicationsVideosPageModule'
+    loadChildren: () => import('./publications-videos/more-publications-videos/more-publications-videos.module').then(m => m.MorePublicationsVideosPageModule)
   },
   {
     path: 'blog',
-    loadChildren: './blog/blog.module#BlogPageModule'
+    loadChildren: () => import('./blog/blog.module').then(m => m.BlogPageModule)
   },
   {
     path: 'contact',
-    loadChildren: './contact/contact.module#ContactPageModule'
+    loadChildren: () => import('./contact/contact.module').then(m => m.ContactPageModule)
   }
 ];
 
