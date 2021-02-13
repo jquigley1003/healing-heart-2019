@@ -38,26 +38,26 @@ import { NewsletterModalComponent } from '../modals/newsletter-modal/newsletter-
             style({
               transform: 'scale(1)'
             }),
-            animate('18s 3000ms linear', style({transform: 'scale(1.5) translateX(-130vw) translateY(-150px)'}))
+            animate('40s 3000ms linear', style({transform: 'scale(1.5) translateX(-200vw) translateY(-250vh)'}))
           ]),
           query('.bubble-am', [
             style({
               transform: 'scale(0.8)'
             }),
-            animate('20s 3000ms linear', style({transform: 'translateX(170vw) translateY(30vh)'}))
+            animate('20s 3000ms linear', style({transform: 'translateX(200vw) translateY(30vh)'}))
           ]),
           query('.bubble-ws', [
             style({
               transform: 'scale(0.5)'
             }),
-            animate('20s 3000ms linear', style({transform: 'scale(1.3) translateX(10vw) translateY(150vh)'}))
+            animate('30s 3000ms linear', style({transform: 'scale(1.3) translateX(70vw) translateY(200vh)'}))
+          ]),
+          query('.bubble-book-vid', [
+            style({
+              transform: 'scale(1.0)'
+            }),
+            animate('40s 6000ms ease-in', style({transform: 'scale(1.5) translateX(200vw) translateY(-150vh)'}))
           ])
-        ]),
-        query('.bubble-book-vid', [
-          style({
-            transform: 'scale(1.0)'
-          }),
-          animate('15s 1000ms ease-in', style({transform: 'scale(1.5) translateX(50vw) translateY(-150vh)'}))
         ])
       ])
     ]),
@@ -67,10 +67,11 @@ import { NewsletterModalComponent } from '../modals/newsletter-modal/newsletter-
 })
 export class HomePage {
   isDone = true;
-  bubbleIsDone = true;
+  bubbleIsDone = false;
 
   constructor(private modalCtrl: ModalController,
               private router: Router) {}
+
 
   onAnimationEvent (event: AnimationEvent) {
     this.isDone = !this.isDone;

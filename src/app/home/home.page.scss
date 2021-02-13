@@ -88,12 +88,12 @@ ion-card ion-item {
 
 /* Bubble Animation */
 .bubble-container {
-  height: 100%;
+  position: absolute;
+  height: 2000px;
   width: 100%;
   left: 0;
   top: 0;
   overflow: hidden;
-  position: absolute;
 }
 
 .bubble-am {
@@ -106,21 +106,21 @@ ion-card ion-item {
 .bubble-psy {
   position: absolute;
   top: 50%;
-  left: 110%;
+  left: 120%;
   z-index: 2;
 }
 
 .bubble-ws {
   position: absolute;
-  top: -25vh;
-  left: 45vw;
+  top: -40vh;
+  left: 30vw;
   z-index: 2;
 }
 
 .bubble-book-vid {
   position: absolute;
   top: 110vh;
-  left: 0%;
+  left: -100vw;
   z-index: 2;
 }
 

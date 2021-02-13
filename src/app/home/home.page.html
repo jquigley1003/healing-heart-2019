@@ -8,7 +8,7 @@
 <!--</ion-header>-->
 <ion-content fullscreen>
   <div class="bubble-container" [@bubbleState]="bubbleIsDone ? 'true' : 'false'"
-       (@bubbleState.done)="onBubbleEvent($event)">
+    (@bubbleState.done)="onBubbleEvent($event)">
     <a (click)="bubblePopAM()">
       <img src="/assets/am-bubble.png" alt="About Me" class="bubble-am">
     </a>
@@ -21,7 +21,7 @@
     <a (click)="bubblePopBV()">
       <img src="/assets/bv-bubble.png" alt="Publications and Videos" class="bubble-book-vid">
     </a>
-  </div>
+  </div> 
   <ion-grid [@colorChange]="isDone ? 'true' : 'false'" (@colorChange.done)="onAnimationEvent($event)">
     <ion-row>
       <ion-col size="12">
