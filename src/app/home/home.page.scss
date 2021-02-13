@@ -127,10 +127,10 @@ ion-card ion-item {
 /* End Bubble Animation */
 
 .snowfall-container {
+  position: absolute;
   height: 100%;
   width: 100%;
+  top: -40px;
   left: 0;
-  top: 0;
   overflow: hidden;
-  position: absolute;
 }
