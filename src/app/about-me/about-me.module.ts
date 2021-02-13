@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { AboutMePage } from './about-me.page';
+import { MySnowfallModule } from '../shared/components/my-snowfall/my-snowfall.module';
 
 const routes: Routes = [
   {
@@ -19,7 +20,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    MySnowfallModule
   ],
   declarations: [AboutMePage]
 })

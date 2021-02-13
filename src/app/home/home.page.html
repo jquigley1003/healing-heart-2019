@@ -60,285 +60,292 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <div class="home-section">
-          <h2>Books and Publications by Deva Joy Gouss</h2>
-          <ion-row>
-            <ion-col text-center>
-              <a href="https://www.amazon.com/gp/product/1530067499/ref=dbs_a_def_rwt_bibl_vppi_i0"
-                 target="_blank">
-                <img src="/assets/re-arranged-cover-website.png">
-                <p>Buy Now</p></a>
-            </ion-col>
-            <ion-col text-center>
-              <a href="https://www.amazon.com/gp/product/1545164096/ref=dbs_a_def_rwt_hsch_vapi_taft_p1_i1"
-                 target="_blank">
-                <img src="/assets/toolbox-cover-website.png">
-                <p>Buy Now</p></a>
-            </ion-col>
-          </ion-row>
+        <div class="snowfall-container">
+          <app-my-snowfall></app-my-snowfall>
         </div>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <div class="home-section">
-          <h2>Videos by Deva Joy Gouss</h2>
-          <ion-row>
-            <ion-col>
-              <p><a href="https://vimeo.com/128218524" target="_blank">Living with
-                Arthur: My Life with<br>Chronic Illness</a></p>
-              <div class="embed-responsive embed-responsive-4by3" >
-                <iframe src="https://player.vimeo.com/video/128218524" class="embed-responsive-image" allowfullscreen></iframe>
-              </div>
-            </ion-col>
-            <ion-col>
-              <p class="text-center"><a href="https://vimeo.com/31941044" target="_blank">Path of
-                Psychotherapy with<br>Deva Joy</a></p>
-              <div class="embed-responsive embed-responsive-4by3">
-                <iframe src="https://player.vimeo.com/video/31941044?autoplay=0" class="embed-responsive-image" allowfullscreen></iframe>
-              </div>
-            </ion-col>
-          </ion-row>
-        </div>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <div class="home-section">
-          <h2>Articles by Deva Joy Gouss</h2>
-          <ion-row>
-            <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
-              <ion-item (click)="articleFifteen()" button>
-                <ion-thumbnail slot="start">
-                  <img src="/assets/lincoln-memorial-armed.jpg"
-                       alt="National Guard troops at Lincoln Memorial during Black Lives Matter protest, June 2, 2020">
-                </ion-thumbnail>
-                <ion-label text-wrap>
-                  <h2>2021!!!</h2>
-                  <h3>HealingHeartCommunications.blogspot.com</h3>
-                  <p>January 8, 2021</p>
-                </ion-label>
-                <ion-button slot="end">
-                  <ion-icon slot="icon-only" name="book"></ion-icon>
-                </ion-button>
-              </ion-item>
-            </ion-col>
-            <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
-              <ion-item (click)="articleFourteen()" button>
-                <ion-thumbnail slot="start">
-                  <img src="/assets/what-would-you-do.jpg"
-                       alt="purple and blue light shining from thin crack">
-                </ion-thumbnail>
-                <ion-label text-wrap>
-                  <h2>"What would you do if...?"</h2>
-                  <h3>HealingHeartCommunications.blogspot.com</h3>
-                  <p>August 23, 2020</p>
-                </ion-label>
-                <ion-button slot="end">
-                  <ion-icon slot="icon-only" name="book"></ion-icon>
-                </ion-button>
-              </ion-item>
-            </ion-col>
-            <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
-              <ion-item (click)="articleThirteen()" button>
-                <ion-thumbnail slot="start">
-                  <img src="/assets/man-looking-horizon.jpg"
-                       alt="tim-marshall-173957-unsplash">
-                </ion-thumbnail>
-                <ion-label text-wrap>
-                  <h2>2020 Vision</h2>
-                  <h3>Thrive Global</h3>
-                  <p>January 6, 2020</p>
-                </ion-label>
-                <ion-button slot="end">
-                  <ion-icon slot="icon-only" name="book"></ion-icon>
-                </ion-button>
-              </ion-item>
-            </ion-col>
-            <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
-              <ion-item (click)="articleTwelve()" button>
-                <ion-thumbnail slot="start">
-                  <img src="/assets/podcast-friends-with-illness.jpg"
-                       alt="Deva Joy with her dog">
-                </ion-thumbnail>
-                <ion-label text-wrap>
-                  <h2>Being Friends With Your Illness</h2>
-                  <h3>Apple Podcast</h3>
-                  <p>December 22, 2019</p>
-                </ion-label>
-                <ion-button slot="end">
-                  <ion-icon slot="icon-only" name="mic"></ion-icon>
-                </ion-button>
-              </ion-item>
-            </ion-col>
-            <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
-              <ion-item (click)="articleEleven()" button>
-                <ion-thumbnail slot="start">
-                  <img src="/assets/abundance.jpg"
-                       alt="abundance with pink/purple sunset over ocean">
-                </ion-thumbnail>
-                <ion-label text-wrap>
-                  <h2>Love Your Life As It Is</h2>
-                  <h3>ThriveGlobal.com</h3>
-                  <p>August 26, 2019</p>
-                </ion-label>
-                <ion-button slot="end">
-                  <ion-icon slot="icon-only" name="book"></ion-icon>
-                </ion-button>
-              </ion-item>
-            </ion-col>
-            <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
-              <ion-item (click)="articleTen()" button>
-                <ion-thumbnail slot="start">
-                  <img src="/assets/WomanOnPorch.jpg" alt="woman meditating on porch">
-                </ion-thumbnail>
-                <ion-label text-wrap>
-                  <h2>Channel Your Goodness as a Spiritual Practice</h2>
-                  <h3>ThriveGlobal.com</h3>
-                  <p>June 3, 2019</p>
-                </ion-label>
-                <ion-button slot="end">
-                  <ion-icon slot="icon-only" name="book"></ion-icon>
-                </ion-button>
-              </ion-item>
-            </ion-col>
-            <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
-              <ion-item (click)="articleNine()" button>
-                <ion-thumbnail slot="start">
-                  <img src="/assets/UnderWaterView.jpg" alt="marek-okon-1398447-unsplash">
-                </ion-thumbnail>
-                <ion-label text-wrap>
-                  <h2>The Invitation to Practice Awareness of Our Oneness</h2>
-                  <h3>ThriveGlobal.com</h3>
-                  <p>April 10, 2019</p>
-                </ion-label>
-                <ion-button slot="end">
-                  <ion-icon slot="icon-only" name="book"></ion-icon>
-                </ion-button>
-              </ion-item>
-            </ion-col>
-            <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
-              <ion-item (click)="articleEight()" button>
-                <ion-thumbnail slot="start">
-                  <img src="/assets/whale-death.jpg">
-                </ion-thumbnail>
-                <ion-label text-wrap>
-                  <h2>Practicing Awareness of our One-ness</h2>
-                  <h3>HealingHeartCommunications.blogspot.com</h3>
-                  <p>April 2, 2019</p>
-                </ion-label>
-                <ion-button slot="end">
-                  <ion-icon slot="icon-only" name="book"></ion-icon>
-                </ion-button>
-              </ion-item>
-            </ion-col>
-            <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
-              <ion-item (click)="articleSeven()" button>
-                <ion-thumbnail slot="start">
-                  <img src="/assets/GBP.jpg">
-                </ion-thumbnail>
-                <ion-label text-wrap>
-                  <h2>Energy Hygiene Practice for Maintaining Your Vibrance</h2>
-                  <h3>ThriveGlobal.com</h3>
-                  <p>March 22, 2019</p>
-                </ion-label>
-                <ion-button slot="end">
-                  <ion-icon slot="icon-only" name="book"></ion-icon>
-                </ion-button>
-              </ion-item>
-            </ion-col>
-            <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
-            <ion-item (click)="articleSix()" button>
-              <ion-thumbnail slot="start">
-                <img src="/assets/GBP.jpg">
-              </ion-thumbnail>
-              <ion-label text-wrap>
-                <h2>The Goodness Breath Project</h2>
-                <h3>HealingHeartCommunications.blogspot.com</h3>
-                <p>March 11, 2019</p>
-              </ion-label>
-              <ion-button slot="end">
-                <ion-icon slot="icon-only" name="book"></ion-icon>
-              </ion-button>
-            </ion-item>
-            </ion-col>
-            <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
-              <ion-item (click)="articleFive()" button>
-                <ion-thumbnail slot="start">
-                  <img src="/assets/abundance.jpg">
-                </ion-thumbnail>
-                <ion-label text-wrap>
-                  <h2>Love Your Life: Actualize Dreams into Realities</h2>
-                  <h3>HealingHeartCommunications.blogspot.com</h3>
-                  <p>September 5, 2018</p>
-                </ion-label>
-                <ion-button slot="end">
-                  <ion-icon slot="icon-only" name="book"></ion-icon>
-                </ion-button>
-              </ion-item>
-            </ion-col>
-            <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
-              <ion-item (click)="articleFour()" button>
-                <ion-thumbnail slot="start">
-                  <img src="/assets/ManBombardedByNews.jpg">
-                </ion-thumbnail>
-                <ion-label text-wrap>
-                  <h2>Practicing "Centering" in These Times of Stress and Chaos</h2>
-                  <h3>HealingHeartCommunications.blogspot.com</h3>
-                  <p>August 19, 2018</p>
-                </ion-label>
-                <ion-button slot="end">
-                  <ion-icon slot="icon-only" name="book"></ion-icon>
-                </ion-button>
-              </ion-item>
-            </ion-col>
-            <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
-              <ion-item (click)="articleThree()" button>
-                <ion-thumbnail slot="start">
-                  <img src="/assets/WomanHidingEyes.jpg">
-                </ion-thumbnail>
-                <ion-label text-wrap>
-                  <h2>How to Fight Online Dating Fatigue</h2>
-                  <h3>Zoosk.com</h3>
-                  <p>June 18, 2018</p>
-                </ion-label>
-                <ion-button slot="end">
-                  <ion-icon slot="icon-only" name="book"></ion-icon>
-                </ion-button>
-              </ion-item>
-            </ion-col>
-            <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
-              <ion-item (click)="articleTwo()" button>
-                <ion-thumbnail slot="start">
-                  <img src="/assets/SmilingWoman.jpg">
-                </ion-thumbnail>
-                <ion-label text-wrap>
-                  <h2>Inner Steps to Take Before Approaching Effective Conflict</h2>
-                  <h3>ProfessorsHouse.com</h3>
-                  <p>May 11, 2018</p>
-                </ion-label>
-                <ion-button slot="end">
-                  <ion-icon slot="icon-only" name="book"></ion-icon>
-                </ion-button>
-              </ion-item>
-            </ion-col>
-            <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
-              <ion-item (click)="articleOne()" button>
-                <ion-thumbnail slot="start">
-                  <img src="/assets/WomanOnPorch.jpg">
-                </ion-thumbnail>
-                <ion-label text-wrap>
-                  <h2>What to Keep in Mind and Close to Your Heart as You Grieve</h2>
-                  <h3>Wellness.com</h3>
-                  <p>May 2, 2018</p>
-                </ion-label>
-                <ion-button slot="end">
-                  <ion-icon slot="icon-only" name="book"></ion-icon>
-                </ion-button>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-        </div>
+        <ion-row>
+          <ion-col>
+            <div class="home-section">
+              <h2>Books and Publications by Deva Joy Gouss</h2>
+              <ion-row>
+                <ion-col text-center>
+                  <a href="https://www.amazon.com/gp/product/1530067499/ref=dbs_a_def_rwt_bibl_vppi_i0"
+                     target="_blank">
+                    <img src="/assets/re-arranged-cover-website.png">
+                    <p>Buy Now</p></a>
+                </ion-col>
+                <ion-col text-center>
+                  <a href="https://www.amazon.com/gp/product/1545164096/ref=dbs_a_def_rwt_hsch_vapi_taft_p1_i1"
+                     target="_blank">
+                    <img src="/assets/toolbox-cover-website.png">
+                    <p>Buy Now</p></a>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="home-section">
+              <h2>Videos by Deva Joy Gouss</h2>
+              <ion-row>
+                <ion-col>
+                  <p><a href="https://vimeo.com/128218524" target="_blank">Living with
+                    Arthur: My Life with<br>Chronic Illness</a></p>
+                  <div class="embed-responsive embed-responsive-4by3" >
+                    <iframe src="https://player.vimeo.com/video/128218524" class="embed-responsive-image" allowfullscreen></iframe>
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <p class="text-center"><a href="https://vimeo.com/31941044" target="_blank">Path of
+                    Psychotherapy with<br>Deva Joy</a></p>
+                  <div class="embed-responsive embed-responsive-4by3">
+                    <iframe src="https://player.vimeo.com/video/31941044?autoplay=0" class="embed-responsive-image" allowfullscreen></iframe>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="home-section">
+              <h2>Articles by Deva Joy Gouss</h2>
+              <ion-row>
+                <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
+                  <ion-item (click)="articleFifteen()" button>
+                    <ion-thumbnail slot="start">
+                      <img src="/assets/lincoln-memorial-armed.jpg"
+                           alt="National Guard troops at Lincoln Memorial during Black Lives Matter protest, June 2, 2020">
+                    </ion-thumbnail>
+                    <ion-label text-wrap>
+                      <h2>2021!!!</h2>
+                      <h3>HealingHeartCommunications.blogspot.com</h3>
+                      <p>January 8, 2021</p>
+                    </ion-label>
+                    <ion-button slot="end">
+                      <ion-icon slot="icon-only" name="book"></ion-icon>
+                    </ion-button>
+                  </ion-item>
+                </ion-col>
+                <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
+                  <ion-item (click)="articleFourteen()" button>
+                    <ion-thumbnail slot="start">
+                      <img src="/assets/what-would-you-do.jpg"
+                           alt="purple and blue light shining from thin crack">
+                    </ion-thumbnail>
+                    <ion-label text-wrap>
+                      <h2>"What would you do if...?"</h2>
+                      <h3>HealingHeartCommunications.blogspot.com</h3>
+                      <p>August 23, 2020</p>
+                    </ion-label>
+                    <ion-button slot="end">
+                      <ion-icon slot="icon-only" name="book"></ion-icon>
+                    </ion-button>
+                  </ion-item>
+                </ion-col>
+                <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
+                  <ion-item (click)="articleThirteen()" button>
+                    <ion-thumbnail slot="start">
+                      <img src="/assets/man-looking-horizon.jpg"
+                           alt="tim-marshall-173957-unsplash">
+                    </ion-thumbnail>
+                    <ion-label text-wrap>
+                      <h2>2020 Vision</h2>
+                      <h3>Thrive Global</h3>
+                      <p>January 6, 2020</p>
+                    </ion-label>
+                    <ion-button slot="end">
+                      <ion-icon slot="icon-only" name="book"></ion-icon>
+                    </ion-button>
+                  </ion-item>
+                </ion-col>
+                <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
+                  <ion-item (click)="articleTwelve()" button>
+                    <ion-thumbnail slot="start">
+                      <img src="/assets/podcast-friends-with-illness.jpg"
+                           alt="Deva Joy with her dog">
+                    </ion-thumbnail>
+                    <ion-label text-wrap>
+                      <h2>Being Friends With Your Illness</h2>
+                      <h3>Apple Podcast</h3>
+                      <p>December 22, 2019</p>
+                    </ion-label>
+                    <ion-button slot="end">
+                      <ion-icon slot="icon-only" name="mic"></ion-icon>
+                    </ion-button>
+                  </ion-item>
+                </ion-col>
+                <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
+                  <ion-item (click)="articleEleven()" button>
+                    <ion-thumbnail slot="start">
+                      <img src="/assets/abundance.jpg"
+                           alt="abundance with pink/purple sunset over ocean">
+                    </ion-thumbnail>
+                    <ion-label text-wrap>
+                      <h2>Love Your Life As It Is</h2>
+                      <h3>ThriveGlobal.com</h3>
+                      <p>August 26, 2019</p>
+                    </ion-label>
+                    <ion-button slot="end">
+                      <ion-icon slot="icon-only" name="book"></ion-icon>
+                    </ion-button>
+                  </ion-item>
+                </ion-col>
+                <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
+                  <ion-item (click)="articleTen()" button>
+                    <ion-thumbnail slot="start">
+                      <img src="/assets/WomanOnPorch.jpg" alt="woman meditating on porch">
+                    </ion-thumbnail>
+                    <ion-label text-wrap>
+                      <h2>Channel Your Goodness as a Spiritual Practice</h2>
+                      <h3>ThriveGlobal.com</h3>
+                      <p>June 3, 2019</p>
+                    </ion-label>
+                    <ion-button slot="end">
+                      <ion-icon slot="icon-only" name="book"></ion-icon>
+                    </ion-button>
+                  </ion-item>
+                </ion-col>
+                <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
+                  <ion-item (click)="articleNine()" button>
+                    <ion-thumbnail slot="start">
+                      <img src="/assets/UnderWaterView.jpg" alt="marek-okon-1398447-unsplash">
+                    </ion-thumbnail>
+                    <ion-label text-wrap>
+                      <h2>The Invitation to Practice Awareness of Our Oneness</h2>
+                      <h3>ThriveGlobal.com</h3>
+                      <p>April 10, 2019</p>
+                    </ion-label>
+                    <ion-button slot="end">
+                      <ion-icon slot="icon-only" name="book"></ion-icon>
+                    </ion-button>
+                  </ion-item>
+                </ion-col>
+                <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
+                  <ion-item (click)="articleEight()" button>
+                    <ion-thumbnail slot="start">
+                      <img src="/assets/whale-death.jpg">
+                    </ion-thumbnail>
+                    <ion-label text-wrap>
+                      <h2>Practicing Awareness of our One-ness</h2>
+                      <h3>HealingHeartCommunications.blogspot.com</h3>
+                      <p>April 2, 2019</p>
+                    </ion-label>
+                    <ion-button slot="end">
+                      <ion-icon slot="icon-only" name="book"></ion-icon>
+                    </ion-button>
+                  </ion-item>
+                </ion-col>
+                <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
+                  <ion-item (click)="articleSeven()" button>
+                    <ion-thumbnail slot="start">
+                      <img src="/assets/GBP.jpg">
+                    </ion-thumbnail>
+                    <ion-label text-wrap>
+                      <h2>Energy Hygiene Practice for Maintaining Your Vibrance</h2>
+                      <h3>ThriveGlobal.com</h3>
+                      <p>March 22, 2019</p>
+                    </ion-label>
+                    <ion-button slot="end">
+                      <ion-icon slot="icon-only" name="book"></ion-icon>
+                    </ion-button>
+                  </ion-item>
+                </ion-col>
+                <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
+                <ion-item (click)="articleSix()" button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/GBP.jpg">
+                  </ion-thumbnail>
+                  <ion-label text-wrap>
+                    <h2>The Goodness Breath Project</h2>
+                    <h3>HealingHeartCommunications.blogspot.com</h3>
+                    <p>March 11, 2019</p>
+                  </ion-label>
+                  <ion-button slot="end">
+                    <ion-icon slot="icon-only" name="book"></ion-icon>
+                  </ion-button>
+                </ion-item>
+                </ion-col>
+                <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
+                  <ion-item (click)="articleFive()" button>
+                    <ion-thumbnail slot="start">
+                      <img src="/assets/abundance.jpg">
+                    </ion-thumbnail>
+                    <ion-label text-wrap>
+                      <h2>Love Your Life: Actualize Dreams into Realities</h2>
+                      <h3>HealingHeartCommunications.blogspot.com</h3>
+                      <p>September 5, 2018</p>
+                    </ion-label>
+                    <ion-button slot="end">
+                      <ion-icon slot="icon-only" name="book"></ion-icon>
+                    </ion-button>
+                  </ion-item>
+                </ion-col>
+                <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
+                  <ion-item (click)="articleFour()" button>
+                    <ion-thumbnail slot="start">
+                      <img src="/assets/ManBombardedByNews.jpg">
+                    </ion-thumbnail>
+                    <ion-label text-wrap>
+                      <h2>Practicing "Centering" in These Times of Stress and Chaos</h2>
+                      <h3>HealingHeartCommunications.blogspot.com</h3>
+                      <p>August 19, 2018</p>
+                    </ion-label>
+                    <ion-button slot="end">
+                      <ion-icon slot="icon-only" name="book"></ion-icon>
+                    </ion-button>
+                  </ion-item>
+                </ion-col>
+                <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
+                  <ion-item (click)="articleThree()" button>
+                    <ion-thumbnail slot="start">
+                      <img src="/assets/WomanHidingEyes.jpg">
+                    </ion-thumbnail>
+                    <ion-label text-wrap>
+                      <h2>How to Fight Online Dating Fatigue</h2>
+                      <h3>Zoosk.com</h3>
+                      <p>June 18, 2018</p>
+                    </ion-label>
+                    <ion-button slot="end">
+                      <ion-icon slot="icon-only" name="book"></ion-icon>
+                    </ion-button>
+                  </ion-item>
+                </ion-col>
+                <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
+                  <ion-item (click)="articleTwo()" button>
+                    <ion-thumbnail slot="start">
+                      <img src="/assets/SmilingWoman.jpg">
+                    </ion-thumbnail>
+                    <ion-label text-wrap>
+                      <h2>Inner Steps to Take Before Approaching Effective Conflict</h2>
+                      <h3>ProfessorsHouse.com</h3>
+                      <p>May 11, 2018</p>
+                    </ion-label>
+                    <ion-button slot="end">
+                      <ion-icon slot="icon-only" name="book"></ion-icon>
+                    </ion-button>
+                  </ion-item>
+                </ion-col>
+                <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
+                  <ion-item (click)="articleOne()" button>
+                    <ion-thumbnail slot="start">
+                      <img src="/assets/WomanOnPorch.jpg">
+                    </ion-thumbnail>
+                    <ion-label text-wrap>
+                      <h2>What to Keep in Mind and Close to Your Heart as You Grieve</h2>
+                      <h3>Wellness.com</h3>
+                      <p>May 2, 2018</p>
+                    </ion-label>
+                    <ion-button slot="end">
+                      <ion-icon slot="icon-only" name="book"></ion-icon>
+                    </ion-button>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-col>
+        </ion-row>
       </ion-col>
     </ion-row>
   </ion-grid>

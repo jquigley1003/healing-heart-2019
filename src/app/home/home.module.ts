@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 
 import { SharedModalsModule } from '../modals/shared-modals/shared.modals.module';
+import { MySnowfallModule } from '../shared/components/my-snowfall/my-snowfall.module';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { SharedModalsModule } from '../modals/shared-modals/shared.modals.module
         component: HomePage
       }
     ]),
-    SharedModalsModule
+    SharedModalsModule,
+    MySnowfallModule
   ],
   declarations: [
     HomePage

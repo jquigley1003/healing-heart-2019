@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 import { ContactPage } from './contact.page';
 
 import { SharedModalsModule } from '../modals/shared-modals/shared.modals.module';
+import { MySnowfallModule } from '../shared/components/my-snowfall/my-snowfall.module';
 
 const routes: Routes = [
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    SharedModalsModule
+    SharedModalsModule,
+    MySnowfallModule
   ],
   declarations: [
     ContactPage
