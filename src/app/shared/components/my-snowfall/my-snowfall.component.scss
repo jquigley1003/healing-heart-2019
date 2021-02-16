@@ -7,15 +7,12 @@
 .snow {
   $total: 60;
   position: absolute;
-  width: 40px;
-  height: 40px;
-  font-size: 40px;
+  width: 50px;
+  height: 50px;
   pointer-events: none;
-  color: #ffffff;
-  text-shadow: 0 0 15px white;
   z-index: 10;
-  // background-image: url('../../../../assets/bird-left.png');
-  // background-repeat:no-repeat;
+  background-image: url('../../../../assets/heart-white.png');
+  filter: drop-shadow(0 0 10px white);
 
   @for $i from 1 through $total {
     $random-x: random(1000000) * 0.0001vw;
