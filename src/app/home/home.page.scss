@@ -134,3 +134,19 @@ ion-card ion-item {
   left: 0;
   overflow: hidden;
 }
+
+.display_archive {
+  font-family: arial,verdana;
+  font-size: 12px;
+  ion-col {
+    background: var(--ion-color-primary);
+  }
+  p {
+    margin-right: 5px;
+  }
+}
+
+.campaign {
+  line-height: 125%; 
+  margin: 5px;
+}

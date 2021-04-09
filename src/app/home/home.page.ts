@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { trigger, state, style, group, transition, query, animate, keyframes } from '@angular/animations';
 import { growImgTrigger, slideTitleRightTrigger } from '../shared/components/animations/animations.component';
@@ -6,6 +6,9 @@ import { growImgTrigger, slideTitleRightTrigger } from '../shared/components/ani
 import { ModalController } from '@ionic/angular';
 
 import { NewsletterModalComponent } from '../modals/newsletter-modal/newsletter-modal.component';
+import { MailchimpService } from '../shared/services/mailchimp.service';
+import { Observable } from 'rxjs';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -65,12 +68,20 @@ import { NewsletterModalComponent } from '../modals/newsletter-modal/newsletter-
     growImgTrigger
   ]
 })
-export class HomePage {
+export class HomePage implements OnInit {
   isDone = true;
   bubbleIsDone = false;
+  campaigns$: Observable<any>;
+  allCampaigns = [];
+  objectKeys = Object.keys;
 
   constructor(private modalCtrl: ModalController,
-              private router: Router) {}
+              private router: Router,
+              private mailchimpService: MailchimpService) {}
+
+  ngOnInit() {
+    // this.getCampaigns()
+  }
 
 
   onAnimationEvent (event: AnimationEvent) {
@@ -163,5 +174,15 @@ export class HomePage {
       componentProps: {}
     });
     return await modal.present();
+  }
+
+  getCampaigns() {
+    this.mailchimpService.getMailChimpNewsLetters()
+      .pipe(take(1))
+        .subscribe(res => {
+          this.allCampaigns = res.campaigns;
+          this.allCampaigns.sort((a, b) => (a.send_time > b.send_time) ? -1 : 1)
+          console.log('home page results: ', this.allCampaigns);
+        });
   }
 }

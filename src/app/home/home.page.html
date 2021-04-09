@@ -43,8 +43,8 @@
         <ion-card class="welcome-card">
           <img class="card-img" src="/assets/new-forest-path-2019.jpg">
           <ion-row class="rotating-logo" justify-content-center>
-            <ion-col size="10">
-              <img @slideTitleRight src="/assets/hhcc-logo-tree-purple.png">
+            <ion-col>
+              <img @slideTitleRight src="/assets/hhcc-logo-purple.png">
             </ion-col>
           </ion-row>
           <ion-card-title @growImg>
@@ -93,14 +93,21 @@
                   <p><a href="https://vimeo.com/128218524" target="_blank">Living with
                     Arthur: My Life with<br>Chronic Illness</a></p>
                   <div class="embed-responsive embed-responsive-4by3" >
-                    <iframe src="https://player.vimeo.com/video/128218524" class="embed-responsive-image" allowfullscreen></iframe>
+                    <iframe src="https://player.vimeo.com/video/128218524" class="embed-responsive-image" frameborder="0" allowfullscreen></iframe>
                   </div>
                 </ion-col>
                 <ion-col>
                   <p class="text-center"><a href="https://vimeo.com/31941044" target="_blank">Path of
                     Psychotherapy with<br>Deva Joy</a></p>
                   <div class="embed-responsive embed-responsive-4by3">
-                    <iframe src="https://player.vimeo.com/video/31941044?autoplay=0" class="embed-responsive-image" allowfullscreen></iframe>
+                    <iframe src="https://player.vimeo.com/video/31941044?autoplay=0" class="embed-responsive-image" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <p class="text-center">Taking Care of the Heart in Time of Grief &amp; Chaos</p>
+                  <div class="embed-responsive embed-responsive-4by3">
+                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FBurrellCenter%2Fvideos%2F1151144735330942%2F&show_text=false&width=560" 
+                     class="embed-responsive-image" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
                   </div>
                 </ion-col>
               </ion-row>
@@ -341,6 +348,46 @@
                       <ion-icon slot="icon-only" name="book"></ion-icon>
                     </ion-button>
                   </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <div class="display_archive campaign">
+                    <h2>Deva Joy's Newsletters</h2>
+                    <ion-button (click)="getCampaigns()">Show Past Newletters</ion-button>
+                    <ion-row>
+                      <ion-col size="12" *ngFor="let data of allCampaigns">
+                        <a href="{{ data.long_archive_url }}" target="_blank">
+                        <ion-item>
+                        <ion-avatar slot="start">
+                          <img src="./../../assets/bird-right.png">
+                        </ion-avatar>
+                        <ion-text>
+                          <p>{{ data.settings.title }}</p>
+                        </ion-text>
+                        <ion-text color="secondary">
+                          <p>{{ data.send_time |  date:'fullDate' }}</p>
+                        </ion-text>
+                        </ion-item>
+                        </a>
+                      </ion-col>
+                    </ion-row>
+                    
+                    <!-- <ion-list>
+                      <ion-item *ngFor="let data of allCampaigns">
+                        <ion-avatar>
+                          <img src="./../../assets/bird-right.png">
+                        </ion-avatar>
+                        <a href="{{ data.long_archive_url }}" target="_blank">
+                        <ion-label>
+                          <h2 color="primary">{{ data.settings.title }}</h2>
+                          <p color="secondary">{{ data.send_time |  date:'fullDate' }}</p>  
+                        </ion-label>
+                        </a>
+                      </ion-item>
+                    </ion-list> -->
+
+                  </div>
                 </ion-col>
               </ion-row>
             </div>
