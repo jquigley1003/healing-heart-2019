@@ -150,3 +150,13 @@ ion-card ion-item {
   line-height: 125%; 
   margin: 5px;
 }
+
+.center-img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-img :hover {
+  cursor: pointer;
+}

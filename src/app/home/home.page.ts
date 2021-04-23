@@ -108,6 +108,10 @@ export class HomePage implements OnInit {
     this.router.navigate(['/publications-videos']);
   }
 
+  articleSixteen() {
+    window.open('https://us5.campaign-archive.com/?u=43ff155694febb47b6a7d8e73&id=930715618c', '_blank');
+  }
+
   articleFifteen() {
     window.open('http://healingheartcommunications.blogspot.com/2021/01/fifty-fourth-invitation.html', '_blank');
   }

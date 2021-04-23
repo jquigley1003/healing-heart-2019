@@ -120,6 +120,22 @@
               <h2>Articles by Deva Joy Gouss</h2>
               <ion-row>
                 <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
+                  <ion-item (click)="articleSixteen()" button>
+                    <ion-thumbnail slot="start">
+                      <img src="/assets/flowers55th.jpeg"
+                           alt="pink spring flower">
+                    </ion-thumbnail>
+                    <ion-label text-wrap>
+                      <h2>Landing Safely, Spring Forward, Courageous Kindness, Love Triumphs</h2>
+                      <h3>HealingHeartCommunications Newsletter</h3>
+                      <p>March 20, 2021</p>
+                    </ion-label>
+                    <ion-button slot="end">
+                      <ion-icon slot="icon-only" name="book"></ion-icon>
+                    </ion-button>
+                  </ion-item>
+                </ion-col>
+                <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
                   <ion-item (click)="articleFifteen()" button>
                     <ion-thumbnail slot="start">
                       <img src="/assets/lincoln-memorial-armed.jpg"
@@ -350,7 +366,7 @@
                   </ion-item>
                 </ion-col>
               </ion-row>
-              <ion-row>
+              <!-- <ion-row>
                 <ion-col>
                   <div class="display_archive campaign">
                     <h2>Deva Joy's Newsletters</h2>
@@ -372,22 +388,69 @@
                         </a>
                       </ion-col>
                     </ion-row>
-                    
-                    <!-- <ion-list>
-                      <ion-item *ngFor="let data of allCampaigns">
-                        <ion-avatar>
-                          <img src="./../../assets/bird-right.png">
-                        </ion-avatar>
-                        <a href="{{ data.long_archive_url }}" target="_blank">
-                        <ion-label>
-                          <h2 color="primary">{{ data.settings.title }}</h2>
-                          <p color="secondary">{{ data.send_time |  date:'fullDate' }}</p>  
-                        </ion-label>
-                        </a>
-                      </ion-item>
-                    </ion-list> -->
-
                   </div>
+                </ion-col>
+              </ion-row> -->
+            </div>
+          </ion-col>
+        </ion-row>
+        <!-- BEGIN PSYCHOTHERAPY ROW -->
+        <ion-row>
+          <ion-col>
+            <div class="home-section">
+              <h2>Psychotherapy Quick Links</h2>
+              <ion-row>
+                <ion-col class="ion-text-center" size="12" size-sm
+                routerLink="/psychotherapy/individual">
+                  <ion-avatar class="center-img">
+                    <img src="/assets/red-tulip-among-yellow.jpg">
+                  </ion-avatar>
+                  <p>Individual</p>
+                </ion-col>
+                <ion-col class="ion-text-center" size="12" size-sm
+                routerLink="/psychotherapy/couples">
+                  <ion-avatar class="center-img">
+                    <img src="/assets/two-red-scarlet-macaws.jpg">
+                  </ion-avatar>
+                  <p>Couples</p>
+                </ion-col>
+                <ion-col class="ion-text-center" size="12" size-sm
+                routerLink="/psychotherapy/healing-exercises">
+                  <ion-avatar class="center-img">
+                    <img src="/assets/healing-exercises.jpg">
+                  </ion-avatar>
+                  <p>Healing Exercises</p>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-col>
+        </ion-row>
+        <!-- BEGIN WORKSHOPS AND MORE -->
+        <ion-row>
+          <ion-col>
+            <div class="home-section">
+              <h2>Workshops &amp; More</h2>
+              <ion-row>
+                <ion-col class="ion-text-center" size="12" size-sm
+                routerLink="/workshops">
+                  <ion-avatar class="center-img">
+                    <img src="/assets/waiting-room-3.jpg">
+                  </ion-avatar>
+                  <p>Workshops</p>
+                </ion-col>
+                <ion-col class="ion-text-center" size="12" size-sm
+                routerLink="/about-me">
+                  <ion-avatar class="center-img">
+                    <img src="/assets/devajoy-3.jpg">
+                  </ion-avatar>
+                  <p>About Deva Joy</p>
+                </ion-col>
+                <ion-col class="ion-text-center" size="12" size-sm
+                routerLink="/blog">
+                  <ion-avatar class="center-img">
+                    <img src="/assets/blogger-logo.png">
+                  </ion-avatar>
+                  <p>Blog</p>
                 </ion-col>
               </ion-row>
             </div>
