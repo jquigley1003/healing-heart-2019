@@ -73,6 +73,7 @@ export class HomePage implements OnInit {
   bubbleIsDone = false;
   campaigns$: Observable<any>;
   allCampaigns = [];
+  showNewsletters = false;
   objectKeys = Object.keys;
 
   constructor(private modalCtrl: ModalController,
@@ -80,7 +81,7 @@ export class HomePage implements OnInit {
               private mailchimpService: MailchimpService) {}
 
   ngOnInit() {
-    // this.getCampaigns()
+    this.getCampaigns()
   }
 
 
@@ -188,5 +189,9 @@ export class HomePage implements OnInit {
           this.allCampaigns.sort((a, b) => (a.send_time > b.send_time) ? -1 : 1)
           console.log('home page results: ', this.allCampaigns);
         });
+  }
+
+  toggleNewsletters() {
+    this.showNewsletters = !this.showNewsletters;
   }
 }

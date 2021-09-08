@@ -19,15 +19,5 @@ export class MailchimpService {
     const newsletters = callable({});
 
     return newsletters;
-      
-    
-    // console.log('mailchimp service response: ',this.newsletters$)
-
-    // newsletters.then(resp => {
-    //   console.log('mailchimp service response: ',resp);
-    //   return resp;
-    // });
-    
   }
-
 }

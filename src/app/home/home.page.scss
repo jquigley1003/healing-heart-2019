@@ -135,20 +135,23 @@ ion-card ion-item {
   overflow: hidden;
 }
 
-.display_archive {
+.newsletter-archive {
   font-family: arial,verdana;
   font-size: 12px;
-  ion-col {
-    background: var(--ion-color-primary);
-  }
+  line-height: 125%; 
+  margin: 5px;
   p {
     margin-right: 5px;
   }
 }
 
-.campaign {
-  line-height: 125%; 
-  margin: 5px;
+.newsletter-archive .date-format {
+  color: var(--ion-color-medium);
+  font-size: 15px;
+}
+
+.newsletter-archive .border-bottom {
+  border-bottom: solid 1px rgba(var(--ion-color-dark-rgb), 0.3);
 }
 
 .center-img {
