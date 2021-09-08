@@ -109,18 +109,6 @@ export class HomePage implements OnInit {
     this.router.navigate(['/publications-videos']);
   }
 
-  articleSixteen() {
-    window.open('https://us5.campaign-archive.com/?u=43ff155694febb47b6a7d8e73&id=930715618c', '_blank');
-  }
-
-  articleFifteen() {
-    window.open('http://healingheartcommunications.blogspot.com/2021/01/fifty-fourth-invitation.html', '_blank');
-  }
-
-  articleFourteen() {
-    window.open('http://healingheartcommunications.blogspot.com/2020/08/healing-heart-communications-inc.html', '_blank');
-  }
-
   articleThirteen() {
     window.open('https://thriveglobal.com/stories/2020-vision/', '_blank');
   }
@@ -141,24 +129,8 @@ export class HomePage implements OnInit {
     window.open('https://thriveglobal.com/stories/the-invitation-to-practice-awareness-of-our-oneness/', '_blank');
   }
 
-  articleEight() {
-    window.open('http://healingheartcommunications.blogspot.com/2019/04/forty-sixth-invitation.html', '_blank');
-  }
-
   articleSeven() {
     window.open('https://thriveglobal.com/stories/energy-hygiene-practice-for-maintaining-your-vibrance/', '_blank');
-  }
-
-  articleSix() {
-    window.open('http://healingheartcommunications.blogspot.com/2019/03/forty-fifth-invitation_11.html', '_blank');
-  }
-
-  articleFive() {
-    window.open('http://healingheartcommunications.blogspot.com/2018/09/forty-fourth-invitation.html', '_blank');
-  }
-
-  articleFour() {
-    window.open('http://healingheartcommunications.blogspot.com/2018/08/forty-third-invitation.html', '_blank');
   }
 
   articleThree() {
