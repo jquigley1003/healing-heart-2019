@@ -109,6 +109,10 @@ export class HomePage implements OnInit {
     this.router.navigate(['/publications-videos']);
   }
 
+  articleFourteen() {
+    window.open('http://healingheartcommunications.blogspot.com/2021/09/fifty-sixth-invitation.html', '_blank');
+  }
+
   articleThirteen() {
     window.open('https://thriveglobal.com/stories/2020-vision/', '_blank');
   }
