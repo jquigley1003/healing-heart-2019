@@ -119,6 +119,38 @@
             <div class="home-section">
               <ion-row>
                 <ion-col size="12">
+                  <h2>Deva Joy's Blogs</h2>
+                </ion-col>
+                <ion-col>
+                  <div class="newsletter-archive">
+                    <ion-button (click)="getBloggerBlogs()">
+                      <!-- <span *ngIf="!showNewsletters">Show All Newsletters</span>
+                      <span *ngIf="showNewsletters">Hide All Newsletters</span> -->
+                    </ion-button>
+                    <!-- <ion-row *ngIf="showNewsletters">
+                      <ion-col size="12" *ngFor="let data of allCampaigns">
+                        <a href="{{ data.long_archive_url }}" target="_blank">
+                          <ion-row class="border-bottom">
+                            <ion-col size-xs="12" size-sm="6">
+                              <ion-item lines="none" detail="false">
+                                <ion-button slot="start">
+                                  <ion-icon slot="icon-only" name="book"></ion-icon>
+                                </ion-button>
+                                <p>{{ data.settings.title }}</p>
+                                </ion-item>
+                            </ion-col>
+                            <ion-col size-xs="12" size-sm="6" class="date-format">
+                              <p>{{ data.send_time |  date:'fullDate' }}</p>
+                            </ion-col>
+                          </ion-row>
+                        </a>
+                      </ion-col>
+                    </ion-row> -->
+                  </div>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12">
                   <h2>Deva Joy's Newsletters</h2>
                 </ion-col>
                 <ion-col>

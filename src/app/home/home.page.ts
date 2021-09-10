@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { trigger, state, style, group, transition, query, animate, keyframes } from '@angular/animations';
+import { HttpClient } from '@angular/common/http';
+
 import { growImgTrigger, slideTitleRightTrigger } from '../shared/components/animations/animations.component';
 
 import { ModalController } from '@ionic/angular';
@@ -74,11 +76,14 @@ export class HomePage implements OnInit {
   campaigns$: Observable<any>;
   allCampaigns = [];
   showNewsletters = false;
+  blogs$: Observable<any>;
+  bloggerBlogs = [];
   objectKeys = Object.keys;
 
   constructor(private modalCtrl: ModalController,
               private router: Router,
-              private mailchimpService: MailchimpService) {}
+              private mailchimpService: MailchimpService,
+              private http: HttpClient) {}
 
   ngOnInit() {
     this.getCampaigns()
@@ -164,6 +169,16 @@ export class HomePage implements OnInit {
           this.allCampaigns = res.campaigns;
           this.allCampaigns.sort((a, b) => (a.send_time > b.send_time) ? -1 : 1)
           console.log('home page results: ', this.allCampaigns);
+        });
+  }
+
+  getBloggerBlogs() {
+    this.blogs$ = this.http.get('https://www.googleapis.com/blogger/v3/users/11063089649650567098/blogs?key= AIzaSyAxVM80_F-zT3d_Aaz0iRGhBBPdwOxnKHM');
+    this.blogs$
+    .pipe(take(1))
+        .subscribe(res => {
+          this.bloggerBlogs = res;
+          console.log('Blogger results: ', this.bloggerBlogs);
         });
   }
 
