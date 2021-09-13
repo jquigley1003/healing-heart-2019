@@ -13,6 +13,9 @@ export const environment = {
     storageBucket: env.firebase.storageBucket,
     messagingSenderId: env.firebase.messagingSenderId,
     appId: env.firebase.appId
+  },
+  blogger: {
+    apiKey: env.blogger.apiKey
   }
 };
 

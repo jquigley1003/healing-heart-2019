@@ -11,6 +11,7 @@ import { NewsletterModalComponent } from '../modals/newsletter-modal/newsletter-
 import { MailchimpService } from '../shared/services/mailchimp.service';
 import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -172,15 +173,16 @@ export class HomePage implements OnInit {
         });
   }
 
-  getBloggerBlogs() {
-    this.blogs$ = this.http.get('https://www.googleapis.com/blogger/v3/users/11063089649650567098/blogs?key=YOURAPIKEY');
-    this.blogs$
-    .pipe(take(1))
-        .subscribe(res => {
-          this.bloggerBlogs = res;
-          console.log('Blogger results: ', this.bloggerBlogs);
-        });
-  }
+  // getBloggerBlogs() {
+  //   const blogApiKey = environment.blogger.apiKey;
+  //   this.blogs$ = this.http.get('https://www.googleapis.com/blogger/v3/users/11063089649650567098/blogs?key='+blogApiKey);
+  //   this.blogs$
+  //   .pipe(take(1))
+  //       .subscribe(res => {
+  //         this.bloggerBlogs = res;
+  //         console.log('Blogger results: ', this.bloggerBlogs);
+  //       });
+  // }
 
   toggleNewsletters() {
     this.showNewsletters = !this.showNewsletters;
