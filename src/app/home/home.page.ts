@@ -173,7 +173,7 @@ export class HomePage implements OnInit {
   }
 
   getBloggerBlogs() {
-    this.blogs$ = this.http.get('https://www.googleapis.com/blogger/v3/users/11063089649650567098/blogs?key= AIzaSyAxVM80_F-zT3d_Aaz0iRGhBBPdwOxnKHM');
+    this.blogs$ = this.http.get('https://www.googleapis.com/blogger/v3/users/11063089649650567098/blogs?key=YOURAPIKEY');
     this.blogs$
     .pipe(take(1))
         .subscribe(res => {
