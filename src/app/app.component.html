@@ -2,11 +2,11 @@
   <ion-menu contentId="main-content">
     <ion-header>
       <ion-toolbar color="tertiary">
-        <ion-title>Menu</ion-title>
+        <ion-title (click)="toggleMenu('mainMenu')">Menu</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content color="light">
-      <ion-list>
+      <ion-list *ngIf="showMainMenu">
         <ion-menu-toggle auto-hide="false">
           <ion-item *ngFor="let p of appPages" color="light" [routerDirection]="'root'"
                     [routerLink]="[p.url]">
@@ -17,7 +17,36 @@
           </ion-item>
         </ion-menu-toggle>
       </ion-list>
+      <div *ngIf="true">
+        <ion-toolbar color="tertiary">
+          <ion-title (click)="toggleMenu('workshop1')">Workshop One</ion-title>
+        </ion-toolbar>
+        <ion-list *ngIf="showWorkshop1">
+          <ion-list-header>Workshop 1</ion-list-header>
+          <ion-item>
+            <ion-label>One</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Two</ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+      <div *ngIf="false">
+        <ion-toolbar color="tertiary">
+          <ion-title (click)="toggleMenu('workshop2')">Workshop Two</ion-title>
+        </ion-toolbar>
+        <ion-list *ngIf="showWorkshop2">
+          <ion-list-header>Workshop 2</ion-list-header>
+          <ion-item>
+            <ion-label>Uno</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Dos</ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
     </ion-content>
   </ion-menu>
   <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>
+  
