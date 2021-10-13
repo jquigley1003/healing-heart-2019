@@ -1,5 +1,7 @@
 {
   "name": "healingHeart2019",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

@@ -29,7 +29,7 @@
 }
 
 ion-toolbar {
-  --background: transparent;
+  --background: var(--ion-color-tertiary);
   --min-height: 1em;
 }
 
