@@ -1,13 +1,19 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
-
+import SwiperCore, { SwiperOptions, EffectCube } from 'swiper';
+SwiperCore.use([EffectCube]);
 @Component({
   selector: 'app-module01',
   templateUrl: './module01.page.html',
   styleUrls: ['./module01.page.scss'],
 })
 export class Module01Page implements OnInit, AfterViewInit {
+  config: SwiperOptions = {
+    pagination: true,
+    effect: 'cube',
+  }
+
   completedModule: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
