@@ -31,7 +31,7 @@ export class Module01Page implements OnInit, AfterViewInit {
     const result1 = await YoutubePlayerWeb.initialize(options1);
     const options2 = {playerId: 'youtube-player2', playerSize: {width: 640, height: 360}, videoId: 'aTq2cMQpPeY'};
     const result2 = await YoutubePlayerWeb.initialize(options2);
-    const options3 = {playerId: 'youtube-player3', playerSize: {width: 640, height: 360}, videoId: 'rptW7zOPX2E'};
+    const options3 = {playerId: 'youtube-player3', playerSize: {width: 640, height: 360}, videoId: 'HpvK9Af4aiA'};
     const result3 = await YoutubePlayerWeb.initialize(options3);
     const options4 = {playerId: 'youtube-player4', playerSize: {width: 640, height: 360}, videoId: 'P3fIZuW9P_M'};
     const result4 = await YoutubePlayerWeb.initialize(options4);
