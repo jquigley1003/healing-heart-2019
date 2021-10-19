@@ -2,7 +2,7 @@
   <ion-menu contentId="main-content" type="push">
     <ion-header>
       <ion-toolbar color="tertiary">
-        <ion-title (click)="toggleMenu('mainMenu')">Menu</ion-title>
+        <ion-title (click)="toggleMenu('mainMenu')">Main Menu</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content color="light">
@@ -24,7 +24,7 @@
         </ion-toolbar>
         <ion-list *ngIf="showWorkshop1">
           <ion-menu-toggle auto-hide="false" >
-            <ion-list-header><h2>Marrying Yourself</h2></ion-list-header>
+            <ion-list-header><h2>Marrying Yourself<br>(Launching 2022!)</h2></ion-list-header>
             <ion-item button routerDirection="forward" 
             [routerLink]="['/workshops/marrying-yourself']">
               <ion-label class="ion-text-wrap">
@@ -33,8 +33,7 @@
             </ion-item>
             <ion-item button routerDirection="forward" 
             [routerLink]="['/workshops/marrying-yourself/module01']">
-              <ion-label class="ion-text-wrap">Module 01 - Welcoming and Embarking, 
-                Introduction to Deva Joy and the Journey
+              <ion-label class="ion-text-wrap">Module 01 - The Welcoming, The Beginning
               </ion-label>
             </ion-item>
             <ion-item button routerDirection="forward" 
@@ -50,12 +49,12 @@
           <ion-title (click)="toggleMenu('workshop2')">Workshop Two</ion-title>
         </ion-toolbar>
         <ion-list *ngIf="showWorkshop2">
-          <ion-list-header>Workshop 2</ion-list-header>
+          <ion-list-header><h2>Coming Soon!</h2></ion-list-header>
           <ion-item>
-            <ion-label>Uno</ion-label>
+            <ion-label>Module 01</ion-label>
           </ion-item>
           <ion-item>
-            <ion-label>Dos</ion-label>
+            <ion-label>Module 02</ion-label>
           </ion-item>
         </ion-list>
       </div>
