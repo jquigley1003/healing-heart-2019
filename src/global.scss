@@ -10,10 +10,33 @@
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
 
+@import '~swiper/swiper-bundle.css';
+
 @font-face {
   font-family: "Tempus Sans ITC";
   src: url(/assets/fonts/TEMPSITC.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url(/assets/fonts/Roboto-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Medium";
+  src: url(/assets/fonts/Roboto-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Film Cryptic";
+  src: url(/assets/fonts/Filmcryptic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Balthazar Regular";
+  src: url(/assets/fonts/Balthazar-Regular.ttf) format("truetype");
+}
+
 
 /* custom background color change animation */
 
@@ -29,7 +52,7 @@
 }
 
 ion-toolbar {
-  --background: transparent;
+  --background: var(--ion-color-tertiary);
   --min-height: 1em;
 }
 
