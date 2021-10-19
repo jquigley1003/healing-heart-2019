@@ -1,0 +1,39 @@
+ion-content {
+	font-family: 'Roboto Medium', sans-serif;
+}
+
+audio { 
+  width: 80vw; 
+  box-shadow: 5px 5px 20px rgba(0,0, 0, 0.4);
+  border-radius: 90px;
+  transform: scale(1.05);
+}
+
+.balthazar {
+	font-family: 'Balthazar Regular', serif;
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+.film-cryptic {
+	font-family: 'Film Cryptic', serif;
+	font-size: 2em;
+}
+
+.video-player {
+	width: 90vw;
+}
+
+.audio-title {
+	text-shadow: 3px 3px 2px lightblue;
+}
+
+.audio-player {
+	margin: 0 auto;
+	padding: 10px 0px;
+	text-align: center;
+	width: 100%;
+	background: lightblue;
+	border: solid 2px white;
+	border-radius: 50px;
+}

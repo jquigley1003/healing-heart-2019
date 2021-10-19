@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
+import { WorkshopsPageRoutingModule } from './workshops-routing.module';
 import { WorkshopsPage } from './workshops.page';
 import { MySnowfallModule } from '../shared/components/my-snowfall/my-snowfall.module';
 
@@ -20,7 +21,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),
+    WorkshopsPageRoutingModule,
     MySnowfallModule
   ],
   declarations: [WorkshopsPage]

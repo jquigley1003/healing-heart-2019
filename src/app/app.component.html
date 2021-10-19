@@ -1,12 +1,12 @@
 <ion-app>
-  <ion-menu contentId="main-content">
+  <ion-menu contentId="main-content" type="push">
     <ion-header>
       <ion-toolbar color="tertiary">
-        <ion-title>Menu</ion-title>
+        <ion-title (click)="toggleMenu('mainMenu')">Menu</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content color="light">
-      <ion-list>
+      <ion-list *ngIf="showMainMenu">
         <ion-menu-toggle auto-hide="false">
           <ion-item *ngFor="let p of appPages" color="light" [routerDirection]="'root'"
                     [routerLink]="[p.url]">
@@ -17,7 +17,50 @@
           </ion-item>
         </ion-menu-toggle>
       </ion-list>
+      <!-- Workshop 1 Menu - Marrying Yourself -->
+      <div *ngIf="true">
+        <ion-toolbar color="tertiary">
+          <ion-title (click)="toggleMenu('workshop1')">Workshop One</ion-title>
+        </ion-toolbar>
+        <ion-list *ngIf="showWorkshop1">
+          <ion-menu-toggle auto-hide="false" >
+            <ion-list-header><h2>Marrying Yourself</h2></ion-list-header>
+            <ion-item button routerDirection="forward" 
+            [routerLink]="['/workshops/marrying-yourself']">
+              <ion-label class="ion-text-wrap">
+                Introduction
+              </ion-label>
+            </ion-item>
+            <ion-item button routerDirection="forward" 
+            [routerLink]="['/workshops/marrying-yourself/module01']">
+              <ion-label class="ion-text-wrap">Module 01 - Welcoming and Embarking, 
+                Introduction to Deva Joy and the Journey
+              </ion-label>
+            </ion-item>
+            <ion-item button routerDirection="forward" 
+            [routerLink]="['/workshops/marrying-yourself/module02']">
+              <ion-label class="ion-text-wrap">Module 02 - The Antidote to Codependency
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </div>
+      <div *ngIf="true">
+        <ion-toolbar color="tertiary">
+          <ion-title (click)="toggleMenu('workshop2')">Workshop Two</ion-title>
+        </ion-toolbar>
+        <ion-list *ngIf="showWorkshop2">
+          <ion-list-header>Workshop 2</ion-list-header>
+          <ion-item>
+            <ion-label>Uno</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Dos</ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
     </ion-content>
   </ion-menu>
   <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>
+  

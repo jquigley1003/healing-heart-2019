@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Marrying Yourself Journey - by Deva Joy Gouss</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-grid class="ion-no-padding ion-no-margin">
+    <ion-row class="ion-no-padding ion-no-margin">
+      <ion-col size="12" class="ion-margin ion-padding ion-text-center">
+        <h1>Module 02 - The Antidote to Codependency</h1>
+      </ion-col>
+      <!-- navigation buttons-->
+      <ion-col size="12" class="ion-text-center">
+        <ion-button [routerLink]="['/workshops/marrying-yourself/module01']"
+        routerDirection="back"><ion-icon name="arrow-back-circle-outline"></ion-icon>
+        &nbsp; Module 01</ion-button>
+         <ion-button [routerLink]="['/workshops/marrying-yourself/module03']"
+        routerDirection="forward">Module 03 &nbsp;
+        <ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -9,6 +9,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
+  showMainMenu = true;
+  showWorkshop1 = false;
+  showWorkshop2 = false;
+
   public appPages = [
     {
       title: 'Home',
@@ -60,5 +64,25 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+
+  toggleMenu(menu) {
+    switch (menu) {
+      case 'mainMenu':
+        this.showMainMenu = true;
+        this.showWorkshop1 = false;
+        this.showWorkshop2 = false;
+          break;
+      case 'workshop1':
+        this.showMainMenu = false;
+        this.showWorkshop1 = true;
+        this.showWorkshop2 = false;
+          break;
+      case 'workshop2':
+        this.showMainMenu = false;
+        this.showWorkshop1 = false;
+        this.showWorkshop2 = true;
+        break;
+    }
   }
 }
