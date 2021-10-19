@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { trigger, state, style, group, transition, query, animate, keyframes } from '@angular/animations';
+import { AnimationEvent, trigger, state, style, group, transition, query, animate, keyframes } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 
 import { growImgTrigger, slideTitleRightTrigger } from '../shared/components/animations/animations.component';

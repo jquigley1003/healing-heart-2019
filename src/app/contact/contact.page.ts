@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
+import { AnimationEvent, animate, keyframes, state, style, transition, trigger } from '@angular/animations';
 
 import { ModalController } from '@ionic/angular';
 

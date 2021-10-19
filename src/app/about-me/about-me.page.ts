@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
+import { AnimationEvent, animate, keyframes, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-about-me',
