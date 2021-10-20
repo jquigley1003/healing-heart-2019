@@ -19,12 +19,12 @@
       </ion-list>
       <!-- Workshop 1 Menu - Marrying Yourself -->
       <div *ngIf="true">
-        <ion-toolbar color="tertiary">
-          <ion-title (click)="toggleMenu('workshop1')">Workshop One</ion-title>
+        <ion-toolbar style="border-bottom: solid 2px black;" color="secondary">
+          <ion-title (click)="toggleMenu('workshop1')">Workshop One<br>Marrying Yourself</ion-title>
         </ion-toolbar>
         <ion-list *ngIf="showWorkshop1">
           <ion-menu-toggle auto-hide="false" >
-            <ion-list-header><h2>Marrying Yourself<br>(Launching 2022!)</h2></ion-list-header>
+            <ion-list-header><h2>Table of Contents</h2></ion-list-header>
             <ion-item button routerDirection="forward" 
             [routerLink]="['/workshops/marrying-yourself']">
               <ion-label class="ion-text-wrap">
@@ -45,11 +45,11 @@
         </ion-list>
       </div>
       <div *ngIf="true">
-        <ion-toolbar color="tertiary">
-          <ion-title (click)="toggleMenu('workshop2')">Workshop Two</ion-title>
+        <ion-toolbar style="border-bottom: solid 2px black;" color="secondary" color="secondary">
+          <ion-title (click)="toggleMenu('workshop2')">Workshop Two<br>Comming Soon!</ion-title>
         </ion-toolbar>
         <ion-list *ngIf="showWorkshop2">
-          <ion-list-header><h2>Coming Soon!</h2></ion-list-header>
+          <ion-list-header><h2>Table of Contents</h2></ion-list-header>
           <ion-item>
             <ion-label>Module 01</ion-label>
           </ion-item>

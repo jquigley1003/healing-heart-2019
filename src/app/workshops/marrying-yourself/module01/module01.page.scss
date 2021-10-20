@@ -3,6 +3,7 @@ ion-content {
 }
 
 audio { 
+	background: #083344;
 	text-align: center;
   width: 80vw;
   box-shadow: 5px 5px 20px rgba(0,0, 0, 0.4);
@@ -23,6 +24,16 @@ audio {
 
 .video-player {
 	width: 90vw;
+}
+
+.videoTrnspPoster {
+	background-image: url('../../../../assets/noPoster.png');
+	background-position: center;
+	position:absolute;
+	top: 25%;
+	width: 100%;
+	height: 40%;
+	opacity: 0.2;
 }
 
 .audio-title {
