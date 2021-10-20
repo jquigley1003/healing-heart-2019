@@ -1,14 +1,28 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
-import { Platform } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { ModalController } from '@ionic/angular';
+
+import { Observable, Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+
+import { RegisterModalComponent } from './shared/auth/register-modal/register-modal.component';
+import { SignInModalComponent } from './shared/auth/sign-in-modal/sign-in-modal.component';
+import { User } from './shared/models/user.model';
+import { AuthService } from './shared/auth/auth.service';
+import { ToastService } from './shared/notify/toast.service';
 
 @Component({
   selector: 'app-root',
+  styleUrls: ['app.component.scss'],
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
+  currentUser = null;
+  userFullName = null;
+  currentUser$: Observable<User>;
+  ngUnsubscribe = new Subject<void>();
+  isAdmin = false;
   showMainMenu = true;
   showWorkshop1 = false;
   showWorkshop2 = false;
@@ -52,18 +66,36 @@ export class AppComponent {
   ];
 
   constructor(
-    private platform: Platform,
-    private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private modalCtrl: ModalController,
+    private authService: AuthService,
+    private toastService: ToastService,
+    private router: Router
   ) {
-    this.initializeApp();
+    this.initializeUsers();
+    // this.initializeApp();
   }
 
-  initializeApp() {
-    this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
-    });
+  // initializeApp() {
+  //   this.platform.ready().then(() => {
+  //     this.statusBar.styleDefault();
+  //     this.splashScreen.hide();
+  //   });
+  // }
+
+  initializeUsers() {
+    this.getCurrentUser();
+    this.authService.currentUser$
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(data => {
+        this.currentUser = data;
+        // console.log('app component current user: ',this.currentUser);
+      });
+    this.authService.isAdmin$
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(async data => {
+        this.isAdmin = data;
+        // console.log('app component admin idTokenResult is: ', this.isAdmin);
+      });
   }
 
   toggleMenu(menu) {
@@ -84,5 +116,61 @@ export class AppComponent {
         this.showWorkshop2 = true;
         break;
     }
+  }
+
+  getCurrentUser() {
+    this.currentUser$ = this.authService.user$;
+    this.currentUser$
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(data => {
+      if(data) {
+        this.userFullName = data.firstName + ' ' + data.lastName;
+      } else {
+        this.userFullName = null;
+      }
+      // console.log('app component getCurrentUser = ', this.userFullName);
+    });
+  }
+
+  async presentRegisterModal() {
+    const modal = await this.modalCtrl.create({
+      component: RegisterModalComponent,
+      componentProps: {}
+    });
+    return await modal.present();
+  }
+
+  async presentSignInModal() {
+    const modal = await this.modalCtrl.create({
+      component: SignInModalComponent,
+      componentProps: {}
+    });
+    return await modal.present();
+  }
+
+  async signOut() {
+    await this.authService.signOut()
+    .then(async () => {
+      await this.toastService.presentToast(
+        'You Have Signed Out.',
+        'middle',
+        [{
+          text: 'OK',
+          role: 'cancel',
+          handler: () => {
+            console.log('dismiss toast message');
+            this.router.navigate(['/home']);
+          }
+        }],
+        3000
+      );
+      this.router.navigate(['/home']);
+      this.showMainMenu = true;
+    });
+  }
+
+  ngOnDestroy() {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
   }
 }
