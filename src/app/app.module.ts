@@ -20,6 +20,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { RegisterModalModule } from './shared/auth/register-modal/register-modal.module';
+import { SignInModalModule } from './shared/auth/sign-in-modal/sign-in-modal.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
@@ -37,6 +39,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AngularFireFunctionsModule,
     AngularFireMessagingModule,
     AngularFireStorageModule,
+    RegisterModalModule,
+    SignInModalModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
