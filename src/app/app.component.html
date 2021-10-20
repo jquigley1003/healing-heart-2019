@@ -19,7 +19,7 @@
       </ion-list>
       <!-- Workshop 1 Menu - Marrying Yourself -->
       <div *ngIf="true">
-        <ion-toolbar style="border-bottom: solid 2px black;" color="secondary">
+        <ion-toolbar style="border-bottom: solid 2px black; --min-height: 50px;" color="secondary">
           <ion-title (click)="toggleMenu('workshop1')">Workshop One<br>Marrying Yourself</ion-title>
         </ion-toolbar>
         <ion-list *ngIf="showWorkshop1">
@@ -45,7 +45,7 @@
         </ion-list>
       </div>
       <div *ngIf="true">
-        <ion-toolbar style="border-bottom: solid 2px black;" color="secondary" color="secondary">
+        <ion-toolbar style="border-bottom: solid 2px black; --min-height: 50px;" color="secondary">
           <ion-title (click)="toggleMenu('workshop2')">Workshop Two<br>Comming Soon!</ion-title>
         </ion-toolbar>
         <ion-list *ngIf="showWorkshop2">
