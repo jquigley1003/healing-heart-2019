@@ -6,10 +6,10 @@
       </ion-toolbar>
       <!-- <ion-button (click)="getCurrentUser()">Get Current User</ion-button> -->
       <ion-list *ngIf="showMainMenu" id="inbox-list">
-        <ion-list-header class="ion-padding ion-text-wrap">
+        <ion-note class="ion-padding ion-text-wrap">
           <!-- <span>{{ (currentUser$ | async).firstName }},<br></span> -->
           <span *ngIf="currentUser">{{ currentUser.displayName }},<br></span>
-        Welcome to Healing Heart Communications!</ion-list-header>
+        Welcome to Healing Heart Communications!</ion-note>
         <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
           <ion-item
           routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
@@ -26,7 +26,7 @@
         <ion-list *ngIf="showWorkshop1">
           <ion-menu-toggle auto-hide="false" >
             <ion-list-header><h2>Table of Contents</h2></ion-list-header>
-            <ion-item button routerDirection="forward" detail="false" routerLinkActive="selected"
+            <ion-item button routerDirection="forward" detail="false"
             [routerLink]="['/workshops/marrying-yourself']">
               <ion-label class="ion-text-wrap">
                 Introduction
