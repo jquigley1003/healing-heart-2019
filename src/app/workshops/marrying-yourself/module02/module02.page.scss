@@ -3,10 +3,9 @@ ion-content {
 }
 
 audio { 
-	background: #083344;
 	text-align: center;
   width: 80vw;
-  box-shadow: 5px 5px 20px rgba(0,0, 0, 0.4);
+  box-shadow: 5px 5px 15px 2px var(--ion-color-secondary);
   border-radius: 90px;
   transform: scale(1.05);
 }
@@ -22,7 +21,11 @@ audio {
 	font-size: 2em;
 }
 
-.module-section {
+.section-title {
+	text-shadow: 3px 3px 2px lightblue;
+}
+
+.section-container {
 	margin-bottom: 1em;
 	border-top: 1px solid var(--ion-color-tertiary);
 	border-bottom: 5px solid var(--ion-color-secondary);
@@ -36,28 +39,11 @@ audio {
 	overflow: scroll;
 }
 
-.videoTrnspPoster {
-	background-image: url('../../../../assets/noPoster.png');
-	background-position: center;
-	position:absolute;
-	top: 25%;
-	width: 100%;
-	height: 40%;
-	opacity: 0.2;
-}
-
-.audio-title {
-	text-shadow: 3px 3px 2px lightblue;
-}
-
 .audio-player {
 	margin: 0 auto;
 	padding: 10px 0px;
 	text-align: center;
 	width: 100%;
-	background: lightblue;
-	border: solid 2px white;
-	border-radius: 50px;
 }
 
 .assignment {

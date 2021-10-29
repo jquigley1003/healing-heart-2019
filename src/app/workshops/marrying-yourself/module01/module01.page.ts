@@ -59,7 +59,7 @@ export class Module01Page implements OnInit, AfterViewInit {
     console.log('destroyYoutubePlayer4', result4);
     console.log('destroyYoutubePlayer5', result5);
     console.log('destroyYoutubePlayer6', result6);
-    console.log('destroyYoutubePlayer6', result7);
+    console.log('destroyYoutubePlayer7', result7);
   }
 
   onToggle() {
