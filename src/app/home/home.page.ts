@@ -169,7 +169,7 @@ export class HomePage implements OnInit {
         .subscribe(res => {
           this.allCampaigns = res.campaigns;
           this.allCampaigns.sort((a, b) => (a.send_time > b.send_time) ? -1 : 1)
-          console.log('home page results: ', this.allCampaigns);
+          // console.log('home page results: ', this.allCampaigns);
         });
   }
 
