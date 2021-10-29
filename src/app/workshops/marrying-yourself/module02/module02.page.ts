@@ -22,21 +22,21 @@ export class Module02Page implements OnInit, AfterViewInit {
   }
 
   async initializeYoutubePlayerPluginWeb() {
-    const player1 = {playerId: 'youtube-player1', playerSize: {}, videoId: '46f6qgo7EYA'};
+    const player1 = {playerId: 'youtube-player1', playerSize: {width: 640, height: 360}, videoId: '46f6qgo7EYA'};
     const result1 = await YoutubePlayerWeb.initialize(player1);
-    const player2 = {playerId: 'youtube-player2', playerSize: {}, videoId: 'r9VexoTZnrw'};
+    const player2 = {playerId: 'youtube-player2', playerSize: {width: 640, height: 360}, videoId: 'r9VexoTZnrw'};
     const result2 = await YoutubePlayerWeb.initialize(player2);
-    const player3 = {playerId: 'youtube-player3', playerSize: {}, videoId: 'C6R8P1hhgW4'};
+    const player3 = {playerId: 'youtube-player3', playerSize: {width: 640, height: 360}, videoId: 'C6R8P1hhgW4'};
     const result3 = await YoutubePlayerWeb.initialize(player3);
-    const player4 = {playerId: 'youtube-player4', playerSize: {}, videoId: 'gJUrhzGejTM'};
+    const player4 = {playerId: 'youtube-player4', playerSize: {width: 640, height: 360}, videoId: 'gJUrhzGejTM'};
     const result4 = await YoutubePlayerWeb.initialize(player4);
-    const player5 = {playerId: 'youtube-player5', playerSize: {}, videoId: 'D4HxOinvaos'};
+    const player5 = {playerId: 'youtube-player5', playerSize: {width: 640, height: 360}, videoId: 'D4HxOinvaos'};
     const result5 = await YoutubePlayerWeb.initialize(player5);
-    const player6 = {playerId: 'youtube-player6', playerSize: {}, videoId: 'IYzlVDlE72w'};
+    const player6 = {playerId: 'youtube-player6', playerSize: {width: 640, height: 360}, videoId: 'IYzlVDlE72w'};
     const result6 = await YoutubePlayerWeb.initialize(player6);
-    const player7 = {playerId: 'youtube-player7', playerSize: {}, videoId: 'iyBIidyRB-Q'};
+    const player7 = {playerId: 'youtube-player7', playerSize: {width: 640, height: 360}, videoId: 'iyBIidyRB-Q'};
     const result7 = await YoutubePlayerWeb.initialize(player7);
-    const player8 = {playerId: 'youtube-player8', playerSize: {}, videoId: 'SmbmeOgWsqE'};
+    const player8 = {playerId: 'youtube-player8', playerSize: {width: 640, height: 360}, videoId: 'SmbmeOgWsqE'};
     const result8 = await YoutubePlayerWeb.initialize(player8);
   }
 
