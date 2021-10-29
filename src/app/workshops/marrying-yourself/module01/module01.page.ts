@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
 import SwiperCore, { SwiperOptions, EffectCube } from 'swiper';
@@ -8,7 +8,7 @@ SwiperCore.use([EffectCube]);
   templateUrl: './module01.page.html',
   styleUrls: ['./module01.page.scss'],
 })
-export class Module01Page implements OnInit, AfterViewInit {
+export class Module01Page implements OnInit, AfterViewInit, OnDestroy {
   config: SwiperOptions = {
     pagination: true,
     effect: 'cube',
@@ -74,6 +74,10 @@ export class Module01Page implements OnInit, AfterViewInit {
   markIncomplete() {
     this.showCompleteBtn = false;
     this.showIncompleteBtn = true;
+  }
+
+  ngOnDestroy() {
+    this.destroyYoutubePlayerPluginWeb();
   }
 
 }
