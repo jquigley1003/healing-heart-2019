@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { SwUpdate } from '@angular/service-worker';
 
 import { ModalController } from '@ionic/angular';
 
@@ -11,13 +12,14 @@ import { SignInModalComponent } from './shared/auth/sign-in-modal/sign-in-modal.
 import { User } from './shared/models/user.model';
 import { AuthService } from './shared/auth/auth.service';
 import { ToastService } from './shared/notify/toast.service';
+import { AlertService } from './shared/notify/alert.service';
 
 @Component({
   selector: 'app-root',
   styleUrls: ['app.component.scss'],
   templateUrl: 'app.component.html'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   currentUser = null;
   userFullName = null;
   currentUser$: Observable<User>;
@@ -69,10 +71,41 @@ export class AppComponent {
     private modalCtrl: ModalController,
     private authService: AuthService,
     private toastService: ToastService,
-    private router: Router
+    private alertService: AlertService,
+    private router: Router,
+    private swUpdate: SwUpdate
   ) {
     this.initializeUsers();
     // this.initializeApp();
+  }
+
+  ngOnInit() {
+    if (this.swUpdate.isEnabled) {
+      this.swUpdate.available.subscribe(data => {
+        console.log(data.current.appData);
+        this.alertService.presentAlert(
+          'App Update!',
+          'Updated version of SFCA app available.',
+          'Load Improved Version?',
+          [
+            {
+              text: 'Cancel',
+              role: 'cancel',
+              cssClass: 'secondary',
+            },
+            {
+              text: 'Yes',
+              handler: () => {
+                window.location.reload();
+              }
+            }
+          ]
+        );
+          // if (confirm('Updated version of SFCA app available. Load New Version?')) {
+          //     window.location.reload();
+          // }
+      });
+    }
   }
 
   // initializeApp() {
