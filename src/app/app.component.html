@@ -2,7 +2,7 @@
   <ion-menu contentId="main-content" type="push">
     <ion-content>
       <ion-toolbar color="tertiary">
-        <ion-title (click)="toggleMenu('mainMenu')">Main Menu</ion-title>
+        <ion-title (click)="toggleMenu('mainMenu')">Main<br>Menu</ion-title>
       </ion-toolbar>
       <!-- <ion-button (click)="getCurrentUser()">Get Current User</ion-button> -->
       <ion-list *ngIf="showMainMenu" id="inbox-list">
@@ -19,7 +19,8 @@
         </ion-menu-toggle>
       </ion-list>
       <!-- Workshop 1 Menu - Marrying Yourself -->
-      <div *ngIf="currentUser">
+      <!-- <div *ngIf="currentUser"> -->
+      <div>
         <ion-toolbar style="border-bottom: solid 2px black; --min-height: 50px;" color="secondary">
           <ion-title (click)="toggleMenu('workshop1')">Workshop One<br>Marrying Yourself</ion-title>
         </ion-toolbar>
@@ -46,7 +47,8 @@
         </ion-list>
       </div>
       <!-- Workshop 2 Menu - Coming Soon -->
-      <div *ngIf="currentUser">
+      <!-- <div *ngIf="currentUser"> -->
+      <div>
         <ion-toolbar style="border-bottom: solid 2px black; --min-height: 50px;" color="secondary">
           <ion-title (click)="toggleMenu('workshop2')">Workshop Two<br>Coming Soon!</ion-title>
         </ion-toolbar>
