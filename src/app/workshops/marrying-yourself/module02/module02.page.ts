@@ -49,14 +49,14 @@ export class Module02Page implements OnInit, AfterViewInit, OnDestroy {
     const result6 = await YoutubePlayerWeb.destroy('youtube-player2-6');
     const result7 = await YoutubePlayerWeb.destroy('youtube-player2-7');
     const result8 = await YoutubePlayerWeb.destroy('youtube-player2-8');
-    console.log('destroyYoutubePlayer2-1', result1);
-    console.log('destroyYoutubePlayer2-2', result2);
-    console.log('destroyYoutubePlayer2-3', result3);
-    console.log('destroyYoutubePlayer2-4', result4);
-    console.log('destroyYoutubePlayer2-5', result5);
-    console.log('destroyYoutubePlayer2-6', result6);
-    console.log('destroyYoutubePlayer2-7', result7);
-    console.log('destroyYoutubePlayer2-8', result8);
+    // console.log('destroyYoutubePlayer2-1', result1);
+    // console.log('destroyYoutubePlayer2-2', result2);
+    // console.log('destroyYoutubePlayer2-3', result3);
+    // console.log('destroyYoutubePlayer2-4', result4);
+    // console.log('destroyYoutubePlayer2-5', result5);
+    // console.log('destroyYoutubePlayer2-6', result6);
+    // console.log('destroyYoutubePlayer2-7', result7);
+    // console.log('destroyYoutubePlayer2-8', result8);
   }
 
   onToggle() {
