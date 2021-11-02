@@ -20,7 +20,7 @@
         </ion-menu-toggle>
       </ion-list>
       <!-- Workshop 1 Menu - Marrying Yourself -->
-      <div *ngIf="currentUser">
+      <div *ngIf="isWorkshop01">
         <ion-toolbar color="secondary">
           <ion-icon *ngIf="!showWorkshop1" slot="end" name="arrow-down-circle-outline"></ion-icon>
           <ion-title (click)="toggleMenu('workshop1')">Workshop One<br>Marrying Yourself</ion-title>
@@ -48,7 +48,7 @@
         </ion-list>
       </div>
       <!-- Workshop 2 Menu - Coming Soon -->
-      <div *ngIf="currentUser">
+      <div *ngIf="isWorkshop02">
         <ion-toolbar color="secondary">
           <ion-icon *ngIf="!showWorkshop2" slot="end" name="arrow-down-circle-outline"></ion-icon>
           <ion-title (click)="toggleMenu('workshop2')">Workshop Two<br>Coming Soon!</ion-title>
@@ -78,11 +78,11 @@
             <ion-icon slot="start" name="log-out-outline"></ion-icon>
             <ion-button (click)="signOut()">Sign Out</ion-button>
           </ion-item>
-          <!-- <ion-item *ngIf="isAdmin" lines="none" detail="false" 
+          <ion-item *ngIf="isAdmin" lines="none" detail="false" 
           routerDirection="root" [routerLink]="['/admin']" routerLinkActive="selected">
             <ion-icon slot="start" name="business-outline"></ion-icon>
             <ion-button>Admin Dashboard</ion-button>
-          </ion-item> -->
+          </ion-item>
         </ion-menu-toggle>
       </ion-list>
     </ion-content>

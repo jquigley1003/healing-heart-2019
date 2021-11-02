@@ -38,7 +38,7 @@ export class AuthService {
         this.currentUser$.next(user);
         await user.getIdTokenResult().then((res) =>{
           this.isAdmin$.next(res.claims.admin);
-          console.log('authservice idTokenResult for admin is: ', res.claims.admin);
+          // console.log('authservice idTokenResult for admin is: ', res.claims.admin);
         });
       } else {
         this.currentUser$.next(null);
