@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
+import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
 
 import { AuthService } from '../auth/auth.service';
@@ -10,34 +11,28 @@ import { AlertService } from '../notify/alert.service';
 })
 
 export class AuthGuard implements CanActivate {
-  isLoggedIn = false;
   constructor(
     private authService: AuthService,
     private router: Router,
     private alertService: AlertService
   ) {}
 
-  canActivate(
+  async canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-    ): boolean {
-    this.authService.currentUser$
-    .pipe(take(1))
-    .subscribe(res => {
-      const user = res;
-      if(!user) {
-        this.isLoggedIn = false;
-        this.alertService.presentAlert(
-          'Blocked',
-          'Please sign in!',
-          'You need to sign in to access this page',
-          ['OK']
-        );
-        this.router.navigate(['/home']);
-      } else {
-        this.isLoggedIn = true;
-      }
-    });
-    return this.isLoggedIn;
+    ): Promise<boolean> {
+    const uid = await this.authService.uid();
+    const isLoggedIn = !!uid;
+
+    if(!isLoggedIn) {
+      this.alertService.presentAlert(
+        'Blocked',
+        'Please sign in!',
+        'You need to sign in to access this page',
+        ['OK']
+      );
+      this.router.navigate(['/home']);
+    }
+    return isLoggedIn;
   }
 }

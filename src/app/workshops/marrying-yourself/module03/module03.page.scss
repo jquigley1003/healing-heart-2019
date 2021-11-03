@@ -1,0 +1,59 @@
+ion-content {
+	font-family: 'Roboto Medium', sans-serif;
+}
+
+audio { 
+	text-align: center;
+  width: 80vw;
+  box-shadow: 5px 5px 15px 2px var(--ion-color-secondary);
+  border-radius: 90px;
+  transform: scale(1.05);
+}
+
+.balthazar {
+	font-family: 'Balthazar Regular', serif;
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+.film-cryptic {
+	font-family: 'Film Cryptic', serif;
+	font-size: 2em;
+}
+
+.section-title {
+	text-shadow: 3px 3px 2px lightblue;
+}
+
+.section-container {
+	margin-bottom: 1em;
+	border-top: 1px solid var(--ion-color-tertiary);
+	border-bottom: 5px solid var(--ion-color-secondary);
+	border-radius: 10px;
+	box-shadow: 0px 2px 3px 1px var(--ion-color-tertiary);
+}
+
+.video-player {
+	margin: 0px auto;
+	width: 85vw;
+	overflow: scroll;
+}
+
+.audio-player {
+	margin: 0 auto;
+	padding: 10px 0px;
+	text-align: center;
+	width: 100%;
+}
+
+.assignment {
+	padding: 0px 10px;
+	color: var(--ion-color-primary);
+	font-weight: bold;
+}
+
+.practices {
+	padding: 0px 10px;
+	color: var(--ion-color-primary);
+	font-weight: bold;
+}

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { WorkshopsPage } from './workshops.page';
 import { Workshop01Guard } from './../shared/guards/workshop01.guard';
+import { AuthGuard } from '../shared/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -12,7 +13,8 @@ const routes: Routes = [
 	{
     path: 'marrying-yourself',
     loadChildren: () => import('./marrying-yourself/marrying-yourself.module').then( m => m.MarryingYourselfPageModule),
-    canActivate: [Workshop01Guard]
+    canActivate: [AuthGuard],
+    canActivateChild: [Workshop01Guard]
   }
 ];
 
