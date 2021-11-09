@@ -1,5 +1,7 @@
 ion-content {
 	font-family: 'Roboto Medium', sans-serif;
+	font-size: 1.5em;
+	color: var(--ion-color-medium);
 }
 
 audio { 
@@ -8,6 +10,10 @@ audio {
   box-shadow: 5px 5px 15px 2px var(--ion-color-secondary);
   border-radius: 90px;
   transform: scale(1.05);
+}
+
+.workshop-header {
+	--min-height: 4em;
 }
 
 .balthazar {
