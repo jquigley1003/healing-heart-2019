@@ -31,19 +31,21 @@
         <ion-col size="12" class="ion-text-center ion-padding">
           <h2 class="section-title">An Intro to Deva Joy Gouss and the Course</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #welcomingAudio>
               <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Faudio%2FWelcoming4.mp3?alt=media&token=cc687a5d-6e33-4de8-b929-d47c14e0f643" 
               type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration01 * 1000 | date:'mm:ss' }}</p>
           </div>  
         </ion-col>
         <ion-col size="12" class="ion-text-center ion-padding">
           <h2 class="section-title">Welcoming Everyone</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #everyoneAudio>
               <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule01%2Faudio%2FWelcomingEveryone.m4a?alt=media&token=686eb9ef-a3e5-4305-9569-f7dcb993cfc9" 
               type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration02 * 1000 | date:'mm:ss' }}</p>
           </div>  
         </ion-col>
         <ion-col class="ion-margin-right ion-padding">

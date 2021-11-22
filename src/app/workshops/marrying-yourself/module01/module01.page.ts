@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
 import SwiperCore, { SwiperOptions, EffectCube } from 'swiper';
@@ -9,6 +9,9 @@ SwiperCore.use([EffectCube]);
   styleUrls: ['./module01.page.scss'],
 })
 export class Module01Page implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChild('welcomingAudio') welcomingAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('everyoneAudio') everyoneAudioRef: ElementRef<HTMLAudioElement>;
+
   config: SwiperOptions = {
     pagination: true,
     effect: 'cube',
@@ -17,14 +20,24 @@ export class Module01Page implements OnInit, AfterViewInit, OnDestroy {
   completedModule: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
+  audioDuration01: number;
+  audioDuration02: number;
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  ngAfterViewInit() {
+  async ngAfterViewInit() {
     this.initializeYoutubePlayerPluginWeb();
+    this.welcomingAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration01 = this.welcomingAudioRef.nativeElement.duration;
+    };
+    this.everyoneAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration02 = this.everyoneAudioRef.nativeElement.duration;
+    };
   }
+
 
   async initializeYoutubePlayerPluginWeb() {
     const options1 = {playerId: 'youtube-player1', playerSize: {}, videoId: 'Dou2JUmogvU'};
