@@ -9,11 +9,13 @@ import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
 })
 export class Module03Page implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('onBeingAudio') onBeingAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('practice03Audio') practice03AudioRef: ElementRef<HTMLAudioElement>;
 
   completedModule: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
   audioDuration301: number;
+  audioDuration302: number;
 
   constructor() { }
 
@@ -24,6 +26,9 @@ export class Module03Page implements OnInit, AfterViewInit, OnDestroy {
     this.initializeYoutubePlayerPluginWeb();
     this.onBeingAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration301 = this.onBeingAudioRef.nativeElement.duration;
+    };
+    this.practice03AudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration302 = this.practice03AudioRef.nativeElement.duration;
     };
   }
 
