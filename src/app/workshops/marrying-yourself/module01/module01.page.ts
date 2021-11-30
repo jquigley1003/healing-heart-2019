@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
 import SwiperCore, { SwiperOptions, EffectCube } from 'swiper';
@@ -9,6 +9,14 @@ SwiperCore.use([EffectCube]);
   styleUrls: ['./module01.page.scss'],
 })
 export class Module01Page implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChild('welcomingAudio') welcomingAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('everyoneAudio') everyoneAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('connectedAudio') connectedAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('revelAudio') revelAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('beginningAudio') beginningAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('mudraAudio') mudraAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('practices01Audio') practices01AudioRef: ElementRef<HTMLAudioElement>;
+
   config: SwiperOptions = {
     pagination: true,
     effect: 'cube',
@@ -17,14 +25,44 @@ export class Module01Page implements OnInit, AfterViewInit, OnDestroy {
   completedModule: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
+  audioDuration01: number;
+  audioDuration02: number;
+  audioDuration03: number;
+  audioDuration04: number;
+  audioDuration05: number;
+  audioDuration06: number;
+  audioDuration07: number;
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  ngAfterViewInit() {
+  async ngAfterViewInit() {
     this.initializeYoutubePlayerPluginWeb();
+    this.welcomingAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration01 = this.welcomingAudioRef.nativeElement.duration;
+    };
+    this.everyoneAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration02 = this.everyoneAudioRef.nativeElement.duration;
+    };
+    this.connectedAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration03 = this.connectedAudioRef.nativeElement.duration;
+    };
+    this.revelAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration04 = this.revelAudioRef.nativeElement.duration;
+    };
+    this.beginningAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration05 = this.beginningAudioRef.nativeElement.duration;
+    };
+    this.mudraAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration06 = this.mudraAudioRef.nativeElement.duration;
+    };
+    this.practices01AudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration07 = this.practices01AudioRef.nativeElement.duration;
+    };
   }
+
 
   async initializeYoutubePlayerPluginWeb() {
     const options1 = {playerId: 'youtube-player1', playerSize: {}, videoId: 'Dou2JUmogvU'};
@@ -39,10 +77,6 @@ export class Module01Page implements OnInit, AfterViewInit, OnDestroy {
     const result5 = await YoutubePlayerWeb.initialize(options5);
     const options6 = {playerId: 'youtube-player6', playerSize: {width: 640, height: 360}, videoId: 'aeKYip-sBjM'};
     const result6 = await YoutubePlayerWeb.initialize(options6);
-    const options7 = {playerId: 'youtube-player7', playerSize: {width: 640, height: 360}, videoId: '4xfusryXtrI'};
-    const result7 = await YoutubePlayerWeb.initialize(options7);
-
-    
   }
 
   async destroyYoutubePlayerPluginWeb() {
@@ -52,7 +86,6 @@ export class Module01Page implements OnInit, AfterViewInit, OnDestroy {
     const result4 = await YoutubePlayerWeb.destroy('youtube-player4');
     const result5 = await YoutubePlayerWeb.destroy('youtube-player5');
     const result6 = await YoutubePlayerWeb.destroy('youtube-player6');
-    const result7 = await YoutubePlayerWeb.destroy('youtube-player7');
     // console.log('destroyYoutubePlayer1', result1);
     // console.log('destroyYoutubePlayer2', result2);
     // console.log('destroyYoutubePlayer3', result3);

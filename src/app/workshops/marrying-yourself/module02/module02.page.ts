@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
 
@@ -8,9 +8,24 @@ import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
   styleUrls: ['./module02.page.scss'],
 })
 export class Module02Page implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChild('codependencyAudio') codependencyAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('selfBetrayalAudio') selfBetrayalAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('retrieving01Audio') retrieving01AudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('retrieving02Audio') retrieving02AudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('noDivorceAudio') noDivorceAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('blossomingAudio') blossomingAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('marryingMyselfAudio') marryingMyselfAudioRef: ElementRef<HTMLAudioElement>;
+
   completedModule: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
+  audioDuration201: number;
+  audioDuration202: number;
+  audioDuration203: number;
+  audioDuration204: number;
+  audioDuration205: number;
+  audioDuration206: number;
+  audioDuration207: number;
 
   constructor() { }
 
@@ -19,6 +34,27 @@ export class Module02Page implements OnInit, AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     this.initializeYoutubePlayerPluginWeb();
+    this.codependencyAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration201 = this.codependencyAudioRef.nativeElement.duration;
+    };
+    this.selfBetrayalAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration202 = this.selfBetrayalAudioRef.nativeElement.duration;
+    };
+    this.retrieving01AudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration203 = this.retrieving01AudioRef.nativeElement.duration;
+    };
+    this.retrieving02AudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration204 = this.retrieving02AudioRef.nativeElement.duration;
+    };
+    this.noDivorceAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration205 = this.noDivorceAudioRef.nativeElement.duration;
+    };
+    this.blossomingAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration206 = this.blossomingAudioRef.nativeElement.duration;
+    };
+    this.marryingMyselfAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration207 = this.marryingMyselfAudioRef.nativeElement.duration;
+    };
   }
 
   async initializeYoutubePlayerPluginWeb() {
@@ -34,8 +70,6 @@ export class Module02Page implements OnInit, AfterViewInit, OnDestroy {
     const result5 = await YoutubePlayerWeb.initialize(player5);
     const player6 = {playerId: 'youtube-player2-6', playerSize: {width: 640, height: 360}, videoId: 'IYzlVDlE72w'};
     const result6 = await YoutubePlayerWeb.initialize(player6);
-    const player7 = {playerId: 'youtube-player2-7', playerSize: {width: 640, height: 360}, videoId: 'iyBIidyRB-Q'};
-    const result7 = await YoutubePlayerWeb.initialize(player7);
     const player8 = {playerId: 'youtube-player2-8', playerSize: {width: 640, height: 360}, videoId: 'SmbmeOgWsqE'};
     const result8 = await YoutubePlayerWeb.initialize(player8);
   }
@@ -47,7 +81,6 @@ export class Module02Page implements OnInit, AfterViewInit, OnDestroy {
     const result4 = await YoutubePlayerWeb.destroy('youtube-player2-4');
     const result5 = await YoutubePlayerWeb.destroy('youtube-player2-5');
     const result6 = await YoutubePlayerWeb.destroy('youtube-player2-6');
-    const result7 = await YoutubePlayerWeb.destroy('youtube-player2-7');
     const result8 = await YoutubePlayerWeb.destroy('youtube-player2-8');
     // console.log('destroyYoutubePlayer2-1', result1);
     // console.log('destroyYoutubePlayer2-2', result2);

@@ -117,3 +117,11 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+
+ion-toolbar {
+  --min-height: 4em;
+  --padding-end: 1em;
+  --border-color: white;
+  --border-style: solid;
+  --border-width: 5px;
+}

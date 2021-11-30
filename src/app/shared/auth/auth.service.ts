@@ -7,7 +7,7 @@ import { UserService } from '../user/user.service';
 import { User } from '../models/user.model';
 import { ToastService } from '../notify/toast.service';
 import { BehaviorSubject, from, Observable, of } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { map, switchMap, take } from 'rxjs/operators';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AlertService } from '../notify/alert.service';
 
@@ -38,7 +38,7 @@ export class AuthService {
         this.currentUser$.next(user);
         await user.getIdTokenResult().then((res) =>{
           this.isAdmin$.next(res.claims.admin);
-          console.log('authservice idTokenResult for admin is: ', res.claims.admin);
+          // console.log('authservice idTokenResult for admin is: ', res.claims.admin);
         });
       } else {
         this.currentUser$.next(null);
@@ -57,6 +57,24 @@ export class AuthService {
         }
       })
     );
+  }
+
+  uid() {
+    return this.user$
+      .pipe(
+        take(1),
+        map(u => u && u.uid)
+      )
+      .toPromise()
+  }
+
+  workshop01Role() {
+    return this.user$
+      .pipe(
+        take(1),
+        map(u => u && u.roles.workshop01)
+      )
+      .toPromise();
   }
 
   async register(newUser) {

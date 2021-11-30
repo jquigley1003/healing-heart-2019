@@ -8,11 +8,11 @@ export const registerUser = functions.https.onCall((data, context) => {
   // example: const isAdmin = context.auth!.token.admin;
 
   if (context.auth) {
-    // if (context.auth.token.admin !== true) {
-    //   return {
-    //     error: "Request not authorized. You must be an admin",
-    //   };
-    // }
+    if (context.auth.token.admin !== true) {
+      return {
+        error: "Request not authorized. You must be an admin",
+      };
+    }
     const newUserEmail = data.email;
     const newUserPassword = data.password;
     const firstName = data.firstName;
@@ -43,6 +43,8 @@ export const registerUser = functions.https.onCall((data, context) => {
         phone: null,
         roles: {
           admin: false,
+          workshop01: false,
+          workshop02: false,
         },
       });
     }).then(() => {
@@ -86,23 +88,23 @@ export const setUserRoles = functions.auth.user().onCreate(async (user) => {
 
 export const addAdmin = functions.https.onCall((data, context) => {
   if (context.auth) {
-    // if (context.auth.token.admin !== true) {
-    //   return {
-    //     error: `Request not authorized.
-    //     You must be an admin to grant request for ${data.email}.`,
-    //   };
-    // }
+    if (context.auth.token.admin !== true) {
+      return {
+        error: `Request not authorized.
+        You must be an admin to grant request for ${data.email}.`,
+      };
+    }
     const userEmail = data.email;
     const userId = data.uid;
     const fullName = data.firstName + " " + data.lastName;
 
     return grantAdminRole(userId).then(() => {
       const users = admin.firestore().collection("users");
-      return users.doc(userId).update({
+      return users.doc(userId).set({
         roles: {
           admin: true,
         },
-      }).then(() => {
+      }, {merge: true}).then(() => {
         return {
           result: `${fullName} is now an admin! 
           ${userEmail} updated.`,
@@ -118,23 +120,23 @@ export const addAdmin = functions.https.onCall((data, context) => {
 
 export const removeAdmin = functions.https.onCall((data, context) => {
   if (context.auth) {
-    // if (context.auth.token.admin !== true) {
-    //   return {
-    //     error: `Request not authorized.
-    //     You must be an admin to remove this role for ${data.email}.`,
-    //   };
-    // }
+    if (context.auth.token.admin !== true) {
+      return {
+        error: `Request not authorized.
+        You must be an admin to remove this role for ${data.email}.`,
+      };
+    }
     const userEmail = data.email;
     const userId = data.uid;
     const fullName = data.firstName + " " + data.lastName;
 
     return removeAdminRole(userId).then(() => {
       const users = admin.firestore().collection("users");
-      return users.doc(userId).update({
+      return users.doc(userId).set({
         roles: {
           admin: false,
         },
-      }).then(() => {
+      }, {merge: true}).then(() => {
         return {
           result: `${fullName} removed as admin. ${userEmail} updated.`,
         };
