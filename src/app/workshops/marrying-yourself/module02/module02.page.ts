@@ -12,7 +12,6 @@ export class Module02Page implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('selfBetrayalAudio') selfBetrayalAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('retrieving01Audio') retrieving01AudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('retrieving02Audio') retrieving02AudioRef: ElementRef<HTMLAudioElement>;
-  @ViewChild('noDivorceAudio') noDivorceAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('blossomingAudio') blossomingAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('marryingMyselfAudio') marryingMyselfAudioRef: ElementRef<HTMLAudioElement>;
 
@@ -23,7 +22,6 @@ export class Module02Page implements OnInit, AfterViewInit, OnDestroy {
   audioDuration202: number;
   audioDuration203: number;
   audioDuration204: number;
-  audioDuration205: number;
   audioDuration206: number;
   audioDuration207: number;
 
@@ -45,9 +43,6 @@ export class Module02Page implements OnInit, AfterViewInit, OnDestroy {
     };
     this.retrieving02AudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration204 = this.retrieving02AudioRef.nativeElement.duration;
-    };
-    this.noDivorceAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration205 = this.noDivorceAudioRef.nativeElement.duration;
     };
     this.blossomingAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration206 = this.blossomingAudioRef.nativeElement.duration;
