@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
 
@@ -8,9 +8,12 @@ import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
   styleUrls: ['./module03.page.scss'],
 })
 export class Module03Page implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChild('onBeingAudio') onBeingAudioRef: ElementRef<HTMLAudioElement>;
+
   completedModule: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
+  audioDuration301: number;
 
   constructor() { }
 
@@ -19,6 +22,9 @@ export class Module03Page implements OnInit, AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     this.initializeYoutubePlayerPluginWeb();
+    this.onBeingAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration301 = this.onBeingAudioRef.nativeElement.duration;
+    };
   }
 
   async initializeYoutubePlayerPluginWeb() {

@@ -87,9 +87,10 @@
           <img src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule01%2FhandsOnTree.jpeg?alt=media&token=5878031b-a29a-49e2-b323-218f8d396693">
           <h2 class="section-title">WE ARE ALL CONNECTED!</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload" preload="metadata">
+            <audio preload="auto" controls controlsList="nodownload" #connectedAudio>
               <source src="../../../../assets/audio/module01/WeAreConnected.mp3" type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration03 * 1000 | date:'mm:ss' }}</p>
           </div>  
         </ion-col>
         <ion-col size="12" class="ion-margin-right ion-padding">
@@ -147,9 +148,10 @@
         <ion-col size="12" class="ion-padding ion-text-center">
           <h2 class="section-title">Hey, bride to be, let’s revel!</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #revelAudio>
               <source src="../../../../assets/audio/module01/HeyBrideToBe.mp3" type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration04 * 1000 | date:'mm:ss' }}</p>
           </div>
         </ion-col>
         <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center">
@@ -165,9 +167,10 @@
         <ion-col size="12" class="ion-padding ion-text-center">
           <h2 class="section-title">The Beginning</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #beginningAudio>
               <source src="../../../../assets/audio/module01/TheBeginning.mp3" type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration05 * 1000 | date:'mm:ss' }}</p>
           </div>
         </ion-col>
         <ion-col size="12" class="ion-margin-right ion-padding">
@@ -261,9 +264,10 @@
         <ion-col size="12" class="ion-padding ion-text-center">
           <h2 class="section-title">Commitment to Mudra Flow</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #mudraAudio>
               <source src="../../../../assets/audio/module01/CommitmentMudraFlowNew.mp3" type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration06 * 1000 | date:'mm:ss' }}</p>
           </div>
         </ion-col>
         <ion-col size="12" class="ion-margin-right ion-padding">
@@ -306,9 +310,10 @@
         <ion-col size="12" class="ion-padding ion-text-center">
           <h2 class="section-title">Welcoming Practices</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #practices01Audio>
               <source src="../../../../assets/audio/module01/WelcomingPracticesNew.mp3" type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration07 * 1000 | date:'mm:ss' }}</p>
           </div>
         </ion-col>
         <ion-col size="12" class="ion-margin-right ion-padding">
@@ -331,12 +336,6 @@
           </p>
         </ion-col>
       </ion-row>
-      <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center">
-        <h2>Jana Stanfield - Stop, Look & Listen</h2>
-        <div class="video-player">
-          <div id="youtube-player7"></div>
-        </div>
-      </ion-col>
       <ion-col size="12" class="ion-padding ion-text-center">
         <img src="../../../../assets/workshop1/module01/responsibility.jpg">
         <img src="../../../../assets/workshop1/module01/PromiseWTP.jpg">

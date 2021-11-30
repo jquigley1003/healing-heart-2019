@@ -19,10 +19,11 @@
         <ion-col size="12" class="ion-text-center ion-padding">
           <h2 class="section-title">Ah, So This is Codependency</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #codependencyAudio>
               <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule02%2Faudio%2FAhSoThisIsCodependency.mp3?alt=media&token=90553de4-b3de-4208-8b36-16023061b552" 
               type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration201 * 1000 | date:'mm:ss' }}</p>
           </div>  
         </ion-col>
         <ion-col size="12" class="ion-margin-right ion-padding">
@@ -132,10 +133,11 @@
         <ion-col size="12" class="ion-text-center ion-padding">
           <h2 class="section-title">Self-Betrayal</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #selfBetrayalAudio>
               <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule02%2Faudio%2FSelfBetrayalHurts.mp3?alt=media&token=39ef6dcb-1923-43ba-aa2c-be5ccc790d1c" 
               type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration202 * 1000 | date:'mm:ss' }}</p>
           </div>  
         </ion-col>
         <ion-col size="12" class="ion-margin-right ion-padding">
@@ -174,17 +176,19 @@
         <ion-col size="12" class="ion-text-center ion-padding">
           <h2 class="section-title">Retrieving Myself</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #retrieving01Audio>
               <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule02%2Faudio%2FEmbarkingOnSelfRetrieval.mp3?alt=media&token=bf07216f-644d-4431-ab63-8ec63c5e0ffe" 
               type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration203 * 1000 | date:'mm:ss' }}</p>
           </div>
           <h2 class="section-title">...more retrieving myself</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #retrieving02Audio>
               <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule02%2Faudio%2FMoreOnSelfRetrieval.mp3?alt=media&token=2dadd704-5621-4fc6-ab91-6bfb975ef345" 
               type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration204 * 1000 | date:'mm:ss' }}</p>
           </div>  
         </ion-col>
         <ion-col size="12" class="ion-margin-right ion-padding">
@@ -232,10 +236,11 @@
         <ion-col size="12" class="ion-text-center ion-padding">
           <h2 class="section-title">What is a Marriage Where There is no Option for Divorce?</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #noDivorceAudio>
               <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule02%2Faudio%2FAhSoThisIsCodependency.mp3?alt=media&token=90553de4-b3de-4208-8b36-16023061b552" 
               type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration205 * 1000 | date:'mm:ss' }}</p>
           </div>  
         </ion-col>
         <ion-col size="12" class="ion-margin-right ion-padding">
@@ -284,10 +289,11 @@
         <ion-col size="12" class="ion-text-center ion-padding">
           <h2 class="section-title">Blossoming Into Myself</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #blossomingAudio>
               <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule02%2Faudio%2FBlossoming.mp3?alt=media&token=47ce3355-8f43-448b-b99a-d2b1ddc9a127" 
               type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration206 * 1000 | date:'mm:ss' }}</p>
           </div>  
         </ion-col>
         <ion-col size="12" class="ion-margin-right ion-padding">
@@ -341,10 +347,11 @@
         <ion-col size="12" class="ion-text-center ion-padding">
           <h2 class="section-title">Marrying Myself</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #marryingMyselfAudio>
               <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule02%2Faudio%2FMarryingMyself.mp3?alt=media&token=9e359bc6-d9c8-495b-8000-cf69de10b633" 
               type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration207 * 1000 | date:'mm:ss' }}</p>
           </div>  
         </ion-col>
         <ion-col size="12" class="ion-margin-right ion-padding">
@@ -424,21 +431,6 @@
             my engagement time. I loved singing it boldly, my passionate self-retrieval calling. I will always 
             be grateful for it. I hope it can serve you as well! Enjoy it, throw yourself into it and make it 
             yours too!</i></p>
-        </ion-col>
-        <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-          <h2>Olivia O'Brien - Love Myself </h2>
-          <div class="video-player">
-            <div id="youtube-player2-7">
-            </div>
-          </div>
-        </ion-col>
-        <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-          <h2>Lizzo - Good As Hell</h2>
-          <div class="video-player">
-            <div id="youtube-player2-8">
-            </div>
-          </div>
-          <p class="ion-padding ion-text-center"><i>Stand, move, dance, let it go, let it fly!</i></p>
         </ion-col>
       </ion-row><!-- END OF MODULE SECTION Marrying Myself-->
       <ion-row class="practices">
