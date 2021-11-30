@@ -25,6 +25,8 @@ export class AppComponent implements OnInit {
   currentUser$: Observable<User>;
   ngUnsubscribe = new Subject<void>();
   isAdmin = false;
+  isWorkshop01 = false;
+  isWorkshop02 = false;
   showMainMenu = true;
   showWorkshop1 = false;
   showWorkshop2 = false;
@@ -121,13 +123,13 @@ export class AppComponent implements OnInit {
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe(data => {
         this.currentUser = data;
-        // console.log('app component current user: ',this.currentUser);
+        console.log('app component current user: ',this.currentUser);
       });
     this.authService.isAdmin$
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe(async data => {
         this.isAdmin = data;
-        // console.log('app component admin idTokenResult is: ', this.isAdmin);
+        console.log('app component admin idTokenResult is: ', this.isAdmin);
       });
   }
 
@@ -158,8 +160,12 @@ export class AppComponent implements OnInit {
       .subscribe(data => {
       if(data) {
         this.userFullName = data.firstName + ' ' + data.lastName;
+        this.isWorkshop01 = data.roles.workshop01;
+        this.isWorkshop02 = data.roles.workshop01; // change this line to data.roles.workshop02!
       } else {
         this.userFullName = null;
+        this.isWorkshop01 = false;
+        this.isWorkshop02 = false;
       }
       // console.log('app component getCurrentUser = ', this.userFullName);
     });
@@ -199,6 +205,8 @@ export class AppComponent implements OnInit {
       );
       this.router.navigate(['/home']);
       this.showMainMenu = true;
+      this.showWorkshop1 = false;
+      this.showWorkshop2 = false;
     });
   }
 

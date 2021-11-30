@@ -1,9 +1,11 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="workshop-header">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title class="ion-text-center">Marrying Yourself Journey - by Deva Joy Gouss</ion-title>
+    <ion-title class="ion-text-center">Marrying Yourself Journey - by Deva Joy Gouss<br>
+      Module 02 - The Antidote to Codependency
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
@@ -17,10 +19,11 @@
         <ion-col size="12" class="ion-text-center ion-padding">
           <h2 class="section-title">Ah, So This is Codependency</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #codependencyAudio>
               <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule02%2Faudio%2FAhSoThisIsCodependency.mp3?alt=media&token=90553de4-b3de-4208-8b36-16023061b552" 
               type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration201 * 1000 | date:'mm:ss' }}</p>
           </div>  
         </ion-col>
         <ion-col size="12" class="ion-margin-right ion-padding">
@@ -81,20 +84,28 @@
               person takes on the role of caretaker for someone going through addiction, the intentions 
               are good. But eventually, the desire to take care of this person becomes a compulsion.</p>
           </ion-col>
-        <ion-row class="assignment ion-margin ion-padding">
-          <ion-col size="1" class="ion-text-center ion-align-self-center">
+        <ion-row class="assignment">
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+            <ion-checkbox #assignment0201 color="primary"></ion-checkbox>
+          </ion-col>
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
             <ion-icon name="heart-circle"></ion-icon> 
           </ion-col>
-          <ion-col size="11" class="ion-margin-right">
+          <ion-col size="9" class="ion-margin-right ion-padding">
             <p>Everyone has their story. What is your story? When and with whom did you live out 
               your codependency? Or, you may presently be involved in a codependent relationship. 
               Either way, bring your pen to paper, set your timer for ten to fifteen minutes and write. 
               Just write and see what comes out.</p>
           </ion-col>
-          <ion-col size="1" class="ion-text-center ion-align-self-center">
+        </ion-row>
+        <ion-row class="assignment">
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+            <ion-checkbox #assignment0202 color="primary"></ion-checkbox>
+          </ion-col>
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
             <ion-icon name="heart-circle"></ion-icon> 
           </ion-col>
-          <ion-col size="11" class="ion-margin-right">
+          <ion-col size="9" class="ion-margin-right ion-padding">
             <p>Now read what you wrote. Breathe and notice what stirs in your body. Bring the palms 
               of your hands to your body where you feel the sensations and breathe into your heart, 
               through your hands and into where your body needs to feel the love...</p>
@@ -128,10 +139,11 @@
         <ion-col size="12" class="ion-text-center ion-padding">
           <h2 class="section-title">Self-Betrayal</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #selfBetrayalAudio>
               <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule02%2Faudio%2FSelfBetrayalHurts.mp3?alt=media&token=39ef6dcb-1923-43ba-aa2c-be5ccc790d1c" 
               type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration202 * 1000 | date:'mm:ss' }}</p>
           </div>  
         </ion-col>
         <ion-col size="12" class="ion-margin-right ion-padding">
@@ -141,21 +153,29 @@
             another so intensely, and trying to avoid being abandoned, I was seriously being abandoned. 
             By my-self. By me!</p>
         </ion-col>
-        <ion-row class="assignment ion-margin ion-paddingt">
-          <ion-col size="1" class="ion-text-center ion-align-self-center">
+        <ion-row class="assignment">
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+            <ion-checkbox #assignment0203 color="primary"></ion-checkbox>
+          </ion-col>
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
             <ion-icon name="heart-circle"></ion-icon> 
           </ion-col>
-          <ion-col size="11" class="ion-margin-right ion-padding">
+          <ion-col size="9" class="ion-margin-right ion-padding">
             <p>Have you experienced betraying yourself? Breathe. Are there any areas in your current 
               life where you are not living in alignment with yourself and are in self-betrayal? 
               Set a timer again for fifteen minutes. Bring your pen to paper and just write. 
               You can start with “I know about self-betrayal...”. And just see what comes out 
               on the page....</p>
           </ion-col>
-          <ion-col size="1" class="ion-text-center ion-align-self-center">
+        </ion-row>
+        <ion-row class="assignment">
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+            <ion-checkbox #assignment0204 color="primary"></ion-checkbox>
+          </ion-col>
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
             <ion-icon name="heart-circle"></ion-icon> 
           </ion-col>
-          <ion-col size="11" class="ion-margin-right ion-padding">
+          <ion-col size="9" class="ion-margin-right ion-padding">
             <p>Now read what you wrote. See where you feel this is in your body and again, bring your 
               hands to your body and breathe love into yourself.</p>
           </ion-col>
@@ -168,17 +188,19 @@
         <ion-col size="12" class="ion-text-center ion-padding">
           <h2 class="section-title">Retrieving Myself</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #retrieving01Audio>
               <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule02%2Faudio%2FEmbarkingOnSelfRetrieval.mp3?alt=media&token=bf07216f-644d-4431-ab63-8ec63c5e0ffe" 
               type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration203 * 1000 | date:'mm:ss' }}</p>
           </div>
           <h2 class="section-title">...more retrieving myself</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #retrieving02Audio>
               <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule02%2Faudio%2FMoreOnSelfRetrieval.mp3?alt=media&token=2dadd704-5621-4fc6-ab91-6bfb975ef345" 
               type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration204 * 1000 | date:'mm:ss' }}</p>
           </div>  
         </ion-col>
         <ion-col size="12" class="ion-margin-right ion-padding">
@@ -226,10 +248,11 @@
         <ion-col size="12" class="ion-text-center ion-padding">
           <h2 class="section-title">What is a Marriage Where There is no Option for Divorce?</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #noDivorceAudio>
               <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule02%2Faudio%2FAhSoThisIsCodependency.mp3?alt=media&token=90553de4-b3de-4208-8b36-16023061b552" 
               type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration205 * 1000 | date:'mm:ss' }}</p>
           </div>  
         </ion-col>
         <ion-col size="12" class="ion-margin-right ion-padding">
@@ -248,20 +271,28 @@
           <p>In time, I grew to love and enjoy and even crave time with myself. I got the knack 
             and the must for self-care. It became a necessity.</p>
         </ion-col>
-        <ion-row class="assignment ion-margin ion-padding">
-          <ion-col size="1" class="ion-text-center ion-align-self-center">
+        <ion-row class="assignment">
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+            <ion-checkbox #assignment0205 color="primary"></ion-checkbox>
+          </ion-col>
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
             <ion-icon name="heart-circle"></ion-icon> 
           </ion-col>
-          <ion-col size="11" class="ion-margin-right ion-padding">
+          <ion-col size="9" class="ion-margin-right ion-padding">
             <p>Time for your own self-exploration. Write the words, "Self-retrieval". And then just write.... 
               Perhaps you have experienced something similar to me or perhaps there are parts of you that 
               are calling out to be retrieved now. Just write for ten to fifteen minutes. Don’t think about it. 
               Just bring pen to paper and see what comes out on the page.</p>
           </ion-col>
-          <ion-col size="1" class="ion-text-center ion-align-self-center">
+        </ion-row>
+        <ion-row class="assignment">
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+            <ion-checkbox #assignment0206 color="primary"></ion-checkbox>
+          </ion-col>
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
             <ion-icon name="heart-circle"></ion-icon> 
           </ion-col>
-          <ion-col size="11" class="ion-margin-right ion-padding">
+          <ion-col size="9" class="ion-margin-right ion-padding">
             <p>Now read what you wrote. See where this is in your body and bring your hands to your body 
               and again, breathe into your heart, into the palms of your hands, having contact with your 
               body, and breathe in the love, receive, and breathe the love out... let it be a circular 
@@ -276,10 +307,11 @@
         <ion-col size="12" class="ion-text-center ion-padding">
           <h2 class="section-title">Blossoming Into Myself</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #blossomingAudio>
               <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule02%2Faudio%2FBlossoming.mp3?alt=media&token=47ce3355-8f43-448b-b99a-d2b1ddc9a127" 
               type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration206 * 1000 | date:'mm:ss' }}</p>
           </div>  
         </ion-col>
         <ion-col size="12" class="ion-margin-right ion-padding">
@@ -333,10 +365,11 @@
         <ion-col size="12" class="ion-text-center ion-padding">
           <h2 class="section-title">Marrying Myself</h2>
           <div class="audio-player">
-            <audio controls controlsList="nodownload">
+            <audio preload="auto" controls controlsList="nodownload" #marryingMyselfAudio>
               <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule02%2Faudio%2FMarryingMyself.mp3?alt=media&token=9e359bc6-d9c8-495b-8000-cf69de10b633" 
               type="audio/mpeg">
             </audio>
+            <p class="audio-duration">Duration: {{ audioDuration207 * 1000 | date:'mm:ss' }}</p>
           </div>  
         </ion-col>
         <ion-col size="12" class="ion-margin-right ion-padding">
@@ -378,25 +411,38 @@
           <p>Each of us has our own story. The story that leads us to discovering the cracks in our foundations and then the 
             necessity for healing and filling in these cracks. With self-love cement.</p>
         </ion-col>
-        <ion-row class="assignment ion-margin ion-padding">
-          <ion-col size="1" class="ion-text-center ion-align-self-center">
+        <ion-row class="assignment">
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+            <ion-checkbox #assignment0207 color="primary"></ion-checkbox>
+          </ion-col>
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
             <ion-icon name="heart-circle"></ion-icon> 
           </ion-col>
-          <ion-col size="11" class="ion-margin-right ion-padding">
+          <ion-col size="9" class="ion-margin-right ion-padding">
             <p>So, close your eyes and bring honor to yourself for doing this. For taking time to listen to this and to reflect 
               on yourself.</p>
           </ion-col>
-          <ion-col size="1" class="ion-text-center ion-align-self-center">
+        </ion-row>
+        <ion-row class="assignment">
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+            <ion-checkbox #assignment0208 color="primary"></ion-checkbox>
+          </ion-col>
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
             <ion-icon name="heart-circle"></ion-icon> 
           </ion-col>
-          <ion-col size="11" class="ion-margin-right ion-padding">
+          <ion-col size="9" class="ion-margin-right ion-padding">
             <p>In a moment, I invite you to open your eyes and bring your pen to paper and write... I am embarking on this journey 
               toward marrying myself. I want to marry myself.... And just start writing... Ten minutes.</p>
           </ion-col>
-          <ion-col size="1" class="ion-text-center ion-align-self-center">
+        </ion-row>
+        <ion-row class="assignment">
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+            <ion-checkbox #assignment0209 color="primary"></ion-checkbox>
+          </ion-col>
+          <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
             <ion-icon name="heart-circle"></ion-icon> 
           </ion-col>
-          <ion-col size="11" class="ion-margin-right ion-padding">
+          <ion-col size="9" class="ion-margin-right ion-padding">
             <p>Now read what you wrote.  See where this is in your body and bring your hands to your 
               body and breathe love into yourself.</p>
           </ion-col>
@@ -412,21 +458,6 @@
             my engagement time. I loved singing it boldly, my passionate self-retrieval calling. I will always 
             be grateful for it. I hope it can serve you as well! Enjoy it, throw yourself into it and make it 
             yours too!</i></p>
-        </ion-col>
-        <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-          <h2>Olivia O'Brien - Love Myself </h2>
-          <div class="video-player">
-            <div id="youtube-player2-7">
-            </div>
-          </div>
-        </ion-col>
-        <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-          <h2>Lizzo - Good As Hell</h2>
-          <div class="video-player">
-            <div id="youtube-player2-8">
-            </div>
-          </div>
-          <p class="ion-padding ion-text-center"><i>Stand, move, dance, let it go, let it fly!</i></p>
         </ion-col>
       </ion-row><!-- END OF MODULE SECTION Marrying Myself-->
       <ion-row class="practices">
@@ -446,9 +477,10 @@
             call upon ways you really missed being met in past or current relationships. Allowing your
              heart desires, keep adding to this list. Include the qualities you want to attract in a partner 
              or that you value in your current partner. As this list fills out, choose one of the items on 
-             your list daily and enact it in your own life, with yourself! Embody these qualities, bring it, 
-             and practice showing up the ways you want to be met.
+             your list daily and enact it in your own life, with yourself! Make it a practice to be conscience of this quality that you are invoking and at the end of the day, write about your experience (even writing one sentence will empower you to anchor it deeper inside of yourself).
           </p>
+          <p>Embody these qualities, bring it, 
+            and practice showing up the ways you want to be met.</p>
         </ion-col>
       </ion-row>
       <ion-col size="12" class="ion-text-center">
@@ -469,55 +501,5 @@
         <ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-button>
       </ion-col>
     </ion-row>
-    <!-- template -->
-    <!-- <ion-row class="section-container">
-      <ion-col size="12" class="ion-padding ion-text-center">
-        <img src=" ">
-      </ion-col>
-      <ion-col size="12" class="ion-text-center ion-padding">
-        <h2 class="section-title">section title</h2>
-        <div class="audio-player">
-          <audio controls controlsList="nodownload">
-            <source src=" " 
-            type="audio/mpeg">
-          </audio>
-        </div>  
-      </ion-col>
-      <ion-col size="12" class="ion-margin-right ion-padding">
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-      </ion-col>
-      <ion-row class="assignment">
-        <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
-          <ion-icon name="heart-circle"></ion-icon> 
-        </ion-col>
-        <ion-col size="10" class="ion-margin-right ion-padding">
-          <p></p>
-        </ion-col>
-      </ion-row>
-      <ion-row class="assignment">
-        <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
-          <ion-icon name="heart-circle"></ion-icon> 
-        </ion-col>
-        <ion-col size="10" class="ion-margin-right ion-padding">
-          <p></p>
-        </ion-col>
-      </ion-row>
-      <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-        <h2>Video Title</h2>
-        <div class="video-player">
-          <div id="youtube-player#">
-          </div>
-        </div>
-        <p><i></i></p>
-      </ion-col>
-    </ion-row> -->
-    <!-- END OF MODULE SECTION -->
-    <!-- end of template -->
   </ion-grid>
 </ion-content>
