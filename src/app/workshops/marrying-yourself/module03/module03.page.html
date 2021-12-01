@@ -196,6 +196,17 @@
           </p>
         </ion-col>
       </ion-row>
+      <!-- BEGINNING OF QUOTES -->
+	    <ion-col size="12" class="ion-padding ion-text-center">
+        <img src="../../../../assets/workshop1/module03/DontBeConfused.jpg">
+        <img src="../../../../assets/workshop1/module03/OneThingYouHave.jpg">
+        <img src="../../../../assets/workshop1/module03/KnowingYourself.jpg">
+        <img src="../../../../assets/workshop1/module03/TheGreatestWisdom.jpg">
+        <img src="../../../../assets/workshop1/module03/ToGrowYourself.jpg">
+        <img src="../../../../assets/workshop1/module03/ToKnowYourself.jpg">
+        <img src="../../../../assets/workshop1/module03/WatchYour.jpg">
+      </ion-col>
+	    <!-- END OF QUOTES --> 
       <ion-col size="12" class="ion-text-center">
         <ion-button *ngIf="showIncompleteBtn" (click)="markComplete()">
           <ion-icon color="warning" name="square-outline"></ion-icon>&nbsp; You Have Not Completed This Module.
@@ -209,54 +220,10 @@
         <ion-button [routerLink]="['/workshops/marrying-yourself/module02']"
         routerDirection="back"><ion-icon name="arrow-back-circle-outline"></ion-icon>
         &nbsp; Module 02</ion-button>
-         <ion-button
+         <ion-button [routerLink]="['/workshops/marrying-yourself/module04']"
         routerDirection="forward">Module 04 &nbsp;
         <ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-button>
       </ion-col>
     </ion-row>
-    <!-- template -->
-    <!-- <ion-row class="section-container">
-      <ion-col size="12" class="ion-padding ion-text-center">
-        <img src=" ">
-      </ion-col>
-      <ion-col size="12" class="ion-text-center ion-padding">
-        <h2 class="section-title">section title</h2>
-        <div class="audio-player">
-          <audio controls controlsList="nodownload">
-            <source src=" " 
-            type="audio/mpeg">
-          </audio>
-        </div>  
-      </ion-col>
-      <ion-col size="12" class="ion-margin-right ion-padding">
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-      </ion-col>
-      <ion-row class="assignment">
-        <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
-          <ion-icon name="heart-circle"></ion-icon> 
-        </ion-col>
-        <ion-col size="10" class="ion-margin-right ion-padding">
-          <p></p>
-        </ion-col>
-      </ion-row>
-      <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-        <h2>Video Title</h2>
-        <div class="video-player">
-          <div id="youtube-player#">
-          </div>
-        </div>
-        <p><i></i></p>
-      </ion-col>
-    </ion-row> -->
-    <!-- END OF MODULE SECTION -->
-    <!-- end of template -->
-
-
   </ion-grid>
 </ion-content>
