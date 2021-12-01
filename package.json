@@ -33,6 +33,7 @@
     "@ionic-native/status-bar": "^5.31.1",
     "@ionic/angular": "^5.5.2",
     "@mailchimp/mailchimp_marketing": "^3.0.36",
+    "@vimeo/player": "^2.16.2",
     "capacitor-youtube-player": "^1.0.0",
     "core-js": "^2.5.4",
     "firebase": "^8.7.1",

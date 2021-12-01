@@ -82,6 +82,26 @@
             <p>~~ From the moment you get engaged, you are committing to honor yourself as the most important 
               partner life could offer -- yourself!</p>
           </ion-col>
+          <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
+            <h2>Dassy - Engagement</h2>
+            <div class="video-player">
+              <div #dassyVimeo>
+              </div>
+            </div>
+            <p><i>
+            </i></p>
+          </ion-col>
+          <!-- BEGINNING OF ASSIGNMENT Self-inquiry Questions -->
+          <ion-col size="12" class="ion-padding ion-text-center ion-align-self-center">
+            <h2 class="assignment-title">Assignment: Self-inquiry Questions</h2>
+            <div class="audio-player">
+              <audio preload="auto" controls controlsList="nodownload" #selfInquiryAudio>
+                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule04%2Faudio%2FSelfInquiryQuestions.mp3?alt=media&token=8c403a77-d20a-43ff-96b9-970a27cff008" 
+                type="audio/mpeg">
+              </audio>
+              <p class="audio-duration">Duration: {{ audioDuration403 * 1000 | date:'mm:ss' }}</p>
+            </div>
+          </ion-col>
           <ion-row class="assignment">
             <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
                 <ion-checkbox #assignment0401 color="primary"></ion-checkbox>
@@ -90,39 +110,269 @@
               <ion-icon name="heart-circle"></ion-icon> 
             </ion-col>
             <ion-col size="9" class="ion-margin-right ion-padding">
-              <p></p>
+              <p>1.	 Write three words/adjectives to describe your relationship with yourself right now.</p>
             </ion-col>
           </ion-row>
+          <ion-row class="assignment">
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                <ion-checkbox #assignment0402 color="primary"></ion-checkbox>
+              </ion-col>
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+              <ion-icon name="heart-circle"></ion-icon> 
+            </ion-col>
+            <ion-col size="9" class="ion-margin-right ion-padding">
+              <p>2.	 What are three loving actions that you want to commit to daily that demonstrate 
+                to yourself that you are in a loving relationship with yourself?</p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="assignment">
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                <ion-checkbox #assignment0403 color="primary"></ion-checkbox>
+              </ion-col>
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+              <ion-icon name="heart-circle"></ion-icon> 
+            </ion-col>
+            <ion-col size="9" class="ion-margin-right ion-padding">
+              <p>3.	 Imagine you are engaged to another person. How would you express your love to and for 
+                your fiancé? List at least four ways you would naturally show up for your partner in your 
+                engagement time.</p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="assignment">
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                <ion-checkbox #assignment0404 color="primary"></ion-checkbox>
+              </ion-col>
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+              <ion-icon name="heart-circle"></ion-icon> 
+            </ion-col>
+            <ion-col size="9" class="ion-margin-right ion-padding">
+              <p>4.	 Now, imagine bringing these messages and behaviors to yourself. Write them again, but 
+                this time, add in the beginning of the sentence, “I am open to give and receive...”</p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="assignment">
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                <ion-checkbox #assignment0405 color="primary"></ion-checkbox>
+              </ion-col>
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+              <ion-icon name="heart-circle"></ion-icon> 
+            </ion-col>
+            <ion-col size="9" class="ion-margin-right ion-padding">
+              <p>5.	Now star two things that you listed that you want to commit to fully bring into action 
+                this month as you embark on getting engaged.</p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="assignment">
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                <ion-checkbox #assignment0406 color="primary"></ion-checkbox>
+              </ion-col>
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+              <ion-icon name="heart-circle"></ion-icon> 
+            </ion-col>
+            <ion-col size="9" class="ion-margin-right ion-padding">
+              <p>6.	 Is there anything you want to adjust, tweak, or totally change about your house so 
+                that your home serves you the best it can to provide a safe, protected and beautiful 
+                containment to deepen with yourself?</p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="assignment">
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                <ion-checkbox #assignment0407 color="primary"></ion-checkbox>
+              </ion-col>
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+              <ion-icon name="heart-circle"></ion-icon> 
+            </ion-col>
+            <ion-col size="9" class="ion-margin-right ion-padding">
+              <p>7.	 What self-love practices do you want to commit to doing during this modular? Each 
+                modular I suggest that you write down and commit to several loving actions that speak to 
+                you of being engaged to yourself.</p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="assignment">
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                <ion-checkbox #assignment0408 color="primary"></ion-checkbox>
+              </ion-col>
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+              <ion-icon name="heart-circle"></ion-icon> 
+            </ion-col>
+            <ion-col size="9" class="ion-margin-right ion-padding">
+              <p>8.	 Write three words/adjectives to describe how your want your relationship to be by 
+                the time you marry yourself.</p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="assignment">
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                <ion-checkbox #assignment0409 color="primary"></ion-checkbox>
+              </ion-col>
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+              <ion-icon name="heart-circle"></ion-icon> 
+            </ion-col>
+            <ion-col size="9" class="ion-margin-right ion-padding">
+              <p>9.	 Write down one bottom line statement of what it means to you to be getting engaged to 
+                yourself today.</p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="assignment">
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                <ion-checkbox #assignment0410 color="primary"></ion-checkbox>
+              </ion-col>
+            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+              <ion-icon name="heart-circle"></ion-icon> 
+            </ion-col>
+            <ion-col size="9" class="ion-margin-right ion-padding">
+              <p>10. You can take this statement you just wrote and work with it to be your engagement 
+                vow. Take your time to get the right words for your proposal to yourself.</p>
+            </ion-col>
+          </ion-row>
+          <!-- END OF ASSIGNMENT Self-inquiry Questions -->
+          <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
+            <h2>Heh Got Engaged by Myself</h2>
+            <div class="video-player">
+              <div id="youtube-player4-2">
+              </div>
+            </div>
+            <p><i></i></p>
+          </ion-col>
         </ion-row>
         <!-- END OF MODULE SECTION Principles for engagement -->
+        <!-- BEGINNING OF MODULE SECTION Ready for Your Engagement Ritual?-->
+        <ion-row class="section-container">
+          <ion-col size="12" class="ion-padding ion-text-center">
+            <img src="../../../../assets/workshop1/module04/MirrorLoveMe.jpg">
+          </ion-col>
+          <ion-col size="12" class="ion-text-center ion-padding">
+            <h2 class="section-title">READY FOR YOUR ENGAGEMENT RITUAL?</h2>
+            <div class="audio-player">
+                <audio preload="auto" controls controlsList="nodownload" #engagementAudio>
+                  <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule04%2Faudio%2FPrinciples%20for%20Engagement.mp3?alt=media&token=30cbfd3f-f364-40be-87e9-0c243a4013df" 
+                  type="audio/mpeg">
+                </audio>
+                <p class="audio-duration">(Need to replace this audio!) Duration: {{ audioDuration404 * 1000 | date:'mm:ss' }}</p>
+              </div>
+          </ion-col>
+          <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
+            <h2>My Engagement to Myself</h2>
+            <div class="video-player">
+              <div #devaEngagementVimeo>
+              </div>
+            </div>
+            <p><i>
+            </i></p>
+          </ion-col>
+          <ion-col size="12" class="ion-margin-right ion-padding">
+            <p><b>Engagement Ritual: </b>Create a puja, an alter, for your engagement. Allow there to be 
+              a mirror. You can decorate your sacred ritual space with flowers, candles, crystals, and 
+              other favorite meaningful objects.
+            </p>
+            <p>Sit in front of your alter with a mirror before you. Be prepared with an offering you want 
+              to bring to yourself to anchor your engagement. There is no right or wrong way of doing this. 
+              It is totally yours. It is your statement to yourself. Your proposal. Your sacred exchange 
+              between you and you.
+            </p>
+            <p>Look in the mirror and make eye contact. Breathe. Take your time. Be mindful. Don’t rush 
+              yourself. Propose and then offer and receive the representation of your engagement. Say out 
+              loud why you chose this specific object to represent your engagement. Hold eye contact. Then 
+              close your eyes. Move into Commitment Mudra Flow. After your three deep long breaths, open 
+              your eyes and look deep in thee and announce your engagement! “I am engaged to myself!” Breathe, 
+              feel it, celebrate it!
+            </p>
+          </ion-col>
+          <ion-col size="12" class="ion-text-center">
+            <h2 class="section-title">Examples of Engagement Proposal Statements:</h2>
+          </ion-col>
+          <ion-col size="12" class="ion-margin-right ion-padding">
+            <p><i>With all my heart, I commit to being engaged to you, my beloved ________.</i></p>
+            <p><i>I commit to growing and arriving into the person I want to marry, comfortable 
+              in my own skin, confident in who I am, home in myself.
+            </i></p>
+            <p><i>I promise to show up for me and bring acceptance to all of who I am.</i></p>
+            <p><i>I claim myself as home.</i></p>
+            <p><i>I commit to discovering that I am what I need and I have everything I need within myself.</i></p>
+            <p><i>I am enough.</i></p>
+            <p><i>I am beautiful, vital and precious.</i></p>
+            <p><i>I choose me.</i></p>
+            <p><i>I commit to bringing my full self to unveiling what it means to be my number one primary 
+              relationship.
+            </i></p>
+            <p><i>Do I commit to being engaged to myself, as I approach marrying myself?</i></p>
+          </ion-col>
+          <ion-col size="12" class="ion-text-center">
+            <p>CONGRATULATIONS ON YOUR ENGAGEMENT!!! CELEBRATE YOUR 
+              <span class="large-font">YES....</span>
+            </p>
+          </ion-col>
+          <ion-col size="12" class="ion-padding ion-text-center">
+            <img src="../../../../assets/workshop1/module04/womanBlueBackground.jpg">
+          </ion-col>
+          <ion-col size="12" class="ion-text-center ion-padding">
+            <h2 class="section-title">A Powerful Quote</h2>
+            <div class="audio-player">
+                <audio preload="auto" controls controlsList="nodownload" #quoteAudio>
+                  <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule04%2Faudio%2FPowerfulQuote.mp3?alt=media&token=6306f801-0a29-44c3-8b11-a34359695fe8" 
+                  type="audio/mpeg">
+                </audio>
+                <p class="audio-duration">Duration: {{ audioDuration405 * 1000 | date:'mm:ss' }}</p>
+              </div>
+          </ion-col>
+          <ion-col size="12" class="ion-padding ion-text-center">
+            <img src="../../../../assets/workshop1/module04/womanFlowerWindowSun.jpg">
+          </ion-col>
+        </ion-row>
+        <!-- END OF MODULE SECTION Ready for Your Engagement Ritual?-->
         <!-- BEGINNING OF PRACTICES -->
         <ion-row class="practices">
           <ion-col size="12" class="ion-padding ion-text-center">
-            <h2 class="section-title">Practice Title Here</h2>
-            <div class="audio-player">
-              <audio preload="auto" controls controlsList="nodownload" #practice04Audio>
-                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule03%2Faudio%2FWalking%20_I%20AM_%20Practice%20followed%20by%20a%20Writing%20Exercise.mp3?alt=media&token=240fe81c-c795-4b85-90f7-d745caf6a770" 
-                type="audio/mpeg">
-              </audio>
-              <p class="audio-duration">Duration: {{ audioDuration403 * 1000 | date:'mm:ss' }}</p>
-            </div>
+            <h2 class="section-title">PRACTICES FOR ENLIVENING YOUR ENGAGEMENT</h2>
           </ion-col>
           <ion-col size="12" class="ion-margin-right ion-padding">
             <p>
-              ~~ test test test
+              ~~ Every day (or at least week) write something to yourself -- a love letter -- even if it 
+              is a sentence... Or a photo or a drawing or a quote... in your journal.
             </p>
             <p>
-              ~~ 
+              ~~ Practice the three behaviors you named in the Self-Inquiry exercise that demonstrate to you 
+              self-love.
             </p>
             <p>
-              ~~ 
+              ~~ Daily Commitment Mudra Flow.
+            </p>
+            </ion-col>
+            <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
+              <h2>Commitment Mudra Flow</h2>
+              <div class="video-player">
+                <div id="youtube-player4-3">
+                </div>
+              </div>
+            </ion-col>
+            <ion-col size="12" class="ion-margin-right ion-padding">
+            <p>
+              ~~ Pay attention to your self-talk. Play detective. Write down what you have said that you want 
+              to change and then practice turning this message around and intentionally writing the opposite 
+              of the negative messages.<br>Affirm yourself!
             </p>
             <p>
-              ~~ 
+              ~~ MIRROR COMMUNING -- Every morning when you look at yourself in mirror, make a declaration 
+              of love to yourself. "I am engaged to you. I commit to living in awareness of being engaged to 
+              you and treating you as my primary rich precious relationship"
+            </p>
+            <p>
+              ~~ Write about what it means to be engaged and in beloved relationship with yourself. 
+              Remember, what you focus on, expands. How to grow more in love... with being you? 
             </p>
           </ion-col>
         </ion-row>
         <!-- END OF PRACTICES -->
+        <!-- BEGINNING OF QUOTES -->
+        <ion-col size="12" class="ion-padding ion-text-center">
+          <img src="../../../../assets/workshop1/module04/quotes/ItsTimeTo.jpg">
+          <img src="../../../../assets/workshop1/module04/quotes/CantPourFrom.jpg">
+          <img src="../../../../assets/workshop1/module04/quotes/DoNotFeelLonly.jpg">
+          <img src="../../../../assets/workshop1/module04/quotes/make-yourself-a-priority-workout-motivation-spotebi.jpg">
+          <img src="../../../../assets/workshop1/module04/quotes/withoutCommitmentQuote.jpg">
+          <img src="../../../../assets/workshop1/module04/quotes/InLoveWithYourself.jpg">
+          <img src="../../../../assets/workshop1/module04/quotes/BiggestMistake.jpg">
+        </ion-col>
+	    <!-- END OF QUOTES --> 
         <!-- BEGINNING OF COMPLETE MODULE BUTTONS -->
         <ion-col size="12" class="ion-text-center">
           <ion-button *ngIf="showIncompleteBtn" (click)="markComplete()">
