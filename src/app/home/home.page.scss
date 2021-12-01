@@ -16,10 +16,10 @@ ion-card ion-card-title {
   position: absolute;
   top: 40%;
   font-size: 2.5vw;
-  text-shadow: 2px 2px 3px #000000;
+  text-shadow: 0 0 10px #9e48b3, 0 0 20px #ffffff;
   font-weight: bold;
   width: 100%;
-  color: #ffffff;
+  color: var(--ion-color-dark);
 }
 
 ion-card ion-card-content {
