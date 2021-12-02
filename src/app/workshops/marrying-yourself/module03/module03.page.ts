@@ -33,12 +33,15 @@ export class Module03Page implements OnInit, AfterViewInit, OnDestroy {
   }
 
   async initializeYoutubePlayerPluginWeb() {
-    const player1 = {playerId: 'youtube-player3-1', playerSize: {width: 640, height: 360}, videoId: 'XLFEvHWD_NE'};
+    const player1 = {playerId: 'youtube-player3-1', playerSize: {width: 640, height: 360}, videoId: 'aWNupk1jn20'};
     const result1 = await YoutubePlayerWeb.initialize(player1);
+    const player2 = {playerId: 'youtube-player3-2', playerSize: {width: 640, height: 360}, videoId: 'XLFEvHWD_NE'};
+    const result2 = await YoutubePlayerWeb.initialize(player2);
   }
 
   async destroyYoutubePlayerPluginWeb() {
     const result1 = await YoutubePlayerWeb.destroy('youtube-player3-1');
+    const result2 = await YoutubePlayerWeb.destroy('youtube-player3-2');
   }
 
   onToggle() {

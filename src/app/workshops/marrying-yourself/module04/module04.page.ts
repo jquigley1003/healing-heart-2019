@@ -16,6 +16,7 @@ export class Module04Page implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('quoteAudio') quoteAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('dassyVimeo') dassyVimeoRef: ElementRef;
   @ViewChild('devaEngagementVimeo') devaEngagementVimeoRef: ElementRef;
+  @ViewChild('bodyPostureVimeo') bodyPostureVimeoRef: ElementRef;
 
   completedModule: boolean;
   showCompleteBtn: boolean;
@@ -27,6 +28,7 @@ export class Module04Page implements OnInit, AfterViewInit, OnDestroy {
   audioDuration405: number;
   dassyVimeoPlayer: Player;
   devaEngagementVimeoPlayer: Player;
+  bodyPostureVimeoPlayer: Player;
   
 
   constructor() { }
@@ -56,7 +58,11 @@ export class Module04Page implements OnInit, AfterViewInit, OnDestroy {
       height: 350
     });
     this.devaEngagementVimeoPlayer = new Player(this.devaEngagementVimeoRef.nativeElement, {
-      id: 652065200,
+      id: 652593403,
+      height: 350
+    });
+    this.bodyPostureVimeoPlayer = new Player(this.bodyPostureVimeoRef.nativeElement, {
+      id: 652065275,
       height: 350
     });
   }
