@@ -8,13 +8,12 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
     <ion-grid>
       <ion-row class="ion-margin-right">
         <ion-col size="12" class="ion-padding ion-text-center">
           <img src="../../../../assets/workshop1/module04/WomanHandHeart.jpg">
-          <h1>Module 04<br>Getting Engaged</h1>
+          <h1 class="module-title">Module 04<br>Getting Engaged</h1>
         </ion-col>
         <!-- BEGINNING OF MODULE SECTION Embarking on Getting Engaged -->
         <ion-row class="section-container">
@@ -92,20 +91,22 @@
             </i></p>
           </ion-col>
           <!-- BEGINNING OF ASSIGNMENT Self-inquiry Questions -->
-          <ion-col size="12" class="ion-padding ion-text-center ion-align-self-center">
-            <h2 class="assignment-title">Assignment: Self-inquiry Questions</h2>
-            <div class="audio-player">
-              <audio preload="auto" controls controlsList="nodownload" #selfInquiryAudio>
-                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule04%2Faudio%2FSelfInquiryQuestions.mp3?alt=media&token=8c403a77-d20a-43ff-96b9-970a27cff008" 
-                type="audio/mpeg">
-              </audio>
-              <p class="audio-duration">Duration: {{ audioDuration403 * 1000 | date:'mm:ss' }}</p>
-            </div>
-          </ion-col>
-          <ion-col size="12" class="ion-padding ion-text-center ion-align-self-center">
-            <h4 class="assignment-title">(To Follow Along With Recording Above)</h4>
-          </ion-col>
           <ion-col size="12" class="assignment">
+            <ion-row>
+              <ion-col size="12" class="ion-padding ion-text-center ion-align-self-center">
+                <p class="assignment-title">Assignment: Self-inquiry Questions</p>
+                <div class="audio-player">
+                  <audio preload="auto" controls controlsList="nodownload" #selfInquiryAudio>
+                    <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule04%2Faudio%2FSelfInquiryQuestions.mp3?alt=media&token=8c403a77-d20a-43ff-96b9-970a27cff008" 
+                    type="audio/mpeg">
+                  </audio>
+                  <p class="audio-duration">Duration: {{ audioDuration403 * 1000 | date:'mm:ss' }}</p>
+                </div>
+              </ion-col>
+              <ion-col size="12" class="ion-padding ion-text-center ion-align-self-center">
+                <h4 class="assignment-title">(To Follow Along With Recording Above)</h4>
+              </ion-col>
+            </ion-row>
             <ion-row>
               <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
                 <ion-checkbox #assignment0401 color="primary"></ion-checkbox>
@@ -117,8 +118,6 @@
                 <p>1.  Write three words/adjectives to describe your relationship with yourself right now.</p>
               </ion-col>
             </ion-row>
-          </ion-col>
-          <ion-col size="12" class="assignment">
             <ion-row>
               <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
                   <ion-checkbox #assignment0402 color="primary"></ion-checkbox>
@@ -131,8 +130,6 @@
                   to yourself that you are in a loving relationship with yourself?</p>
               </ion-col>
             </ion-row>
-          </ion-col>
-          <ion-col size="12" class="assignment">
             <ion-row>
               <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
                   <ion-checkbox #assignment0403 color="primary"></ion-checkbox>
@@ -146,8 +143,6 @@
                   engagement time.</p>
               </ion-col>
             </ion-row>
-          </ion-col>
-          <ion-col size="12" class="assignment">
             <ion-row>
               <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
                   <ion-checkbox #assignment0404 color="primary"></ion-checkbox>
@@ -160,8 +155,6 @@
                   this time, add in the beginning of the sentence, “I am open to give and receive...”</p>
               </ion-col>
             </ion-row>
-          </ion-col>
-          <ion-col size="12" class="assignment">
             <ion-row>
               <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
                   <ion-checkbox #assignment0405 color="primary"></ion-checkbox>
@@ -174,8 +167,6 @@
                   this month as you embark on getting engaged.</p>
               </ion-col>
             </ion-row>
-          </ion-col>
-          <ion-col size="12" class="assignment">
             <ion-row>
               <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
                   <ion-checkbox #assignment0406 color="primary"></ion-checkbox>
@@ -189,8 +180,6 @@
                   containment to deepen with yourself?</p>
               </ion-col>
             </ion-row>
-          </ion-col>
-          <ion-col size="12" class="assignment">
             <ion-row>
               <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
                   <ion-checkbox #assignment0407 color="primary"></ion-checkbox>
@@ -204,8 +193,6 @@
                   you of being engaged to yourself.</p>
               </ion-col>
             </ion-row>
-          </ion-col>
-          <ion-col size="12" class="assignment">
             <ion-row>
               <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
                   <ion-checkbox #assignment0408 color="primary"></ion-checkbox>
@@ -217,18 +204,16 @@
                 <p>8.	 Write three words/adjectives to describe how your want your relationship to be by 
                   the time you marry yourself.</p>
               </ion-col>
+              <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
+                <p>Practice embodying them with a body posture</p>
+                <div class="video-player">
+                  <div #bodyPostureVimeo>
+                  </div>
+                </div>
+                <p><i>
+                </i></p>
+              </ion-col>
             </ion-row>
-          </ion-col>
-          <ion-col size="12" class="assignment ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-            <p>Practice embodying them with a body posture</p>
-            <div class="video-player">
-              <div #bodyPostureVimeo>
-              </div>
-            </div>
-            <p><i>
-            </i></p>
-          </ion-col>
-          <ion-col size="12" class="assignment">
             <ion-row>
               <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
                   <ion-checkbox #assignment0409 color="primary"></ion-checkbox>
@@ -241,8 +226,6 @@
                   yourself today.</p>
               </ion-col>
             </ion-row>
-          </ion-col>
-          <ion-col size="12" class="assignment">
             <ion-row>
               <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
                   <ion-checkbox #assignment0410 color="primary"></ion-checkbox>

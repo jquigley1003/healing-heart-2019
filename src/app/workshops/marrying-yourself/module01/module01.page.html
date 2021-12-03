@@ -13,7 +13,7 @@
     <ion-row class="ion-margin-right">
       <ion-col size="12" class="ion-padding ion-text-center">
         <img src="../../../../assets/workshop1/module01/woman1.jpg">
-        <h1>Module 01<br>The Welcoming, The Beginning</h1>
+        <h1 class="module-title">Module 01<br>The Welcoming, The Beginning</h1>
       </ion-col>
       <ion-col size="12" class="ion-margin-right ion-padding">
         <p>Welcome as you embark on this powerful and transformative journey that is all 
@@ -27,6 +27,7 @@
           relationship ~~ you with you.</p>
         <p class="ion-text-center film-cryptic">Here we Grow!</p>
       </ion-col>
+      <!-- BEGINNING OF MODULE SECTION An Intro to Deva Joy Gouss and the Course -->
       <ion-row class="section-container">
         <ion-col size="12" class="ion-text-center ion-padding">
           <h2 class="section-title">An Intro to Deva Joy Gouss and the Course</h2>
@@ -81,7 +82,9 @@
             I want to marry myself!”<br>(Go for it, give yourself to loving…. Yourself!) 
           </p>
         </ion-col>
-      </ion-row><!-- END OF SECTION CONTAINER An Intro to Deva Joy Gouss and the Course -->
+      </ion-row>
+      <!-- END OF MODULE SECTION An Intro to Deva Joy Gouss and the Course -->
+      <!-- BEGINNING OF MODULE SECTION We Are All Connected -->
       <ion-row class="section-container">
         <ion-col size="12" class="ion-padding ion-text-center">
           <img src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule01%2FhandsOnTree.jpeg?alt=media&token=5878031b-a29a-49e2-b323-218f8d396693">
@@ -143,10 +146,12 @@
             <i>Let’s put a cosmic seat belt on you. Here you grow!</i>
           </p>
         </ion-col>
-      </ion-row><!-- END OF SECTION CONTAINER  We Are All Connected -->
+      </ion-row>
+      <!-- END OF MODULE SECTION We Are All Connected -->
+      <!-- BEGINNING OF MODULE SECTION Hey, bride to be, let's revel-->
       <ion-row class="section-container">
         <ion-col size="12" class="ion-padding ion-text-center">
-          <h2 class="section-title">Hey, bride to be, let’s revel!</h2>
+          <h2 class="section-title">HEY, BRIDE TO BE, LET'S REVEL!</h2>
           <div class="audio-player">
             <audio preload="auto" controls controlsList="nodownload" #revelAudio>
               <source src="../../../../assets/audio/module01/HeyBrideToBe.mp3" type="audio/mpeg">
@@ -162,10 +167,12 @@
           <p><i>As you listen to this song, stand and close your eyes — and allow the music to 
             take you inward and allow your body to move and breathe and be...</i></p>
         </ion-col>
-      </ion-row><!-- END OF SECTION CONTAINER  Hey, bride to be, let's revel-->
+      </ion-row>
+      <!-- END OF MODULE SECTION Hey, bride to be, let's revel-->
+      <!-- BEGINNING OF MODULE SECTION The Beginning-->
       <ion-row class="section-container">
         <ion-col size="12" class="ion-padding ion-text-center">
-          <h2 class="section-title">The Beginning</h2>
+          <h2 class="section-title">THE BEGINNING</h2>
           <div class="audio-player">
             <audio preload="auto" controls controlsList="nodownload" #beginningAudio>
               <source src="../../../../assets/audio/module01/TheBeginning.mp3" type="audio/mpeg">
@@ -193,10 +200,8 @@
           </p>
         </ion-col>
         <!-- BEGINNING OF ASSIGNMENT Imagine and Write for Ten Minutes -->
-        <ion-col size="12" class="ion-padding ion-text-center ion-align-self-center">
-          <h2 class="assignment-title">Assignment: Imagine and Write for Ten Minutes</h2>
-        </ion-col>
         <ion-col size="12" class="assignment">
+          <p class="assignment-title">Assignment: Imagine and Write for Ten Minutes</p>
           <ion-row>
             <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
               <ion-checkbox #assignment0101 color="primary"></ion-checkbox>
@@ -267,10 +272,12 @@
             </ng-template>
           </swiper>
         </ion-col> -->
-      </ion-row><!-- END OF SECTION CONTAINER  The Beginning-->
+      </ion-row>
+      <!-- END OF MODULE SECTION The Beginning-->
+      <!-- BEGINNING OF MODULE SECTION Commitment to Mudra Flow -->
       <ion-row class="section-container">
         <ion-col size="12" class="ion-padding ion-text-center">
-          <h2 class="section-title">Commitment to Mudra Flow</h2>
+          <h2 class="section-title">COMMITMENT TO MUDRA FLOW</h2>
           <div class="audio-player">
             <audio preload="auto" controls controlsList="nodownload" #mudraAudio>
               <source src="../../../../assets/audio/module01/CommitmentMudraFlowNew.mp3" type="audio/mpeg">
@@ -313,10 +320,12 @@
             <div id="youtube-player6"></div>
           </div>
         </ion-col>
-      </ion-row><!-- END OF SECTION CONTAINER Commitment to Mudra Flow -->
+      </ion-row>
+      <!-- END OF MODULE SECTION Commitment to Mudra Flow -->
+      <!-- BEGINNING OF PRACTICES -->
       <ion-row class="practices">
         <ion-col size="12" class="ion-padding ion-text-center">
-          <h2 class="section-title">Welcoming Practices</h2>
+          <h2 class="section-title">WELCOMING PRACTICES</h2>
           <div class="audio-player">
             <audio preload="auto" controls controlsList="nodownload" #practices01Audio>
               <source src="../../../../assets/audio/module01/WelcomingPracticesNew.mp3" type="audio/mpeg">
@@ -344,11 +353,14 @@
           </p>
         </ion-col>
       </ion-row>
+      <!-- END OF PRACTICES -->
+      <!-- BEGINNING OF QUOTES -->
       <ion-col size="12" class="ion-padding ion-text-center">
         <img src="../../../../assets/workshop1/module01/responsibility.jpg">
         <img src="../../../../assets/workshop1/module01/PromiseWTP.jpg">
         <img src="../../../../assets/workshop1/module01/HowYouLove.jpg">
       </ion-col>
+      <!-- END OF QUOTES -->
       <ion-col size="12" class="ion-text-center">
         <ion-button *ngIf="showIncompleteBtn" (click)="markComplete()">
           <ion-icon color="warning" name="square-outline"></ion-icon>&nbsp; You Have Not Completed This Module.
