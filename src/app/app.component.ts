@@ -87,7 +87,7 @@ export class AppComponent implements OnInit {
         console.log(data.current.appData);
         this.alertService.presentAlert(
           'App Update!',
-          'Updated version of SFCA app available.',
+          'Updated version of Healing Heart Communications app is available.',
           'Load Improved Version?',
           [
             {
