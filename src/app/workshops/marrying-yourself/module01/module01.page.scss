@@ -27,8 +27,14 @@ audio {
 	font-size: 2em;
 }
 
+.module-title {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
 .section-title {
-	text-shadow: 3px 3px 2px lightblue;
+	font-weight: bold;
+	text-shadow: 2px 2px 4px var(--ion-color-secondary);
 }
 
 .section-container {
@@ -58,13 +64,19 @@ audio {
 }
 
 .assignment {
+	background-color: rgb(251, 238, 249);
+	border: 2mm ridge rgba(var(--ion-color-tertiary-rgb, 0.6));
+	border-radius: 10px;
+	margin-left: 1px;
+	margin-right: 1px;
 	padding: 0px 10px;
 	color: var(--ion-color-primary);
 	font-weight: bold;
 }
 
-.assignment-title {
-	text-shadow: 2px 2px 4px var(--ion-color-primary);
+.assignment-title{
+	text-align: center;
+	text-shadow: 2px 2px 4px var(--ion-color-tertiary);
 }
 
 .practices {
