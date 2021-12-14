@@ -122,17 +122,17 @@ export class AdminPage implements OnInit, OnDestroy {
   }
 
   deleteUserConfirmed(userId, userEmail) {
-    if(userEmail == "devajoy@me.com" || "jeff.quigley@wavinghi.com") {
-        this.toastService.presentToast(
-          `${userEmail} is main admin of this web app and can not be deleted`,
-          'middle',
-          [{
-            text: 'OK',
-            role: 'cancel',
-          }], 5000);
-    } else {
+    // if(userEmail == "devajoy@me.com" || "jeff.quigley@wavinghi.com") {
+    //     this.toastService.presentToast(
+    //       `${userEmail} is main admin of this web app and can not be deleted`,
+    //       'middle',
+    //       [{
+    //         text: 'OK',
+    //         role: 'cancel',
+    //       }], 5000);
+    // } else {
       this.userService.deleteUser(userId);
-    }
+    // }
   }
 
   goHome() {
