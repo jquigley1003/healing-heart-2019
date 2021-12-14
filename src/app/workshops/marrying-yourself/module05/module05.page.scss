@@ -1,5 +1,6 @@
 ion-content {
-	font-family: 'Roboto Medium', sans-serif;
+	font-family: 'Helvetica Neue Light', sans-serif;
+	// font-family: 'Roboto Medium', sans-serif;
 	font-size: 1.5em;
 	color: var(--ion-color-medium);
 }
@@ -73,7 +74,11 @@ audio {
 }
 
 .practices {
+	background-color: rgb(209, 234, 243);
+	border: 2mm ridge rgba(var(--ion-color-tertiary-rgb, 0.6));
+	border-radius: 10px;
 	padding: 0px 10px;
 	color: var(--ion-color-primary);
+	font-family: 'Calibri Regular', sans-serif;
 	font-weight: bold;
 }
