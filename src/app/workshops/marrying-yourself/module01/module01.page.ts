@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
+import Player from '@vimeo/player';
 import SwiperCore, { SwiperOptions, EffectCube } from 'swiper';
 SwiperCore.use([EffectCube]);
 @Component({
@@ -16,6 +17,7 @@ export class Module01Page implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('beginningAudio') beginningAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('mudraAudio') mudraAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('practices01Audio') practices01AudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('kristenVimeo') kristenVimeoRef: ElementRef;
 
   config: SwiperOptions = {
     pagination: true,
@@ -32,6 +34,7 @@ export class Module01Page implements OnInit, AfterViewInit, OnDestroy {
   audioDuration05: number;
   audioDuration06: number;
   audioDuration07: number;
+  kristenVimeoPlayer: Player;
 
   constructor() { }
 
@@ -61,6 +64,10 @@ export class Module01Page implements OnInit, AfterViewInit, OnDestroy {
     this.practices01AudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration07 = this.practices01AudioRef.nativeElement.duration;
     };
+    this.kristenVimeoPlayer = new Player(this.kristenVimeoRef.nativeElement, {
+      id: 657064873,
+      height: 350
+    });
   }
 
 
