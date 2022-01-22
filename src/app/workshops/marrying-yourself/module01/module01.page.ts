@@ -66,7 +66,7 @@ export class Module01Page implements OnInit, AfterViewInit, OnDestroy {
     };
     this.kristenVimeoPlayer = new Player(this.kristenVimeoRef.nativeElement, {
       id: 657064873,
-      height: 350
+      height: 450
     });
   }
 

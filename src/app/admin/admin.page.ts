@@ -33,7 +33,7 @@ export class AdminPage implements OnInit, OnDestroy {
   }
 
   async getAllUsers() {
-    this.userService.allUsers$
+    this.userService.getAllUsers()
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe(async data => {
         this.users = data;
@@ -68,7 +68,7 @@ export class AdminPage implements OnInit, OnDestroy {
   }
 
   removeAdmin(user) {
-    if(user.email == "devajoy@me.com" || "jeff.quigley@wavinghi.com") {
+    if(user.email == 'devajoy@me.com" || "jeff.quigley@wavinghi.com') {
       this.toastService.presentToast(
         `This user is a main admin, you can not remove admin role from ${user.email}.`,
         'middle',
@@ -122,17 +122,17 @@ export class AdminPage implements OnInit, OnDestroy {
   }
 
   deleteUserConfirmed(userId, userEmail) {
-    // if(userEmail == "devajoy@me.com" || "jeff.quigley@wavinghi.com") {
-    //     this.toastService.presentToast(
-    //       `${userEmail} is main admin of this web app and can not be deleted`,
-    //       'middle',
-    //       [{
-    //         text: 'OK',
-    //         role: 'cancel',
-    //       }], 5000);
-    // } else {
+    if(userEmail == "jeff.quigley@wavinghi.com") {
+        this.toastService.presentToast(
+          `${userEmail} is main admin of this web app and can not be deleted`,
+          'middle',
+          [{
+            text: 'OK',
+            role: 'cancel',
+          }], 5000);
+    } else {
       this.userService.deleteUser(userId);
-    // }
+    }
   }
 
   goHome() {

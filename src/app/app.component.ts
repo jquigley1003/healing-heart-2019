@@ -110,13 +110,6 @@ export class AppComponent implements OnInit {
     }
   }
 
-  // initializeApp() {
-  //   this.platform.ready().then(() => {
-  //     this.statusBar.styleDefault();
-  //     this.splashScreen.hide();
-  //   });
-  // }
-
   initializeUsers() {
     this.getCurrentUser();
     this.authService.currentUser$
