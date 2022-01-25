@@ -8,12 +8,12 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content [fullscreen]="true" class="module-content">
     <ion-grid>
       <ion-row class="ion-margin-right">
         <ion-col size="12" class="ion-padding ion-text-center">
           <img src="../../../../assets/workshop1/module05/HandForeFingerThumb.jpg">
-          <h1 class=“module-title”>Module 05<br>Commitment Mudra Flow</h1>
+          <h1>Module 05<br>Commitment Mudra Flow</h1>
         </ion-col>
         <!-- BEGINNING OF MODULE SECTION Commitment Mudra Flow Introduction -->
         <ion-row class="section-container">
@@ -131,8 +131,8 @@
         <ion-col size="12" class="ion-text-center">
           <ion-button [routerLink]="['/workshops/marrying-yourself/module04']"
           routerDirection="back"><ion-icon name="arrow-back-circle-outline"></ion-icon>
-          &nbsp; Module 04</ion-button>
-          <ion-button
+          &nbsp; Module 05</ion-button>
+          <ion-button [routerLink]="['/workshops/marrying-yourself/module06']"
           routerDirection="forward">Module 06 &nbsp;
           <ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-button>
         </ion-col>
