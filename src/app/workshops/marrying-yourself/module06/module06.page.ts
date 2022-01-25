@@ -12,12 +12,16 @@ export class Module06Page implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('tamingYourMindAudio') tamingYourMindAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('howToTameYourMindAudio') howToTameYourMindAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('alphaMindAudio') alphaMindAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('transformingMindAudio') transformingMindAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('practiceTamingMindAudio') practiceTamingMindAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('embracingYourHeartAudio') embracingYourHeartAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('guidedImageryHeartAudio') guidedImageryHeartAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('practiceEmbracingHeartAudio') practiceEmbracingHeartAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('lovingYourBodyAudio') lovingYourBodyAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('practiceLovingYourBodyAudio') practiceLovingYourBodyAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('nourishYourSoulAudio') nourishYourSoulAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('practiceNourishSoulAudio') practiceNourishSoulAudioRef: ElementRef<HTMLAudioElement>;
+
 
   completedModule: boolean;
   showCompleteBtn: boolean;
@@ -32,6 +36,9 @@ export class Module06Page implements OnInit, AfterViewInit, OnDestroy {
   audioDuration608: number;
   audioDuration609: number;
   audioDuration610: number;
+  audioDuration611: number;
+  audioDuration612: number;
+  audioDuration613: number;
 
   constructor() { }
 
@@ -52,23 +59,32 @@ export class Module06Page implements OnInit, AfterViewInit, OnDestroy {
     this.alphaMindAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration604 = this.alphaMindAudioRef.nativeElement.duration;
     };
+    this.transformingMindAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration605 = this.transformingMindAudioRef.nativeElement.duration;
+    };
     this.practiceTamingMindAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration605 = this.practiceTamingMindAudioRef.nativeElement.duration;
+      this.audioDuration606 = this.practiceTamingMindAudioRef.nativeElement.duration;
     };
     this.embracingYourHeartAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration606 = this.embracingYourHeartAudioRef.nativeElement.duration;
+      this.audioDuration607 = this.embracingYourHeartAudioRef.nativeElement.duration;
     };
     this.guidedImageryHeartAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration607 = this.guidedImageryHeartAudioRef.nativeElement.duration;
+      this.audioDuration608 = this.guidedImageryHeartAudioRef.nativeElement.duration;
     };
     this.practiceEmbracingHeartAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration608 = this.practiceEmbracingHeartAudioRef.nativeElement.duration;
+      this.audioDuration609 = this.practiceEmbracingHeartAudioRef.nativeElement.duration;
     };
     this.lovingYourBodyAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration609 = this.lovingYourBodyAudioRef.nativeElement.duration;
+      this.audioDuration610 = this.lovingYourBodyAudioRef.nativeElement.duration;
     };
     this.practiceLovingYourBodyAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration610 = this.practiceLovingYourBodyAudioRef.nativeElement.duration;
+      this.audioDuration611 = this.practiceLovingYourBodyAudioRef.nativeElement.duration;
+    };
+    this.nourishYourSoulAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration612 = this.nourishYourSoulAudioRef.nativeElement.duration;
+    };
+    this.practiceNourishSoulAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration613 = this.practiceNourishSoulAudioRef.nativeElement.duration;
     };
   }
 
@@ -93,7 +109,6 @@ export class Module06Page implements OnInit, AfterViewInit, OnDestroy {
     const result10 = await YoutubePlayerWeb.initialize(player10);
     const player11 = {playerId: 'youtube-player0611', playerSize: {width: 640, height: 360}, videoId: 'rhA94ozSUD0'};
     const result11 = await YoutubePlayerWeb.initialize(player11);
-
     const player12 = {playerId: 'youtube-player0612', playerSize: {width: 640, height: 360}, videoId: 'eAfyFTzZDMM'};
     const result12 = await YoutubePlayerWeb.initialize(player12);
     const player13 = {playerId: 'youtube-player0613', playerSize: {width: 640, height: 360}, videoId: 'AEVC-IRdxZY'};
@@ -119,6 +134,12 @@ export class Module06Page implements OnInit, AfterViewInit, OnDestroy {
     const result9 = await YoutubePlayerWeb.destroy('youtube-player0609');
     const result10 = await YoutubePlayerWeb.destroy('youtube-player0610');
     const result11 = await YoutubePlayerWeb.destroy('youtube-player0611');
+    const result12 = await YoutubePlayerWeb.destroy('youtube-player0612');
+    const result13 = await YoutubePlayerWeb.destroy('youtube-player0613');
+    const result14 = await YoutubePlayerWeb.destroy('youtube-player0614');
+    const result15 = await YoutubePlayerWeb.destroy('youtube-player0615');
+    const result16 = await YoutubePlayerWeb.destroy('youtube-player0616');
+    const result17 = await YoutubePlayerWeb.destroy('youtube-player0617');
   }
 
   onToggle() {
