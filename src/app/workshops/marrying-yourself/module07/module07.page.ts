@@ -9,7 +9,7 @@ import Player from '@vimeo/player';
   styleUrls: ['./module07.page.scss'],
 })
 export class Module07Page implements OnInit {
-  @ViewChild('introModule06Audio') introModule06AudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('introModule07Audio') introModule07AudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('tamingYourMindAudio') tamingYourMindAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('howToTameYourMindAudio') howToTameYourMindAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('alphaMindAudio') alphaMindAudioRef: ElementRef<HTMLAudioElement>;
@@ -28,7 +28,7 @@ export class Module07Page implements OnInit {
   completedModule: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
-  audioDuration601: number;
+  audioDuration701: number;
   audioDuration602: number;
   audioDuration603: number;
   audioDuration604: number;
@@ -50,8 +50,8 @@ export class Module07Page implements OnInit {
 
   ngAfterViewInit() {
     this.initializeYoutubePlayerPluginWeb();
-    this.introModule06AudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration601 = this.introModule06AudioRef.nativeElement.duration;
+    this.introModule07AudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration701 = this.introModule07AudioRef.nativeElement.duration;
     };
     this.tamingYourMindAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration602 = this.tamingYourMindAudioRef.nativeElement.duration;
@@ -96,6 +96,8 @@ export class Module07Page implements OnInit {
   }
 
   async initializeYoutubePlayerPluginWeb() {
+    const player1 = {playerId: 'youtube-player0701', playerSize: {width: 640, height: 360}, videoId: 'Xn676-fLq7I'};
+    const result1 = await YoutubePlayerWeb.initialize(player1);
     const player2 = {playerId: 'youtube-player0602', playerSize: {width: 640, height: 360}, videoId: '-jc8tacP520'};
     const result2 = await YoutubePlayerWeb.initialize(player2);
     const player3 = {playerId: 'youtube-player0603', playerSize: {width: 640, height: 360}, videoId: 'k4F7dzyGqnE'};
