@@ -9,39 +9,40 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true" class="module-content">
-    <ion-grid>
-      <ion-row class="ion-margin-right">
-        <ion-col size="12" class="ion-padding ion-text-center">
-          <img src="../../../../assets/workshop1/module07/WomanHandOnHerShoulder.jpg">
-          <h1>Module 06<br>Self-Retrieval</h1>
-        </ion-col>
-        <ion-col size="12" class="ion-text-center ion-padding">
-          <h2 class="section-title">INTRODUCTION TO SELF-RETRIEVAL</h2>
-          <div class="audio-player">
-              <audio preload="auto" controls controlsList="nodownload" #introModule07Audio>
-                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule07%2FIntroToSelfRetreivalModule.mp3?alt=media&token=89f196e8-1313-4acb-8a71-fe1a3c210788" 
-                type="audio/mpeg">
-              </audio>
-              <p class="audio-duration">Duration: {{ audioDuration701 * 1000 | date:'mm:ss' }}</p>
-            </div>
-        </ion-col>
-        <ion-col size="12" class="ion-margin-right ion-padding">
-          <p>To be in this relationship with ourselves in this way, it is essential to know our sense of wholeness and ownership 
-            of  ourselves. To do this, we must reflect on and learn from our past relationships and retrieve parts 
-            of ourselves that we left behind.
-          </p>
-          <p>Whatever is needed, this module is dedicated to doing what is necessary so you can go forth in your engagement time 
-            with a greater sense of wholeness.</p>
-        </ion-col>
-        <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-          <h2>Stronger by Kelly Clarkson</h2>
-          <div class="video-player">
-            <div id="youtube-player0701">
-            </div>
+  <ion-grid>
+    <ion-row class="ion-margin-right">
+      <ion-col size="12" class="ion-padding ion-text-center">
+        <img src="../../../../assets/workshop1/module07/WomanHandOnHerShoulder.jpg">
+        <h1>Module 06<br>Self-Retrieval</h1>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center ion-padding">
+        <h2 class="section-title">INTRODUCTION TO SELF-RETRIEVAL</h2>
+        <div class="audio-player">
+            <audio preload="auto" controls controlsList="nodownload" #introModule07Audio>
+              <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule07%2FIntroToSelfRetreivalModule.mp3?alt=media&token=89f196e8-1313-4acb-8a71-fe1a3c210788" 
+              type="audio/mpeg">
+            </audio>
+            <p class="audio-duration">Duration: {{ audioDuration701 * 1000 | date:'mm:ss' }}</p>
           </div>
-          <p><i></i></p>
-        </ion-col>
-        <!-- BEGINNING OF MODULE SECTION The Inner Work -->
+      </ion-col>
+      <ion-col size="12" class="ion-margin-right ion-padding">
+        <p>To be in this relationship with ourselves in this way, it is essential to know our sense of wholeness and ownership 
+          of  ourselves. To do this, we must reflect on and learn from our past relationships and retrieve parts 
+          of ourselves that we left behind.
+        </p>
+        <p>Whatever is needed, this module is dedicated to doing what is necessary so you can go forth in your engagement time 
+          with a greater sense of wholeness.</p>
+      </ion-col>
+      <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
+        <h2>Stronger by Kelly Clarkson</h2>
+        <div class="video-player">
+          <div id="youtube-player0701">
+          </div>
+        </div>
+        <p><i></i></p>
+      </ion-col>
+      <!-- BEGINNING OF MODULE SECTION The Inner Work -->
+      <ion-col size="12">
         <ion-row class="section-container">
           <ion-col size="12" class="ion-text-center ion-padding">
             <h2 class="section-title">The Inner Work</h2>
@@ -136,6 +137,9 @@
               </li>
             </ol>
           </ion-col>
+          <ion-col size="12" class="ion-text-center ion-padding">
+            <h2 class="section-subtitle">ENERGY MEDICINE EXERCISES</h2>
+          </ion-col>
           <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
             <h2>Clear Out Your Energy Field</h2>
             <div class="video-player">
@@ -169,8 +173,10 @@
             <p><i></i></p>
           </ion-col>
         </ion-row>
-        <!-- END OF MODULE SECTION The Inner Work -->
-        <!-- BEGINNING OF MODULE SECTION Horizontal Relating and Vertical Alignment -->
+      </ion-col>
+      <!-- END OF MODULE SECTION The Inner Work -->
+      <!-- BEGINNING OF MODULE SECTION Horizontal Relating and Vertical Alignment -->
+      <ion-col size="12">
         <ion-row class="section-container">
           <ion-col size="12" class="ion-text-center ion-padding">
             <h2 class="section-title">THE DIFFERENCE BETWEEN HORIZONTAL RELATING AND VERTICAL ALIGNMENT</h2>
@@ -207,255 +213,220 @@
             </i></p>
           </ion-col>
         </ion-row>
-        <!-- END OF MODULE SECTION Horizontal Relating and Vertical Alignment -->
-
-
-        <!-- BEGINNING OF PRACTICES Embracing The Heart -->
-        <ion-row class="practices">
-          <ion-col size="12" class="ion-padding ion-text-center">
-            <h2 class="section-title">PRACTICES FOR EMBRACING YOUR HEART</h2>
-            <div class="audio-player">
-              <audio preload="auto" controls controlsList="nodownload" #practiceEmbracingHeartAudio>
-                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule06%2Faudio%2FPracticesForEmbracingYourHeart.mp3?alt=media&token=b7c7bead-84eb-40d7-b438-f31010169277" 
-                type="audio/mpeg">
-              </audio>
-              <p class="audio-duration">Duration: {{ audioDuration609 * 1000 | date:'mm:ss' }}</p>
-            </div>
-          </ion-col>
-          <ion-col size="12" class="ion-margin-right ion-padding">
-            <p>~~ Intentionally take time to intentionally breathe into your heart, a deep inhale 
-              expanding your chest and with the exhale, you are letting go and watching all the air 
-              leave your body and then the inhale comes in like a wave onto shore, and with the exhale 
-              the tide goes back out. In and out. Through the heart chambers, as the chest rises with the 
-              inhale and releases with the exhale. Your focus is on embracing your heart. As you do this, also 
-              practice hearting the sound of your breath as you breathe the deepest longest inhale you can, and 
-              then slowly and gently allow the sound of the exhale as it drops you deeper into yourself and 
-              communing with your heart. Follow the breath.</p>
-            <p>~~ Practice daily bringing your hands to your heart, palming your heart chakra in the middle of 
-              your chest and send loving energy and gratitude to your heart.
-            </p>
-            <p>~~ Practice the Heart Balancing Energy Movement.</p>
-            <p>~~ Write to your heart. This can be letters, notes, one liners or lots of journaling...</p>
-            <ion-row>
-              <!-- BEGINNING OF QUOTES Embracing The Heart -->
-              <ion-col size="12" class="ion-padding ion-text-center">
-                <img src="../../../../assets/workshop1/module06/quote-onlyWithHeart.jpg">
-                <img src="../../../../assets/workshop1/module06/quote-heartSoftest.jpg">
-              </ion-col>
-      	      <!-- END OF QUOTES Embracing The Heart --> 
-            </ion-row>
-          </ion-col>
-        </ion-row>
-        <!-- END OF PRACTICES Embracing The Heart -->
-        <!-- BEGINNING OF MODULE SECTION Loving Your Body -->
+      </ion-col>
+      <!-- END OF MODULE SECTION Horizontal Relating and Vertical Alignment -->
+      <!-- BEGINNING OF MODULE SECTION Self-Retrieval Ritual -->
+      <ion-col size="12">
         <ion-row class="section-container">
           <ion-col size="12" class="ion-text-center ion-padding">
-            <h2 class="section-title">LOVING YOUR BODY</h2>
+            <h2 class="section-title">THE SELF-RETRIEVAL RITUAL</h2>
             <div class="audio-player">
-                <audio preload="auto" controls controlsList="nodownload" #lovingYourBodyAudio>
-                  <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule06%2Faudio%2FLovingYourBody.mp3?alt=media&token=3184f161-f233-4384-819b-a0e16e4f4b44" 
+                <audio preload="auto" controls controlsList="nodownload" #selfRetrievalRitualAudio>
+                  <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule07%2FSelfRetrievalSacredRitual.mp3?alt=media&token=f12d7850-cf9d-4235-bc6e-30387db636df" 
                   type="audio/mpeg">
                 </audio>
-                <p class="audio-duration">Duration: {{ audioDuration610 * 1000 | date:'mm:ss' }}</p>
+                <p class="audio-duration">Duration: {{ audioDuration704 * 1000 | date:'mm:ss' }}</p>
               </div>
           </ion-col>
           <ion-col size="12" class="ion-margin-right ion-padding">
-            <p>Society breeds a lot of self-consciousness and impacts how we feel in our own bodies. 
-              Sometimes we feel insecure with our bodies, afraid of being judged by others, and other 
-              times we are wild and dancing and shameless and loving our whole selves and our bodies 
-              feel like a great place to be.
+            <p>The point of this ritual is to do exactly what it says it is — to retrieve yourself. You have starred the 
+              relationship you feel is still most unresolved and unfinished, calling for self-retrieval. I will tell you 
+              about what we are going to do. This is called a sacred ritual. You can ask someone you trust to be witness 
+              to your ritual or you can do it by yourself. Leave enough time for yourself to do this work. At least an hour.
             </p>
-            <p>It is time to take back our own relationships with our bodies. To claim them as home! 
-              Our own.
+            <p>A ritual is enacting something in 3-D, what you hold inside of yourself and then once it is externalized, 
+              and given meaning, you act upon it in some way that feels meaningful and transformative and then you bring 
+              that back inside of you.
             </p>
-          </ion-col>
-          <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-            <h2>Grounding Techniques | Get Back Into Your Body | Brooke Bridges</h2>
-            <div class="video-player">
-              <div id="youtube-player0611">
-              </div>
-            </div>
-            <p><i></i></p>
+            <p>It is sacred because it is about you and your inner work. Of course it is sacred. We are entering into a 
+              vulnerable hurt place inside of you and bringing healing. This is sacred work.
+            </p>
           </ion-col>
           <ion-col size="12" class="ion-padding ion-text-center">
-            <img src="../../../../assets/workshop1/module06/dancingWoman.jpg">
-          </ion-col>
-          <ion-col size="12" class="ion-text-center ion-margin-right ion-padding">
-            <p>The body is a marvel. Be in awe everyday. Gratitude.</p>
+            <img src="../../../../assets/workshop1/module07/WomanInFrontOfComputer.jpg">
           </ion-col>
           <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-            <h2>Christina Aguilera - Beautiful</h2>
+            <h2>Self-Retrieval Demonstration</h2>
             <div class="video-player">
-              <div id="youtube-player0612">
-              </div>
-            </div>
-            <p><i></i></p>
-          </ion-col>
-          <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-            <h2>Sacral Chakra Trance Dance Meditaition</h2>
-            <div class="video-player">
-              <div id="youtube-player0613">
-              </div>
-            </div>
-            <p><i></i></p>
-          </ion-col>
-          <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-            <h2>Alessia Cara - Scars To Your Beautiful</h2>
-            <div class="video-player">
-              <div id="youtube-player0614">
-              </div>
-            </div>
-            <p><i></i></p>
-          </ion-col>
-          <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-            <h2>India.Arie - Video</h2>
-            <div class="video-player">
-              <div id="youtube-player0615">
-              </div>
-            </div>
-            <p><i></i></p>
-          </ion-col>
-          <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-            <h2>Lizzo - My Skin</h2>
-            <div class="video-player">
-              <div id="youtube-player0616">
-              </div>
-            </div>
-            <p><i></i></p>
-          </ion-col>
-          <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-            <h2>A Lesson in Therapeutic Dance Movement</h2>
-            <div class="video-player">
-              <div id="youtube-player0617">
-              </div>
-            </div>
-            <p><i></i></p>
-          </ion-col>
-        </ion-row>
-        <!-- END OF MODULE SECTION Loving Your Body -->
-        <!-- BEGINNING OF PRACTICES Loving Your Body -->
-        <ion-row class="practices">
-          <ion-col size="12" class="ion-padding ion-text-center">
-            <h2 class="section-title">PRACTICES FOR LOVING YOUR BODY</h2>
-            <div class="audio-player">
-              <audio preload="auto" controls controlsList="nodownload" #practiceLovingYourBodyAudio>
-                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule06%2Faudio%2FPracticesForLovingYourBody.mp3?alt=media&token=e18c61bf-912a-47e2-8b3c-b8dc564091d3" 
-                type="audio/mpeg">
-              </audio>
-              <p class="audio-duration">Duration: {{ audioDuration611 * 1000 | date:'mm:ss' }}</p>
-            </div>
-          </ion-col>
-          <ion-col size="12" class="ion-margin-right ion-padding">
-            <p>~~ Every day for a two weeks minimum practice two minutes of consciously addressing your body 
-              in a loving nurturing way. (E.g. self-talk, breath, self-massage and touch with loving thoughts, 
-              looking at yourself in the mirror and saying something kind.)
-            </p>
-            <p>~~ You may breathe into your body intentionally with love and acceptance.</p>
-            <p>~~ Practice intentional gratitude to have a body and to your body, thank you body!!! Do this daily 
-              for a week and see what happens.</p>
-            <p>~~ Move to music any way your body wants to move.</p>
-            <p>~~ Make a wonderful nutritious meal for yourself that is delicious and you love to eat, and is good 
-              for you too! (If you don't cook, order a great meal or go out to eat). When you eat the food, 
-              consciously eat it with the awareness that you are feeding your body healthy foods and also yummy 
-              foods. Enjoy as you receive pleasure in gathering the meal for yourself and ingesting it.
-            </p>
-            <ion-row>
-              <!-- BEGINNING OF QUOTES Loving Your Body -->
-              <ion-col size="12" class="ion-padding ion-text-center">
-                <img src="../../../../assets/workshop1/module06/quote-embraceLoveBody.jpg">
-                <img src="../../../../assets/workshop1/module06/quote-melissaMcCarthy.jpg">
-              </ion-col>
-      	      <!-- END OF QUOTES Loving Your Body --> 
-            </ion-row>
-          </ion-col>
-        </ion-row>
-        <!-- END OF PRACTICES Loving Your Body -->
-
-        <!-- BEGINNING OF MODULE SECTION Nourish Your Soul -->
-        <ion-row class="section-container">
-          <ion-col size="12" class="ion-text-center ion-padding">
-            <h2 class="section-title">NOURISH YOUR SOUL</h2>
-            <div class="audio-player">
-                <audio preload="auto" controls controlsList="nodownload" #nourishYourSoulAudio>
-                  <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule06%2Faudio%2FNourishingYourSoul.mp3?alt=media&token=524012b2-b224-457d-9e72-8694326dc7b7" 
-                  type="audio/mpeg">
-                </audio>
-                <p class="audio-duration">Duration: {{ audioDuration612 * 1000 | date:'mm:ss' }}</p>
-              </div>
-          </ion-col>
-          <ion-col size="12" class="ion-margin-right ion-padding">
-            <p>What feeds your soul? What helps you to feel deep into the center of your self — the bigger self 
-              than the roles you play, the things you do and accomplish, the relationships you have?
-            </p>
-            <p>What helps you to feel the vertical connection and the pulse of the divine within you? Whatever 
-              does that for you in your life, go towards it...
-            </p>
-            <p>Just listen... to what opens you.. to nourishing your soul.</p>
-          </ion-col>
-          <ion-col size="12" class="ion-padding ion-text-center">
-            <img src="../../../../assets/workshop1/module06/waterPour.jpg">
-          </ion-col>
-          <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-            <h2>Dassy - Engagement</h2>
-            <div class="video-player">
-              <div #dassyVimeo>
+              <div #selfRetrievalDemoVimeo>
               </div>
             </div>
             <p><i>
             </i></p>
           </ion-col>
         </ion-row>
-        <!-- END OF MODULE SECTION Nourish Your Soul -->
-        <!-- BEGINNING OF PRACTICES Nourish Your Soul -->
-        <ion-row class="practices">
-          <ion-col size="12" class="ion-padding ion-text-center">
-            <h2 class="section-title">PRACTICES FOR NOURISHING YOUR SOUL</h2>
+      </ion-col>
+      <!-- END OF MODULE SECTION Self-Retrieval Ritual -->
+      <!-- BEGINNING OF MODULE SECTION Metta Meditation -->
+      <ion-col size="12">
+        <ion-row class="section-container">
+          <ion-col size="12" class="ion-text-center ion-padding">
+            <h2 class="section-title">METTA MEDITATION</h2>
             <div class="audio-player">
-              <audio preload="auto" controls controlsList="nodownload" #practiceNourishSoulAudio>
-                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule06%2Faudio%2FPracticesForNourishingYourSoul.mp3?alt=media&token=0449a5c4-e333-4d1d-a004-db419a454ec8" 
-                type="audio/mpeg">
-              </audio>
-              <p class="audio-duration">Duration: {{ audioDuration613 * 1000 | date:'mm:ss' }}</p>
-            </div>
+                <audio preload="auto" controls controlsList="nodownload" #mettaMeditationAudio>
+                  <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule07%2FMettaMeditaitonFollwoingSelfRetreivalRitual.mp3?alt=media&token=825cd309-9c50-458c-b311-35d4ea54ffc8" 
+                  type="audio/mpeg">
+                </audio>
+                <p class="audio-duration">Duration: {{ audioDuration705 * 1000 | date:'mm:ss' }}</p>
+              </div>
           </ion-col>
           <ion-col size="12" class="ion-margin-right ion-padding">
-            <p>~~ Pay attention to what helps you to experience your more spacious deeper self — and then do more of that!</p>
-            <p>~~ For two weeks, commit to sitting with yourself for five minutes a day with your eyes closed with the 
-              intention to nurture your soul. See if you want to repeat the mantra, OM Namah Shivaya and Shhhhh... Or if you 
-              want to chant or practice watching the breath... Or talking to your soul. Just sit with nurturing your soul. 
-              Set a timer.
+            <p>The metta prayer of loving kindness is a prayer or mantra used as part of a loving-kindness meditation, 
+              or metta bhavana. This kind of meditation and use of a mantra is popular in the Buddhist tradition. 
+              The word, metta, comes from Pali and can be translated as "good will" or "loving kindness."
             </p>
-            <ion-row>
-              <!-- BEGINNING OF QUOTES Nourish Your Soul -->
-              <ion-col size="12" class="ion-padding ion-text-center">
-                <img src="../../../../assets/workshop1/module06/quote-danceSoul.jpg">
-                <img src="../../../../assets/workshop1/module06/quote-soulBestFriend.jpg">
-              </ion-col>
-      	      <!-- END OF QUOTES Nourish Your Soul --> 
-            </ion-row>
+            <p>I am changing the words to fit our self retrieval theme. We will sit in meditation for this.
+            </p>
+            <p>May I be safe and protected<br>
+              May I be healthy and strong<br>
+              May I be released from grudges, resentments and anger<br>
+              May I be whole, retrieved, and embraced by forgiveness and love
+            </p>
+          </ion-col>
+          <ion-col size="12" class="ion-padding ion-text-center">
+            <img src="../../../../assets/workshop1/module07/WomanBreakFromChain.jpg">
+          </ion-col>
+          <ion-col size="12" class="ion-text-center ion-padding">
+            <h2 class="section-subtitle">THE GUEST HOUSE by RUMI</h2>
+            <div class="audio-player">
+                <audio preload="auto" controls controlsList="nodownload" #theGuestHouseAudio>
+                  <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule07%2FTheGuestHouseRumi.mp3?alt=media&token=2db19bd5-3600-460e-bc87-6bdac415a404" 
+                  type="audio/mpeg">
+                </audio>
+                <p class="audio-duration">Duration: {{ audioDuration706 * 1000 | date:'mm:ss' }}</p>
+              </div>
+          </ion-col>
+          <ion-col size="12" class="ion-justify-content-center ion-text-center ion-margin-right ion-padding">
+            <div class="quote">
+              <h2>The Guest House</h2>
+              <h3>by Rumi</h3>
+              <p>This being human is a guest house.<br>
+                Every morning a new arrival.<br>
+              </p>
+              <p>
+                A joy, a depression, a meanness,<br>
+                some momentary awareness comes<br>
+                As an unexpected visitor.<br>
+              </p>
+              <p>
+                Welcome and entertain them all!<br>
+                Even if they're a crowd of sorrows,<br>
+                who violently sweep your house<br>
+                empty of its furniture,<br>
+                still treat each guest honorably.<br>
+                He may be clearing you out<br>
+                for some new delight.
+              </p>
+              <p>
+                The dark thought, the shame, the malice,<br>
+                meet them at the door laughing,<br>
+                and invite them in.
+              </p>
+              <p>
+                Be grateful for whoever comes,<br>
+                because each has been sent<br>
+                as a guide from beyond.
+              </p>
+            </div>
+          </ion-col>
+          <ion-col size="12" class="ion-text-center ion-padding">
+            <h2 class="section-subtitle">THE INVITATION by ORIAH MOUNTAIN DREAMER</h2>
+            <div class="audio-player">
+                <audio preload="auto" controls controlsList="nodownload" #theInvitationAudio>
+                  <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule07%2FTheInvitationByOriahMountainDreamer.mp3?alt=media&token=e2f1a999-6c00-49a1-83e6-4af19e6cf534" 
+                  type="audio/mpeg">
+                </audio>
+                <p class="audio-duration">Duration: {{ audioDuration707 * 1000 | date:'mm:ss' }}</p>
+              </div>
+          </ion-col>
+
+          <ion-col size="12" class="ion-margin-right ion-padding">
+            <div class="quote">
+              <h2>The Invitation</h2>
+              <h3>by Oriah Mountain Dreamer</h3>
+              <p>It doesn't interest me what you do for a living. 
+                I want to know what you ache for and if you dare to dream of meeting your heart's longing.
+              </p>
+              <p>It doesn't interest me how old you are. 
+                I want to know if you will risk looking like a fool for love, for your dream, for the adventure 
+                of being alive.
+              </p>
+              <p>It doesn't interest me what planets are squaring your moon. 
+                I want to know if you have touched the centre of your own sorrow, if you have been opened by 
+                life's betrayals or have become shrivelled and closed from fear of further pain.
+              </p>
+              <p>I want to know if you can sit with pain, mine or your own, without moving to hide it, or fade 
+                it, or fix it.
+              </p>
+              <p>I want to know if you can be with joy, mine or your own; if you can dance with wildness and 
+                let the ecstasy fill you to the tips of your fingers and toes without cautioning us to be careful, 
+                be realistic, remember the limitations of being human.
+              </p>
+              <p>It doesn't interest me if the story you are telling me is true. 
+                I want to know if you can disappoint another to be true to yourself. If you can bear the accusation 
+                of betrayal and not betray your own soul. If you can be faithless and therefore trustworthy.
+              </p>
+              <p>I want to know if you can see Beauty even when it is not pretty every day. And if you can source your 
+                own life from its presence.
+              </p>
+              <p>I want to know if you can live with failure, yours and mine, and still stand at the edge of the lake 
+                and shout to the silver of the full moon, 'Yes.'
+              </p>
+              <p>It doesn't interest me to know where you live or how much money you have. 
+                I want to know if you can get up after the night of grief and despair, weary and bruised to the bone and 
+                do what needs to be done to feed the children.
+              </p>
+              <p>It doesn't interest me who you know or how you came to be here. 
+                I want to know if you will stand in the centre of the fire with me and not shrink back.
+              </p>
+              <p>It doesn't interest me where or what or with whom you have studied. 
+                I want to know what sustains you from the inside when all else falls away.
+              </p>
+              <p>I want to know if you can be alone with yourself and if you truly like the company you keep in the 
+                empty moments.
+              </p>
+            </div>
           </ion-col>
         </ion-row>
-        <!-- END OF PRACTICES Nourish Your Soul -->
-        <!-- BEGINNING OF COMPLETE MODULE BUTTONS -->
-        <ion-col size="12" class="ion-text-center">
-          <ion-button *ngIf="showIncompleteBtn" (click)="markComplete()">
-            <ion-icon color="warning" name="square-outline"></ion-icon>&nbsp; You Have Not Completed This Module.
-          </ion-button>
-          <ion-button *ngIf="showCompleteBtn" (click)="markIncomplete()">
-            <ion-icon color="success" name="checkbox-outline"></ion-icon>&nbsp; You Completed This Module!
-          </ion-button>
-        </ion-col>
-        <!-- END OF COMPLETE MODULE BUTTONS -->
-        <!-- BEGINNING OF NAVIGATION BUTTONS -->
-        <ion-col size="12" class="ion-text-center">
-          <ion-button [routerLink]="['/workshops/marrying-yourself/module06']"
-          routerDirection="back"><ion-icon name="arrow-back-circle-outline"></ion-icon>
-          &nbsp; Module 06</ion-button>
-          <ion-button
-          routerDirection="forward">Module 08 &nbsp;
-          <ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-button>
-        </ion-col>
-        <!-- END OF NAVIGATION BUTTONS -->
+      </ion-col>
+      <!-- END OF MODULE SECTION Metta Meditation -->
+      <!-- BEGINNING OF PRACTICES For Self-Retrieval -->
+      <ion-col size="12">
+        <ion-row class="practices">
+          <ion-col size="12" class="ion-padding ion-text-center">
+            <h2 class="section-title">PRACTICES FOR SELF-RETRIEVAL</h2>
+          </ion-col>
+          <ion-col size="12" class="ion-margin-right ion-padding">
+            <p>~~ The Inner Work: the Self-Inquiry Questions</p>
+            <p>~~ The Energy Medicine Exercises</p>
+            <p>~~ The Horizontal vs. Vertical Relating Exercise</p>
+            <p>~~ The Self-Retrieval Ritual</p>
+            <p>~~ The Meta-Meditation </p>
+            <p>~~ Commitment Mudra Flow</p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <!-- END OF PRACTICES For Self-Retrieval -->
+      <!-- BEGINNING OF COMPLETE MODULE BUTTONS -->
+      <ion-col size="12" class="ion-text-center">
+        <ion-button *ngIf="showIncompleteBtn" (click)="markComplete()">
+          <ion-icon color="warning" name="square-outline"></ion-icon>&nbsp; You Have Not Completed This Module.
+        </ion-button>
+        <ion-button *ngIf="showCompleteBtn" (click)="markIncomplete()">
+          <ion-icon color="success" name="checkbox-outline"></ion-icon>&nbsp; You Completed This Module!
+        </ion-button>
+      </ion-col>
+      <!-- END OF COMPLETE MODULE BUTTONS -->
+      <!-- BEGINNING OF NAVIGATION BUTTONS -->
+      <ion-col size="12" class="ion-text-center">
+        <ion-button [routerLink]="['/workshops/marrying-yourself/module06']"
+        routerDirection="back"><ion-icon name="arrow-back-circle-outline"></ion-icon>
+        &nbsp; Module 06</ion-button>
+        <ion-button
+        routerDirection="forward">Module 08 &nbsp;
+        <ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-button>
+      </ion-col>
+      <!-- END OF NAVIGATION BUTTONS -->
     </ion-row>
   </ion-grid>
 </ion-content>
