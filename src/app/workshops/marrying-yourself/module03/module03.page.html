@@ -8,7 +8,6 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true" class="module-content">
   <ion-grid>
     <ion-row class="ion-margin-right">
@@ -17,85 +16,89 @@
         <h1>Module 03<br>Who I Am</h1>
       </ion-col>
       <!-- BEGINNING OF MODULE SECTION On Being -->
-      <ion-row class="section-container">
-        <ion-col size="12" class="ion-text-center ion-padding">
-          <h2 class="section-title">ON BEING</h2>
-          <div class="audio-player">
-            <audio preload="auto" controls controlsList="nodownload" #onBeingAudio>
-              <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule03%2Faudio%2FWho%20I%20AM.mp3?alt=media&token=6eff2a1c-4309-4be6-9a63-111c30881b47" 
-              type="audio/mpeg">
-            </audio>
-            <p class="audio-duration">Duration: {{ audioDuration301 * 1000 | date:'mm:ss' }}</p>
-          </div>
-        </ion-col>
-        <ion-col size="12" class="ion-text-center ion-padding">
-          <div class="audio-player">
-            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/166566354&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-            </iframe>
-            <div style="font-size: 10px; color: #423e3e;line-break: anywhere;word-break: normal;
-              overflow: hidden;white-space: nowrap;text-overflow: ellipsis; 
-              font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-              font-weight: 100;">
-              <a href="https://soundcloud.com/vulturedotcom" title="VultureDotCom" target="_blank" 
-              style="color: #423e3e; text-decoration: none;">VultureDotCom</a> · 
-              <a href="https://soundcloud.com/vulturedotcom/bill-murray-on-what-its-like-to-be-bill-murray" 
-              title="Bill Murray On Being Bill Murray" target="_blank" style="color: #423e3e; text-decoration: none;">
-              Bill Murray On Being Bill Murray</a>
+      <ion-col size="12">
+        <ion-row class="section-container">
+          <ion-col size="12" class="ion-text-center ion-padding">
+            <h2 class="section-title">ON BEING</h2>
+            <div class="audio-player">
+              <audio preload="auto" controls controlsList="nodownload" #onBeingAudio>
+                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule03%2Faudio%2FWho%20I%20AM.mp3?alt=media&token=6eff2a1c-4309-4be6-9a63-111c30881b47" 
+                type="audio/mpeg">
+              </audio>
+              <p class="audio-duration">Duration: {{ audioDuration301 * 1000 | date:'mm:ss' }}</p>
             </div>
-          </div>  
-        </ion-col>
-        <ion-col size="12" class="ion-margin-right ion-padding ion-text-center">
-          <p>Listen to Bill Murray on Being Bill Murray before going any further.</p>
-        </ion-col>
-        <!-- BEGINNING OF ASSIGNMENT On Being -->
-        <ion-col size="12" class="assignment">
-          <p class="assignment-title">Assignment: On Being</p>
-          <ion-row>
-            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
-              <ion-checkbox #assignment0301 color="primary"></ion-checkbox>
-            </ion-col>
-            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
-              <ion-icon name="heart-circle"></ion-icon> 
-            </ion-col>
-            <ion-col size="9" class="ion-margin-right ion-padding">
-              <p>Now, take pen to paper and write your name, then write "On being _____" and fill 
-                in your name again. And then just write without stopping until you feel done. 
-                Write without thinking about it. Just see what comes out on your page 
-                about what its like being you.</p>
-            </ion-col>
-          </ion-row>
-        </ion-col>
-        <!-- END OF ASSIGNMENT On Being -->
-        <ion-col size="12" class="ion-margin-right ion-padding">
-          <p>WHO I AM</p>
-          <p>Bring true curiosity and interest to...</p>
-          <p>your self....</p>
-          <p>To knowing — you.</p>
-          <p>To clarifying who you are — to yourself.</p>
-          <p>To naming who you know yourself to be.</p>
-          <p>To experiencing breath — breath breathing into your own being.... And out</p>
-          <p>To sitting in your own self and being willing to discover what naturally arises from 
-            within your being.</p>
-          <p>We are all adult human beings who have preferences and aversions, as well as values, 
-            beliefs, principles and passions that give context, form and expression to the life energy 
-            that manifests as each one of us.</p>
-          <p>In the mission to grow in love with ourselves and to be in solid loving relationship with 
-            ourselves, we must know who we are.</p>
-          <p>Our strengths and weaknesses, our motivations and impasses, what juices our sense of aliveness 
-            and what suppresses our spirits, our sense of gender and sexuality, our creative expressions 
-            and our blocks, on and on — all to be discovered, explored, claimed and celebrated.</p>
-        </ion-col>
-        <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-          <h2>Ruby Amanfu</h2>
-          <div class="video-player">
-            <div id="youtube-player3-1">
-            </div>
-          </div>
-          <p><i></i></p>
-        </ion-col>
-        <ion-row class="ion-justify-content-center ion-text-center">
+          </ion-col>
+          <ion-col size="12" class="ion-text-center ion-padding">
+            <div class="audio-player">
+              <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/166566354&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+              </iframe>
+              <div style="font-size: 10px; color: #423e3e;line-break: anywhere;word-break: normal;
+                overflow: hidden;white-space: nowrap;text-overflow: ellipsis; 
+                font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+                font-weight: 100;">
+                <a href="https://soundcloud.com/vulturedotcom" title="VultureDotCom" target="_blank" 
+                style="color: #423e3e; text-decoration: none;">VultureDotCom</a> · 
+                <a href="https://soundcloud.com/vulturedotcom/bill-murray-on-what-its-like-to-be-bill-murray" 
+                title="Bill Murray On Being Bill Murray" target="_blank" style="color: #423e3e; text-decoration: none;">
+                Bill Murray On Being Bill Murray</a>
+              </div>
+            </div>  
+          </ion-col>
+          <ion-col size="12" class="ion-margin-right ion-padding ion-text-center">
+            <p>Listen to Bill Murray on Being Bill Murray before going any further.</p>
+          </ion-col>
+          <!-- BEGINNING OF ASSIGNMENT On Being -->
+          <ion-col size="12">
+            <ion-row>
+              <ion-col class="assignment"><!-- Nesting in another row creates space for the border -->
+                <p class="assignment-title">Assignment: On Being</p>
+                <ion-row>
+                  <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                    <ion-checkbox #assignment0301 color="primary"></ion-checkbox>
+                  </ion-col>
+                  <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                    <ion-icon name="heart-circle"></ion-icon> 
+                  </ion-col>
+                  <ion-col size="9" class="ion-margin-right ion-padding">
+                    <p>Now, take pen to paper and write your name, then write "On being _____" and fill 
+                      in your name again. And then just write without stopping until you feel done. 
+                      Write without thinking about it. Just see what comes out on your page 
+                      about what its like being you.</p>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <!-- END OF ASSIGNMENT On Being -->
           <ion-col size="12" class="ion-margin-right ion-padding">
+            <p>WHO I AM</p>
+            <p>Bring true curiosity and interest to...</p>
+            <p>your self....</p>
+            <p>To knowing — you.</p>
+            <p>To clarifying who you are — to yourself.</p>
+            <p>To naming who you know yourself to be.</p>
+            <p>To experiencing breath — breath breathing into your own being.... And out</p>
+            <p>To sitting in your own self and being willing to discover what naturally arises from 
+              within your being.</p>
+            <p>We are all adult human beings who have preferences and aversions, as well as values, 
+              beliefs, principles and passions that give context, form and expression to the life energy 
+              that manifests as each one of us.</p>
+            <p>In the mission to grow in love with ourselves and to be in solid loving relationship with 
+              ourselves, we must know who we are.</p>
+            <p>Our strengths and weaknesses, our motivations and impasses, what juices our sense of aliveness 
+              and what suppresses our spirits, our sense of gender and sexuality, our creative expressions 
+              and our blocks, on and on — all to be discovered, explored, claimed and celebrated.</p>
+          </ion-col>
+          <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
+            <h2>Ruby Amanfu</h2>
+            <div class="video-player">
+              <div id="youtube-player3-1">
+              </div>
+            </div>
+            <p><i></i></p>
+          </ion-col>
+          <ion-col size="12" class="ion-margin-right ion-text-center ion-padding">
             <div class="quote">
               <h2>Landing Safely</h2>
               <h3>by Wren Breen</h3>
@@ -159,112 +162,119 @@
               </p>
             </div>
           </ion-col>
-        </ion-row>
-        <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-          <h2>The Greatest Showman | "This Is Me"</h2>
-          <div class="video-player">
-            <div id="youtube-player3-2">
-            </div>
-          </div>
-          <p><i></i></p>
-        </ion-col>
-        <!-- BEGINNING OF ASSIGNMENT On Being -->
-        <ion-col size="12" class="assignment">
-          <p class="assignment-title">Assignment: Owning Who You Are</p>
-          <ion-row>
-            <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-              <h2>The Art of Being Yourself</h2>
-              <div class="video-player">
-                <div id="youtube-player0303">
-                </div>
+          <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
+            <h2>The Greatest Showman | "This Is Me"</h2>
+            <div class="video-player">
+              <div id="youtube-player3-2">
               </div>
-              <p><i></i></p>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
-              <ion-checkbox #assignment0302 color="primary"></ion-checkbox>
-            </ion-col>
-            <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
-              <ion-icon name="heart-circle"></ion-icon> 
-            </ion-col>
-            <ion-col size="9" class="ion-margin-right ion-padding">
-              <p>Take out your MYJ journal and write notes while you listen. And then, when you 
-                feel inspired, when you hear something in this Ted talk that really speaks to you 
-                about owning who you are, pause the Ted talk and write. And then, continue with 
-                listening and stop it again when you feel like writing.</p>
-            </ion-col>
-          </ion-row>
-        </ion-col>
-        <!-- END OF ASSIGNMENT On Being -->
-      </ion-row>
+            </div>
+            <p><i></i></p>
+          </ion-col>
+          <!-- BEGINNING OF ASSIGNMENT Owning Who You Are -->
+          <ion-col size="12">
+            <ion-row>
+              <ion-col class="assignment"><!-- Nesting in another row creates space for the border -->
+                <p class="assignment-title">Assignment: Owning Who You Are</p>
+                <ion-row>
+                  <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
+                    <h2>The Art of Being Yourself</h2>
+                    <div class="video-player">
+                      <div id="youtube-player0303">
+                      </div>
+                    </div>
+                    <p><i></i></p>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                    <ion-checkbox #assignment0302 color="primary"></ion-checkbox>
+                  </ion-col>
+                  <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                    <ion-icon name="heart-circle"></ion-icon> 
+                  </ion-col>
+                  <ion-col size="9" class="ion-margin-right ion-padding">
+                    <p>Take out your MYJ journal and write notes while you listen. And then, when you 
+                      feel inspired, when you hear something in this Ted talk that really speaks to you 
+                      about owning who you are, pause the Ted talk and write. And then, continue with 
+                      listening and stop it again when you feel like writing.</p>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row> 
+          </ion-col>
+          <!-- END OF ASSIGNMENT Owning Who You Are -->
+        </ion-row>
+      </ion-col>
       <!-- END OF MODULE SECTION On Being -->
-      <!-- BEGINNING OF PRACTICES -->
-      <ion-row class="practices">
-        <ion-col size="12" class="ion-padding ion-text-center">
-          <h2 class="section-title">THE "I AM..." WALKING PRACTICES FOLLOWED BY A WRITING EXERCISE</h2>
-          <div class="audio-player">
-            <audio preload="auto" controls controlsList="nodownload" #practice03Audio>
-              <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule03%2Faudio%2FWalking%20_I%20AM_%20Practice%20followed%20by%20a%20Writing%20Exercise.mp3?alt=media&token=240fe81c-c795-4b85-90f7-d745caf6a770" 
-              type="audio/mpeg">
-            </audio>
-            <p class="audio-duration">Duration: {{ audioDuration302 * 1000 | date:'mm:ss' }}</p>
-          </div>
-        </ion-col>
-        <ion-col size="12" class="ion-margin-right ion-padding">
-          <p>
-            ~~ Take a slow meditative walk outside. As you walk, allow yourself to look through the 
-            lens of clear, crisp vision. Practice seeing everything clearly and vividly that your gaze 
-            falls upon. And as your eyes look upon what is before you, experiment with saying out loud, 
-            “I am ____________” and fill it in with whatever you are looking at. For example:
-          </p>
-          <p class="ion-text-center">
-            “I am e.g. the cherry blossom tree.”<br>
-            “ I am the dog that is running after the ball.”<br>
-          </p>
-          <p>
-            Just try it on and see what arises. 
-            Does it have truth particles for you? Does it feel foreign? Familiar? Easy? Challenging? 
-            Do you feel like crying? Do you want to laugh? Are you feeling expansive — or contracted? 
-            Lifted or grounded?           
-          </p>
-          <p>
-            ~~ After you do this for fifteen minutes, sit with yourself, with your journal and for ten minutes 
-            again write, I am... and see what comes out on the paper now that you have done this practice.
-          </p>
-          <p>
-            ~~ When you are done, read it to yourself.
-          </p>
-          <p>
-            ~~ Now, turn the page. Get some color pencils or markers or crayons and draw a picture of yourself on 
-            the next page of your journal. Give yourself permission for it to be messy and terrible and sloppy and 
-            abstract and childlike. Just draw your you-ness as you feel you in this moment.
-          </p>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col></ion-col>
-      </ion-row>
-      <ion-row class="practices">
-        <ion-col size="12" class="ion-padding ion-text-center">
-          <h2 class="section-title">A Special Assignment For Your Engagement Taking Place Next Modular:
-            <br>CREATE A DATE WITH YOURSELF
-          </h2>
-          <ion-row>
-            <ion-col size="12" class="ion-padding ion-text-center">
-              <img src="../../../../assets/workshop1/module03/DateAssignment.jpg">
-            </ion-col>
-          </ion-row>
-          <p>
-            ~~ Find what you want to offer to yourself and wear to represent your engagement to yourself. 
-            This object is to remind you that you are engaged in this sacred process of committing to yourself as 
-            number one priority relationship. Find something that you want to wear every day — something that is 
-            easy for you as well as of beauty, something that uplifts you when you look at it.  Next modular, modular four, 
-            you will be getting engaged so enjoy this preparation that usually calls for shopping or crafting!
-          </p>
-        </ion-col>
-      </ion-row>
-      <!-- END OF PRACTICES -->
+      <!-- BEGINNING OF PRACTICES I Am Walking Followed By Writing -->
+      <ion-col size="12">
+        <ion-row class="practices">
+          <ion-col size="12" class="ion-padding ion-text-center">
+            <h2 class="section-title">THE "I AM..." WALKING PRACTICES FOLLOWED BY A WRITING EXERCISE</h2>
+            <div class="audio-player">
+              <audio preload="auto" controls controlsList="nodownload" #practice03Audio>
+                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule03%2Faudio%2FWalking%20_I%20AM_%20Practice%20followed%20by%20a%20Writing%20Exercise.mp3?alt=media&token=240fe81c-c795-4b85-90f7-d745caf6a770" 
+                type="audio/mpeg">
+              </audio>
+              <p class="audio-duration">Duration: {{ audioDuration302 * 1000 | date:'mm:ss' }}</p>
+            </div>
+          </ion-col>
+          <ion-col size="12" class="ion-margin-right ion-padding">
+            <p>
+              ~~ Take a slow meditative walk outside. As you walk, allow yourself to look through the 
+              lens of clear, crisp vision. Practice seeing everything clearly and vividly that your gaze 
+              falls upon. And as your eyes look upon what is before you, experiment with saying out loud, 
+              “I am ____________” and fill it in with whatever you are looking at. For example:
+            </p>
+            <p class="ion-text-center">
+              “I am e.g. the cherry blossom tree.”<br>
+              “ I am the dog that is running after the ball.”<br>
+            </p>
+            <p>
+              Just try it on and see what arises. 
+              Does it have truth particles for you? Does it feel foreign? Familiar? Easy? Challenging? 
+              Do you feel like crying? Do you want to laugh? Are you feeling expansive — or contracted? 
+              Lifted or grounded?           
+            </p>
+            <p>
+              ~~ After you do this for fifteen minutes, sit with yourself, with your journal and for ten minutes 
+              again write, I am... and see what comes out on the paper now that you have done this practice.
+            </p>
+            <p>
+              ~~ When you are done, read it to yourself.
+            </p>
+            <p>
+              ~~ Now, turn the page. Get some color pencils or markers or crayons and draw a picture of yourself on 
+              the next page of your journal. Give yourself permission for it to be messy and terrible and sloppy and 
+              abstract and childlike. Just draw your you-ness as you feel you in this moment.
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <!-- END OF PRACTICES I Am Walking Followed By Writing -->
+      <!-- BEGINNING OF PRACTICES Special Assignment For Your Engagement -->
+      <ion-col size="12">
+        <ion-row class="practices">
+          <ion-col size="12" class="ion-padding ion-text-center">
+            <h2 class="section-title">A Special Assignment For Your Engagement Taking Place Next Modular:
+              <br>CREATE A DATE WITH YOURSELF
+            </h2>
+            <ion-row>
+              <ion-col size="12" class="ion-padding ion-text-center">
+                <img src="../../../../assets/workshop1/module03/DateAssignment.jpg">
+              </ion-col>
+            </ion-row>
+            <p>
+              ~~ Find what you want to offer to yourself and wear to represent your engagement to yourself. 
+              This object is to remind you that you are engaged in this sacred process of committing to yourself as 
+              number one priority relationship. Find something that you want to wear every day — something that is 
+              easy for you as well as of beauty, something that uplifts you when you look at it.  Next modular, modular four, 
+              you will be getting engaged so enjoy this preparation that usually calls for shopping or crafting!
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <!-- END OF PRACTICES Special Assignment For Your Engagement -->
       <!-- BEGINNING OF QUOTES -->
 	    <ion-col size="12" class="ion-padding ion-text-center">
         <img src="../../../../assets/workshop1/module03/DontBeConfused.jpg">
