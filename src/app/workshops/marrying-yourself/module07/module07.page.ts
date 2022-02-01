@@ -1,14 +1,15 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
 import Player from '@vimeo/player';
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-module07',
   templateUrl: './module07.page.html',
   styleUrls: ['./module07.page.scss'],
 })
-export class Module07Page implements OnInit {
+export class Module07Page implements OnInit, AfterViewInit {
   @ViewChild('introModule07Audio') introModule07AudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('innerWorkAudio') innerWorkAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('horizontalVerticalAudio') horizontalVerticalAudioRef: ElementRef<HTMLAudioElement>;
@@ -32,14 +33,30 @@ export class Module07Page implements OnInit {
   audioDuration707: number;
   sonataVimeoPlayer: Player;
   selfRetrievalDemoVimeoPlayer: Player;
+  tl1 = null;
 
   constructor() { }
 
   ngOnInit() {
+    setTimeout(() => {this.animate07Title()}, 1.5*1000);
+  }
+
+  animate07Title() {
+    gsap.set(".dark", {opacity:1});
+    gsap.set(".title", {scale:1});
+    gsap.set(".effect", {autoAlpha:1}) //remove fouc
+    this.tl1 = gsap.timeline()
+      .to(".title", {scale:50, duration:2, ease:"power4.inOut"})
+      .to(".blendImage, .bg", {scale:1, duration:2}, 0)
+      .to(".dark", {opacity:0, duration:1}, ">-=100%")
+  
+      this.tl1.play();
+      // .then(() => {
+      //   tl.reverse();
+      // })
   }
 
   ngAfterViewInit() {
-    this.initializeYoutubePlayerPluginWeb();
     this.introModule07AudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration701 = this.introModule07AudioRef.nativeElement.duration;
     };
@@ -112,7 +129,16 @@ export class Module07Page implements OnInit {
     this.showIncompleteBtn = true;
   }
 
-  ngOnDestroy() {
+  ionViewWillLeave() {
     this.destroyYoutubePlayerPluginWeb();
+  }
+
+  ionViewDidEnter() {
+    this.initializeYoutubePlayerPluginWeb();
+    gsap.set(".dark", {opacity:1});
+    gsap.set(".title", {scale:1});
+    if(this.tl1 != null) {
+      this.tl1.restart();
+    }
   }
 }
