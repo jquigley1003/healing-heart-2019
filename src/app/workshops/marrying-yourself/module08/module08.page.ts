@@ -1,13 +1,14 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-module08',
   templateUrl: './module08.page.html',
   styleUrls: ['./module08.page.scss'],
 })
-export class Module08Page implements AfterViewInit, OnInit, OnDestroy {
+export class Module08Page implements AfterViewInit, OnInit {
   @ViewChild('introModule08Audio') introModule08AudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('beingPresentAudio') beingPresentAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('bsaoAudio') bsaoAudioRef: ElementRef<HTMLAudioElement>;
@@ -39,14 +40,15 @@ export class Module08Page implements AfterViewInit, OnInit, OnDestroy {
   audioDuration611: number;
   audioDuration612: number;
   audioDuration613: number;
+  tl1 = null;
 
   constructor() { }
 
   ngOnInit() {
+    setTimeout(() => {this.animate08Title()}, 1.5*1000);
   }
 
   ngAfterViewInit() {
-    this.initializeYoutubePlayerPluginWeb();
     this.introModule08AudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration801 = this.introModule08AudioRef.nativeElement.duration;
     };
@@ -88,6 +90,19 @@ export class Module08Page implements AfterViewInit, OnInit, OnDestroy {
     // };
   }
 
+  animate08Title() {
+    gsap.set(".effect", {autoAlpha:1}) //remove fouc
+    this.tl1 = gsap.timeline()
+      .to(".title", {scale:50, duration:2, ease:"power4.inOut"})
+      .to(".blendImage, .bg", {scale:1, duration:2}, 0)
+      .to(".dark", {opacity:0, duration:1}, ">-=100%")
+    
+      this.tl1.play()
+      // .then(() => {
+      //   tl.reverse();
+      // })
+  }
+
   async initializeYoutubePlayerPluginWeb() {
     const player1 = {playerId: 'youtube-player0801', playerSize: {width: 640, height: 360}, videoId: 'MZJN4e0nzls'};
     const result1 = await YoutubePlayerWeb.initialize(player1);
@@ -117,8 +132,17 @@ export class Module08Page implements AfterViewInit, OnInit, OnDestroy {
     this.showIncompleteBtn = true;
   }
 
-  ngOnDestroy() {
+  ionViewWillLeave() {
     this.destroyYoutubePlayerPluginWeb();
+  }
+
+  ionViewWillEnter() {
+    this.initializeYoutubePlayerPluginWeb();
+    gsap.set(".dark", {opacity:1});
+    gsap.set(".title", {scale:1});
+    if(this.tl1 != null) {
+      this.tl1.restart();
+    }
   }
 
 }
