@@ -15,11 +15,11 @@ export class Module08Page implements AfterViewInit, OnInit {
   @ViewChild('enjoymentAudio') enjoymentAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('livingTheDharmaAudio') livingTheDharmaAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('understandingYourImpactAudio') understandingYourImpactAudioRef: ElementRef<HTMLAudioElement>;
-  // @ViewChild('embracingYourHeartAudio') embracingYourHeartAudioRef: ElementRef<HTMLAudioElement>;
-  // @ViewChild('guidedImageryHeartAudio') guidedImageryHeartAudioRef: ElementRef<HTMLAudioElement>;
-  // @ViewChild('practiceEmbracingHeartAudio') practiceEmbracingHeartAudioRef: ElementRef<HTMLAudioElement>;
-  // @ViewChild('lovingYourBodyAudio') lovingYourBodyAudioRef: ElementRef<HTMLAudioElement>;
-  // @ViewChild('practiceLovingYourBodyAudio') practiceLovingYourBodyAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('beautyDivineAudio') beautyDivineAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('courageousHonestyAudio') courageousHonestyAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('innerTranslatorAudio') innerTranslatorAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('healthyBoundariesAudio') healthyBoundariesAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('selfInquiryBoundariesAudio') selfInquiryBoundariesAudioRef: ElementRef<HTMLAudioElement>;
   // @ViewChild('nourishYourSoulAudio') nourishYourSoulAudioRef: ElementRef<HTMLAudioElement>;
   // @ViewChild('practiceNourishSoulAudio') practiceNourishSoulAudioRef: ElementRef<HTMLAudioElement>;
 
@@ -33,11 +33,11 @@ export class Module08Page implements AfterViewInit, OnInit {
   audioDuration804: number;
   audioDuration805: number;
   audioDuration806: number;
-  audioDuration607: number;
-  audioDuration608: number;
-  audioDuration609: number;
-  audioDuration610: number;
-  audioDuration611: number;
+  audioDuration807: number;
+  audioDuration808: number;
+  audioDuration809: number;
+  audioDuration810: number;
+  audioDuration811: number;
   audioDuration612: number;
   audioDuration613: number;
   tl1 = null;
@@ -67,21 +67,21 @@ export class Module08Page implements AfterViewInit, OnInit {
     this.understandingYourImpactAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration806 = this.understandingYourImpactAudioRef.nativeElement.duration;
     };
-    // this.embracingYourHeartAudioRef.nativeElement.onloadedmetadata = (event) => {
-    //   this.audioDuration607 = this.embracingYourHeartAudioRef.nativeElement.duration;
-    // };
-    // this.guidedImageryHeartAudioRef.nativeElement.onloadedmetadata = (event) => {
-    //   this.audioDuration608 = this.guidedImageryHeartAudioRef.nativeElement.duration;
-    // };
-    // this.practiceEmbracingHeartAudioRef.nativeElement.onloadedmetadata = (event) => {
-    //   this.audioDuration609 = this.practiceEmbracingHeartAudioRef.nativeElement.duration;
-    // };
-    // this.lovingYourBodyAudioRef.nativeElement.onloadedmetadata = (event) => {
-    //   this.audioDuration610 = this.lovingYourBodyAudioRef.nativeElement.duration;
-    // };
-    // this.practiceLovingYourBodyAudioRef.nativeElement.onloadedmetadata = (event) => {
-    //   this.audioDuration611 = this.practiceLovingYourBodyAudioRef.nativeElement.duration;
-    // };
+    this.beautyDivineAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration807 = this.beautyDivineAudioRef.nativeElement.duration;
+    };
+    this.courageousHonestyAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration808 = this.courageousHonestyAudioRef.nativeElement.duration;
+    };
+    this.innerTranslatorAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration809 = this.innerTranslatorAudioRef.nativeElement.duration;
+    };
+    this.healthyBoundariesAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration810 = this.healthyBoundariesAudioRef.nativeElement.duration;
+    };
+    this.selfInquiryBoundariesAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration811 = this.selfInquiryBoundariesAudioRef.nativeElement.duration;
+    };
     // this.nourishYourSoulAudioRef.nativeElement.onloadedmetadata = (event) => {
     //   this.audioDuration612 = this.nourishYourSoulAudioRef.nativeElement.duration;
     // };
@@ -126,6 +126,20 @@ export class Module08Page implements AfterViewInit, OnInit {
     const result10 = await YoutubePlayerWeb.initialize(player10);
     const player11 = {playerId: 'youtube-player0811', playerSize: {width: 640, height: 360}, videoId: 'ynVTqHYg5A4'};
     const result11 = await YoutubePlayerWeb.initialize(player11);
+    const player12 = {playerId: 'youtube-player0812', playerSize: {width: 640, height: 360}, videoId: 'IxcS4XGEBGk'};
+    const result12 = await YoutubePlayerWeb.initialize(player12);
+    const player13 = {playerId: 'youtube-player0813', playerSize: {width: 640, height: 360}, videoId: '7E70pNrQt0k'};
+    const result13 = await YoutubePlayerWeb.initialize(player13);
+    const player14 = {playerId: 'youtube-player0814', playerSize: {width: 640, height: 360}, videoId: 'hkUSjaGiGzk'};
+    const result14 = await YoutubePlayerWeb.initialize(player14);
+    const player15 = {playerId: 'youtube-player0815', playerSize: {width: 640, height: 360}, videoId: 'JCnexOFOxCo'};
+    const result15 = await YoutubePlayerWeb.initialize(player15);
+    const player16 = {playerId: 'youtube-player0816', playerSize: {width: 640, height: 360}, videoId: '-WpdsRPzKco'};
+    const result16 = await YoutubePlayerWeb.initialize(player16);
+    const player17 = {playerId: 'youtube-player0817', playerSize: {width: 640, height: 360}, videoId: '759qtG5acjU'};
+    const result17 = await YoutubePlayerWeb.initialize(player17);
+    const player18 = {playerId: 'youtube-player0818', playerSize: {width: 640, height: 360}, videoId: 'ezH-SnJfxgc'};
+    const result18 = await YoutubePlayerWeb.initialize(player18);
   }
 
   async destroyYoutubePlayerPluginWeb() {
@@ -140,6 +154,13 @@ export class Module08Page implements AfterViewInit, OnInit {
     const result9 = await YoutubePlayerWeb.destroy('youtube-player0809');
     const result10 = await YoutubePlayerWeb.destroy('youtube-player0810');
     const result11 = await YoutubePlayerWeb.destroy('youtube-player0811');
+    const result12 = await YoutubePlayerWeb.destroy('youtube-player0812');
+    const result13 = await YoutubePlayerWeb.destroy('youtube-player0813');
+    const result14 = await YoutubePlayerWeb.destroy('youtube-player0814');
+    const result15 = await YoutubePlayerWeb.destroy('youtube-player0815');
+    const result16 = await YoutubePlayerWeb.destroy('youtube-player0816');
+    const result17 = await YoutubePlayerWeb.destroy('youtube-player0817');
+    const result18 = await YoutubePlayerWeb.destroy('youtube-player0818');
   }
 
   onToggle() {
