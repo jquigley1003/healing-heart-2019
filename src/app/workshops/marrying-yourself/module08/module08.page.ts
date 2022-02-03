@@ -25,6 +25,11 @@ export class Module08Page implements AfterViewInit, OnInit {
   @ViewChild('creativeExpressionAudio') creativeExpressionAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('receivingAudio') receivingAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('receivingSpotAudio') receivingSpotAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('bibaAudio') bibaAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('livingWithArthurAudio') livingWithArthurAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('beingKindAudio') beingKindAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('beingKindToYourselfAudio') beingKindToYourselfAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('beingAuthenticAudio') beingAuthenticAudioRef: ElementRef<HTMLAudioElement>;
 
 
   completedModule: boolean;
@@ -46,6 +51,11 @@ export class Module08Page implements AfterViewInit, OnInit {
   audioDuration814: number;
   audioDuration815: number;
   audioDuration816: number;
+  audioDuration817: number;
+  audioDuration818: number;
+  audioDuration819: number;
+  audioDuration820: number;
+  audioDuration821: number;
   tl1 = null;
 
   constructor() { }
@@ -102,6 +112,21 @@ export class Module08Page implements AfterViewInit, OnInit {
     };
     this.receivingSpotAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration816 = this.receivingSpotAudioRef.nativeElement.duration;
+    };
+    this.bibaAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration817 = this.bibaAudioRef.nativeElement.duration;
+    };
+    this.livingWithArthurAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration818 = this.livingWithArthurAudioRef.nativeElement.duration;
+    };
+    this.beingKindAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration819 = this.beingKindAudioRef.nativeElement.duration;
+    };
+    this.beingKindToYourselfAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration820 = this.beingKindToYourselfAudioRef.nativeElement.duration;
+    };
+    this.beingAuthenticAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration821 = this.beingAuthenticAudioRef.nativeElement.duration;
     };
   }
 
@@ -171,6 +196,20 @@ export class Module08Page implements AfterViewInit, OnInit {
     const result25 = await YoutubePlayerWeb.initialize(player25);
     const player26 = {playerId: 'youtube-player0826', playerSize: {width: 640, height: 360}, videoId: 'lf9vRwf2254'};
     const result26 = await YoutubePlayerWeb.initialize(player26);
+    const player27 = {playerId: 'youtube-player0827', playerSize: {width: 640, height: 360}, videoId: 'BiczcGMIQ7A'};
+    const result27 = await YoutubePlayerWeb.initialize(player27);
+    const player28 = {playerId: 'youtube-player0828', playerSize: {width: 640, height: 360}, videoId: 'VDlKOHEjb-s'};
+    const result28 = await YoutubePlayerWeb.initialize(player28);
+    const player29 = {playerId: 'youtube-player0829', playerSize: {width: 640, height: 360}, videoId: 'r5ywQKJPfHs'};
+    const result29 = await YoutubePlayerWeb.initialize(player29);
+    const player30 = {playerId: 'youtube-player0830', playerSize: {width: 640, height: 360}, videoId: 'fayaTARX77Q'};
+    const result30 = await YoutubePlayerWeb.initialize(player30);
+    const player31 = {playerId: 'youtube-player0831', playerSize: {width: 640, height: 360}, videoId: '1Evwgu369Jw'};
+    const result31 = await YoutubePlayerWeb.initialize(player31);
+    const player32 = {playerId: 'youtube-player0832', playerSize: {width: 640, height: 360}, videoId: 'JC3atTsEkq0'};
+    const result32 = await YoutubePlayerWeb.initialize(player32);
+    const player33 = {playerId: 'youtube-player0833', playerSize: {width: 640, height: 360}, videoId: 'MdD7nQ_H0Z0'};
+    const result33 = await YoutubePlayerWeb.initialize(player33);
   }
 
   async destroyYoutubePlayerPluginWeb() {
@@ -198,6 +237,13 @@ export class Module08Page implements AfterViewInit, OnInit {
     const result22 = await YoutubePlayerWeb.destroy('youtube-player0822');
     const result23 = await YoutubePlayerWeb.destroy('youtube-player0823');
     const result24 = await YoutubePlayerWeb.destroy('youtube-player0824');
+    const result25 = await YoutubePlayerWeb.destroy('youtube-player0825');
+    const result26 = await YoutubePlayerWeb.destroy('youtube-player0826');
+    const result27 = await YoutubePlayerWeb.destroy('youtube-player0827');
+    const result28 = await YoutubePlayerWeb.destroy('youtube-player0828');
+    const result29 = await YoutubePlayerWeb.destroy('youtube-player0829');
+    const result30 = await YoutubePlayerWeb.destroy('youtube-player0830');
+    const result31 = await YoutubePlayerWeb.destroy('youtube-player0831');
   }
 
   onToggle() {
