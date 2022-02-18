@@ -84,7 +84,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     if (this.swUpdate.isEnabled) {
       this.swUpdate.available.subscribe(data => {
-        console.log(data.current.appData);
+        // console.log(data.current.appData);
         this.alertService.presentAlert(
           'App Update!',
           'Updated version of Healing Heart Communications app is available.',
@@ -116,13 +116,13 @@ export class AppComponent implements OnInit {
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe(data => {
         this.currentUser = data;
-        console.log('app component current user: ',this.currentUser);
+        // console.log('app component current user: ',this.currentUser);
       });
     this.authService.isAdmin$
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe(async data => {
         this.isAdmin = data;
-        console.log('app component admin idTokenResult is: ', this.isAdmin);
+        // console.log('app component admin idTokenResult is: ', this.isAdmin);
       });
   }
 
@@ -190,7 +190,6 @@ export class AppComponent implements OnInit {
           text: 'OK',
           role: 'cancel',
           handler: () => {
-            console.log('dismiss toast message');
             this.router.navigate(['/home']);
           }
         }],

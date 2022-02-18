@@ -63,9 +63,9 @@ export class Module09Page implements OnInit, AfterViewInit {
     this.selfReflectionOneAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration902 = this.selfReflectionOneAudioRef.nativeElement.duration;
     };
-    // this.horizontalVerticalAudioRef.nativeElement.onloadedmetadata = (event) => {
-    //   this.audioDuration703 = this.horizontalVerticalAudioRef.nativeElement.duration;
-    // };
+    this.femManQualitiesAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration903 = this.femManQualitiesAudioRef.nativeElement.duration;
+    };
     // this.selfRetrievalRitualAudioRef.nativeElement.onloadedmetadata = (event) => {
     //   this.audioDuration704 = this.selfRetrievalRitualAudioRef.nativeElement.duration;
     // };

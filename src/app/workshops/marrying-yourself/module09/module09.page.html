@@ -11,17 +11,22 @@
 <ion-content [fullscreen]="true" class="module-content">
   <ion-grid>
     <ion-row class="ion-margin-right">
-      <ion-col size="12" class="ion-text-center ion-padding">
+      <ion-col size="12" class="ion-text-center ion-padding img-container">
+        <a href="https://unsplash.com/photos/MD6E2Sv__iA" target="_blank">
           <div class="effect">
-            <img class="hide-img" src="../../../../assets/workshop1/module09/balancingRocks.jpg">
+            <img class="hide-img" src="../../../../assets/workshop1/module09/balancingRocks.jpg"
+              alt="Photo by Martin Sanchez on Unsplash">
             <div class="fullscreen">
-              <img class="bg" src="../../../../assets/workshop1/module09/balancingRocks.jpg">
+              <img class="bg" src="../../../../assets/workshop1/module09/balancingRocks.jpg"
+                alt="Photo by Martin Sanchez on Unsplash">
             </div>
             <div class="fullscreen dark">
               <h1 class="title">OUR FEMININE AND MASCULINE SELVES</h1>
-              <img class="blendImage" src="../../../../assets/workshop1/module09/balancingRocks.jpg">
+              <img class="blendImage" src="../../../../assets/workshop1/module09/balancingRocks.jpg"
+                alt="Photo by Martin Sanchez on Unsplash">
             </div>
           </div>
+        </a>
       </ion-col>
       <ion-col size="12" class="ion-padding ion-text-center">
         <h1>Module 09<br>Our Feminine and Masculine Selves</h1>
@@ -29,37 +34,40 @@
       <ion-col size="12" class="ion-text-center ion-padding">
         <h2 class="section-title">INTRODUCTION TO FEMININE &amp; MASCULINE ASPECTS</h2>
         <div class="audio-player">
-            <audio preload="auto" controls controlsList="nodownload" #introModule09Audio>
-              <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule09%2Faudio%2FIntroductionFeminineMasculineAspects.mp3?alt=media&token=3cfbf9e4-2a1f-480d-9966-fa21413453ae" 
+          <audio preload="auto" controls controlsList="nodownload" #introModule09Audio>
+            <source
+              src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule09%2Faudio%2FIntroductionFeminineMasculineAspects.mp3?alt=media&token=3cfbf9e4-2a1f-480d-9966-fa21413453ae"
               type="audio/mpeg">
-            </audio>
-            <p class="audio-duration">Duration: {{ audioDuration901 * 1000 | date:'mm:ss' }}</p>
-          </div>
+          </audio>
+          <p class="audio-duration">Duration: {{ audioDuration901 * 1000 | date:'mm:ss' }}</p>
+        </div>
       </ion-col>
       <ion-col size="12" class="ion-margin-right ion-padding">
         <p>This module is dedicated to knowing ourselves through the lens of our feminine and masculine aspects.
         </p>
-        <p>In marrying ourselves, our feminine and masculine energies lean into one another, and give support and 
-          expression to one another. During this focus, we grow into claiming how our masculine and feminine energies 
-          already work well together. We uncover what needs strengthening and what needs taming — so that we can be 
+        <p>In marrying ourselves, our feminine and masculine energies lean into one another, and give support and
+          expression to one another. During this focus, we grow into claiming how our masculine and feminine energies
+          already work well together. We uncover what needs strengthening and what needs taming — so that we can be
           most effective in the world as well as in harmonious within.
         </p>
       </ion-col>
       <!-- BEGINNING OF ASSIGNMENT Self-Reflection Exercise -->
       <ion-col size="12">
         <ion-row>
-          <ion-col class="assignment"><!-- Nesting in another row creates space for the border -->
+          <ion-col class="assignment">
+            <!-- Nesting in another row creates space for the border -->
             <p class="assignment-title">Assignment: Self-Reflection Exercise</p>
             <ion-row>
               <ion-col size="12" class="ion-text-center ion-padding">
                 <h2 class="section-title">SELF-REFLECTION EXERCISE ONE</h2>
                 <div class="audio-player">
-                    <audio preload="auto" controls controlsList="nodownload" #selfReflectionOneAudio>
-                      <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule09%2Faudio%2FSelfRefectionExercise%20PartOne.mp3?alt=media&token=852d91ed-918c-401f-a732-85273993e163" 
+                  <audio preload="auto" controls controlsList="nodownload" #selfReflectionOneAudio>
+                    <source
+                      src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule09%2Faudio%2FSelfRefectionExercise%20PartOne.mp3?alt=media&token=852d91ed-918c-401f-a732-85273993e163"
                       type="audio/mpeg">
-                    </audio>
-                    <p class="audio-duration">Duration: {{ audioDuration902 * 1000 | date:'mm:ss' }}</p>
-                  </div>
+                  </audio>
+                  <p class="audio-duration">Duration: {{ audioDuration902 * 1000 | date:'mm:ss' }}</p>
+                </div>
               </ion-col>
             </ion-row>
             <ion-row>
@@ -67,11 +75,11 @@
                 <ion-checkbox #assignment0901 color="primary"></ion-checkbox>
               </ion-col>
               <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
-                <ion-icon name="heart-circle"></ion-icon> 
+                <ion-icon name="heart-circle"></ion-icon>
               </ion-col>
               <ion-col size="9" class="ion-margin-right ion-padding">
-                <p>You are going to create two lists. One list will be the ten most important men in your life, 
-                  starting from when you were born. The other list is the ten most important women in your life 
+                <p>You are going to create two lists. One list will be the ten most important men in your life,
+                  starting from when you were born. The other list is the ten most important women in your life
                   since babyhood.</p>
               </ion-col>
             </ion-row>
@@ -80,82 +88,258 @@
                 <ion-checkbox #assignment0902 color="primary"></ion-checkbox>
               </ion-col>
               <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
-                <ion-icon name="heart-circle"></ion-icon> 
+                <ion-icon name="heart-circle"></ion-icon>
               </ion-col>
               <ion-col size="9" class="ion-margin-right ion-padding">
-                <p>So, take a look at your lists. Now, next to their names (however you have to do it, including 
-                  writing their names again) write three strengths or positive qualities of this person and three 
+                <p>So, take a look at your lists. Now, next to their names (however you have to do it, including
+                  writing their names again) write three strengths or positive qualities of this person and three
                   shadow aspects of this person.</p>
               </ion-col>
             </ion-row>
           </ion-col>
-        </ion-row> 
+        </ion-row>
       </ion-col>
       <!-- END OF ASSIGNMENT Self-Reflection Exercise -->
-
       <!-- BEGINNING OF MODULE SECTION Feminine and Masculine Energies -->
       <ion-col size="12">
         <ion-row class="section-container">
           <ion-col size="12" class="ion-text-center ion-padding">
             <h2 class="section-title">FEMININE AND MASCULINE ENERGIES</h2>
             <div class="audio-player">
-                <audio preload="auto" controls controlsList="nodownload" #femManQualitiesAudio>
-                  <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule09%2Faudio%2FFeminineMasculineQualities.mp3?alt=media&token=64b939af-fb0c-4f9f-a90c-a7c329e9b1a2" 
+              <audio preload="auto" controls controlsList="nodownload" #femManQualitiesAudio>
+                <source
+                  src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule09%2Faudio%2FFeminineMasculineQualities.mp3?alt=media&token=64b939af-fb0c-4f9f-a90c-a7c329e9b1a2"
                   type="audio/mpeg">
-                </audio>
-                <p class="audio-duration">Duration: {{ audioDuration903 * 1000 | date:'mm:ss' }}</p>
-              </div>
+              </audio>
+              <p class="audio-duration">Duration: {{ audioDuration903 * 1000 | date:'mm:ss' }}</p>
+            </div>
+          </ion-col>
+          <ion-col size="12" class="img-container ion-padding ion-text-center">
+            <a href="https://unsplash.com/photos/3kZpELkaxHc" target="blank">
+              <img src="../../../../assets/workshop1/module09/blancingCoffeeCups.jpg"
+                alt="Photo by Nathan Dumlao on Unsplash">
+            </a>
           </ion-col>
           <ion-col size="12" class="ion-margin-right ion-padding">
-            <p>Now, let us review universal understanding of the differences between the feminine and masculine energies.</p>
+            <p>Now, let us review universal understanding of the differences between the feminine and masculine
+              energies.</p>
           </ion-col>
-          <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-            <h2>Vertical Alignment</h2>
-            <div class="video-player">
-              <div id="youtube-player0707">
-              </div>
-            </div>
-            <p><i></i></p>
+          <ion-col size="12" class="ion-text-center ion-padding">
+            <h2 class="section-subtitle">Feminine and Masculine Attributes</h2>
+            <ion-row>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Gentle ≈≈ Strong</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Vulnerable ≈≈ Protective </p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Sensitive ≈≈ Neutral</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Caring ≈≈ Indifferent</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Permeable, Semi-permeable ≈≈ Impermeable</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Compassionate, Sympathetic, Tender ≈≈ Merciless, Harsh, Hard or Tough</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Compromising, Yielding ≈≈ Absolute, Stubborn, Insistent</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Open-minded ≈≈ Opinionated, Close-minded</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Negotiating, Accommodating ≈≈ Non-negotiable</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Blurry ≈≈ Sharp</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Nurturer ≈≈ Provider</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Graceful ≈≈ Bull in China-shop</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Being-ness ≈≈ Purposeful</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Inactive ≈≈ Proactive</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Wandering ≈≈ Intentional</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Communicative ≈≈ Reserved</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Boundless ≈≈ Bounded</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Fluid ≈≈ Rigid</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Intuitive ≈≈ Logical, Analytical</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Emotional ≈≈ Rational</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Homemaker ≈≈ Homebuilder</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Close, Warm, Motherly ≈≈ Distant, Cool, Detached</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Fearful, Timid ≈≈ Courageous, Daring</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Apathetic ≈≈ Passionate</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Meek, Cowardly, Afraid ≈≈ Bold, Gallant, Heroic</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Quiet ≈≈ Outspoken</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Indirect ≈≈ Direct</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Passive, Idle ≈≈ Active, Asservie, </p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Complaisant ≈≈ Innovating, Initiating</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Inwardly oriented ≈≈ Outwardly oriented</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Unmotivated ≈≈ Ambitious</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Responsive ≈≈ Initiating</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Following ≈≈ Leading</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Cooperative ≈≈ Competitive</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Indecisive ≈≈ Decisive</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Docile ≈≈ Forceful, Dominant</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Cautious ≈≈ Risk-taking</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Relational, Communal ≈≈ Individualistic</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Egalitarian ≈≈ Authoritarian</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Dependent ≈≈ Self-reliant, Independent</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Surrendered ≈≈ Controlling</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Integrative, Unifying ≈≈ Differentiating, Separating</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Forego, Give up ≈≈ Enforce, Follow through</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Delay, Procrastinate ≈≈ Implement, Manifest</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Vague ≈≈ Clear</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Accepting, Embracing ≈≈ Rejecting, Discarding</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Self-critical ≈≈ Self-affirming</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Unrealistic ≈≈ Practical</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Flighty ≈≈ Grounded</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Wave ≈≈ Rock</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Submissive ≈≈ Dominant</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Placating ≈≈ Rebellious</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Intuitive ≈≈ Rational</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Sensual ≈≈ Thrusting</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Flow ≈≈ Structured</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Nurturing ≈≈ Supportive</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Meek ≈≈ Expressive</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Dreaming ≈≈ Manifesting</p>
+              </ion-col>
+              <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-align-self-center">
+                <p>Love ≈≈ Wisdom</p>
+              </ion-col>
+            </ion-row>
           </ion-col>
-          <ion-col size="12" class="ion-text-center ion-margin-right ion-padding">
-            <p>“Be the seer, not the seen.”</p>
-          </ion-col>
-          <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-            <h2>Self-Retrieval by Sonata</h2>
-            <div class="video-player">
-              <div #sonataVimeo>
-              </div>
-            </div>
-            <p><i>
-            </i></p>
+          <ion-col size="12" class="ion-margin-right ion-padding">
+            <p>The feminine and masculine dance together to express and manifest what is inside of us.</p>
           </ion-col>
         </ion-row>
       </ion-col>
-      <!-- END OF MODULE SECTION Horizontal Relating and Vertical Alignment -->
+      <!-- END OF MODULE SECTION Feminine and Masculine Energies -->
+
+
       <!-- BEGINNING OF MODULE SECTION Self-Retrieval Ritual -->
       <ion-col size="12">
         <ion-row class="section-container">
           <ion-col size="12" class="ion-text-center ion-padding">
             <h2 class="section-title">THE SELF-RETRIEVAL RITUAL</h2>
             <div class="audio-player">
-                <audio preload="auto" controls controlsList="nodownload" #selfRetrievalRitualAudio>
-                  <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule07%2FSelfRetrievalSacredRitual.mp3?alt=media&token=f12d7850-cf9d-4235-bc6e-30387db636df" 
+              <audio preload="auto" controls controlsList="nodownload" #selfRetrievalRitualAudio>
+                <source
+                  src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule07%2FSelfRetrievalSacredRitual.mp3?alt=media&token=f12d7850-cf9d-4235-bc6e-30387db636df"
                   type="audio/mpeg">
-                </audio>
-                <p class="audio-duration">Duration: {{ audioDuration704 * 1000 | date:'mm:ss' }}</p>
-              </div>
+              </audio>
+              <p class="audio-duration">Duration: {{ audioDuration704 * 1000 | date:'mm:ss' }}</p>
+            </div>
           </ion-col>
           <ion-col size="12" class="ion-margin-right ion-padding">
-            <p>The point of this ritual is to do exactly what it says it is — to retrieve yourself. You have starred the 
-              relationship you feel is still most unresolved and unfinished, calling for self-retrieval. I will tell you 
-              about what we are going to do. This is called a sacred ritual. You can ask someone you trust to be witness 
-              to your ritual or you can do it by yourself. Leave enough time for yourself to do this work. At least an hour.
+            <p>The point of this ritual is to do exactly what it says it is — to retrieve yourself. You have starred the
+              relationship you feel is still most unresolved and unfinished, calling for self-retrieval. I will tell you
+              about what we are going to do. This is called a sacred ritual. You can ask someone you trust to be witness
+              to your ritual or you can do it by yourself. Leave enough time for yourself to do this work. At least an
+              hour.
             </p>
-            <p>A ritual is enacting something in 3-D, what you hold inside of yourself and then once it is externalized, 
-              and given meaning, you act upon it in some way that feels meaningful and transformative and then you bring 
+            <p>A ritual is enacting something in 3-D, what you hold inside of yourself and then once it is externalized,
+              and given meaning, you act upon it in some way that feels meaningful and transformative and then you bring
               that back inside of you.
             </p>
-            <p>It is sacred because it is about you and your inner work. Of course it is sacred. We are entering into a 
+            <p>It is sacred because it is about you and your inner work. Of course it is sacred. We are entering into a
               vulnerable hurt place inside of you and bringing healing. This is sacred work.
             </p>
           </ion-col>
@@ -169,7 +353,7 @@
               </div>
             </div>
             <p><i>
-            </i></p>
+              </i></p>
           </ion-col>
         </ion-row>
       </ion-col>
@@ -180,16 +364,17 @@
           <ion-col size="12" class="ion-text-center ion-padding">
             <h2 class="section-title">METTA MEDITATION</h2>
             <div class="audio-player">
-                <audio preload="auto" controls controlsList="nodownload" #mettaMeditationAudio>
-                  <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule07%2FMettaMeditaitonFollwoingSelfRetreivalRitual.mp3?alt=media&token=825cd309-9c50-458c-b311-35d4ea54ffc8" 
+              <audio preload="auto" controls controlsList="nodownload" #mettaMeditationAudio>
+                <source
+                  src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule07%2FMettaMeditaitonFollwoingSelfRetreivalRitual.mp3?alt=media&token=825cd309-9c50-458c-b311-35d4ea54ffc8"
                   type="audio/mpeg">
-                </audio>
-                <p class="audio-duration">Duration: {{ audioDuration705 * 1000 | date:'mm:ss' }}</p>
-              </div>
+              </audio>
+              <p class="audio-duration">Duration: {{ audioDuration705 * 1000 | date:'mm:ss' }}</p>
+            </div>
           </ion-col>
           <ion-col size="12" class="ion-margin-right ion-padding">
-            <p>The metta prayer of loving kindness is a prayer or mantra used as part of a loving-kindness meditation, 
-              or metta bhavana. This kind of meditation and use of a mantra is popular in the Buddhist tradition. 
+            <p>The metta prayer of loving kindness is a prayer or mantra used as part of a loving-kindness meditation,
+              or metta bhavana. This kind of meditation and use of a mantra is popular in the Buddhist tradition.
               The word, metta, comes from Pali and can be translated as "good will" or "loving kindness."
             </p>
             <p>I am changing the words to fit our self retrieval theme. We will sit in meditation for this.
@@ -206,12 +391,13 @@
           <ion-col size="12" class="ion-text-center ion-padding">
             <h2 class="section-subtitle">THE GUEST HOUSE by RUMI</h2>
             <div class="audio-player">
-                <audio preload="auto" controls controlsList="nodownload" #theGuestHouseAudio>
-                  <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule07%2FTheGuestHouseRumi.mp3?alt=media&token=2db19bd5-3600-460e-bc87-6bdac415a404" 
+              <audio preload="auto" controls controlsList="nodownload" #theGuestHouseAudio>
+                <source
+                  src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule07%2FTheGuestHouseRumi.mp3?alt=media&token=2db19bd5-3600-460e-bc87-6bdac415a404"
                   type="audio/mpeg">
-                </audio>
-                <p class="audio-duration">Duration: {{ audioDuration706 * 1000 | date:'mm:ss' }}</p>
-              </div>
+              </audio>
+              <p class="audio-duration">Duration: {{ audioDuration706 * 1000 | date:'mm:ss' }}</p>
+            </div>
           </ion-col>
           <ion-col size="12" class="ion-justify-content-center ion-text-center ion-margin-right ion-padding">
             <div class="quote">
@@ -249,57 +435,58 @@
           <ion-col size="12" class="ion-text-center ion-padding">
             <h2 class="section-subtitle">THE INVITATION by ORIAH MOUNTAIN DREAMER</h2>
             <div class="audio-player">
-                <audio preload="auto" controls controlsList="nodownload" #theInvitationAudio>
-                  <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule07%2FTheInvitationByOriahMountainDreamer.mp3?alt=media&token=e2f1a999-6c00-49a1-83e6-4af19e6cf534" 
+              <audio preload="auto" controls controlsList="nodownload" #theInvitationAudio>
+                <source
+                  src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule07%2FTheInvitationByOriahMountainDreamer.mp3?alt=media&token=e2f1a999-6c00-49a1-83e6-4af19e6cf534"
                   type="audio/mpeg">
-                </audio>
-                <p class="audio-duration">Duration: {{ audioDuration707 * 1000 | date:'mm:ss' }}</p>
-              </div>
+              </audio>
+              <p class="audio-duration">Duration: {{ audioDuration707 * 1000 | date:'mm:ss' }}</p>
+            </div>
           </ion-col>
 
           <ion-col size="12" class="ion-margin-right ion-padding">
             <div class="quote">
               <h2>The Invitation</h2>
               <h3>by Oriah Mountain Dreamer</h3>
-              <p>It doesn't interest me what you do for a living. 
+              <p>It doesn't interest me what you do for a living.
                 I want to know what you ache for and if you dare to dream of meeting your heart's longing.
               </p>
-              <p>It doesn't interest me how old you are. 
-                I want to know if you will risk looking like a fool for love, for your dream, for the adventure 
+              <p>It doesn't interest me how old you are.
+                I want to know if you will risk looking like a fool for love, for your dream, for the adventure
                 of being alive.
               </p>
-              <p>It doesn't interest me what planets are squaring your moon. 
-                I want to know if you have touched the centre of your own sorrow, if you have been opened by 
+              <p>It doesn't interest me what planets are squaring your moon.
+                I want to know if you have touched the centre of your own sorrow, if you have been opened by
                 life's betrayals or have become shrivelled and closed from fear of further pain.
               </p>
-              <p>I want to know if you can sit with pain, mine or your own, without moving to hide it, or fade 
+              <p>I want to know if you can sit with pain, mine or your own, without moving to hide it, or fade
                 it, or fix it.
               </p>
-              <p>I want to know if you can be with joy, mine or your own; if you can dance with wildness and 
-                let the ecstasy fill you to the tips of your fingers and toes without cautioning us to be careful, 
+              <p>I want to know if you can be with joy, mine or your own; if you can dance with wildness and
+                let the ecstasy fill you to the tips of your fingers and toes without cautioning us to be careful,
                 be realistic, remember the limitations of being human.
               </p>
-              <p>It doesn't interest me if the story you are telling me is true. 
-                I want to know if you can disappoint another to be true to yourself. If you can bear the accusation 
+              <p>It doesn't interest me if the story you are telling me is true.
+                I want to know if you can disappoint another to be true to yourself. If you can bear the accusation
                 of betrayal and not betray your own soul. If you can be faithless and therefore trustworthy.
               </p>
-              <p>I want to know if you can see Beauty even when it is not pretty every day. And if you can source your 
+              <p>I want to know if you can see Beauty even when it is not pretty every day. And if you can source your
                 own life from its presence.
               </p>
-              <p>I want to know if you can live with failure, yours and mine, and still stand at the edge of the lake 
+              <p>I want to know if you can live with failure, yours and mine, and still stand at the edge of the lake
                 and shout to the silver of the full moon, 'Yes.'
               </p>
-              <p>It doesn't interest me to know where you live or how much money you have. 
-                I want to know if you can get up after the night of grief and despair, weary and bruised to the bone and 
+              <p>It doesn't interest me to know where you live or how much money you have.
+                I want to know if you can get up after the night of grief and despair, weary and bruised to the bone and
                 do what needs to be done to feed the children.
               </p>
-              <p>It doesn't interest me who you know or how you came to be here. 
+              <p>It doesn't interest me who you know or how you came to be here.
                 I want to know if you will stand in the centre of the fire with me and not shrink back.
               </p>
-              <p>It doesn't interest me where or what or with whom you have studied. 
+              <p>It doesn't interest me where or what or with whom you have studied.
                 I want to know what sustains you from the inside when all else falls away.
               </p>
-              <p>I want to know if you can be alone with yourself and if you truly like the company you keep in the 
+              <p>I want to know if you can be alone with yourself and if you truly like the company you keep in the
                 empty moments.
               </p>
             </div>
@@ -336,12 +523,13 @@
       <!-- END OF COMPLETE MODULE BUTTONS -->
       <!-- BEGINNING OF NAVIGATION BUTTONS -->
       <ion-col size="12" class="ion-text-center">
-        <ion-button [routerLink]="['/workshops/marrying-yourself/module08']"
-        routerDirection="back"><ion-icon name="arrow-back-circle-outline"></ion-icon>
-        &nbsp; Module 08</ion-button>
-        <ion-button
-        routerDirection="forward">Module 10 &nbsp;
-        <ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-button>
+        <ion-button [routerLink]="['/workshops/marrying-yourself/module08']" routerDirection="back">
+          <ion-icon name="arrow-back-circle-outline"></ion-icon>
+          &nbsp; Module 08
+        </ion-button>
+        <ion-button routerDirection="forward">Module 10 &nbsp;
+          <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+        </ion-button>
       </ion-col>
       <!-- END OF NAVIGATION BUTTONS -->
     </ion-row>
