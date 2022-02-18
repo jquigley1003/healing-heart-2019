@@ -191,6 +191,20 @@ audio {
 	font-size: 2em;
 }
 
+.blue-highlight {
+  color: var(--ion-color-secondary);
+	text-shadow: 2px 2px 2px #3b343b;
+}
+
+.purple-highlight {
+  color: var(--ion-color-primary);
+	text-shadow: 2px 2px 2px #3b343b;
+}
+
+.heading-shadow {
+  box-shadow: 0px 0px 5px var(--ion-color-tertiary);
+}
+
 .workshop-header {
 	--min-height: 4em;
 }
