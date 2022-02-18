@@ -13,7 +13,7 @@ export class Module09Page implements OnInit, AfterViewInit {
   @ViewChild('introModule09Audio') introModule09AudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('selfReflectionOneAudio') selfReflectionOneAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('femManQualitiesAudio') femManQualitiesAudioRef: ElementRef<HTMLAudioElement>;
-  // @ViewChild('selfRetrievalRitualAudio') selfRetrievalRitualAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('selfInquiryFemMascAudio') selfInquiryFemMascAudioRef: ElementRef<HTMLAudioElement>;
   // @ViewChild('mettaMeditationAudio') mettaMeditationAudioRef: ElementRef<HTMLAudioElement>;
   // @ViewChild('theGuestHouseAudio') theGuestHouseAudioRef: ElementRef<HTMLAudioElement>;
   // @ViewChild('theInvitationAudio') theInvitationAudioRef: ElementRef<HTMLAudioElement>;
@@ -27,7 +27,7 @@ export class Module09Page implements OnInit, AfterViewInit {
   audioDuration901: number;
   audioDuration902: number;
   audioDuration903: number;
-  audioDuration704: number;
+  audioDuration904: number;
   audioDuration705: number;
   audioDuration706: number;
   audioDuration707: number;
@@ -66,9 +66,9 @@ export class Module09Page implements OnInit, AfterViewInit {
     this.femManQualitiesAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration903 = this.femManQualitiesAudioRef.nativeElement.duration;
     };
-    // this.selfRetrievalRitualAudioRef.nativeElement.onloadedmetadata = (event) => {
-    //   this.audioDuration704 = this.selfRetrievalRitualAudioRef.nativeElement.duration;
-    // };
+    this.selfInquiryFemMascAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration904 = this.selfInquiryFemMascAudioRef.nativeElement.duration;
+    };
     // this.mettaMeditationAudioRef.nativeElement.onloadedmetadata = (event) => {
     //   this.audioDuration705 = this.mettaMeditationAudioRef.nativeElement.duration;
     // };
@@ -78,10 +78,6 @@ export class Module09Page implements OnInit, AfterViewInit {
     // this.theInvitationAudioRef.nativeElement.onloadedmetadata = (event) => {
     //   this.audioDuration707 = this.theInvitationAudioRef.nativeElement.duration;
     // };
-    this.sonataVimeoPlayer = new Player(this.sonataVimeoRef.nativeElement, {
-      id: 670040962,
-      height: 350
-    });
     this.selfRetrievalDemoVimeoPlayer = new Player(this.selfRetrievalDemoVimeoRef.nativeElement, {
       id: 670845671,
       height: 350
