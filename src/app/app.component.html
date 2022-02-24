@@ -26,9 +26,9 @@
           <ion-title (click)="toggleMenu('workshop1')">Workshop 01<br>Marrying Yourself</ion-title>
         </ion-toolbar>
         <ion-list *ngIf="showWorkshop1">
-          <ion-menu-toggle auto-hide="false" >
+          <ion-menu-toggle auto-hide="false">
             <!-- <ion-list-header><h2>Modules</h2></ion-list-header> -->
-            <ion-item button routerDirection="forward" detail="false"
+            <ion-item button routerDirection="forward" detail="false" routerLinkActive="selected"
             [routerLink]="['/workshops/marrying-yourself']">
               <ion-label class="ion-text-wrap">
                 Table of Contents
@@ -82,22 +82,30 @@
           </ion-menu-toggle>
         </ion-list>
       </div>
-      <!-- Workshop 2 Menu - Coming Soon -->
-      <!-- <div *ngIf="isWorkshop02">
+      <!-- Begin Workshop 2 Menu - Tribute To Donna -->
+      <div *ngIf="isWorkshop02">
         <ion-toolbar color="secondary">
           <ion-icon *ngIf="!showWorkshop2" slot="end" name="arrow-down-circle-outline"></ion-icon>
-          <ion-title (click)="toggleMenu('workshop2')">Workshop 02<br>Coming Soon!</ion-title>
+          <ion-title (click)="toggleMenu('workshop2')">Tribute To Donna</ion-title>
         </ion-toolbar>
         <ion-list *ngIf="showWorkshop2">
-          <ion-list-header><h2>Table of Contents</h2></ion-list-header>
-          <ion-item>
-            <ion-label>Module 01</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label>Module 02</ion-label>
-          </ion-item>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item button routerDirection="forward" detail="false"
+            [routerLink]="['/workshops/tribute-to-donna']">
+              <ion-label class="ion-text-wrap">
+                Dearest Beloved Donna
+              </ion-label>
+            </ion-item>
+            <ion-item button routerDirection="forward" detail="false" routerLinkActive="selected"
+            [routerLink]="['/workshops/tribute-to-donna/module01']">
+              <ion-label class="ion-text-wrap">
+                Module 01 - Clearing Out The Buts
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>    
         </ion-list>
-      </div> -->
+      </div>
+      <!-- End Workshop 2 Menu - Tribute To Donna -->
       <ion-list id="inbox-list">
         <ion-list-header><h4>Access</h4></ion-list-header>
         <ion-menu-toggle>

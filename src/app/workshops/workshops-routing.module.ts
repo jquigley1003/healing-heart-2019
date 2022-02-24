@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./marrying-yourself/marrying-yourself.module').then( m => m.MarryingYourselfPageModule),
     canActivate: [AuthGuard],
     canActivateChild: [Workshop01Guard]
+  },
+  {
+    path: 'tribute-to-donna',
+    loadChildren: () => import('./tribute-to-donna/tribute-to-donna.module').then( m => m.TributeToDonnaPageModule)
   }
 ];
 

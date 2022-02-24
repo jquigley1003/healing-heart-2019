@@ -1,0 +1,126 @@
+<ion-header>
+  <ion-toolbar class="workshop-header">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Tribute To Donna<br>Module 01 - Clearing Out The "Buts"
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="module-content">
+  <ion-grid>
+    <ion-row class="ion-margin-right">
+      <ion-col size="12" class="img-container ion-padding ion-text-center">
+        <a href="http://wingsfortheheart.com/e-courses/releasing-resistance/" target="blank">
+          <img src="../../../../assets/workshop02/module01/releasingResistance.jpg"
+            alt="Releasing Resistance">
+        </a>
+      </ion-col>
+      <ion-col size="12" class="ion-padding ion-text-center">
+        <h1>CLEARING OUT THE "BUTS"</h1>
+      </ion-col>
+      <!-- BEGINNING OF MODULE SECTION Clearing Out The Buts -->
+      <ion-col size="12">
+        <ion-row class="section-container">
+          <ion-col size="12" class="ion-text-center ion-padding">
+            <h2 class="section-title">WEED OUT THE BUTS</h2>
+            <div class="audio-player">
+              <audio preload="auto" controls controlsList="nodownload" #weedOutButsAudio>
+                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/tribute-to-donna%2Faudio%2FIntroFirstModuleWeedOutTheButs.mp3?alt=media&token=2481284a-ee7d-42b9-8aa3-f4e9a98ffe0c" 
+                type="audio/mpeg">
+              </audio>
+              <p class="audio-duration">Duration: {{ audioDuration0101 * 1000 | date:'mm:ss' }}</p>
+            </div>  
+          </ion-col>
+          <ion-col class="ion-margin-right ion-padding">
+            <p>
+              This YES has to include your true willingness. Your willingness to grow. Your willingness to further heal. 
+              Your willingness to expand. Your willingness to grow close with another man in your life.   
+            </p>
+            <p>
+              It has been said that our thoughts shape our realities. Often it is the unconscious thoughts that have the 
+              pull. Like an undertow. We can think positive thoughts but if we <i>feel</i> pessimistic, the pessimism will rule. 
+              <i>It is HOW we feel about something that comes into fruition</i> more than even the thoughts.
+            </p>
+            <p>
+              Let's give you an opportunity to be right where you are and <i>include</i> the buts!
+            </p>
+          </ion-col>
+          <!-- BEGINNING OF ASSIGNMENT Clearing Out the Buts -->
+          <ion-col size="12">
+            <ion-row>
+              <ion-col class="assignment">
+                <!-- Nesting in another row creates space for the border -->
+                <p class="assignment-title">Assignment: Clearing Out The Buts</p>
+                <ion-row>
+                  <ion-col size="12" class="ion-text-center ion-padding">
+                    <h2 class="section-title">MAKE A LIST OF ALL THE BUTS</h2>
+                    <div class="audio-player">
+                      <audio preload="auto" controls controlsList="nodownload" #listTheButsAudio>
+                        <source
+                          src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/tribute-to-donna%2Faudio%2FFirstModuleAssignments.mp3?alt=media&token=e56b9b26-4218-471b-a70a-ea22bedf0b59"
+                          type="audio/mpeg">
+                      </audio>
+                      <p class="audio-duration">Duration: {{ audioDuration0102 * 1000 | date:'mm:ss' }}</p>
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                    <ion-checkbox #assignment0101 color="primary"></ion-checkbox>
+                  </ion-col>
+                  <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                    <ion-icon name="heart-circle"></ion-icon>
+                  </ion-col>
+                  <ion-col size="9" class="ion-margin-right ion-padding">
+                    <p>1.	Make a list of all the buts that you can think of. Be thorough. For example, these are 
+                      some things I have heard you say: "I don't think it's meant to be in my life."</p>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                    <ion-checkbox #assignment0102 color="primary"></ion-checkbox>
+                  </ion-col>
+                  <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                    <ion-icon name="heart-circle"></ion-icon>
+                  </ion-col>
+                  <ion-col size="9" class="ion-margin-right ion-padding">
+                    <p>2. When you are done with this, take a look at them. Consider loosening up identifying 
+                      with these thoughts. This time, instead of believing them as true, bring curiosity to them.  
+                      See them as stories that attempt to explain why things are the way they are. This time bring 
+                      a fresh look at these thoughts as blueprints for how life takes shape. Thoughts have power. 
+                      These thoughts on your list do not help and instead, block the flow that propels future 
+                      possibilities.
+                    </p>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <!-- END OF ASSIGNMENT Self-Reflection Exercise One -->
+        </ion-row>
+      </ion-col>
+      <!-- END OF MODULE SECTION Clearing Out The Buts -->
+      <!-- BEGINNING OF COMPLETE MODULE BUTTONS -->
+      <ion-col size="12" class="ion-text-center">
+        <ion-button *ngIf="showIncompleteBtn" (click)="markComplete()">
+          <ion-icon color="warning" name="square-outline"></ion-icon>&nbsp; You Have Not Completed This Module.
+        </ion-button>
+        <ion-button *ngIf="showCompleteBtn" (click)="markIncomplete()">
+          <ion-icon color="success" name="checkbox-outline"></ion-icon>&nbsp; You Completed This Module!
+        </ion-button>
+      </ion-col>
+      <!-- END OF COMPLETE MODULE BUTTONS -->
+      <!-- BEGINNING OF NAVIGATION BUTTONS -->
+      <ion-col size="12" class="ion-text-center">
+        <ion-button [routerLink]="['/workshops/tribute-to-donna']"
+        routerDirection="back"><ion-icon name="arrow-back-circle-outline"></ion-icon>
+        &nbsp; Dearest Beloved Donna</ion-button>
+         <ion-button [routerLink]="['/workshops/tribute-to-donna/module02']"
+        routerDirection="forward">Module 02 &nbsp;
+        <ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-button>
+      </ion-col>
+      <!-- END OF NAVIGATION BUTTONS -->
+    </ion-row>
+  </ion-grid>
+</ion-content>
