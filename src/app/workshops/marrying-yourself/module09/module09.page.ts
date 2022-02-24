@@ -18,9 +18,11 @@ export class Module09Page implements OnInit, AfterViewInit {
   @ViewChild('masculinePrinciplesAudio') masculinePrinciplesAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('selfReflectionTwoAudio') selfReflectionTwoAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('selfReflectionThreeAudio') selfReflectionThreeAudioRef: ElementRef<HTMLAudioElement>;
-  
-  @ViewChild('sonataVimeo') sonataVimeoRef: ElementRef;
-  @ViewChild('selfRetrievalDemoVimeo') selfRetrievalDemoVimeoRef: ElementRef;
+  @ViewChild('guidedImageryAudio') guidedImageryAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('selfInquiryGuidedImageryAudio') selfInquiryGuidedImageryAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('practicesFemMascAudio') practicesFemMascAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('callAttributesVimeo') callAttributesVimeoRef: ElementRef;
+  @ViewChild('tavariBrownVimeo') tavariBrownVimeoRef: ElementRef;
 
 
   completedModule: boolean;
@@ -47,6 +49,14 @@ export class Module09Page implements OnInit, AfterViewInit {
   assignment0920: boolean;
   assignment0921: boolean;
   assignment0922: boolean;
+  assignment0923: boolean;
+  assignment0924: boolean;
+  assignment0925: boolean;
+  assignment0926: boolean;
+  assignment0927: boolean;
+  assignment0928: boolean;
+  assignment0929: boolean;
+  assignment0930: boolean;
   audioDuration0901: number;
   audioDuration0902: number;
   audioDuration0903: number;
@@ -55,8 +65,11 @@ export class Module09Page implements OnInit, AfterViewInit {
   audioDuration0906: number;
   audioDuration0907: number;
   audioDuration0908: number;
-  sonataVimeoPlayer: Player;
-  selfRetrievalDemoVimeoPlayer: Player;
+  audioDuration0909: number;
+  audioDuration0910: number;
+  audioDuration0911: number;
+  callAttributesVimeoPlayer: Player;
+  tavariBrownVimeoPlayer: Player;
   tl1 = null;
 
   constructor() { }
@@ -105,8 +118,21 @@ export class Module09Page implements OnInit, AfterViewInit {
     this.selfReflectionThreeAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration0908 = this.selfReflectionThreeAudioRef.nativeElement.duration;
     };
-    this.selfRetrievalDemoVimeoPlayer = new Player(this.selfRetrievalDemoVimeoRef.nativeElement, {
-      id: 670845671,
+    this.guidedImageryAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration0909 = this.guidedImageryAudioRef.nativeElement.duration;
+    };
+    this.selfInquiryGuidedImageryAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration0910 = this.selfInquiryGuidedImageryAudioRef.nativeElement.duration;
+    };
+    this.practicesFemMascAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration0911 = this.practicesFemMascAudioRef.nativeElement.duration;
+    };
+    this.callAttributesVimeoPlayer = new Player(this.callAttributesVimeoRef.nativeElement, {
+      id: 681115797,
+      height: 350
+    });
+    this.tavariBrownVimeoPlayer = new Player(this.tavariBrownVimeoRef.nativeElement, {
+      id: 681118655,
       height: 350
     });
   }
@@ -114,10 +140,13 @@ export class Module09Page implements OnInit, AfterViewInit {
   async initializeYoutubePlayerPluginWeb() {
     const player1 = {playerId: 'youtube-player0901', playerSize: {width: 640, height: 360}, videoId: 'D4HxOinvaos'};
     const result1 = await YoutubePlayerWeb.initialize(player1);
+    const player2 = {playerId: 'youtube-player0902', playerSize: {width: 640, height: 360}, videoId: '4xfusryXtrI'};
+    const result2 = await YoutubePlayerWeb.initialize(player2);
   }
 
   async destroyYoutubePlayerPluginWeb() {
     const result1 = await YoutubePlayerWeb.destroy('youtube-player0901');
+    const result2 = await YoutubePlayerWeb.destroy('youtube-player0902');
   }
 
   onToggle() {
