@@ -22,6 +22,14 @@ export class Module01Page implements OnInit {
   showIncompleteBtn = true;
   assignment0101: boolean;
   assingment0102: boolean;
+  assingment0103: boolean;
+  assingment0104: boolean;
+  assingment0105: boolean;
+  assingment0106: boolean;
+  assingment0107: boolean;
+  assingment0108: boolean;
+  assingment0109: boolean;
+  assingment0110: boolean;
   audioDuration0101: number;
   audioDuration0102: number;
  
