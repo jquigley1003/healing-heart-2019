@@ -2,12 +2,12 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
 
 @Component({
-  selector: 'app-module02',
-  templateUrl: './module02.page.html',
-  styleUrls: ['./module02.page.scss'],
+  selector: 'app-module05',
+  templateUrl: './module05.page.html',
+  styleUrls: ['./module05.page.scss'],
 })
-export class Module02Page implements OnInit, AfterViewInit {
-  @ViewChild('lovingYourselfAudio') lovingYourselfAudioRef: ElementRef<HTMLAudioElement>;
+export class Module05Page implements OnInit {
+  @ViewChild('scripting5StepsAudio') scripting5StepsAudioRef: ElementRef<HTMLAudioElement>;
 
   completedModule: boolean;
   showCompleteBtn: boolean;
@@ -20,7 +20,7 @@ export class Module02Page implements OnInit, AfterViewInit {
   assingment0206: boolean;
   assingment0207: boolean;
   assingment0208: boolean;
-  audioDuration0201: number;
+  audioDuration0501: number;
 
   constructor() { }
 
@@ -29,19 +29,19 @@ export class Module02Page implements OnInit, AfterViewInit {
 
   async ngAfterViewInit() {
     this.initializeYoutubePlayerPluginWeb();
-    this.lovingYourselfAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration0201 = this.lovingYourselfAudioRef.nativeElement.duration;
+    this.scripting5StepsAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration0501 = this.scripting5StepsAudioRef.nativeElement.duration;
     };
   }
 
 
   async initializeYoutubePlayerPluginWeb() {
-    const options1 = {playerId: 'youtube-player0201', playerSize: {}, videoId: 'XLFEvHWD_NE'};
+    const options1 = {playerId: 'youtube-player0501', playerSize: {}, videoId: 'c_X_sPNUDes'};
     const result1 = await YoutubePlayerWeb.initialize(options1);
   }
 
   async destroyYoutubePlayerPluginWeb() {
-    const result1 = await YoutubePlayerWeb.destroy('youtube-player0201');
+    const result1 = await YoutubePlayerWeb.destroy('youtube-player0501');
   }
 
   markComplete() {
