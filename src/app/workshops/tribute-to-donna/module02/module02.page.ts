@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
-import Player from '@vimeo/player';
 
 @Component({
   selector: 'app-module02',
@@ -10,8 +9,6 @@ import Player from '@vimeo/player';
 })
 export class Module02Page implements OnInit, AfterViewInit {
   @ViewChild('lovingYourselfAudio') lovingYourselfAudioRef: ElementRef<HTMLAudioElement>;
-  @ViewChild('clarifyAudio') clarifyAudioRef: ElementRef<HTMLAudioElement>;
-  @ViewChild('communeWithMichaelAudio') communeWithMichaelAudioRef: ElementRef<HTMLAudioElement>;
 
   completedModule: boolean;
   showCompleteBtn: boolean;
@@ -24,15 +21,7 @@ export class Module02Page implements OnInit, AfterViewInit {
   assingment0206: boolean;
   assingment0207: boolean;
   assingment0208: boolean;
-  assingment0209: boolean;
-  assingment0210: boolean;
-  assingment0211: boolean;
-  assingment0212: boolean;
-  assingment0213: boolean;
   audioDuration0201: number;
-  audioDuration0202: number;
-  audioDuration0203: number;
- 
 
   constructor() { }
 
@@ -43,12 +32,6 @@ export class Module02Page implements OnInit, AfterViewInit {
     this.initializeYoutubePlayerPluginWeb();
     this.lovingYourselfAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration0201 = this.lovingYourselfAudioRef.nativeElement.duration;
-    };
-    this.clarifyAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration0202 = this.clarifyAudioRef.nativeElement.duration;
-    };
-    this.communeWithMichaelAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration0203 = this.communeWithMichaelAudioRef.nativeElement.duration;
     };
   }
 
