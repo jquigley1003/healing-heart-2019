@@ -1,0 +1,198 @@
+<ion-header>
+  <ion-toolbar class="workshop-header">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Tribute To Donna<br>Module 07 - Have It All!
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="module-content">
+  <ion-grid>
+    <ion-row class="ion-margin-right">
+      <ion-col size="12" class="img-container ion-padding ion-text-center">
+        <a href="https://unsplash.com/photos/AsahNlC0VhQ" target="blank">
+          <img src="../../../../assets/workshop02/module07/manWomanBikes.jpg"
+            alt="Photo by Everton Vila on Unsplash">
+        </a>
+      </ion-col>
+      <ion-col size="12" class="ion-padding ion-text-center">
+        <h1>HAVE IT ALL!</h1>
+      </ion-col>
+      <ion-col size="12" class="img-container ion-padding ion-text-center">
+        <img src="../../../../assets/workshop02/module07/donnaTable.jpg"
+            alt="Donna sitting at a table">
+      </ion-col>
+      <!-- BEGINNING OF MODULE SECTION Developing Have It All -->
+      <ion-col size="12">
+        <ion-row class="section-container">
+          <ion-col size="12" class="ion-text-center ion-padding">
+            <h2 class="section-title">TO THE ONE WHO GAVE US THIS MESSAGE</h2>
+            <div class="audio-player">
+              <audio preload="auto" controls controlsList="nodownload" #introHaveItAllAudio>
+                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/tribute-to-donna%2Faudio%2FIntroHaveItAllModule7.mp3?alt=media&token=5fcfcfaa-0d95-46a0-adc3-35f41fcdb2cd" 
+                type="audio/mpeg">
+              </audio>
+              <p class="audio-duration">Duration: {{ audioDuration0701 * 1000 | date:'mm:ss' }}</p>
+            </div>  
+          </ion-col>
+          <ion-col size="12" class="img-container ion-padding ion-text-center">
+            <img src="../../../../assets/workshop02/module07/devaDonnaDad.jpg"
+                alt="Donna and Deva's dad">
+          </ion-col>
+          <!-- BEGINNING OF ASSIGNMENT Have It All -->
+          <ion-col size="12">
+            <ion-row>
+              <ion-col class="assignment">
+                <!-- Nesting in another row creates space for the border -->
+                <p class="assignment-title">Assignment: Have It All!</p>
+                <ion-row>
+                  <ion-col size="12" class="ion-text-center ion-padding">
+                    <h2 class="section-title">GUIDED IMAGERY</h2>
+                    <div class="audio-player">
+                      <audio preload="auto" controls controlsList="nodownload" #guidedImageryAudio>
+                        <source
+                          src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/tribute-to-donna%2Faudio%2FGuidedImageryHaveItAll.mp3?alt=media&token=92c56f33-ae39-4a75-8c68-188734a2ff17"
+                          type="audio/mpeg">
+                      </audio>
+                      <p class="audio-duration">Duration: {{ audioDuration0702 * 1000 | date:'mm:ss' }}</p>
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                    <ion-checkbox #assignment0701 color="primary"></ion-checkbox>
+                  </ion-col>
+                  <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                    <ion-icon name="heart-circle"></ion-icon>
+                  </ion-col>
+                  <ion-col size="9" class="ion-margin-right ion-padding">
+                    <p>
+                      1. Listen to Guided Imagery recording
+                    </p>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col class="img-container ion-padding ion-text-center ion-align-self-center">
+                    <img src="../../../../assets/workshop02/module07/dadDonna1.jpg">
+                  </ion-col>
+                  <ion-col class="img-container ion-padding ion-text-center">
+                    <img src="../../../../assets/workshop02/module07/dadDonna2.jpg">
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                    <ion-checkbox #assignment0702 color="primary"></ion-checkbox>
+                  </ion-col>
+                  <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                    <ion-icon name="heart-circle"></ion-icon>
+                  </ion-col>
+                  <ion-col size="9" class="ion-margin-right ion-padding">
+                    <p>
+                      2. Write a letter from your highest Self to the rest of you, taking the lead from Mom and Dad, 
+                      and communicating to yourself that you deserve to be fully happy and have it all. Just bring 
+                      pen to paper and write!!!!
+                    </p>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12" class="img-container ion-padding ion-text-center ion-align-self-center">
+                    <a href="https://unsplash.com/photos/xMNel_otvWs" target="blank">
+                      <img src="../../../../assets/workshop02/module07/womanHandToChest.jpg"
+                        alt="Photo by Darius Bashar on Unsplash">
+                    </a>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                    <ion-checkbox #assignment0703 color="primary"></ion-checkbox>
+                  </ion-col>
+                  <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
+                    <ion-icon name="heart-circle"></ion-icon>
+                  </ion-col>
+                  <ion-col size="9" class="ion-margin-right ion-padding">
+                    <p>
+                      3. Decorate your journal page with colors and hearts and anything else that you want on your page 
+                      that makes it joyful and affirmative.
+                    </p>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12" class="img-container ion-padding ion-text-center ion-align-self-center">
+                    <a href="https://www.dreamstime.com/valentine-day-background-many-different-paper-hearts-pink-soft-copy-space-image109313073" target="blank">
+                      <img src="../../../../assets/workshop02/module07/paperHearts.jpg"
+                        alt="Photo 109313073 / Paper Hearts © Alina Yudina | Dreamstime.com">
+                    </a>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12" class="ion-margin-right ion-padding">
+                    <p>
+                      You have completed your course. Let's bring honor to your willingness to stretch and do this! 
+                      Let's celebrate you anchoring into more self-love!
+                    </p>
+                    <p>
+                      Remember, this is all about You deserving having it all and being happy!
+                    </p> 
+                    <p>
+                      It is said that living fully takes both wings of a bird; one wing is Effort, one wing is Grace.
+                    </p>
+                    <p>
+                      This here is our effort.
+                    </p>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12" class="img-container ion-padding ion-text-center ion-align-self-center">
+                    <a href="https://unsplash.com/photos/bHduFy5Ad1A" target="blank">
+                      <img src="../../../../assets/workshop02/module07/eagleFly.jpg"
+                        alt="Photo by Simon Fitall on Unsplash">
+                    </a>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12" class="ion-text-center ion-padding">
+                    <p>
+                      Move in celebration of you being you to one of my favorite songs:
+                    </p> 
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
+                    <h2>Whitney Houston - Greatest Love Of All</h2>
+                    <div class="video-player">
+                      <div id="youtube-player0701">
+                      </div>
+                    </div>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <!-- END OF ASSIGNMENT Have It All -->
+        </ion-row>
+      </ion-col>
+      <!-- END OF MODULE SECTION Developing Have It All -->
+      <!-- BEGINNING OF COMPLETE MODULE BUTTONS -->
+      <ion-col size="12" class="ion-text-center">
+        <ion-button *ngIf="showIncompleteBtn" (click)="markComplete()">
+          <ion-icon color="warning" name="square-outline"></ion-icon>&nbsp; You Have Not Completed This Module.
+        </ion-button>
+        <ion-button *ngIf="showCompleteBtn" (click)="markIncomplete()">
+          <ion-icon color="success" name="checkbox-outline"></ion-icon>&nbsp; You Completed This Module!
+        </ion-button>
+      </ion-col>
+      <!-- END OF COMPLETE MODULE BUTTONS -->
+      <!-- BEGINNING OF NAVIGATION BUTTONS -->
+      <ion-col size="12" class="ion-text-center">
+        <ion-button [routerLink]="['/workshops/tribute-to-donna/module06']"
+        routerDirection="back"><ion-icon name="arrow-back-circle-outline"></ion-icon>
+        &nbsp; Module 06</ion-button>
+         <!-- <ion-button [routerLink]="['/workshops/tribute-to-donna/module07']"
+        routerDirection="forward">Module 07 &nbsp;
+        <ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-button> -->
+      </ion-col>
+      <!-- END OF NAVIGATION BUTTONS -->
+    </ion-row>
+  </ion-grid>
+</ion-content>

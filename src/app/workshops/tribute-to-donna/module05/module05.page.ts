@@ -6,7 +6,7 @@ import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
   templateUrl: './module05.page.html',
   styleUrls: ['./module05.page.scss'],
 })
-export class Module05Page implements OnInit {
+export class Module05Page implements OnInit, AfterViewInit {
   @ViewChild('scripting5StepsAudio') scripting5StepsAudioRef: ElementRef<HTMLAudioElement>;
 
   completedModule: boolean;

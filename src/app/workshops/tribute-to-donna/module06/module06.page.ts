@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
 
 @Component({
   selector: 'app-module06',
@@ -27,7 +26,6 @@ export class Module06Page implements OnInit, AfterViewInit {
   }
 
   async ngAfterViewInit() {
-    this.initializeYoutubePlayerPluginWeb();
     this.attractionAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration0601 = this.attractionAudioRef.nativeElement.duration;
     };
@@ -39,16 +37,6 @@ export class Module06Page implements OnInit, AfterViewInit {
     };
   }
 
-
-  async initializeYoutubePlayerPluginWeb() {
-    // const options1 = {playerId: 'youtube-player0501', playerSize: {}, videoId: 'c_X_sPNUDes'};
-    // const result1 = await YoutubePlayerWeb.initialize(options1);
-  }
-
-  async destroyYoutubePlayerPluginWeb() {
-    // const result1 = await YoutubePlayerWeb.destroy('youtube-player0501');
-  }
-
   markComplete() {
     this.showCompleteBtn = true;
     this.showIncompleteBtn = false;
@@ -57,13 +45,5 @@ export class Module06Page implements OnInit, AfterViewInit {
   markIncomplete() {
     this.showCompleteBtn = false;
     this.showIncompleteBtn = true;
-  }
-
-  ionViewWillLeave() {
-    this.destroyYoutubePlayerPluginWeb();
-  }
-
-  ionViewDidEnter() {
-    this.initializeYoutubePlayerPluginWeb();
   }
 }
