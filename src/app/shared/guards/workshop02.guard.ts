@@ -18,9 +18,9 @@ export class Workshop02Guard implements CanActivateChild {
     state: RouterStateSnapshot
     ): Promise<boolean> {
       const workshop02Role = await this.authService.workshop02Role();
-      const isWorkshop01 = !!workshop02Role;
+      const isWorkshop02 = !!workshop02Role;
 
-      if(!isWorkshop01) {
+      if(!isWorkshop02) {
         this.alertService.presentAlert(
           'Blocked',
           'You are not authorized!',
@@ -29,6 +29,6 @@ export class Workshop02Guard implements CanActivateChild {
         );
         this.router.navigate(['/home']);
       }
-      return isWorkshop01;
+      return isWorkshop02;
   }
 }
