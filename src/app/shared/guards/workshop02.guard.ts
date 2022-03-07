@@ -1,20 +1,34 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, CanActivateChild, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
+import { ActivatedRouteSnapshot, CanActivateChild, Router, RouterStateSnapshot } from '@angular/router';
+
+import { AuthService } from '../auth/auth.service';
+import { AlertService } from '../notify/alert.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class Workshop02Guard implements CanActivate, CanActivateChild {
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+export class Workshop02Guard implements CanActivateChild {
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private alertService: AlertService
+  ) {}
+
+  async canActivateChild(route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+    ): Promise<boolean> {
+      const workshop02Role = await this.authService.workshop02Role();
+      const isWorkshop01 = !!workshop02Role;
+
+      if(!isWorkshop01) {
+        this.alertService.presentAlert(
+          'Blocked',
+          'You are not authorized!',
+          'You must request access for Workshop 02 - Tribute To Donna.',
+          ['OK']
+        );
+        this.router.navigate(['/home']);
+      }
+      return isWorkshop01;
   }
-  canActivateChild(
-    childRoute: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): boolean | UrlTree {
-    return true;
-  }
-  
 }

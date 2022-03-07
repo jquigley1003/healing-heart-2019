@@ -77,6 +77,15 @@ export class AuthService {
       .toPromise();
   }
 
+  workshop02Role() {
+    return this.user$
+      .pipe(
+        take(1),
+        map(u => u && u.roles.workshop02)
+      )
+      .toPromise();
+  }
+
   async register(newUser) {
     const fullName = newUser.firstName + ' ' + newUser.lastName;
 

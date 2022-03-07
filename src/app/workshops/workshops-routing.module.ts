@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { WorkshopsPage } from './workshops.page';
 import { Workshop01Guard } from './../shared/guards/workshop01.guard';
+import { Workshop02Guard } from '../shared/guards/workshop02.guard';
 import { AuthGuard } from '../shared/guards/auth.guard';
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   },
   {
     path: 'tribute-to-donna',
-    loadChildren: () => import('./tribute-to-donna/tribute-to-donna.module').then( m => m.TributeToDonnaPageModule)
+    loadChildren: () => import('./tribute-to-donna/tribute-to-donna.module').then( m => m.TributeToDonnaPageModule),
+    canActivateChild: [Workshop02Guard]
   }
 ];
 
