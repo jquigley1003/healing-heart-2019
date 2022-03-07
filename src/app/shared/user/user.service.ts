@@ -189,6 +189,40 @@ export class UserService implements OnDestroy{
     });
   }
 
+  async addWorkshop02Role(user) {
+    await this.loadingService.presentLoading(
+      '...please wait while we give user access to Workshop 02',
+      'bubbles',
+    10000,
+    );
+    const data = {
+      roles: {
+        workshop02: true,
+      }
+    };
+    this.afStore.doc(`users/${user.uid}`).set(data, {merge: true})
+    .then(() => {
+      this.loadingService.dismissLoading();
+      this.toastService.presentToast(
+        `${user.firstName} now has access to Workshop 02!`,
+        'middle',
+        [{
+          text: 'OK',
+          role: 'cancel',
+        }], 5000 );
+    })
+    .catch(err => {
+      this.loadingService.dismissLoading();
+      this.toastService.presentToast(
+        'Sorry, try again. There was a problem giving this user access to Workshop 02.',
+        'middle',
+        [{
+          text: 'OK',
+          role: 'cancel',
+        }], 5000);
+    });
+  }
+
   async removeWorkshop01Role(user) {
     await this.loadingService.presentLoading(
       '...please wait while we give user access to Workshop 01',
@@ -215,6 +249,40 @@ export class UserService implements OnDestroy{
       this.loadingService.dismissLoading();
       this.toastService.presentToast(
         'Sorry, try again. There was a problem removing this user from Workshop 01.',
+        'middle',
+        [{
+          text: 'OK',
+          role: 'cancel',
+        }], 5000);
+    });
+  }
+
+  async removeWorkshop02Role(user) {
+    await this.loadingService.presentLoading(
+      '...please wait while we give user access to Workshop 02',
+      'bubbles',
+    10000,
+    );
+    const data = {
+      roles: {
+        workshop02: false,
+      }
+    };
+    this.afStore.doc(`users/${user.uid}`).set(data, {merge: true})
+    .then(() => {
+      this.loadingService.dismissLoading();
+      this.toastService.presentToast(
+        `${user.firstName} was removed from Workshop 02!`,
+        'middle',
+        [{
+          text: 'OK',
+          role: 'cancel',
+        }], 5000 );
+    })
+    .catch(err => {
+      this.loadingService.dismissLoading();
+      this.toastService.presentToast(
+        'Sorry, try again. There was a problem removing this user from Workshop 02.',
         'middle',
         [{
           text: 'OK',

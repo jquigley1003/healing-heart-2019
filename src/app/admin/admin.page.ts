@@ -89,6 +89,14 @@ export class AdminPage implements OnInit, OnDestroy {
     this.userService.removeWorkshop01Role(user);
   }
 
+  giveAccessWorkshop02(user) {
+    this.userService.addWorkshop02Role(user);
+  }
+
+  removeAccessWorkshop02(user) {
+    this.userService.removeWorkshop02Role(user);
+  }
+
   async deleteUser(user: User) {
     this.alertService.presentAlert(
       'Are You Sure?',
