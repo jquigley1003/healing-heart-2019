@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar class="workshop-header">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Tribute To Donna
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="module-content">
+  <ion-grid>
+    <ion-row class="ion-margin-right">
+      <ion-col size="12" class="ion-padding ion-text-center">
+        <img src="../../../../assets/workshop02/twoWomenField.jpg">
+        <h1>Dearest Beloved Donna ~~</h1>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center ion-margin-right ion-padding">
+        <p>As we approach this major birthday — 70 — I wonder how I want to gift my beautimus sister.</p>
+      </ion-col>
+      <!-- BEGINNING OF MODULE SECTION What Can I Give My Sister For Her 70th? -->
+      <ion-col size="12">
+        <ion-row class="section-container">
+          <ion-col size="12" class="ion-text-center ion-padding">
+            <h2 class="section-title">WHAT CAN I GIVE MY SISTER FOR HER 70TH?</h2>
+            <div class="audio-player">
+              <audio preload="auto" controls controlsList="nodownload" #whatCanIGiveAudio>
+                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/tribute-to-donna%2Faudio%2FWhatCanIGiveMySisterForHer70th.mp3?alt=media&token=124da71d-a5f2-4780-b202-cdd7667eaa4e" 
+                type="audio/mpeg">
+              </audio>
+              <p class="audio-duration">Duration: {{ audioDuration01 * 1000 | date:'mm:ss' }}</p>
+            </div>  
+          </ion-col>
+          <ion-col class="ion-margin-right ion-padding">
+            <p>
+              Are you willing to spend some time over the next months to participate in this online course that is 
+              made especially for you?  
+            </p>
+            <p>
+              Before you respond, pause and breathe. See this as an invitation for your <i>capacity to Dream</i> — to 
+              expand to <i>include</i> this very “Jud” arena of your life. (“Jud” is a Sanskrit word that means exactly 
+              as it sounds — thick, dense, immobile).
+            </p>
+            <p>
+              Just to be clear, we are not speaking about forcing you to find juice for this arena. Rather, we are just 
+              expanding the Juice you already have for life to <i>include</i> the possibility for "The More."
+            </p>
+          </ion-col>
+          <ion-col size="12" class="img-container ion-padding ion-text-center">
+            <!-- <a href="https://unsplash.com/photos/Iro6cBbsXOo" target="blank"> -->
+              <img src="../../../../assets/workshop02/ampersand.png"
+                alt="ampersand symbol">
+            <!-- </a> -->
+          </ion-col>
+          <ion-col class="ion-text-center ion-margin-right ion-padding">
+            <p>
+              Sooooo, are you ready? Is that a Yes?
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <!-- END OF MODULE SECTION What Can I Give My Sister For Her 70th? -->
+      <!-- BEGINNING OF NAVIGATION BUTTONS -->
+      <ion-col size="12" class="ion-text-center">
+        <!-- <ion-button [routerLink]="['/workshops/marrying-yourself']"
+        routerDirection="back"><ion-icon name="arrow-back-circle-outline"></ion-icon>
+        &nbsp; Introduction</ion-button> -->
+         <ion-button [routerLink]="['/workshops/tribute-to-donna/module01']"
+        routerDirection="forward">Module 01 &nbsp;
+        <ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-button>
+      </ion-col>
+      <!-- END OF NAVIGATION BUTTONS -->
+    </ion-row>
+  </ion-grid>
+</ion-content>

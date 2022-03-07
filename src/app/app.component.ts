@@ -154,7 +154,7 @@ export class AppComponent implements OnInit {
       if(data) {
         this.userFullName = data.firstName + ' ' + data.lastName;
         this.isWorkshop01 = data.roles.workshop01;
-        this.isWorkshop02 = data.roles.workshop01; // change this line to data.roles.workshop02!
+        this.isWorkshop02 = data.roles.workshop02;
       } else {
         this.userFullName = null;
         this.isWorkshop01 = false;
