@@ -95,21 +95,23 @@ export class AuthService {
       await credentials.user.updateProfile({
         displayName: fullName
       })
-      .then(() => {
-        credentials.user.sendEmailVerification()
-        .then(async () => {
-          console.log('Email verification was sent');
-          await this.alertService.presentAlert(
-            'Thank You For Registering!',
-            'We sent you an email for verification.',
-            'Click the link in the email to complete your registration',
-            ['OK']
-          );
-        }).catch((err) => {
-          console.log('Error sending verification email: ', err);
-          this.handleError(err);
-        });
-      }).catch((err) => {
+      // ADD CODE BELOW IF SENDING EMAIL VERIFICATION TO NEW USER
+      // .then(() => {
+      //   credentials.user.sendEmailVerification()
+      //   .then(async () => {
+      //     console.log('Email verification was sent');
+      //     await this.alertService.presentAlert(
+      //       'Thank You For Registering!',
+      //       'We sent you an email for verification.',
+      //       'Click the link in the email to complete your registration',
+      //       ['OK']
+      //     );
+      //   }).catch((err) => {
+      //     console.log('Error sending verification email: ', err);
+      //     this.handleError(err);
+      //   });
+      // })
+      .catch((err) => {
         console.log('Error adding displayName: ', err);
         this.handleError(err);
       });

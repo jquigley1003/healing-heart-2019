@@ -62,6 +62,9 @@ export const registerUser = functions.https.onCall((data, context) => {
 });
 
 export const setUserRoles = functions.auth.user().onCreate(async (user) => {
+  await admin.auth().updateUser(user.uid, {
+    emailVerified: true,
+  });
   await admin.auth().setCustomUserClaims(user.uid, {
     admin: false,
     workshop01: false,
