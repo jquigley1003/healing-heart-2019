@@ -1,39 +1,48 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 import { UserService } from 'src/app/shared/user/user.service';
 import { AuthService } from 'src/app/shared/auth/auth.service';
+import { AssignmentService } from 'src/app/shared/assignment/assignment.service';
 import { User } from 'src/app/shared/models/user.model';
+import { Assignment } from 'src/app/shared/models/assignment.model';
 
 @Component({
   selector: 'app-module03',
   templateUrl: './module03.page.html',
   styleUrls: ['./module03.page.scss'],
 })
-export class Module03Page implements OnInit, AfterViewInit {
+export class Module03Page implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('clarifyAudio') clarifyAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('communeWithMichaelAudio') communeWithMichaelAudioRef: ElementRef<HTMLAudioElement>;
 
+  ngUnsubscribe = new Subject<void>();
   currentUser: User;
   userFullName: string;
   userEmail: string;
   completedModule03: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
-  assingment0301: boolean;
-  assingment0302: boolean;
-  assingment0303: boolean;
-  assingment0304: boolean;
-  assingment0305: boolean;
+  assignments: Assignment;
+  work02assign0301: boolean;
+  work02assign0302: boolean;
+  work02assign0303: boolean;
+  work02assign0304: boolean;
+  work02assign0305: boolean;
   audioDuration0301: number;
   audioDuration0302: number;
 
   constructor(
     private userService: UserService,
-    private authService: AuthService
+    private authService: AuthService,
+    private assignmentService: AssignmentService
   ) { }
 
   ngOnInit() {
     this.initializeUserData();
+    this.initializeUserAssignments();
   }
 
   async ngAfterViewInit() {
@@ -69,6 +78,39 @@ export class Module03Page implements OnInit, AfterViewInit {
     })
   }
 
+  initializeUserAssignments() {
+    this.assignmentService.getUserAssignments()
+    .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(data => {
+        this.assignments = data;
+        this.work02assign0301 = this.assignments.work02assign0301;
+        this.work02assign0302 = this.assignments.work02assign0302;
+        this.work02assign0303 = this.assignments.work02assign0303;
+        this.work02assign0304 = this.assignments.work02assign0304;
+        this.work02assign0305 = this.assignments.work02assign0305;
+      });
+  }
+
+  assignmentCheck(assignment) {
+    // console.log('result of check: ', assignment);
+    const assignmentComplete = {
+      userName: this.currentUser.firstName + ' ' + this.currentUser.lastName,
+      [assignment]: true
+    };
+    // console.log('========= ',assignment,' CHECKED');
+    this.assignmentService.assignmentComplete(assignment, assignmentComplete, this.currentUser);
+  }
+
+  assignmentUncheck(assignment) {
+    // console.log('result of check: ', assignment);
+    const assignmentComplete = {
+      userName: this.currentUser.firstName + ' ' + this.currentUser.lastName,
+      [assignment]: false
+    };
+    // console.log('========= ',assignment,' UNCHECKED');
+    this.assignmentService.assignmentIncomplete(assignment, assignmentComplete, this.currentUser);
+  }
+
   markComplete() {
     const moduleCompleted = {
       completed: {
@@ -89,5 +131,10 @@ export class Module03Page implements OnInit, AfterViewInit {
     this.showCompleteBtn = false;
     this.showIncompleteBtn = true;
     this.userService.removeModuleComplete('Module 03', moduleCompleted, this.currentUser);
+  }
+
+  ngOnDestroy(): void {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();  
   }
 }

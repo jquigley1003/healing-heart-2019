@@ -1,41 +1,47 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
+
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 import { UserService } from 'src/app/shared/user/user.service';
 import { AuthService } from 'src/app/shared/auth/auth.service';
+import { AssignmentService } from 'src/app/shared/assignment/assignment.service';
 import { User } from 'src/app/shared/models/user.model';
+import { Assignment } from 'src/app/shared/models/assignment.model';
 
 @Component({
   selector: 'app-module05',
   templateUrl: './module05.page.html',
   styleUrls: ['./module05.page.scss'],
 })
-export class Module05Page implements OnInit, AfterViewInit {
+export class Module05Page implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('scripting5StepsAudio') scripting5StepsAudioRef: ElementRef<HTMLAudioElement>;
 
+  ngUnsubscribe = new Subject<void>();
   currentUser: User;
   userFullName: string;
   userEmail: string;
   completedModule05: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
-  assignment0201: boolean;
-  assingment0202: boolean;
-  assingment0203: boolean;
-  assingment0204: boolean;
-  assingment0205: boolean;
-  assingment0206: boolean;
-  assingment0207: boolean;
-  assingment0208: boolean;
+  assignments: Assignment;
+  work02assign0501: boolean;
+  work02assign0502: boolean;
+  work02assign0503: boolean;
+  work02assign0504: boolean;
+  work02assign0505: boolean;
   audioDuration0501: number;
 
   constructor(
     private userService: UserService,
-    private authService: AuthService
+    private authService: AuthService,
+    private assignmentService: AssignmentService
   ) { }
 
   ngOnInit() {
     this.initializeUserData();
+    this.initializeUserAssignments();
   }
 
   async ngAfterViewInit() {
@@ -69,6 +75,19 @@ export class Module05Page implements OnInit, AfterViewInit {
     })
   }
 
+  initializeUserAssignments() {
+    this.assignmentService.getUserAssignments()
+    .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(data => {
+        this.assignments = data;
+        this.work02assign0501 = this.assignments.work02assign0501;
+        this.work02assign0502 = this.assignments.work02assign0502;
+        this.work02assign0503 = this.assignments.work02assign0503;
+        this.work02assign0504 = this.assignments.work02assign0504;
+        this.work02assign0505 = this.assignments.work02assign0505;
+      });
+  }
+
   async initializeYoutubePlayerPluginWeb() {
     const options1 = {playerId: 'youtube-player0501', playerSize: {}, videoId: 'c_X_sPNUDes'};
     const result1 = await YoutubePlayerWeb.initialize(options1);
@@ -76,6 +95,26 @@ export class Module05Page implements OnInit, AfterViewInit {
 
   async destroyYoutubePlayerPluginWeb() {
     const result1 = await YoutubePlayerWeb.destroy('youtube-player0501');
+  }
+
+  assignmentCheck(assignment) {
+    // console.log('result of check: ', assignment);
+    const assignmentComplete = {
+      userName: this.currentUser.firstName + ' ' + this.currentUser.lastName,
+      [assignment]: true
+    };
+    // console.log('========= ',assignment,' CHECKED');
+    this.assignmentService.assignmentComplete(assignment, assignmentComplete, this.currentUser);
+  }
+
+  assignmentUncheck(assignment) {
+    // console.log('result of check: ', assignment);
+    const assignmentComplete = {
+      userName: this.currentUser.firstName + ' ' + this.currentUser.lastName,
+      [assignment]: false
+    };
+    // console.log('========= ',assignment,' UNCHECKED');
+    this.assignmentService.assignmentIncomplete(assignment, assignmentComplete, this.currentUser);
   }
 
   markComplete() {
@@ -106,5 +145,10 @@ export class Module05Page implements OnInit, AfterViewInit {
 
   ionViewDidEnter() {
     this.initializeYoutubePlayerPluginWeb();
+  }
+
+  ngOnDestroy(): void {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();  
   }
 }

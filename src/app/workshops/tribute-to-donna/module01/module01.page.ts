@@ -1,45 +1,54 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+
+import { User } from 'src/app/shared/models/user.model';
+import { Assignment } from 'src/app/shared/models/assignment.model';
 import { UserService } from 'src/app/shared/user/user.service';
 import { AuthService } from 'src/app/shared/auth/auth.service';
-import { User } from 'src/app/shared/models/user.model';
+import { AssignmentService } from 'src/app/shared/assignment/assignment.service';
 
 @Component({
   selector: 'app-module01',
   templateUrl: './module01.page.html',
   styleUrls: ['./module01.page.scss'],
 })
-export class Module01Page implements OnInit {
+export class Module01Page implements OnInit, OnDestroy {
   @ViewChild('weedOutButsAudio') weedOutButsAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('listTheButsAudio') listTheButsAudioRef: ElementRef<HTMLAudioElement>;
 
+  ngUnsubscribe = new Subject<void>();
   currentUser: User;
   userFullName: string;
   userEmail: string;
   completedModule01: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
-  assignment0101: boolean;
-  assingment0102: boolean;
-  assingment0103: boolean;
-  assingment0104: boolean;
-  assingment0105: boolean;
-  assingment0106: boolean;
-  assingment0107: boolean;
-  assingment0108: boolean;
-  assingment0109: boolean;
-  assingment0110: boolean;
+  assignments: Assignment;
+  work02assign0101: boolean;
+  work02assign0102: boolean;
+  work02assign0103: boolean;
+  work02assign0104: boolean;
+  work02assign0105: boolean;
+  work02assign0106: boolean;
+  work02assign0107: boolean;
+  work02assign0108: boolean;
+  work02assign0109: boolean;
+  work02assign0110: boolean;
   audioDuration0101: number;
   audioDuration0102: number;
  
 
   constructor(
     private userService: UserService,
-    private authService: AuthService
+    private authService: AuthService,
+    private assignmentService: AssignmentService
   ) { }
 
   ngOnInit() {
     this.initializeUserData();
+    this.initializeUserAssignments();
   }
 
   async ngAfterViewInit() {
@@ -75,6 +84,44 @@ export class Module01Page implements OnInit {
     })
   }
 
+  initializeUserAssignments() {
+    this.assignmentService.getUserAssignments()
+    .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(data => {
+        this.assignments = data;
+        this.work02assign0101 = this.assignments.work02assign0101;
+        this.work02assign0102 = this.assignments.work02assign0102;
+        this.work02assign0103 = this.assignments.work02assign0103;
+        this.work02assign0104 = this.assignments.work02assign0104;
+        this.work02assign0105 = this.assignments.work02assign0105;
+        this.work02assign0106 = this.assignments.work02assign0106;
+        this.work02assign0107 = this.assignments.work02assign0107;
+        this.work02assign0108 = this.assignments.work02assign0108;
+        this.work02assign0109 = this.assignments.work02assign0109;
+        this.work02assign0110 = this.assignments.work02assign0110;
+      });
+  }
+
+  assignmentCheck(assignment) {
+    // console.log('result of check: ', assignment);
+    const assignmentComplete = {
+      userName: this.currentUser.firstName + ' ' + this.currentUser.lastName,
+      [assignment]: true
+    };
+    // console.log('========= ',assignment,' CHECKED');
+    this.assignmentService.assignmentComplete(assignment, assignmentComplete, this.currentUser);
+  }
+
+  assignmentUncheck(assignment) {
+    // console.log('result of check: ', assignment);
+    const assignmentComplete = {
+      userName: this.currentUser.firstName + ' ' + this.currentUser.lastName,
+      [assignment]: false
+    };
+    // console.log('========= ',assignment,' UNCHECKED');
+    this.assignmentService.assignmentIncomplete(assignment, assignmentComplete, this.currentUser);
+  }
+
   markComplete() {
     const moduleCompleted = {
       completed: {
@@ -95,5 +142,10 @@ export class Module01Page implements OnInit {
     this.showCompleteBtn = false;
     this.showIncompleteBtn = true;
     this.userService.removeModuleComplete('Module 01', moduleCompleted, this.currentUser);
+  }
+
+  ngOnDestroy(): void {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
   }
 }

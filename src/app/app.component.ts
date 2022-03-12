@@ -11,6 +11,7 @@ import { RegisterModalComponent } from './shared/auth/register-modal/register-mo
 import { SignInModalComponent } from './shared/auth/sign-in-modal/sign-in-modal.component';
 import { User } from './shared/models/user.model';
 import { AuthService } from './shared/auth/auth.service';
+import { AssignmentService } from './shared/assignment/assignment.service';
 import { ToastService } from './shared/notify/toast.service';
 import { AlertService } from './shared/notify/alert.service';
 
@@ -81,6 +82,7 @@ export class AppComponent implements OnInit {
     private authService: AuthService,
     private toastService: ToastService,
     private alertService: AlertService,
+    private assignmentService: AssignmentService,
     private router: Router,
     private swUpdate: SwUpdate
   ) {
@@ -159,6 +161,7 @@ export class AppComponent implements OnInit {
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe(data => {
       if(data) {
+        this.initializeAssignments(data.uid);
         this.userFullName = data.firstName + ' ' + data.lastName;
         this.isWorkshop01 = data.roles.workshop01;
         this.isWorkshop02 = data.roles.workshop02;
@@ -183,6 +186,10 @@ export class AppComponent implements OnInit {
       }
       // console.log('app component getCurrentUser = ', this.userFullName);
     });
+  }
+
+  initializeAssignments(assId) {
+    this.assignmentService.initializeAssignments(assId);
   }
 
   async presentRegisterModal() {

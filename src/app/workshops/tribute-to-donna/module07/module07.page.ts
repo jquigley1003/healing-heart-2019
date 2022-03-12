@@ -1,39 +1,49 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
 
 import { UserService } from 'src/app/shared/user/user.service';
 import { AuthService } from 'src/app/shared/auth/auth.service';
+import { AssignmentService } from 'src/app/shared/assignment/assignment.service';
 import { User } from 'src/app/shared/models/user.model';
+import { Assignment } from 'src/app/shared/models/assignment.model';
 
 @Component({
   selector: 'app-module07',
   templateUrl: './module07.page.html',
   styleUrls: ['./module07.page.scss'],
 })
-export class Module07Page implements OnInit, AfterViewInit {
+export class Module07Page implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('introHaveItAllAudio') introHaveItAllAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('guidedImageryAudio') guidedImageryAudioRef: ElementRef<HTMLAudioElement>;
 
+  ngUnsubscribe = new Subject<void>();
   currentUser: User;
   userFullName: string;
   userEmail: string;
   completedModule07: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
-  assignment0701: boolean;
-  assingment0702: boolean;
-  assingment0703: boolean;
+  assignments: Assignment;
+  work02assign0701: boolean;
+  work02assign0702: boolean;
+  work02assign0703: boolean;
   
   audioDuration0701: number;
   audioDuration0702: number;
   
   constructor(
     private userService: UserService,
-    private authService: AuthService
+    private authService: AuthService,
+    private assignmentService: AssignmentService
   ) { }
 
   ngOnInit() {
     this.initializeUserData();
+    this.initializeUserAssignments();
   }
 
   async ngAfterViewInit() {
@@ -70,6 +80,17 @@ export class Module07Page implements OnInit, AfterViewInit {
     })
   }
 
+  initializeUserAssignments() {
+    this.assignmentService.getUserAssignments()
+    .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(data => {
+        this.assignments = data;
+        this.work02assign0701 = this.assignments.work02assign0701;
+        this.work02assign0702 = this.assignments.work02assign0702;
+        this.work02assign0703 = this.assignments.work02assign0703;
+      });
+  }
+
   async initializeYoutubePlayerPluginWeb() {
     const options1 = {playerId: 'youtube-player0701', playerSize: {}, videoId: 'IYzlVDlE72w'};
     const result1 = await YoutubePlayerWeb.initialize(options1);
@@ -77,6 +98,26 @@ export class Module07Page implements OnInit, AfterViewInit {
 
   async destroyYoutubePlayerPluginWeb() {
     const result1 = await YoutubePlayerWeb.destroy('youtube-player0701');
+  }
+
+  assignmentCheck(assignment) {
+    // console.log('result of check: ', assignment);
+    const assignmentComplete = {
+      userName: this.currentUser.firstName + ' ' + this.currentUser.lastName,
+      [assignment]: true
+    };
+    // console.log('========= ',assignment,' CHECKED');
+    this.assignmentService.assignmentComplete(assignment, assignmentComplete, this.currentUser);
+  }
+
+  assignmentUncheck(assignment) {
+    // console.log('result of check: ', assignment);
+    const assignmentComplete = {
+      userName: this.currentUser.firstName + ' ' + this.currentUser.lastName,
+      [assignment]: false
+    };
+    // console.log('========= ',assignment,' UNCHECKED');
+    this.assignmentService.assignmentIncomplete(assignment, assignmentComplete, this.currentUser);
   }
 
   markComplete() {
@@ -107,5 +148,10 @@ export class Module07Page implements OnInit, AfterViewInit {
 
   ionViewDidEnter() {
     this.initializeYoutubePlayerPluginWeb();
+  }
+
+  ngOnDestroy(): void {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();  
   }
 }
