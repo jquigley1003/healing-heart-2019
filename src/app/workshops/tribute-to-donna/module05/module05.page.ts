@@ -1,6 +1,10 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
 
+import { UserService } from 'src/app/shared/user/user.service';
+import { AuthService } from 'src/app/shared/auth/auth.service';
+import { User } from 'src/app/shared/models/user.model';
+
 @Component({
   selector: 'app-module05',
   templateUrl: './module05.page.html',
@@ -9,7 +13,10 @@ import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
 export class Module05Page implements OnInit, AfterViewInit {
   @ViewChild('scripting5StepsAudio') scripting5StepsAudioRef: ElementRef<HTMLAudioElement>;
 
-  completedModule: boolean;
+  currentUser: User;
+  userFullName: string;
+  userEmail: string;
+  completedModule05: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
   assignment0201: boolean;
@@ -22,9 +29,13 @@ export class Module05Page implements OnInit, AfterViewInit {
   assingment0208: boolean;
   audioDuration0501: number;
 
-  constructor() { }
+  constructor(
+    private userService: UserService,
+    private authService: AuthService
+  ) { }
 
   ngOnInit() {
+    this.initializeUserData();
   }
 
   async ngAfterViewInit() {
@@ -34,6 +45,29 @@ export class Module05Page implements OnInit, AfterViewInit {
     };
   }
 
+  initializeUserData() {
+    this.authService.returnUserData()
+    .then((data) => {
+      if(data) {
+        this.currentUser = data;
+        this.userFullName = data.firstName + ' ' + data.lastName;
+        this.userEmail = data.email;
+        this.completedModule05 = data.completed.work02module05;
+        if(this.completedModule05) {
+          this.showCompleteBtn = true;
+          this.showIncompleteBtn = false;
+        } else {
+          this.showCompleteBtn = false;
+          this.showIncompleteBtn = true;
+        }
+      } else {
+        this.currentUser = null;
+        this.userFullName = null;
+        this.userEmail = null;
+        this.completedModule05 = false;
+      }
+    })
+  }
 
   async initializeYoutubePlayerPluginWeb() {
     const options1 = {playerId: 'youtube-player0501', playerSize: {}, videoId: 'c_X_sPNUDes'};
@@ -45,13 +79,25 @@ export class Module05Page implements OnInit, AfterViewInit {
   }
 
   markComplete() {
+    const moduleCompleted = {
+      completed: {
+        work02module05: true,
+      }
+    };
     this.showCompleteBtn = true;
     this.showIncompleteBtn = false;
+    this.userService.addModuleComplete('Module 05', moduleCompleted, this.currentUser);
   }
 
   markIncomplete() {
+    const moduleCompleted = {
+      completed: {
+        work02module05: false,
+      }
+    };
     this.showCompleteBtn = false;
     this.showIncompleteBtn = true;
+    this.userService.removeModuleComplete('Module 05', moduleCompleted, this.currentUser);
   }
 
   ionViewWillLeave() {

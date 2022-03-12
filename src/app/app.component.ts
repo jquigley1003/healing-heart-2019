@@ -30,6 +30,13 @@ export class AppComponent implements OnInit {
   showMainMenu = true;
   showWorkshop1 = false;
   showWorkshop2 = false;
+  work02module01 = false;
+  work02module02 = false;
+  work02module03 = false;
+  work02module04 = false;
+  work02module05 = false;
+  work02module06 = false;
+  work02module07 = false;
 
   public appPages = [
     {
@@ -155,10 +162,24 @@ export class AppComponent implements OnInit {
         this.userFullName = data.firstName + ' ' + data.lastName;
         this.isWorkshop01 = data.roles.workshop01;
         this.isWorkshop02 = data.roles.workshop02;
+        this.work02module01 = data.completed.work02module01;
+        this.work02module02 = data.completed.work02module02;
+        this.work02module03 = data.completed.work02module03;
+        this.work02module04 = data.completed.work02module04;
+        this.work02module05 = data.completed.work02module05;
+        this.work02module06 = data.completed.work02module06;
+        this.work02module07 = data.completed.work02module07;
       } else {
         this.userFullName = null;
         this.isWorkshop01 = false;
         this.isWorkshop02 = false;
+        this.work02module01 = false;
+        this.work02module02 = false;
+        this.work02module03 = false;
+        this.work02module04 = false;
+        this.work02module05 = false;
+        this.work02module06 = false;
+        this.work02module07 = false;
       }
       // console.log('app component getCurrentUser = ', this.userFullName);
     });

@@ -18,12 +18,23 @@ export interface Roles {
   workshop02?: boolean;
 }
 
+export interface Completed {
+  work02module01?: boolean;
+  work02module02?: boolean;
+  work02module03?: boolean;
+  work02module04?: boolean;
+  work02module05?: boolean;
+  work02module06?: boolean;
+  work02module07?: boolean;
+}
+
 export interface User extends DisplayName {
   uid: string;
   email: string;
   address?: Address;
   phone?: number;
 	roles?: Roles;
+  completed?: Completed;
   workshopIDs?: string[];
   moduleIDs?: string[];
 }

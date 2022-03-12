@@ -59,6 +59,15 @@ export class AuthService {
     );
   }
 
+  returnUserData() {
+    return this.user$
+    .pipe(
+      take(1),
+      map(u => u)
+    )
+    .toPromise()
+  }
+
   uid() {
     return this.user$
       .pipe(

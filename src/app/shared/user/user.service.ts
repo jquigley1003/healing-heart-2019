@@ -291,6 +291,68 @@ export class UserService implements OnDestroy{
     });
   }
 
+  async addModuleComplete(moduleName, moduleComplete, user) {
+    await this.loadingService.presentLoading(
+      '...please wait while we mark this module complete',
+      'bubbles',
+    10000,
+    );
+    // console.log('addModule data is: ', moduleComplete);
+    const data = moduleComplete;
+    this.afStore.doc(`users/${user.uid}`).set(data, {merge: true})
+    .then(() => {
+      this.loadingService.dismissLoading();
+      this.toastService.presentToast(
+        `${user.firstName} has completed ${moduleName}!`,
+        'middle',
+        [{
+          text: 'OK',
+          role: 'cancel',
+        }], 5000 );
+    })
+    .catch(err => {
+      this.loadingService.dismissLoading();
+      this.toastService.presentToast(
+        `Sorry, try again. There was a problem marking ${moduleName} as complete.`,
+        'middle',
+        [{
+          text: 'OK',
+          role: 'cancel',
+        }], 5000);
+    });
+  }
+
+  async removeModuleComplete(moduleName, moduleComplete, user) {
+    await this.loadingService.presentLoading(
+      '...please wait while we mark this module incomplete',
+      'bubbles',
+    10000,
+    );
+    const data = moduleComplete;
+    // console.log('removeModule data is: ', data);
+    this.afStore.doc(`users/${user.uid}`).set(data, {merge: true})
+    .then(() => {
+      this.loadingService.dismissLoading();
+      this.toastService.presentToast(
+        `${user.firstName} has not completed ${moduleName}.`,
+        'middle',
+        [{
+          text: 'OK',
+          role: 'cancel',
+        }], 5000 );
+    })
+    .catch(err => {
+      this.loadingService.dismissLoading();
+      this.toastService.presentToast(
+        `Sorry, try again. There was a problem marking ${moduleName} as incomplete.`,
+        'middle',
+        [{
+          text: 'OK',
+          role: 'cancel',
+        }], 5000);
+    });
+  }
+
   async deleteUser(userId) {
     await this.loadingService.presentLoading(
       '...please wait while we delete this user',
