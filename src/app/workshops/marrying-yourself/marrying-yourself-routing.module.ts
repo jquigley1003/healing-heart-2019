@@ -43,6 +43,10 @@ const routes: Routes = [
   {
     path: 'module09',
     loadChildren: () => import('./module09/module09.module').then( m => m.Module09PageModule)
+  },
+  {
+    path: 'module10',
+    loadChildren: () => import('./module10/module10.module').then( m => m.Module10PageModule)
   }
 ];
 
