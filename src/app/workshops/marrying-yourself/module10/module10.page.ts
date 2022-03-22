@@ -13,7 +13,7 @@ export class Module10Page implements OnInit, AfterViewInit {
   @ViewChild('introTo4ArchetypesAudio') introTo4ArchetypesAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('theLoverAudio') theLoverAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('shadowAspectLoverAudio') shadowAspectLoverAudioRef: ElementRef<HTMLAudioElement>;
-  // @ViewChild('journalingLoverAudio') journalingLoverAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('journalingLoverAudio') journalingLoverAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('feastingOnaMealAudio') feastingOnaMealAudioRef: ElementRef<HTMLAudioElement>;
   // @ViewChild('sensualExperienceAudio') sensualExperienceAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('tonyLoverAudio') tonyLoverAudioRef: ElementRef<HTMLAudioElement>;
@@ -22,7 +22,7 @@ export class Module10Page implements OnInit, AfterViewInit {
   @ViewChild('positiveWarriorModelAudio') positiveWarriorModelAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('tonyWarriorAudio') tonyWarriorAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('theMagicianAudio') theMagicianAudioRef: ElementRef<HTMLAudioElement>;
-  // @ViewChild('shadowAspectMagicianAudio') shadowAspectMagicianAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('shadowAspectMagicianAudio') shadowAspectMagicianAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('chooseMentorAudio') chooseMentorAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('beaMentorAudio') beaMentorAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('riteOfPassageAudio') riteOfPassageAudioRef: ElementRef<HTMLAudioElement>;
@@ -103,9 +103,9 @@ export class Module10Page implements OnInit, AfterViewInit {
     this.shadowAspectLoverAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1004 = this.shadowAspectLoverAudioRef.nativeElement.duration;
     };
-    // this.journalingLoverAudioRef.nativeElement.onloadedmetadata = (event) => {
-    //   this.audioDuration1005 = this.journalingLoverAudioRef.nativeElement.duration;
-    // };
+    this.journalingLoverAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1005 = this.journalingLoverAudioRef.nativeElement.duration;
+    };
     this.feastingOnaMealAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1006 = this.feastingOnaMealAudioRef.nativeElement.duration;
     };
@@ -130,9 +130,9 @@ export class Module10Page implements OnInit, AfterViewInit {
     this.theMagicianAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1013 = this.theMagicianAudioRef.nativeElement.duration;
     };
-    // this.shadowAspectMagicianAudioRef.nativeElement.onloadedmetadata = (event) => {
-    //   this.audioDuration1014 = this.shadowAspectMagicianAudioRef.nativeElement.duration;
-    // };
+    this.shadowAspectMagicianAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1014 = this.shadowAspectMagicianAudioRef.nativeElement.duration;
+    };
     this.chooseMentorAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1015 = this.chooseMentorAudioRef.nativeElement.duration;
     };
