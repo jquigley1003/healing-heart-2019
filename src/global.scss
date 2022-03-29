@@ -294,6 +294,13 @@ audio {
 	font-weight: bold;
 }
 
+.practice-divider {
+  background-image: url('../src/assets/practice-divider.png');
+  background-repeat: repeat-x;
+  height: 1em;
+  margin-bottom: 1em;
+}
+
 .quote {
 	margin: 0px auto;
 }

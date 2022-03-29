@@ -17,7 +17,21 @@ export class Module12Page implements OnInit, AfterViewInit {
   @ViewChild('supportProtectionAudio') supportProtectionAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('setContainStructureAudio') setContainStructureAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('respectBondConsistentAudio') respectBondConsistentAudioRef: ElementRef<HTMLAudioElement>;
-  // @ViewChild('romancingYourselfVimeo') romancingYourselfVimeoRef: ElementRef;
+  @ViewChild('practicePlaceAudio') practicePlaceAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('practiceNurturanceAudio') practiceNurturanceAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('practiceSupportAudio') practiceSupportAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('practiceProtectionAudio') practiceProtectionAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('practiceScreeningAudio') practiceScreeningAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('practiceShieldingAudio') practiceShieldingAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('practiceLimitsAudio') practiceLimitsAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('practiceContainmentAudio') practiceContainmentAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('practiceStructuringTimeAudio') practiceStructuringTimeAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('practiceRespectAudio') practiceRespectAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('practiceBondingAudio') practiceBondingAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('practiceCPAAudio') practiceCPAAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('acknowledgeAudio') acknowledgeAudioRef: ElementRef<HTMLAudioElement>;
+
+  @ViewChild('settingLimitsVimeo') settingLimitsVimeoRef: ElementRef;
   // @ViewChild('moreThoughtsVimeo') moreThoughtsVimeoRef: ElementRef;
 
 
@@ -51,8 +65,12 @@ export class Module12Page implements OnInit, AfterViewInit {
   audioDuration1214: number;
   audioDuration1215: number;
   audioDuration1216: number;
+  audioDuration1217: number;
+  audioDuration1218: number;
+  audioDuration1219: number;
+  audioDuration1220: number;
   
-  // romancingYourselfVimeoPlayer: Player;
+  settingLimitsVimeoPlayer: Player;
   // moreThoughtsVimeoPlayer: Player;
   tl1 = null;
 
@@ -99,11 +117,51 @@ export class Module12Page implements OnInit, AfterViewInit {
     this.respectBondConsistentAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1207 = this.respectBondConsistentAudioRef.nativeElement.duration;
     };
+    this.practicePlaceAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1208 = this.practicePlaceAudioRef.nativeElement.duration;
+    };
+    this.practiceNurturanceAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1209 = this.practiceNurturanceAudioRef.nativeElement.duration;
+    };
+    this.practiceSupportAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1210 = this.practiceSupportAudioRef.nativeElement.duration;
+    };
+    this.practiceProtectionAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1211 = this.practiceProtectionAudioRef.nativeElement.duration;
+    };
+    this.practiceScreeningAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1212 = this.practiceScreeningAudioRef.nativeElement.duration;
+    };
+    this.practiceShieldingAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1213 = this.practiceShieldingAudioRef.nativeElement.duration;
+    };
+    this.practiceLimitsAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1214 = this.practiceLimitsAudioRef.nativeElement.duration;
+    };
+    this.practiceContainmentAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1215 = this.practiceContainmentAudioRef.nativeElement.duration;
+    };
+    this.practiceStructuringTimeAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1216 = this.practiceStructuringTimeAudioRef.nativeElement.duration;
+    };
+    this.practiceRespectAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1217 = this.practiceRespectAudioRef.nativeElement.duration;
+    };
+    this.practiceBondingAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1218 = this.practiceBondingAudioRef.nativeElement.duration;
+    };
+    this.practiceCPAAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1219 = this.practiceCPAAudioRef.nativeElement.duration;
+    };
+    this.acknowledgeAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1220 = this.acknowledgeAudioRef.nativeElement.duration;
+    };
     
-    // this.romancingYourselfVimeoPlayer = new Player(this.romancingYourselfVimeoRef.nativeElement, {
-    //   id: 691091632,
-    //   height: 350
-    // });
+    
+    this.settingLimitsVimeoPlayer = new Player(this.settingLimitsVimeoRef.nativeElement, {
+      id: 691963781,
+      height: 450
+    });
     // this.moreThoughtsVimeoPlayer = new Player(this.moreThoughtsVimeoRef.nativeElement, {
     //   id: 691095098,
     //   height: 350
@@ -113,10 +171,10 @@ export class Module12Page implements OnInit, AfterViewInit {
   async initializeYoutubePlayerPluginWeb() {
     const player1 = {playerId: 'youtube-player1201', playerSize: {width: 640, height: 360}, videoId: 'RKdYGNQGqFM'};
     const result1 = await YoutubePlayerWeb.initialize(player1);
-    // const player2 = {playerId: 'youtube-player1102', playerSize: {width: 640, height: 360}, videoId: 'bd9Ty1xLAeM'};
-    // const result2 = await YoutubePlayerWeb.initialize(player2);
-    // const player3 = {playerId: 'youtube-player1103', playerSize: {width: 640, height: 360}, videoId: 'LHhoqpgxFNo'};
-    // const result3 = await YoutubePlayerWeb.initialize(player3);
+    const player2 = {playerId: 'youtube-player1202', playerSize: {width: 640, height: 360}, videoId: 'JPQcvVvtv3k'};
+    const result2 = await YoutubePlayerWeb.initialize(player2);
+    const player3 = {playerId: 'youtube-player1203', playerSize: {width: 640, height: 360}, videoId: 'n9ZbnMV80IU'};
+    const result3 = await YoutubePlayerWeb.initialize(player3);
     // const player4 = {playerId: 'youtube-player1104', playerSize: {width: 640, height: 360}, videoId: 'SmbmeOgWsqE'};
     // const result4 = await YoutubePlayerWeb.initialize(player4);
     // const player5 = {playerId: 'youtube-player1105', playerSize: {width: 640, height: 360}, videoId: 'E7pagLfV91E'};
@@ -127,7 +185,7 @@ export class Module12Page implements OnInit, AfterViewInit {
 
   async destroyYoutubePlayerPluginWeb() {
     const result1 = await YoutubePlayerWeb.destroy('youtube-player1201');
-    // const result2 = await YoutubePlayerWeb.destroy('youtube-player1102');
+    const result2 = await YoutubePlayerWeb.destroy('youtube-player1202');
     // const result3 = await YoutubePlayerWeb.destroy('youtube-player1103');
     // const result4 = await YoutubePlayerWeb.destroy('youtube-player1104');
     // const result5 = await YoutubePlayerWeb.destroy('youtube-player1105');
