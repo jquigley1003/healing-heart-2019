@@ -11,7 +11,6 @@ import { gsap } from 'gsap';
 })
 export class Module11Page implements OnInit, AfterViewInit {
   @ViewChild('practicesRomancingAudio') practicesRomancingAudioRef: ElementRef<HTMLAudioElement>;
- 
   @ViewChild('romancingYourselfVimeo') romancingYourselfVimeoRef: ElementRef;
   @ViewChild('moreThoughtsVimeo') moreThoughtsVimeoRef: ElementRef;
 
