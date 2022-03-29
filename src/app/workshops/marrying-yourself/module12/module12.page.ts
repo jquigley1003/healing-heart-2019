@@ -12,6 +12,7 @@ import { gsap } from 'gsap';
 export class Module12Page implements OnInit, AfterViewInit {
   @ViewChild('parentingYourselfWellAudio') parentingYourselfWellAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('transactionalAnalysisAudio') transactionalAnalysisAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('selfInquiryTALensAudio') selfInquiryTALensAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('positiveParentAudio') positiveParentAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('placeNurturingAudio') placeNurturingAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('supportProtectionAudio') supportProtectionAudioRef: ElementRef<HTMLAudioElement>;
@@ -51,6 +52,7 @@ export class Module12Page implements OnInit, AfterViewInit {
 
   audioDuration1201: number;
   audioDuration1202: number;
+  audioDuration1202b: number;
   audioDuration1203: number;
   audioDuration1204: number;
   audioDuration1205: number;
@@ -101,6 +103,9 @@ export class Module12Page implements OnInit, AfterViewInit {
     };
     this.transactionalAnalysisAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1202 = this.transactionalAnalysisAudioRef.nativeElement.duration;
+    };
+    this.selfInquiryTALensAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1202b = this.selfInquiryTALensAudioRef.nativeElement.duration;
     };
     this.positiveParentAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1203 = this.positiveParentAudioRef.nativeElement.duration;
