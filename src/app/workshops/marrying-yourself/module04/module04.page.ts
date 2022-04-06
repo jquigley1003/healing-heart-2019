@@ -1,35 +1,21 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
-import Player from '@vimeo/player';
 
 @Component({
   selector: 'app-module04',
   templateUrl: './module04.page.html',
   styleUrls: ['./module04.page.scss'],
 })
-export class Module04Page implements OnInit, AfterViewInit, OnDestroy {
-  @ViewChild('firstAudio') firstAudioRef: ElementRef<HTMLAudioElement>;
-  @ViewChild('principlesAudio') principlesAudioRef: ElementRef<HTMLAudioElement>;
-  @ViewChild('selfInquiryAudio') selfInquiryAudioRef: ElementRef<HTMLAudioElement>;
-  @ViewChild('engagementAudio') engagementAudioRef: ElementRef<HTMLAudioElement>;
-  @ViewChild('quoteAudio') quoteAudioRef: ElementRef<HTMLAudioElement>;
-  @ViewChild('dassyVimeo') dassyVimeoRef: ElementRef;
-  @ViewChild('devaEngagementVimeo') devaEngagementVimeoRef: ElementRef;
-  @ViewChild('bodyPostureVimeo') bodyPostureVimeoRef: ElementRef;
+export class Module04Page implements OnInit, AfterViewInit {
+  @ViewChild('onBeingAudio') onBeingAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('practice03Audio') practice03AudioRef: ElementRef<HTMLAudioElement>;
 
   completedModule: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
-  audioDuration401: number;
-  audioDuration402: number;
-  audioDuration403: number;
-  audioDuration404: number;
-  audioDuration405: number;
-  dassyVimeoPlayer: Player;
-  devaEngagementVimeoPlayer: Player;
-  bodyPostureVimeoPlayer: Player;
-  
+  audioDuration0401: number;
+  audioDuration0402: number;
 
   constructor() { }
 
@@ -38,48 +24,27 @@ export class Module04Page implements OnInit, AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     this.initializeYoutubePlayerPluginWeb();
-    this.firstAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration401 = this.firstAudioRef.nativeElement.duration;
+    this.onBeingAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration0401 = this.onBeingAudioRef.nativeElement.duration;
     };
-    this.principlesAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration402 = this.principlesAudioRef.nativeElement.duration;
+    this.practice03AudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration0402 = this.practice03AudioRef.nativeElement.duration;
     };
-    this.selfInquiryAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration403 = this.selfInquiryAudioRef.nativeElement.duration;
-    };
-    this.engagementAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration404 = this.engagementAudioRef.nativeElement.duration;
-    };
-    this.quoteAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration405 = this.quoteAudioRef.nativeElement.duration;
-    };
-    this.dassyVimeoPlayer = new Player(this.dassyVimeoRef.nativeElement, {
-      id: 652064411,
-      height: 350
-    });
-    this.devaEngagementVimeoPlayer = new Player(this.devaEngagementVimeoRef.nativeElement, {
-      id: 652593403,
-      height: 350
-    });
-    this.bodyPostureVimeoPlayer = new Player(this.bodyPostureVimeoRef.nativeElement, {
-      id: 652065275,
-      height: 350
-    });
   }
 
   async initializeYoutubePlayerPluginWeb() {
-    const player1 = {playerId: 'youtube-player4-1', playerSize: {width: 640, height: 360}, videoId: 'bMpFmHSgC4Q'};
+    const player1 = {playerId: 'youtube-player0401', playerSize: {width: 640, height: 360}, videoId: 'aWNupk1jn20'};
     const result1 = await YoutubePlayerWeb.initialize(player1);
-    const player2 = {playerId: 'youtube-player4-2', playerSize: {width: 640, height: 360}, videoId: 'LBk5I4nSXBo'};
+    const player2 = {playerId: 'youtube-player0402', playerSize: {width: 640, height: 360}, videoId: 'XLFEvHWD_NE'};
     const result2 = await YoutubePlayerWeb.initialize(player2);
-    const player3 = {playerId: 'youtube-player4-3', playerSize: {width: 640, height: 360}, videoId: 'aeKYip-sBjM'};
+    const player3 = {playerId: 'youtube-player0403', playerSize: {width: 640, height: 360}, videoId: 'veEQQ-N9xWU'};
     const result3 = await YoutubePlayerWeb.initialize(player3);
   }
 
   async destroyYoutubePlayerPluginWeb() {
-    const result1 = await YoutubePlayerWeb.destroy('youtube-player4-1');
-    const result2 = await YoutubePlayerWeb.destroy('youtube-player4-2');
-    const result3 = await YoutubePlayerWeb.destroy('youtube-player4-3');
+    const result1 = await YoutubePlayerWeb.destroy('youtube-player0401');
+    const result2 = await YoutubePlayerWeb.destroy('youtube-player0402');
+    const result3 = await YoutubePlayerWeb.destroy('youtube-player0303');
   }
 
   onToggle() {
@@ -96,7 +61,16 @@ export class Module04Page implements OnInit, AfterViewInit, OnDestroy {
     this.showIncompleteBtn = true;
   }
 
-  ngOnDestroy() {
+  ionViewWillLeave() {
     this.destroyYoutubePlayerPluginWeb();
+  }
+
+  ionViewDidEnter() {
+    this.initializeYoutubePlayerPluginWeb();
+    // gsap.set(".dark", {opacity:1});
+    // gsap.set(".title", {scale:1});
+    // if(this.tl1 != null) {
+    //   this.tl1.restart();
+    // }
   }
 }
