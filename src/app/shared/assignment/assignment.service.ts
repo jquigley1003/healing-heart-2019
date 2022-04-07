@@ -5,6 +5,7 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
 
 import { Assignment } from '../models/assignment.model';
+import { Myjassignment } from '../models/mjyassigment.model';
 import { LoadingService } from '../notify/loading.service';
 import { ToastService } from '../notify/toast.service';
 
@@ -15,6 +16,7 @@ export class AssignmentService implements OnDestroy {
   ngUnsubscribe = new Subject<void>();
   fetchUserAssignments$: Observable<any>;
   userAssignments$: BehaviorSubject<Assignment>;
+  myjAssignments$: BehaviorSubject<Myjassignment>;
 
   constructor(
     private afStore: AngularFirestore,
@@ -31,14 +33,31 @@ export class AssignmentService implements OnDestroy {
             res => {
             this.userAssignments$.next(res);
           },
-        err => console.log('Error retrieving Assignments: ', err)
+        err => console.log('Error retrieving Tribute To Donna Assignments: ', err)
         );
     } else {
     }
+    if(!this.myjAssignments$) {
+      this.myjAssignments$ = new BehaviorSubject<any>([]);
+      this.afStore.doc<Assignment>(`assignments/${assId}`).valueChanges()
+      .pipe(takeUntil(this.ngUnsubscribe))
+        .subscribe(
+            res => {
+            this.myjAssignments$.next(res);
+          },
+        err => console.log('Error retrieving Marry Yourself Journey Assignments: ', err)
+        );
+    } else {
+    }
+
   }
 
   getUserAssignments() {
     return this.userAssignments$.asObservable();
+  }
+
+  getMyjAssignments() {
+    return this.myjAssignments$.asObservable();
   }
 
   async assignmentComplete(assignmentName, assignmentComplete, user) {
@@ -50,6 +69,37 @@ export class AssignmentService implements OnDestroy {
     // console.log('assignment complete data is: ', assignmentComplete);
     const data = assignmentComplete;
     this.afStore.doc(`assignments/${user.uid}`).set(data, {merge: true})
+    .then(() => {
+      this.loadingService.dismissLoading();
+      this.toastService.presentToast(
+        `${user.firstName} has completed ${assignmentName}!`,
+        'middle',
+        [{
+          text: 'OK',
+          role: 'cancel',
+        }], 5000 );
+    })
+    .catch(err => {
+      this.loadingService.dismissLoading();
+      this.toastService.presentToast(
+        `Sorry, try again. There was a problem marking ${assignmentName} as complete.`,
+        'middle',
+        [{
+          text: 'OK',
+          role: 'cancel',
+        }], 5000);
+    });
+  }
+
+  async myjAssignmentComplete(assignmentName, assignmentComplete, user) {
+    await this.loadingService.presentLoading(
+      '...please wait while we mark this assignment complete',
+      'bubbles',
+    10000,
+    );
+    // console.log('assignment complete data is: ', assignmentComplete);
+    const data = assignmentComplete;
+    this.afStore.doc(`myjassignments/${user.uid}`).set(data, {merge: true})
     .then(() => {
       this.loadingService.dismissLoading();
       this.toastService.presentToast(

@@ -27,6 +27,7 @@ export class Module01Page implements OnInit, AfterViewInit, OnDestroy {
   completedModule: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
+  assignment0101: boolean;
   audioDuration01: number;
   audioDuration02: number;
   audioDuration03: number;
