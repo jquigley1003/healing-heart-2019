@@ -121,6 +121,8 @@ export class Module07Page implements OnInit, AfterViewInit {
     const result16 = await YoutubePlayerWeb.initialize(player16);
     const player17 = {playerId: 'youtube-player0717', playerSize: {width: 640, height: 360}, videoId: 'VRNS8XTADEU'};
     const result17 = await YoutubePlayerWeb.initialize(player17);
+    const player18 = {playerId: 'youtube-player0718', playerSize: {width: 640, height: 360}, videoId: '3YHVC1DcHmo'};
+    const result18 = await YoutubePlayerWeb.initialize(player18);
   }
 
   async destroyYoutubePlayerPluginWeb() {
@@ -140,6 +142,7 @@ export class Module07Page implements OnInit, AfterViewInit {
     const result15 = await YoutubePlayerWeb.destroy('youtube-player0715');
     const result16 = await YoutubePlayerWeb.destroy('youtube-player0716');
     const result17 = await YoutubePlayerWeb.destroy('youtube-player0717');
+    const result18 = await YoutubePlayerWeb.destroy('youtube-player0718');
   }
 
   onToggle() {
