@@ -180,18 +180,24 @@ export class Module13Page implements OnInit, AfterViewInit {
     const result2 = await YoutubePlayerWeb.initialize(player2);
     const player3 = {playerId: 'youtube-player1303', playerSize: {width: 640, height: 360}, videoId: 'n9ZbnMV80IU'};
     const result3 = await YoutubePlayerWeb.initialize(player3);
-    // const player4 = {playerId: 'youtube-player1104', playerSize: {width: 640, height: 360}, videoId: 'SmbmeOgWsqE'};
-    // const result4 = await YoutubePlayerWeb.initialize(player4);
-    // const player5 = {playerId: 'youtube-player1105', playerSize: {width: 640, height: 360}, videoId: 'E7pagLfV91E'};
-    // const result5 = await YoutubePlayerWeb.initialize(player5);
-    // const player6 = {playerId: 'youtube-player1106', playerSize: {width: 640, height: 360}, videoId: '9hbJtyxx7gA'};
-    // const result6 = await YoutubePlayerWeb.initialize(player6);
+    const player4 = {playerId: 'youtube-player1304', playerSize: {width: 640, height: 360}, videoId: '9GkU5Bij2-E'};
+    const result4 = await YoutubePlayerWeb.initialize(player4);
+    const player5 = {playerId: 'youtube-player1305', playerSize: {width: 640, height: 360}, videoId: 'CF4pxoPrYjE'};
+    const result5 = await YoutubePlayerWeb.initialize(player5);
+    const player6 = {playerId: 'youtube-player1306', playerSize: {width: 640, height: 360}, videoId: 'cicXlJtscVs'};
+    const result6 = await YoutubePlayerWeb.initialize(player6);
+    const player7 = {playerId: 'youtube-player1307', playerSize: {width: 640, height: 360}, videoId: 'VEdF1TDyAws'};
+    const result7 = await YoutubePlayerWeb.initialize(player7);
   }
 
   async destroyYoutubePlayerPluginWeb() {
     const result1 = await YoutubePlayerWeb.destroy('youtube-player1301');
     const result2 = await YoutubePlayerWeb.destroy('youtube-player1302');
     const result3 = await YoutubePlayerWeb.destroy('youtube-player1303');
+    const result4 = await YoutubePlayerWeb.destroy('youtube-player1304');
+    const result5 = await YoutubePlayerWeb.destroy('youtube-player1305');
+    const result6 = await YoutubePlayerWeb.destroy('youtube-player1306');
+    const result7 = await YoutubePlayerWeb.destroy('youtube-player1307');
   }
 
   onToggle() {
