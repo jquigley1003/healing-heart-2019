@@ -22,7 +22,7 @@
             <h2 class="section-title">AH, SO THIS IS CODEPENDENCY</h2>
             <div class="audio-player">
               <audio preload="auto" controls controlsList="nodownload" #codependencyAudio>
-                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule03%2Faudio%2FAhSoThisIsCodependency.mp3?alt=media&token=917cfb1f-d81a-46b4-bc48-b5cba6244d16" 
+                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule03%2Faudio%2FAhSoThisIsCodependency.mp3?alt=media&token=92a56f75-40b7-4c94-bb94-f589a0b11011" 
                 type="audio/mpeg">
               </audio>
               <p class="audio-duration">Duration: {{ audioDuration0301 * 1000 | date:'mm:ss' }}</p>
@@ -95,11 +95,32 @@
               are good. But eventually, the desire to take care of this person becomes a compulsion.
             </p>
           </ion-col>
+          <ion-col size="12" class="ion-text-center ion-padding">
+            <h2 class="section-subtitle">MY EXPERIENCE AS A CODEPENDENT</h2>
+            <div class="audio-player">
+              <audio preload="auto" controls controlsList="nodownload" #myExperienceAudio>
+                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule03%2Faudio%2FMyExperience.mp3?alt=media&token=859134ca-4b88-4364-bcd8-6c63dff0c048" 
+                type="audio/mpeg">
+              </audio>
+              <p class="audio-duration">Duration: {{ audioDuration0308 * 1000 | date:'mm:ss' }}</p>
+            </div>  
+          </ion-col>
           <!-- BEGINNING OF ASSIGNMENT Your Codependency Story -->  
           <ion-col size="12">
             <ion-row>
               <ion-col class="assignment"><!-- Nesting in another row creates space for the border -->
-                <p class="assignment-title">Assignment: Your Codependency Story</p>
+                <ion-row>
+                  <ion-col size="12" class="ion-text-center ion-padding">
+                    <p class="assignment-title">Assignment: Your Codependency Story</p>
+                    <div class="audio-player">
+                      <audio preload="auto" controls controlsList="nodownload" #assignmentYourStoryAudio>
+                        <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule03%2Faudio%2FAssignmentYourCodependencyStory.mp3?alt=media&token=d2348e1d-42cf-4710-b449-46168ac50d31" 
+                        type="audio/mpeg">
+                      </audio>
+                      <p class="audio-duration">Duration: {{ audioDuration0309 * 1000 | date:'mm:ss' }}</p>
+                    </div>  
+                  </ion-col>
+                </ion-row>
                 <ion-row>
                   <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
                     <ion-checkbox #assignment0201 color="primary"></ion-checkbox>
@@ -177,6 +198,10 @@
               another so intensely, and trying to avoid being abandoned, I was seriously being abandoned. 
               By my-self. By me!</p>
           </ion-col>
+          <ion-col size="12" class="img-container ion-padding ion-text-center">
+            <img src="../../../../assets/workshop1/module03/victimRescuerPersecutor.jpg"
+              alt="Triangle with victim, rescuer, and persecutor">
+          </ion-col>
           <!-- BEGINNING OF ASSIGNMENT Self-betrayal -->
           <ion-col size="12">
             <ion-row>
@@ -239,6 +264,17 @@
               </audio>
               <p class="audio-duration">Duration: {{ audioDuration0304 * 1000 | date:'mm:ss' }}</p>
             </div>  
+          </ion-col>
+          <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
+            <h2>Rachel West - Reach</h2>
+            <div class="video-player">
+              <div id="youtube-player0304">
+              </div>
+            </div>
+            <p class="ion-padding ion-text-left"><i>This song is very special to me because it was my theme song 
+              during when I was making my way back to myself and from the throws of codependency. It helped me 
+              to experience an intensity of deep, passionate conviction, one-pointed on retrieving and ultimately 
+              re-claiming myself.</i></p>
           </ion-col>
           <ion-col size="12" class="ion-margin-right ion-padding">
             <p>This woke me to the knowingness that I had no choice ~~
@@ -382,17 +418,6 @@
               and feel that I am my beloved and my beloved is me.</p>
           </ion-col>
           <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
-            <h2>Rachel West - Reach</h2>
-            <div class="video-player">
-              <div id="youtube-player0304">
-              </div>
-            </div>
-            <p class="ion-padding ion-text-left"><i>This song is very special to me because it was my theme song 
-              during when I was making my way back to myself and from the throws of codependency. It helped me 
-              to experience an intensity of deep, passionate conviction, one-pointed on retrieving and ultimately 
-              re-claiming myself.</i></p>
-          </ion-col>
-          <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
             <h2>Vertical Alignment</h2>
             <div class="video-player">
               <div id="youtube-player0305">
@@ -420,7 +445,7 @@
             <h2 class="section-title">MARRYING MYSELF</h2>
             <div class="audio-player">
               <audio preload="auto" controls controlsList="nodownload" #marryingMyselfAudio>
-                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule03%2Faudio%2FMarryingMyself.mp3?alt=media&token=7aa0ab41-296c-440f-a824-8ee3cca40493" 
+                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule03%2Faudio%2FMarrying%20Myself.mp3?alt=media&token=31857f53-5116-41ce-93a6-c5091a272bef" 
                 type="audio/mpeg">
               </audio>
               <p class="audio-duration">Duration: {{ audioDuration0307 * 1000 | date:'mm:ss' }}</p>
@@ -441,7 +466,7 @@
               Empowering. Truly, like nothing else.</p>
             <p>I love being married to myself. I have never regretted it. I have never doubted it. It is one of the 
               best things I have ever done for myself.</p>
-            <p>So I brought it home from India with me. I lived it. My marriage. To myself. Ahhhhh.... No divorce. 
+            <!-- <p>So I brought it home from India with me. I lived it. My marriage. To myself. Ahhhhh.... No divorce. 
               Being married to myself made everything different ~~ Dating, actually all relationships, my self-regard, 
               my internal experience every day and night.</p>
             <p>I had to share it. Because whatever I find good in life I want to share with others. I offered the 
@@ -458,7 +483,7 @@
               to themselves and putting a ring on their own fingers. Likewise, its powerful to be witnessed making vows 
               to yourself and feeling the support surround you as you make vows to yourself in the mirror. Although this 
               is an online course, we will orchestrate it so that you will have the opportunity if you want to be witnessed 
-              when it is time for you to marry yourself.</p>
+              when it is time for you to marry yourself.</p> -->
             <p>It is also a privilege to be in this journey with you because every step of it matters. The journey is even 
               more important than the arrival because the arrival is just the natural outcome of how you do this journey with 
               yourself. The magic is in how you show up to yourself during this journey.</p>
@@ -469,7 +494,18 @@
           <ion-col size="12">
             <ion-row>
               <ion-col class="assignment"><!-- Nesting in another row creates space for the border -->
-                <p class="assignment-title">Assignment: Embarking on My Journey Toward Marrying Myself</p>
+                <ion-row>
+                  <ion-col size="12" class="ion-text-center ion-padding">
+                    <p class="assignment-title">Assignment: Embarking on My Journey Toward Marrying Myself</p>
+                    <div class="audio-player">
+                      <audio preload="auto" controls controlsList="nodownload" #embarkingOnMYJAudio>
+                        <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule03%2Faudio%2FEmbarkingOnMYJ.mp3?alt=media&token=75f41376-f8c4-482c-9ee5-47cbbad779ce" 
+                        type="audio/mpeg">
+                      </audio>
+                      <p class="audio-duration">Duration: {{ audioDuration0310 * 1000 | date:'mm:ss' }}</p>
+                    </div>  
+                  </ion-col>
+                </ion-row>
                 <ion-row>
                   <ion-col size="1" class="ion-padding ion-text-center ion-align-self-center">
                     <ion-checkbox #assignment0207 color="primary"></ion-checkbox>
@@ -478,8 +514,7 @@
                     <ion-icon name="heart-circle"></ion-icon> 
                   </ion-col>
                   <ion-col size="9" class="ion-margin-right ion-padding">
-                    <p>So, close your eyes and bring honor to yourself for doing this. For taking time to listen to this and to reflect 
-                      on yourself.
+                    <p>So, close your eyes and bring honor to yourself for doing this.
                     </p>
                   </ion-col>
                 </ion-row>

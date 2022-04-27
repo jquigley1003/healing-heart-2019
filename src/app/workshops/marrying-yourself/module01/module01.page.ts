@@ -13,7 +13,7 @@ export class Module01Page implements OnInit, AfterViewInit {
   @ViewChild('welcomingAudio') welcomingAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('everyoneAudio') everyoneAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('connectedAudio') connectedAudioRef: ElementRef<HTMLAudioElement>;
-  @ViewChild('revelAudio') revelAudioRef: ElementRef<HTMLAudioElement>;
+  // @ViewChild('revelAudio') revelAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('beginningAudio') beginningAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('mudraAudio') mudraAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('practices01Audio') practices01AudioRef: ElementRef<HTMLAudioElement>;
@@ -55,9 +55,9 @@ export class Module01Page implements OnInit, AfterViewInit {
     this.connectedAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration03 = this.connectedAudioRef.nativeElement.duration;
     };
-    this.revelAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration04 = this.revelAudioRef.nativeElement.duration;
-    };
+    // this.revelAudioRef.nativeElement.onloadedmetadata = (event) => {
+    //   this.audioDuration04 = this.revelAudioRef.nativeElement.duration;
+    // };
     this.beginningAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration05 = this.beginningAudioRef.nativeElement.duration;
     };
