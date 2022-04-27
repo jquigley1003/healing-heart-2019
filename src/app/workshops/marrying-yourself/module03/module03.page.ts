@@ -14,6 +14,9 @@ export class Module03Page implements OnInit, AfterViewInit {
   @ViewChild('retrieving02Audio') retrieving02AudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('blossomingAudio') blossomingAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('marryingMyselfAudio') marryingMyselfAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('myExperienceAudio') myExperienceAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('assignmentYourStoryAudio') assignmentYourStoryAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('embarkingOnMYJAudio') embarkingOnMYJAudioRef: ElementRef<HTMLAudioElement>;
 
   completedModule: boolean;
   showCompleteBtn: boolean;
@@ -25,6 +28,9 @@ export class Module03Page implements OnInit, AfterViewInit {
   audioDuration0305: number;
   audioDuration0306: number;
   audioDuration0307: number;
+  audioDuration0308: number;
+  audioDuration0309: number;
+  audioDuration0310: number;
 
   constructor() { }
 
@@ -50,6 +56,15 @@ export class Module03Page implements OnInit, AfterViewInit {
     };
     this.marryingMyselfAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration0307 = this.marryingMyselfAudioRef.nativeElement.duration;
+    };
+    this.myExperienceAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration0308 = this.myExperienceAudioRef.nativeElement.duration;
+    };
+    this.assignmentYourStoryAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration0309 = this.assignmentYourStoryAudioRef.nativeElement.duration;
+    };
+    this.embarkingOnMYJAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration0310 = this.embarkingOnMYJAudioRef.nativeElement.duration;
     };
   }
 
