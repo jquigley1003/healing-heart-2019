@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
+import Player from '@vimeo/player';
 
 @Component({
   selector: 'app-module04',
@@ -9,13 +10,19 @@ import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
 })
 export class Module04Page implements OnInit, AfterViewInit {
   @ViewChild('onBeingAudio') onBeingAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('internalWitnessAudio') internalWitnessAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('guidedImageryAudio') guidedImageryAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('practice03Audio') practice03AudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('whoIAmVimeo') whoIAmVimeoRef: ElementRef;
 
   completedModule: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
   audioDuration0401: number;
   audioDuration0402: number;
+  audioDuration0403: number;
+  audioDuration0404: number;
+  whoIAmVimeoPlayer: Player;
 
   constructor() { }
 
@@ -27,9 +34,19 @@ export class Module04Page implements OnInit, AfterViewInit {
     this.onBeingAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration0401 = this.onBeingAudioRef.nativeElement.duration;
     };
-    this.practice03AudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration0402 = this.practice03AudioRef.nativeElement.duration;
+    this.internalWitnessAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration0402 = this.internalWitnessAudioRef.nativeElement.duration;
     };
+    this.guidedImageryAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration0403 = this.guidedImageryAudioRef.nativeElement.duration;
+    };
+    this.practice03AudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration0404 = this.practice03AudioRef.nativeElement.duration;
+    };
+    this.whoIAmVimeoPlayer = new Player(this.whoIAmVimeoRef.nativeElement, {
+      id: 706233941,
+      height: 350
+    });
   }
 
   async initializeYoutubePlayerPluginWeb() {
