@@ -14,6 +14,10 @@ export class Module15Page implements OnInit, AfterViewInit {
   @ViewChild('spiritualAdultAudio') spiritualAdultAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('namingYourselfAudio') namingYourselfAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('breathingExerciseAudio') breathingExerciseAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('namingGoddessAudio') namingGoddessAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('experiencingDivineAudio') experiencingDivineAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('siddharthaAudio') siddharthaAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('guidedLoveAudio') guidedLoveAudioRef: ElementRef<HTMLAudioElement>;
 
   @ViewChild('chavonneVerticalVimeo') chavonneVerticalVimeoRef: ElementRef;
   @ViewChild('moreThoughtsVimeo') moreThoughtsVimeoRef: ElementRef;
@@ -26,6 +30,10 @@ export class Module15Page implements OnInit, AfterViewInit {
   audioDuration1502: number;
   audioDuration1503: number;
   audioDuration1504: number;
+  audioDuration1505: number;
+  audioDuration1506: number;
+  audioDuration1507: number;
+  audioDuration1508: number;
   
   chavonneVerticalVimeoPlayer: Player;
   tl1 = null;
@@ -64,6 +72,18 @@ export class Module15Page implements OnInit, AfterViewInit {
     this.breathingExerciseAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1504 = this.breathingExerciseAudioRef.nativeElement.duration;
     };
+    this.namingGoddessAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1505 = this.namingGoddessAudioRef.nativeElement.duration;
+    };
+    this.experiencingDivineAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1506 = this.experiencingDivineAudioRef.nativeElement.duration;
+    };
+    this.siddharthaAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1507 = this.siddharthaAudioRef.nativeElement.duration;
+    };
+    this.guidedLoveAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1508 = this.guidedLoveAudioRef.nativeElement.duration;
+    };
     this.chavonneVerticalVimeoPlayer = new Player(this.chavonneVerticalVimeoRef.nativeElement, {
       id: 696593721,
       height: 350
@@ -81,8 +101,18 @@ export class Module15Page implements OnInit, AfterViewInit {
     const result4 = await YoutubePlayerWeb.initialize(player4);
     const player5 = {playerId: 'youtube-player1505', playerSize: {width: 640, height: 360}, videoId: 'OPT7687_yko'};
     const result5 = await YoutubePlayerWeb.initialize(player5);
-    // const player6 = {playerId: 'youtube-player1206', playerSize: {width: 640, height: 360}, videoId: '9hbJtyxx7gA'};
-    // const result6 = await YoutubePlayerWeb.initialize(player6);
+    const player6 = {playerId: 'youtube-player1506', playerSize: {width: 640, height: 360}, videoId: 'FQ6-lu7GhV0'};
+    const result6 = await YoutubePlayerWeb.initialize(player6);
+    const player7 = {playerId: 'youtube-player1507', playerSize: {width: 640, height: 360}, videoId: 'GOVYDIHeecA'};
+    const result7 = await YoutubePlayerWeb.initialize(player7);
+    const player8 = {playerId: 'youtube-player1508', playerSize: {width: 640, height: 360}, videoId: 'OOgpT5rEKIU'};
+    const result8 = await YoutubePlayerWeb.initialize(player8);
+    const player9 = {playerId: 'youtube-player1509', playerSize: {width: 640, height: 360}, videoId: 'lwgr_IMeEgA'};
+    const result9 = await YoutubePlayerWeb.initialize(player9);
+    const player10 = {playerId: 'youtube-player1510', playerSize: {width: 640, height: 360}, videoId: '4gUY9QshcVQ'};
+    const result10 = await YoutubePlayerWeb.initialize(player10);
+    const player11 = {playerId: 'youtube-player1511', playerSize: {width: 640, height: 360}, videoId: 'JvljlbKsL2Y'};
+    const result11 = await YoutubePlayerWeb.initialize(player11);
   }
 
   async destroyYoutubePlayerPluginWeb() {
@@ -91,7 +121,12 @@ export class Module15Page implements OnInit, AfterViewInit {
     const result3 = await YoutubePlayerWeb.destroy('youtube-player1503');
     const result4 = await YoutubePlayerWeb.destroy('youtube-player1504');
     const result5 = await YoutubePlayerWeb.destroy('youtube-player1505');
-    // const result6 = await YoutubePlayerWeb.destroy('youtube-player1206');
+    const result6 = await YoutubePlayerWeb.destroy('youtube-player1506');
+    const result7 = await YoutubePlayerWeb.destroy('youtube-player1507');
+    const result8 = await YoutubePlayerWeb.destroy('youtube-player1508');
+    const result9 = await YoutubePlayerWeb.destroy('youtube-player1509');
+    const result10 = await YoutubePlayerWeb.destroy('youtube-player1510');
+    const result11 = await YoutubePlayerWeb.destroy('youtube-player1511');
   }
 
   onToggle() {
