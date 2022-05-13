@@ -18,8 +18,7 @@ export class Module12Page implements OnInit, AfterViewInit {
   completedModule: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
-  audioDuration1101: number;
-  
+  audioDuration1201: number;
   romancingYourselfVimeoPlayer: Player;
   moreThoughtsVimeoPlayer: Player;
   tl1 = null;
@@ -47,9 +46,8 @@ export class Module12Page implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.practicesRomancingAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration1101 = this.practicesRomancingAudioRef.nativeElement.duration;
+      this.audioDuration1201 = this.practicesRomancingAudioRef.nativeElement.duration;
     };
-    
     this.romancingYourselfVimeoPlayer = new Player(this.romancingYourselfVimeoRef.nativeElement, {
       id: 691091632,
       height: 350
