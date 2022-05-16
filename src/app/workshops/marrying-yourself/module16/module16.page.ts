@@ -10,8 +10,8 @@ import { gsap } from 'gsap';
   styleUrls: ['./module16.page.scss'],
 })
 export class Module16Page implements OnInit, AfterViewInit {
-  // @ViewChild('welcomeFocusDivineAudio') welcomeFocusDivineAudioRef: ElementRef<HTMLAudioElement>;
-  // @ViewChild('spiritualAdultAudio') spiritualAdultAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('intentionsVowsAudio') intentionsVowsAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('guidanceVowsAudio') guidanceVowsAudioRef: ElementRef<HTMLAudioElement>;
   // @ViewChild('namingYourselfAudio') namingYourselfAudioRef: ElementRef<HTMLAudioElement>;
   // @ViewChild('breathingExerciseAudio') breathingExerciseAudioRef: ElementRef<HTMLAudioElement>;
   // @ViewChild('namingGoddessAudio') namingGoddessAudioRef: ElementRef<HTMLAudioElement>;
@@ -26,14 +26,15 @@ export class Module16Page implements OnInit, AfterViewInit {
   completedModule: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
-  audioDuration1501: number;
-  audioDuration1502: number;
-  audioDuration1503: number;
-  audioDuration1504: number;
-  audioDuration1505: number;
-  audioDuration1506: number;
-  audioDuration1507: number;
-  audioDuration1508: number;
+  audioDuration1601: number;
+  audioDuration1602: number;
+  audioDuration1603: number;
+  // audioDuration1604: number;
+  // audioDuration1605: number;
+  // audioDuration1606: number;
+  // audioDuration1607: number;
+  // audioDuration1608: number;
+  assignment1601: boolean;
   
   chavonneVerticalVimeoPlayer: Player;
   tl1 = null;
@@ -60,12 +61,12 @@ export class Module16Page implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    // this.welcomeFocusDivineAudioRef.nativeElement.onloadedmetadata = (event) => {
-    //   this.audioDuration1501 = this.welcomeFocusDivineAudioRef.nativeElement.duration;
-    // };
-    // this.spiritualAdultAudioRef.nativeElement.onloadedmetadata = (event) => {
-    //   this.audioDuration1502 = this.spiritualAdultAudioRef.nativeElement.duration;
-    // };
+    this.intentionsVowsAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1601 = this.intentionsVowsAudioRef.nativeElement.duration;
+    };
+    this.guidanceVowsAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1602 = this.guidanceVowsAudioRef.nativeElement.duration;
+    };
     // this.namingYourselfAudioRef.nativeElement.onloadedmetadata = (event) => {
     //   this.audioDuration1503 = this.namingYourselfAudioRef.nativeElement.duration;
     // };
@@ -131,6 +132,26 @@ export class Module16Page implements OnInit, AfterViewInit {
 
   onToggle() {
     console.log('completed is: ',this.completedModule);
+  }
+
+  assignmentCheck(assignment) {
+    console.log('result of check: ', assignment);
+    // const assignmentComplete = {
+    //   userName: this.currentUser.firstName + ' ' + this.currentUser.lastName,
+    //   [assignment]: true
+    // };
+    // console.log('========= ',assignment,' CHECKED');
+      // this.assignmentService.assignmentComplete(assignment, assignmentComplete, this.currentUser);
+  }
+
+  assignmentUncheck(assignment) {
+    console.log('result of check: ', assignment);
+    // const assignmentComplete = {
+    //   userName: this.currentUser.firstName + ' ' + this.currentUser.lastName,
+    //   [assignment]: false
+    // };
+    // console.log('========= ',assignment,' UNCHECKED');
+      // this.assignmentService.assignmentIncomplete(assignment, assignmentComplete, this.currentUser);
   }
 
   markComplete() {
