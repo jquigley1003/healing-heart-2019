@@ -80,6 +80,7 @@ export class Module16Page implements OnInit, AfterViewInit {
 
   assignmentCheck(assignment) {
     console.log('result of check: ', assignment);
+    this.assignment1601 = true;
     // const assignmentComplete = {
     //   userName: this.currentUser.firstName + ' ' + this.currentUser.lastName,
     //   [assignment]: true
@@ -90,6 +91,7 @@ export class Module16Page implements OnInit, AfterViewInit {
 
   assignmentUncheck(assignment) {
     console.log('result of check: ', assignment);
+    this.assignment1601 = false;
     // const assignmentComplete = {
     //   userName: this.currentUser.firstName + ' ' + this.currentUser.lastName,
     //   [assignment]: false
