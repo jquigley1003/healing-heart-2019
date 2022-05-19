@@ -13,9 +13,11 @@ export class Module17Page implements OnInit, AfterViewInit {
   @ViewChild('honorYourselfAudio') honorYourselfAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('guidedImageryAudio') guidedImageryAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('congratulationsAudio') congratulationsAudioRef: ElementRef<HTMLAudioElement>;
-  // @ViewChild('ideasCeremonyAudio') ideasCeremonyAudioRef: ElementRef<HTMLAudioElement>;
-  // @ViewChild('futureMarriedAudio') futureMarriedAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('quote1stModuleAudio') quote1stModuleAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('weddingTestimonialVimeo') weddingTestimonialVimeoRef: ElementRef;
+  @ViewChild('chavonnesWeddingVimeo') chavonnesWeddingVimeoRef: ElementRef;
+  @ViewChild('darlenesWeddingVimeo') darlenesWeddingVimeoRef: ElementRef;
+  @ViewChild('susansWeddingVimeo') susansWeddingVimeoRef: ElementRef;
 
   completedModule: boolean;
   showCompleteBtn: boolean;
@@ -23,11 +25,14 @@ export class Module17Page implements OnInit, AfterViewInit {
   audioDuration1701: number;
   audioDuration1702: number;
   audioDuration1703: number;
-  audioDuration1604: number;
+  audioDuration1704: number;
   audioDuration1605: number;
   assignment1601: boolean;
   tl1 = null;
   weddingTestimonialVimeoPlayer: Player;
+  chavonnesWeddingVimeoPlayer: Player;
+  darlenesWeddingVimeoPlayer: Player;
+  susansWeddingVimeoPlayer: Player;
   showRemainingModule = false;
 
   constructor() { }
@@ -61,14 +66,23 @@ export class Module17Page implements OnInit, AfterViewInit {
     this.congratulationsAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1703 = this.congratulationsAudioRef.nativeElement.duration;
     };
-    // this.ideasCeremonyAudioRef.nativeElement.onloadedmetadata = (event) => {
-    //   this.audioDuration1604 = this.ideasCeremonyAudioRef.nativeElement.duration;
-    // };
-    // this.futureMarriedAudioRef.nativeElement.onloadedmetadata = (event) => {
-    //   this.audioDuration1605 = this.futureMarriedAudioRef.nativeElement.duration;
-    // };
+    this.quote1stModuleAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1704 = this.quote1stModuleAudioRef.nativeElement.duration;
+    };
     this.weddingTestimonialVimeoPlayer = new Player(this.weddingTestimonialVimeoRef.nativeElement, {
       id: 700089565,
+      height: 350
+    });
+    this.chavonnesWeddingVimeoPlayer = new Player(this.chavonnesWeddingVimeoRef.nativeElement, {
+      id: 700089320,
+      height: 350
+    });
+    this.darlenesWeddingVimeoPlayer = new Player(this.darlenesWeddingVimeoRef.nativeElement, {
+      id: 700089265,
+      height: 350
+    });
+    this.susansWeddingVimeoPlayer = new Player(this.susansWeddingVimeoRef.nativeElement, {
+      id: 700089293,
       height: 350
     });
   }

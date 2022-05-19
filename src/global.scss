@@ -249,6 +249,12 @@ audio {
   }
 }
 
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .video-player {
 	margin: 0px auto;
 	width: 85vw;
@@ -320,3 +326,34 @@ audio {
 }
 
 /* END WORKSHOP MODULE FOMATTING */
+/* BORDER QUOTE FORMATTING */
+.border-quote {
+  display: inline-block;
+  margin: 1em;
+  max-width: 20em;
+  overflow: hidden;
+}
+
+.border-quote blockquote{
+	background-color: #fff;
+    border: solid 2px #757575;
+    display: inline-block;
+    margin: 0;
+    padding: 1em;
+    position: relative;
+}
+
+.border-quote blockquote cite {
+	display: block;
+	font-style: italic;
+	text-align: right;
+}
+
+@media (prefers-color-scheme: dark) {
+  .border-quote blockquote{
+    background-color: transparent;
+    border: solid 2px #dadada;
+  }
+}
+/* END OF BORDER QUOTE FORMATTING */
+
