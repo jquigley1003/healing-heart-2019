@@ -38,6 +38,7 @@ export class Module05Page implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.initializeYoutubePlayerPluginWeb();
+    this.initializeVimeoPlayer();
     this.firstAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration0501 = this.firstAudioRef.nativeElement.duration;
     };
@@ -53,6 +54,18 @@ export class Module05Page implements OnInit, AfterViewInit {
     this.quoteAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration0505 = this.quoteAudioRef.nativeElement.duration;
     };
+  }
+
+  async initializeYoutubePlayerPluginWeb() {
+    const player1 = {playerId: 'youtube-player0501', playerSize: {width: 640, height: 360}, videoId: 'bMpFmHSgC4Q'};
+    const result1 = await YoutubePlayerWeb.initialize(player1);
+    const player2 = {playerId: 'youtube-player0502', playerSize: {width: 640, height: 360}, videoId: 'LBk5I4nSXBo'};
+    const result2 = await YoutubePlayerWeb.initialize(player2);
+    const player3 = {playerId: 'youtube-player0503', playerSize: {width: 640, height: 360}, videoId: 'aeKYip-sBjM'};
+    const result3 = await YoutubePlayerWeb.initialize(player3);
+  }
+
+  async initializeVimeoPlayer() {
     this.dassyVimeoPlayer = new Player(this.dassyVimeoRef.nativeElement, {
       id: 652064411,
       height: 350
@@ -67,14 +80,6 @@ export class Module05Page implements OnInit, AfterViewInit {
     });
   }
 
-  async initializeYoutubePlayerPluginWeb() {
-    const player1 = {playerId: 'youtube-player0501', playerSize: {width: 640, height: 360}, videoId: 'bMpFmHSgC4Q'};
-    const result1 = await YoutubePlayerWeb.initialize(player1);
-    const player2 = {playerId: 'youtube-player0502', playerSize: {width: 640, height: 360}, videoId: 'LBk5I4nSXBo'};
-    const result2 = await YoutubePlayerWeb.initialize(player2);
-    const player3 = {playerId: 'youtube-player0503', playerSize: {width: 640, height: 360}, videoId: 'aeKYip-sBjM'};
-    const result3 = await YoutubePlayerWeb.initialize(player3);
-  }
 
   async destroyYoutubePlayerPluginWeb() {
     const result1 = await YoutubePlayerWeb.destroy('youtube-player0501');
