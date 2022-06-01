@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
+import Player from '@vimeo/player';
 
 @Component({
   selector: 'app-module07',
@@ -8,7 +9,7 @@ import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
   styleUrls: ['./module07.page.scss'],
 })
 export class Module07Page implements OnInit, AfterViewInit {
-  @ViewChild('introModule07Audio') introModule07AudioRef: ElementRef<HTMLAudioElement>;
+  // @ViewChild('introModule07Audio') introModule07AudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('tamingYourMindAudio') tamingYourMindAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('howToTameYourMindAudio') howToTameYourMindAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('alphaMindAudio') alphaMindAudioRef: ElementRef<HTMLAudioElement>;
@@ -21,12 +22,13 @@ export class Module07Page implements OnInit, AfterViewInit {
   @ViewChild('practiceLovingYourBodyAudio') practiceLovingYourBodyAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('nourishYourSoulAudio') nourishYourSoulAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('practiceNourishSoulAudio') practiceNourishSoulAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('introModule07Vimeo') introModule07VimeoRef: ElementRef;
 
 
   completedModule: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
-  audioDuration0701: number;
+  // audioDuration0701: number;
   audioDuration0702: number;
   audioDuration0703: number;
   audioDuration0704: number;
@@ -39,6 +41,7 @@ export class Module07Page implements OnInit, AfterViewInit {
   audioDuration0711: number;
   audioDuration0712: number;
   audioDuration0713: number;
+  introModule07VimeoPlayer: Player;
 
   constructor() { }
 
@@ -46,10 +49,9 @@ export class Module07Page implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.initializeYoutubePlayerPluginWeb();
-    this.introModule07AudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration0701 = this.introModule07AudioRef.nativeElement.duration;
-    };
+    // this.introModule07AudioRef.nativeElement.onloadedmetadata = (event) => {
+    //   this.audioDuration0701 = this.introModule07AudioRef.nativeElement.duration;
+    // };
     this.tamingYourMindAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration0702 = this.tamingYourMindAudioRef.nativeElement.duration;
     };
@@ -125,6 +127,13 @@ export class Module07Page implements OnInit, AfterViewInit {
     const result18 = await YoutubePlayerWeb.initialize(player18);
   }
 
+  async initializeVimeoPlayer() {
+    this.introModule07VimeoPlayer = new Player(this.introModule07VimeoRef.nativeElement, {
+      id: 716134228,
+      height: 400
+    });
+  }
+
   async destroyYoutubePlayerPluginWeb() {
     const result2 = await YoutubePlayerWeb.destroy('youtube-player0702');
     const result3 = await YoutubePlayerWeb.destroy('youtube-player0703');
@@ -165,6 +174,7 @@ export class Module07Page implements OnInit, AfterViewInit {
 
   ionViewDidEnter() {
     this.initializeYoutubePlayerPluginWeb();
+    this.initializeVimeoPlayer();
     // gsap.set(".dark", {opacity:1});
     // gsap.set(".title", {scale:1});
     // if(this.tl1 != null) {

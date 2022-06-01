@@ -19,6 +19,7 @@ export class Module08Page implements AfterViewInit, OnInit {
   @ViewChild('theInvitationAudio') theInvitationAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('sonataVimeo') sonataVimeoRef: ElementRef;
   @ViewChild('selfRetrievalDemoVimeo') selfRetrievalDemoVimeoRef: ElementRef;
+  @ViewChild('introExercisesVimeo') introExercisesVimeoRef: ElementRef;
 
 
   completedModule: boolean;
@@ -33,6 +34,7 @@ export class Module08Page implements AfterViewInit, OnInit {
   audioDuration0807: number;
   sonataVimeoPlayer: Player;
   selfRetrievalDemoVimeoPlayer: Player;
+  introExercisesVimeoPlayer: Player;
   tl1 = null;
 
   constructor() { }
@@ -78,14 +80,6 @@ export class Module08Page implements AfterViewInit, OnInit {
     this.theInvitationAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration0807 = this.theInvitationAudioRef.nativeElement.duration;
     };
-    this.sonataVimeoPlayer = new Player(this.sonataVimeoRef.nativeElement, {
-      id: 670040962,
-      height: 350
-    });
-    this.selfRetrievalDemoVimeoPlayer = new Player(this.selfRetrievalDemoVimeoRef.nativeElement, {
-      id: 670845671,
-      height: 350
-    });
   }
 
   async initializeYoutubePlayerPluginWeb() {
@@ -103,6 +97,21 @@ export class Module08Page implements AfterViewInit, OnInit {
     const result6 = await YoutubePlayerWeb.initialize(player6);
     const player7 = {playerId: 'youtube-player0807', playerSize: {width: 640, height: 360}, videoId: 'D4HxOinvaos'};
     const result7 = await YoutubePlayerWeb.initialize(player7);
+  }
+
+  async initializeVimeoPlayer() {
+    this.sonataVimeoPlayer = new Player(this.sonataVimeoRef.nativeElement, {
+      id: 670040962,
+      height: 350
+    });
+    this.selfRetrievalDemoVimeoPlayer = new Player(this.selfRetrievalDemoVimeoRef.nativeElement, {
+      id: 670845671,
+      height: 350
+    });
+    this.introExercisesVimeoPlayer = new Player(this.introExercisesVimeoRef.nativeElement, {
+      id: 716134459,
+      height: 350
+    });
   }
 
   async destroyYoutubePlayerPluginWeb() {
@@ -135,6 +144,7 @@ export class Module08Page implements AfterViewInit, OnInit {
 
   ionViewDidEnter() {
     this.initializeYoutubePlayerPluginWeb();
+    this.initializeVimeoPlayer();
     gsap.set(".dark", {opacity:1});
     gsap.set(".title", {scale:1});
     if(this.tl1 != null) {
