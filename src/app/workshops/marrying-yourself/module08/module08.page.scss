@@ -56,3 +56,12 @@
 	width: 100%;
 	height: 100%;
 }
+
+.showcase {
+	padding: 4px;
+	background-color: var(--ion-color-tertiary);
+}
+
+.showcase-underline {
+	text-decoration: underline 5px var(--ion-color-tertiary);
+}
