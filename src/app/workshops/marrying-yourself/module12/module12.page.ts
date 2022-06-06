@@ -13,6 +13,7 @@ export class Module12Page implements OnInit, AfterViewInit {
   @ViewChild('practicesRomancingAudio') practicesRomancingAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('romancingYourselfVimeo') romancingYourselfVimeoRef: ElementRef;
   @ViewChild('moreThoughtsVimeo') moreThoughtsVimeoRef: ElementRef;
+  @ViewChild('tynerRushingVimeo') tynerRushingVimeoRef: ElementRef;
 
 
   completedModule: boolean;
@@ -21,6 +22,7 @@ export class Module12Page implements OnInit, AfterViewInit {
   audioDuration1201: number;
   romancingYourselfVimeoPlayer: Player;
   moreThoughtsVimeoPlayer: Player;
+  tynerRushingVimeoPlayer: Player;
   tl1 = null;
 
   constructor() { }
@@ -45,17 +47,6 @@ export class Module12Page implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.practicesRomancingAudioRef.nativeElement.onloadedmetadata = (event) => {
-      this.audioDuration1201 = this.practicesRomancingAudioRef.nativeElement.duration;
-    };
-    this.romancingYourselfVimeoPlayer = new Player(this.romancingYourselfVimeoRef.nativeElement, {
-      id: 691091632,
-      height: 350
-    });
-    this.moreThoughtsVimeoPlayer = new Player(this.moreThoughtsVimeoRef.nativeElement, {
-      id: 691095098,
-      height: 350
-    });
   }
 
   async initializeYoutubePlayerPluginWeb() {
@@ -71,6 +62,24 @@ export class Module12Page implements OnInit, AfterViewInit {
     const result5 = await YoutubePlayerWeb.initialize(player5);
     const player6 = {playerId: 'youtube-player1206', playerSize: {width: 640, height: 360}, videoId: '9hbJtyxx7gA'};
     const result6 = await YoutubePlayerWeb.initialize(player6);
+  }
+
+  async initializeVimeoPlayer() {
+    this.practicesRomancingAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1201 = this.practicesRomancingAudioRef.nativeElement.duration;
+    };
+    this.romancingYourselfVimeoPlayer = new Player(this.romancingYourselfVimeoRef.nativeElement, {
+      id: 691091632,
+      height: 350
+    });
+    this.moreThoughtsVimeoPlayer = new Player(this.moreThoughtsVimeoRef.nativeElement, {
+      id: 691095098,
+      height: 350
+    });
+    this.tynerRushingVimeoPlayer = new Player(this.tynerRushingVimeoRef.nativeElement, {
+      id: 716497074,
+      height: 350
+    });
   }
 
   async destroyYoutubePlayerPluginWeb() {
@@ -102,6 +111,7 @@ export class Module12Page implements OnInit, AfterViewInit {
 
   ionViewDidEnter() {
     this.initializeYoutubePlayerPluginWeb();
+    this.initializeVimeoPlayer();
     gsap.set(".dark", {opacity:1});
     gsap.set(".title", {scale:1});
     if(this.tl1 != null) {

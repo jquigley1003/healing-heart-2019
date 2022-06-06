@@ -37,8 +37,6 @@ export class Module05Page implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.initializeYoutubePlayerPluginWeb();
-    this.initializeVimeoPlayer();
     this.firstAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration0501 = this.firstAudioRef.nativeElement.duration;
     };
@@ -106,6 +104,7 @@ export class Module05Page implements OnInit, AfterViewInit {
 
   ionViewDidEnter() {
     this.initializeYoutubePlayerPluginWeb();
+    this.initializeVimeoPlayer();
     // gsap.set(".dark", {opacity:1});
     // gsap.set(".title", {scale:1});
     // if(this.tl1 != null) {
