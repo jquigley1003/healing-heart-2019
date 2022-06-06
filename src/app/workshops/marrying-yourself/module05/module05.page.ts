@@ -80,7 +80,6 @@ export class Module05Page implements OnInit, AfterViewInit {
     });
   }
 
-
   async destroyYoutubePlayerPluginWeb() {
     const result1 = await YoutubePlayerWeb.destroy('youtube-player0501');
     const result2 = await YoutubePlayerWeb.destroy('youtube-player0502');
