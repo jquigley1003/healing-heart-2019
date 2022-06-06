@@ -17,6 +17,7 @@ export class Module05Page implements OnInit, AfterViewInit {
   @ViewChild('dassyVimeo') dassyVimeoRef: ElementRef;
   @ViewChild('devaEngagementVimeo') devaEngagementVimeoRef: ElementRef;
   @ViewChild('bodyPostureVimeo') bodyPostureVimeoRef: ElementRef;
+  @ViewChild('dustinEngagementVimeo') dustinEngagementVimeoRef: ElementRef;
 
   completedModule: boolean;
   showCompleteBtn: boolean;
@@ -29,6 +30,7 @@ export class Module05Page implements OnInit, AfterViewInit {
   dassyVimeoPlayer: Player;
   devaEngagementVimeoPlayer: Player;
   bodyPostureVimeoPlayer: Player;
+  dustinEngagementVimeoPlayer: Player;
   
 
   constructor() { }
@@ -74,6 +76,10 @@ export class Module05Page implements OnInit, AfterViewInit {
     });
     this.bodyPostureVimeoPlayer = new Player(this.bodyPostureVimeoRef.nativeElement, {
       id: 652065275,
+      height: 350
+    });
+    this.dustinEngagementVimeoPlayer = new Player(this.dustinEngagementVimeoRef.nativeElement, {
+      id: 717671517,
       height: 350
     });
   }
