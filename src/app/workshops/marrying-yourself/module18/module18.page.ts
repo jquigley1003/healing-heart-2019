@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
-import Player from '@vimeo/player';
 import { gsap } from 'gsap';
 
 @Component({
@@ -24,15 +23,7 @@ export class Module18Page implements OnInit, AfterViewInit {
   showIncompleteBtn = true;
   audioDuration1801: number;
   audioDuration1802: number;
-  audioDuration1703: number;
-  audioDuration1704: number;
-  audioDuration1605: number;
-  assignment1601: boolean;
   tl1 = null;
-  // weddingTestimonialVimeoPlayer: Player;
-  // chavonnesWeddingVimeoPlayer: Player;
-  // darlenesWeddingVimeoPlayer: Player;
-  // susansWeddingVimeoPlayer: Player;
   showRemainingModule = false;
 
   constructor() { }
@@ -63,37 +54,27 @@ export class Module18Page implements OnInit, AfterViewInit {
     this.practicesBeingMarriedAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1802 = this.practicesBeingMarriedAudioRef.nativeElement.duration;
     };
-    // this.congratulationsAudioRef.nativeElement.onloadedmetadata = (event) => {
-    //   this.audioDuration1703 = this.congratulationsAudioRef.nativeElement.duration;
-    // };
-    // this.quote1stModuleAudioRef.nativeElement.onloadedmetadata = (event) => {
-    //   this.audioDuration1704 = this.quote1stModuleAudioRef.nativeElement.duration;
-    // };
-    // this.weddingTestimonialVimeoPlayer = new Player(this.weddingTestimonialVimeoRef.nativeElement, {
-    //   id: 700089565,
-    //   height: 350
-    // });
-    // this.chavonnesWeddingVimeoPlayer = new Player(this.chavonnesWeddingVimeoRef.nativeElement, {
-    //   id: 700089320,
-    //   height: 350
-    // });
-    // this.darlenesWeddingVimeoPlayer = new Player(this.darlenesWeddingVimeoRef.nativeElement, {
-    //   id: 700089265,
-    //   height: 350
-    // });
-    // this.susansWeddingVimeoPlayer = new Player(this.susansWeddingVimeoRef.nativeElement, {
-    //   id: 700089293,
-    //   height: 350
-    // });
   }
 
   async initializeYoutubePlayerPluginWeb() {
-    // const player1 = {playerId: 'youtube-player1601', playerSize: {width: 640, height: 360}, videoId: 'iQJ7b_xfF2s'};
-    // const result1 = await YoutubePlayerWeb.initialize(player1);
+    const player1 = {playerId: 'youtube-player1801', playerSize: {width: 640, height: 360}, videoId: 'QUQsqBqxoR4'};
+    const result1 = await YoutubePlayerWeb.initialize(player1);
+    const player2 = {playerId: 'youtube-player1802', playerSize: {width: 640, height: 360}, videoId: 'XLFEvHWD_NE'};
+    const result2 = await YoutubePlayerWeb.initialize(player2);
+    const player3 = {playerId: 'youtube-player1803', playerSize: {width: 640, height: 360}, videoId: 'HpvK9Af4aiA'};
+    const result3 = await YoutubePlayerWeb.initialize(player3);
+    const player4 = {playerId: 'youtube-player1804', playerSize: {width: 640, height: 360}, videoId: 'eAfyFTzZDMM'};
+    const result4 = await YoutubePlayerWeb.initialize(player4);
+    const player5 = {playerId: 'youtube-player1805', playerSize: {width: 640, height: 360}, videoId: 'IYzlVDlE72w'};
+    const result5 = await YoutubePlayerWeb.initialize(player5);
   }
 
   async destroyYoutubePlayerPluginWeb() {
-    // const result1 = await YoutubePlayerWeb.destroy('youtube-player1601');
+    const result1 = await YoutubePlayerWeb.destroy('youtube-player1801');
+    const result2 = await YoutubePlayerWeb.destroy('youtube-player1802');
+    const result3 = await YoutubePlayerWeb.destroy('youtube-player1803');
+    const result4 = await YoutubePlayerWeb.destroy('youtube-player1804');
+    const result5 = await YoutubePlayerWeb.destroy('youtube-player1805');
   }
 
   showCongrats() {
@@ -102,28 +83,6 @@ export class Module18Page implements OnInit, AfterViewInit {
 
   onToggle() {
     console.log('completed is: ',this.completedModule);
-  }
-
-  assignmentCheck(assignment) {
-    console.log('result of check: ', assignment);
-    this.assignment1601 = true;
-    // const assignmentComplete = {
-    //   userName: this.currentUser.firstName + ' ' + this.currentUser.lastName,
-    //   [assignment]: true
-    // };
-    // console.log('========= ',assignment,' CHECKED');
-      // this.assignmentService.assignmentComplete(assignment, assignmentComplete, this.currentUser);
-  }
-
-  assignmentUncheck(assignment) {
-    console.log('result of check: ', assignment);
-    this.assignment1601 = false;
-    // const assignmentComplete = {
-    //   userName: this.currentUser.firstName + ' ' + this.currentUser.lastName,
-    //   [assignment]: false
-    // };
-    // console.log('========= ',assignment,' UNCHECKED');
-      // this.assignmentService.assignmentIncomplete(assignment, assignmentComplete, this.currentUser);
   }
 
   markComplete() {
