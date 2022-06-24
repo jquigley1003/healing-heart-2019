@@ -79,8 +79,8 @@ export class Module01Page implements OnInit, AfterViewInit {
 
 
   async initializeYoutubePlayerPluginWeb() {
-    // const options1 = {playerId: 'youtube-player1', playerSize: {}, videoId: 'Dou2JUmogvU'};
-    // const result1 = await YoutubePlayerWeb.initialize(options1);
+    const options1 = {playerId: 'youtube-player1', playerSize: {}, videoId: 'Dou2JUmogvU'};
+    const result1 = await YoutubePlayerWeb.initialize(options1);
     // const options2 = {playerId: 'youtube-player2', playerSize: {width: 640, height: 360}, videoId: 'aTq2cMQpPeY'};
     // const result2 = await YoutubePlayerWeb.initialize(options2);
     // const options3 = {playerId: 'youtube-player3', playerSize: {width: 640, height: 360}, videoId: 'HpvK9Af4aiA'};
@@ -98,7 +98,7 @@ export class Module01Page implements OnInit, AfterViewInit {
   }
 
   async destroyYoutubePlayerPluginWeb() {
-    // const result1 = await YoutubePlayerWeb.destroy('youtube-player1');
+    const result1 = await YoutubePlayerWeb.destroy('youtube-player1');
     // const result2 = await YoutubePlayerWeb.destroy('youtube-player2');
     // const result3 = await YoutubePlayerWeb.destroy('youtube-player3');
     const result4 = await YoutubePlayerWeb.destroy('youtube-player4');

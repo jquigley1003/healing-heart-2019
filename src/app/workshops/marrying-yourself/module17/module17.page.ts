@@ -16,7 +16,7 @@ export class Module17Page implements OnInit, AfterViewInit {
   @ViewChild('quote1stModuleAudio') quote1stModuleAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('weddingTestimonialVimeo') weddingTestimonialVimeoRef: ElementRef;
   @ViewChild('chavonnesWeddingVimeo') chavonnesWeddingVimeoRef: ElementRef;
-  @ViewChild('darlenesWeddingVimeo') darlenesWeddingVimeoRef: ElementRef;
+  @ViewChild('sonatasWeddingVimeo') sonatasWeddingVimeoRef: ElementRef;
   @ViewChild('susansWeddingVimeo') susansWeddingVimeoRef: ElementRef;
 
   completedModule: boolean;
@@ -31,7 +31,7 @@ export class Module17Page implements OnInit, AfterViewInit {
   tl1 = null;
   weddingTestimonialVimeoPlayer: Player;
   chavonnesWeddingVimeoPlayer: Player;
-  darlenesWeddingVimeoPlayer: Player;
+  sonatasWeddingVimeoPlayer: Player;
   susansWeddingVimeoPlayer: Player;
   showRemainingModule = false;
 
@@ -77,7 +77,7 @@ export class Module17Page implements OnInit, AfterViewInit {
       id: 700089320,
       height: 350
     });
-    this.darlenesWeddingVimeoPlayer = new Player(this.darlenesWeddingVimeoRef.nativeElement, {
+    this.sonatasWeddingVimeoPlayer = new Player(this.sonatasWeddingVimeoRef.nativeElement, {
       id: 700089265,
       height: 350
     });

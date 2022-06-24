@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef,OnInit, ViewChild } from '@angular/core';
 
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
+import Player from '@vimeo/player';
 
 @Component({
   selector: 'app-module06',
@@ -10,12 +11,16 @@ import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
 export class Module06Page implements OnInit, AfterViewInit {
   @ViewChild('introductionAudio') introductionAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('practice05Audio') practice05AudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('devaMaleVimeo') devaMaleVimeoRef: ElementRef;
+  @ViewChild('carlExampleVimeo') carlExampleVimeoRef: ElementRef;
 
   completedModule: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
   audioDuration0601: number;
   audioDuration0602: number;
+  devaMaleVimeoPlayer: Player;
+  carlExampleVimeoPlayer: Player;
 
   constructor() { }
 
@@ -24,6 +29,7 @@ export class Module06Page implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.initializeYoutubePlayerPluginWeb();
+    this.initializeVimeoPlayer();
     this.introductionAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration0601 = this.introductionAudioRef.nativeElement.duration;
     };
@@ -37,6 +43,17 @@ export class Module06Page implements OnInit, AfterViewInit {
     const result1 = await YoutubePlayerWeb.initialize(player1);
     const player2 = {playerId: 'youtube-player0602', playerSize: {width: 640, height: 360}, videoId: 'aeKYip-sBjM'};
     const result2 = await YoutubePlayerWeb.initialize(player2);
+  }
+
+  async initializeVimeoPlayer() {
+    this.devaMaleVimeoPlayer = new Player(this.devaMaleVimeoRef.nativeElement, {
+      id: 717580928,
+      height: 350
+    });
+    this.carlExampleVimeoPlayer = new Player(this.carlExampleVimeoRef.nativeElement, {
+      id: 717580149,
+      height: 350
+    });
   }
 
   async destroyYoutubePlayerPluginWeb() {
