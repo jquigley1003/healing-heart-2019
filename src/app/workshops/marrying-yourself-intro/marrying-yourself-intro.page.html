@@ -1,0 +1,60 @@
+<ion-header translucent="true" no-border>
+  <ion-toolbar>
+    <ion-menu-button slot="start" color="primary"></ion-menu-button>
+    <ion-title color="primary">
+      Marrying Yourself Journey Introduction
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div #scrollContainer class="scroll-container">
+    <div class="wrapper">
+      <div>
+        <ion-img src="/assets/hhc-logo-deva.png" [routerLink]="['/home']"></ion-img>
+        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
+              light of your own being.<br>~ Hafiz</p>
+      </div>
+      <div #panelContainer class="panel-container">
+        <div #primaryPanel class="primary-panel">Primary</div>
+        <div #secondaryPanel class="secondary-panel">Secondary</div>
+        <div #tertiaryPanel class="tertiary-panel">Tertiary</div>
+      </div>
+      <div class="panel-next1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi rerum quisquam placeat earum animi, beatae accusamus eveniet tempora adipisci nam repellat dolorem. Molestiae cumque dignissimos nobis maxime impedit velit amet?
+      </div>
+      <div class="panel-next2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum voluptatum esse, repellat fuga ad quasi error molestiae excepturi deleniti saepe adipisci sint beatae dolores, minima natus commodi eius maxime?
+      </div>
+    </div>
+  </div>
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col size-xs="12" size-lg="6">
+        <ion-img src="/assets/hhc-logo-deva.png" [routerLink]="['/home']"></ion-img>
+      </ion-col>
+      <ion-col size-xs="12" size-lg="6" class="ion-align-self-center">
+        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
+          light of your own being.<br>~ Hafiz</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-margin-right">
+      <ion-col size="12" class="ion-padding ion-text-center">
+        <h2 class="section-title">THE PATH AS A SELF-MARRIED PERSON</h2>
+        <div class="audio-player">
+          <audio preload="auto" controls controlsList="nodownload" #selfMarriedPersonAudio>
+            <source
+              src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule18%2Faudio%2FThePathAsASelfMarriedPerson.mp3?alt=media&token=ab7de0bb-07c2-4295-8865-f535a3745e9d"
+              type="audio/mpeg">
+          </audio>
+        </div>
+      </ion-col>
+      <ion-col size="12" class="ion-padding ion-text-center">
+        <div #panelContainer class="panel-container">
+          <div #primaryPanel class="primary-panel">Primary</div>
+          <div #secondaryPanel class="secondary-panel">Secondary</div>
+          <div #tertiaryPanel class="tertiary-panel">Tertiary</div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+</ion-content>

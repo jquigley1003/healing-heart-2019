@@ -21,6 +21,10 @@ const routes: Routes = [
     path: 'tribute-to-donna',
     loadChildren: () => import('./tribute-to-donna/tribute-to-donna.module').then( m => m.TributeToDonnaPageModule),
     canActivateChild: [Workshop02Guard]
+  },
+  {
+    path: 'marrying-yourself-intro',
+    loadChildren: () => import('./marrying-yourself-intro/marrying-yourself-intro.module').then( m => m.MarryingYourselfIntroPageModule)
   }
 ];
 
