@@ -6,27 +6,85 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content [fullscreen]="true">
-  <div #scrollContainer class="scroll-container">
-    <div class="wrapper">
-      <div>
-        <ion-img src="/assets/hhc-logo-deva.png" [routerLink]="['/home']"></ion-img>
-        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
-              light of your own being.<br>~ Hafiz</p>
-      </div>
-      <div #panelContainer class="panel-container">
-        <div #primaryPanel class="primary-panel">Primary</div>
-        <div #secondaryPanel class="secondary-panel">Secondary</div>
-        <div #tertiaryPanel class="tertiary-panel">Tertiary</div>
-      </div>
-      <div class="panel-next1">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi rerum quisquam placeat earum animi, beatae accusamus eveniet tempora adipisci nam repellat dolorem. Molestiae cumque dignissimos nobis maxime impedit velit amet?
-      </div>
-      <div class="panel-next2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum voluptatum esse, repellat fuga ad quasi error molestiae excepturi deleniti saepe adipisci sint beatae dolores, minima natus commodi eius maxime?
-      </div>
-    </div>
-  </div>
+<ion-content [fullscreen]="true" [scrollY]="false">
+  <ion-grid class="ion-no-margin ion-no-padding">
+    <ion-row class="ion-no-margin ion-no-padding">
+      <ion-col class="ion-no-margin ion-no-padding">
+        <div #scrollContainer class="scroll-container">
+          <div>
+            <!-- To keep accurate scrolltrigger positions use img tag, not ion-img tag -->
+            <img class="responsive-image" src="../../../assets/workshop1/intro/heartHandsSun.jpg">
+          </div>
+          <h2 class="vimeo-title">Introduction to the Marrying Yourself Journey</h2>
+          <div class="vimeo-container">
+            <div #introMYJVimeo>
+            </div>
+          </div>
+          <div #panelContainer class="panel-container">
+            <div #primaryPanel class="primary-panel">
+              <div>
+                <h2>There are 18 Modules to this course.</h2><br>
+              </div>
+              <div>
+                <ol>
+                  <li>The Welcoming, The Beginning</li>
+                  <li>Marrying Yourself Journey for the Masculine</li>
+                  <li>The Antidote for Codependency</li>
+                  <li>Who I Am</li>
+                  <li>Getting Engaged</li>
+                  <li>Commitment Mudra Flow</li>
+                  <li>Taming Your Mind, Embracing Your Heart, Loving Your Body, Nourishing Your Soul</li>
+                  <li>Self-Retrieval</li>
+                  <li>Embodying Goddess Wisdom</li>
+                  <li>Our Feminine and Masculine Selves</li>
+                  <li>The Four Archetypes of the Mature Masculine</li>
+                  <li>Romancing Yourself</li>
+                  <li>Parenting Yourself Well</li>
+                  <li>Boundaries and Empowerment</li>
+                  <li>Relationship With the Divine</li>
+                  <li>Intentions and Vows</li>
+                  <li>Wedding Time</li>
+                  <li>The Path of Self Marriage</li>
+                </ol>
+              </div>
+              
+            </div>
+            <div #secondaryPanel class="secondary-panel">Secondary</div>
+            <div #tertiaryPanel class="tertiary-panel">Tertiary</div>
+          </div>
+ 
+          <div class="panel-next1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi rerum quisquam placeat earum animi, beatae accusamus eveniet tempora adipisci nam repellat dolorem. Molestiae cumque dignissimos nobis maxime impedit velit amet?
+          </div>
+          <div class="panel-next2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum voluptatum esse, repellat fuga ad quasi error molestiae excepturi deleniti saepe adipisci sint beatae dolores, minima natus commodi eius maxime?
+          </div>
+          
+         
+          <div>
+            <!-- To keep accurate scrolltrigger positions use img tag, not ion-img tag -->
+            <img class="responsive-image" src="/assets/hhc-logo-deva.png" [routerLink]="['/home']">
+            <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
+                  light of your own being.<br>~ Hafiz</p>
+          </div>
+          <div #panelContainer2 class="panel-container2">
+            <div #primaryPanel2 class="primary-panel2">Primary</div>
+            <div #secondaryPanel2 class="secondary-panel2">Secondary</div>
+            <div #tertiaryPanel2 class="tertiary-panel2">Tertiary</div>
+          </div>
+          <div class="panel-next3">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi rerum quisquam placeat earum animi, beatae accusamus eveniet tempora adipisci nam repellat dolorem. Molestiae cumque dignissimos nobis maxime impedit velit amet?
+          </div>
+          <div class="panel-next4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum voluptatum esse, repellat fuga ad quasi error molestiae excepturi deleniti saepe adipisci sint beatae dolores, minima natus commodi eius maxime?
+          </div>
+        
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+ 
   <!-- <ion-grid>
     <ion-row>
       <ion-col size-xs="12" size-lg="6">

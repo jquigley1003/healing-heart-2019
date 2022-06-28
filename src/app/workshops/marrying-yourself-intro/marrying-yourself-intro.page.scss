@@ -1,7 +1,11 @@
+.responsive-image {
+  width: 100%;
+  height: auto;
+}
+
 .scroll-container {
-  position: absolute;
   border: solid 1px red;
-  margin: 50px;
+  margin: 0px;
   height: 100vh;
   left: 0;
   top: 0;
@@ -13,46 +17,123 @@
   scrollbar-width: none;
 }
 
-.wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
 .panel-container {
+	position: relative;
+	overflow: hidden;
  	width: 100vw;
-	height: 100%;
+	height: 100vh;
 }
 
 .primary-panel {
 	position: absolute;
 	width: 100%;
-	height: 500px;
+	height: 100vh;
 	background-color: var(--ion-color-primary);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	h1 {
+		font-size: 5.9vw;
+	}
+	h2 {
+		font-size: 3.0vh;
+	}
+	p {
+		font-size: calc(0.75em + 1vw);
+	}
+	li {
+		font-size: calc(0.75em + 1vw);
+	}
 }
 
 .secondary-panel {
 	position: absolute;
-	background-color: var(--ion-color-secondary);
 	width: 100%;
-	height: 500px;
+	height: 100vh;
+	background-color: var(--ion-color-secondary);
 	z-index: 2;
  }
 
  .tertiary-panel {
 	position: absolute;
-	background-color: var(--ion-color-tertiary);
 	width: 100%;
-	height: 500px;
+	height: 100vh;
+	background-color: var(--ion-color-tertiary);
+	z-index: 3;
+ }
+
+.panel-container2 {
+	position: relative;
+	overflow: hidden;
+ 	width: 100vw;
+	height: 100vh;
+}
+
+.primary-panel2 {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background-color: var(--ion-color-primary);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.secondary-panel2 {
+	position: absolute;	
+	width: 100%;
+	height: 100vh;
+	background-color: var(--ion-color-secondary);
+	z-index: 2;
+ }
+
+ .tertiary-panel2 {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background-color: var(--ion-color-tertiary);
 	z-index: 3;
  }
 
  .panel-next1 {
-	 margin-top: 600px;
+	 margin-top: 100px;
 	 width: 100%;
-	 height: 500px;
+	 height: 80vh;
  }
 
  .panel-next2 {
+	margin-top: 100px;
 	width: 100%;
-	height: 500px;
+	height: 80vh;
+}
+
+.panel-next3 {
+	width: 100%;
+	height: 80vh;
+}
+
+.panel-next4 {
+ width: 100%;
+ height: 80vh;
+}
+
+.vimeo-title {
+	margin-bottom: 2 rem;
+	text-align: center;
+	font-size: 2rem;
+  font-weight: bold;
+	text-shadow: 2px 2px 4px var(--ion-color-secondary);
+}
+
+.vimeo-container {
+	height: 350px;
+  position: relative;
+	div {
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 }
