@@ -176,7 +176,7 @@ export class Module13Page implements OnInit, AfterViewInit {
   async initializeYoutubePlayerPluginWeb() {
     const player1 = {playerId: 'youtube-player1301', playerSize: {width: 640, height: 360}, videoId: 'RKdYGNQGqFM'};
     const result1 = await YoutubePlayerWeb.initialize(player1);
-    const player2 = {playerId: 'youtube-player1302', playerSize: {width: 640, height: 360}, videoId: 'JPQcvVvtv3k'};
+    const player2 = {playerId: 'youtube-player1302', playerSize: {width: 640, height: 360}, videoId: 'whOIUM_xzKc'};
     const result2 = await YoutubePlayerWeb.initialize(player2);
     const player3 = {playerId: 'youtube-player1303', playerSize: {width: 640, height: 360}, videoId: 'n9ZbnMV80IU'};
     const result3 = await YoutubePlayerWeb.initialize(player3);
