@@ -13,7 +13,7 @@
         <div>
           <div>
             <!-- To keep accurate scrolltrigger positions use img tag, not ion-img tag -->
-            <img class="responsive-image" src="../../../assets/workshop1/intro/heartHandsSun.jpg">
+            <img class="responsive-image" [routerLink]="['/home']" src="../../../assets/workshop1/intro/heartHandsSun.jpg">
           </div>
           <h2 class="vimeo-title">Introduction to the Marrying Yourself Journey</h2>
           <div class="vimeo-container">
@@ -110,9 +110,13 @@
           <div class="panel-next4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum voluptatum esse, repellat fuga ad quasi
             error molestiae excepturi deleniti saepe adipisci sint beatae dolores, minima natus commodi eius maxime?
-          </div>
-
+          </div>        
         </div>
+      </ion-col>
+      <ion-col>
+       
+          <ion-button [routerLink]="['/workshops']">Back to Workshops</ion-button>
+ 
       </ion-col>
     </ion-row>
   </ion-grid>
