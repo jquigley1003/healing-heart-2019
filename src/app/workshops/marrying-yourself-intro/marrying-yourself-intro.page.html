@@ -6,11 +6,11 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content [fullscreen]="true" [scrollY]="false">
+<ion-content [fullscreen]="true" [scrollEvents]="true" (ionScroll)="onScroll($event)" >
   <ion-grid class="ion-no-margin ion-no-padding">
     <ion-row class="ion-no-margin ion-no-padding">
       <ion-col class="ion-no-margin ion-no-padding">
-        <div #scrollContainer class="scroll-container">
+        <div>
           <div>
             <!-- To keep accurate scrolltrigger positions use img tag, not ion-img tag -->
             <img class="responsive-image" src="../../../assets/workshop1/intro/heartHandsSun.jpg">
@@ -20,12 +20,15 @@
             <div #introMYJVimeo>
             </div>
           </div>
+          <!-- <div class="ion-text-center">
+            <p>After watching the video, scroll down!</p>
+          </div> -->
           <div #panelContainer class="panel-container">
-            <div #primaryPanel class="primary-panel">
-              <div>
+            <div #primaryPanel class="panel primary-panel">
+              <div #titlePrimary>
                 <h2>There are 18 Modules to this course.</h2><br>
               </div>
-              <div>
+              <div #infoPrimary>
                 <ol>
                   <li>The Welcoming, The Beginning</li>
                   <li>Marrying Yourself Journey for the Masculine</li>
@@ -47,72 +50,70 @@
                   <li>The Path of Self Marriage</li>
                 </ol>
               </div>
-              
+              <!-- <div class="footer">Keep Scrolling Below ↓↓↓↓↓</div> -->
             </div>
-            <div #secondaryPanel class="secondary-panel">Secondary</div>
-            <div #tertiaryPanel class="tertiary-panel">Tertiary</div>
-          </div>
- 
-          <div class="panel-next1">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi rerum quisquam placeat earum animi, beatae accusamus eveniet tempora adipisci nam repellat dolorem. Molestiae cumque dignissimos nobis maxime impedit velit amet?
-          </div>
-          <div class="panel-next2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum voluptatum esse, repellat fuga ad quasi error molestiae excepturi deleniti saepe adipisci sint beatae dolores, minima natus commodi eius maxime?
-          </div>
-          
-         
-          <div>
-            <!-- To keep accurate scrolltrigger positions use img tag, not ion-img tag -->
-            <img class="responsive-image" src="/assets/hhc-logo-deva.png" [routerLink]="['/home']">
-            <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
-                  light of your own being.<br>~ Hafiz</p>
           </div>
           <div #panelContainer2 class="panel-container2">
-            <div #primaryPanel2 class="primary-panel2">Primary</div>
-            <div #secondaryPanel2 class="secondary-panel2">Secondary</div>
-            <div #tertiaryPanel2 class="tertiary-panel2">Tertiary</div>
+            <div #secondaryPanel class="panel secondary-panel">
+              <div>
+                <h2>The best way to approach this is to make it yours.</h2>
+              </div>
+              <div>
+                <p>It will take dedication. Know this before you sign up. It is guided dedication to yourself — time,
+                  energy,
+                  nurturing and empowering time with yourself. Sometimes you will want to do it, excited to grow into
+                  what
+                  next and sometimes you won't want to do it, you will wish you didn't have to, you will procrastinate
+                  doing
+                  it, you will make excuses... and it is the warrior spirit in you that is with you as you sign up for
+                  this —
+                  because self love is not based on how you are feeling toward yourself. Self love is sometimes a
+                  spiritual
+                  practice, a discipline, an inner posture you cultivate towards yourself, just like you love your
+                  children,
+                  partners, moms and dads, siblings, friends… you don't always feel like it, but you show up again and
+                  again.
+                  This BELOVED relationship is not based on how you feel. It is based on a fierce commitment that says
+                  Yes,
+                  I am going to Marry myself and grow into how to be my very best partner.
+                </p>
+              </div>
+            </div>
+            <!-- <div #tertiaryPanel class="panel tertiary-panel">
+              <div>
+                <p>Tertiary Panel</p>
+              </div>
+              <div class="footer">Keep Scrolling Below ↓↓↓↓↓</div>
+            </div> -->
+          </div>
+
+          <div class="panel-next1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi rerum quisquam placeat earum animi, beatae
+            accusamus eveniet tempora adipisci nam repellat dolorem. Molestiae cumque dignissimos nobis maxime impedit
+            velit amet?
+          </div>
+          <div class="panel-next2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum voluptatum esse, repellat fuga ad quasi
+            error molestiae excepturi deleniti saepe adipisci sint beatae dolores, minima natus commodi eius maxime?
+          </div>
+
+          <div #panelContainer3 class="panel-container2">
+            <div #primaryPanel2 class="panel primary-panel2">Primary</div>
+            <div #secondaryPanel2 class="panel secondary-panel2">Secondary</div>
+            <div #tertiaryPanel2 class="panel tertiary-panel2">Tertiary</div>
           </div>
           <div class="panel-next3">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi rerum quisquam placeat earum animi, beatae accusamus eveniet tempora adipisci nam repellat dolorem. Molestiae cumque dignissimos nobis maxime impedit velit amet?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi rerum quisquam placeat earum animi, beatae
+            accusamus eveniet tempora adipisci nam repellat dolorem. Molestiae cumque dignissimos nobis maxime impedit
+            velit amet?
           </div>
           <div class="panel-next4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum voluptatum esse, repellat fuga ad quasi error molestiae excepturi deleniti saepe adipisci sint beatae dolores, minima natus commodi eius maxime?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum voluptatum esse, repellat fuga ad quasi
+            error molestiae excepturi deleniti saepe adipisci sint beatae dolores, minima natus commodi eius maxime?
           </div>
-        
+
         </div>
       </ion-col>
     </ion-row>
   </ion-grid>
-
- 
-  <!-- <ion-grid>
-    <ion-row>
-      <ion-col size-xs="12" size-lg="6">
-        <ion-img src="/assets/hhc-logo-deva.png" [routerLink]="['/home']"></ion-img>
-      </ion-col>
-      <ion-col size-xs="12" size-lg="6" class="ion-align-self-center">
-        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
-          light of your own being.<br>~ Hafiz</p>
-      </ion-col>
-    </ion-row>
-    <ion-row class="ion-margin-right">
-      <ion-col size="12" class="ion-padding ion-text-center">
-        <h2 class="section-title">THE PATH AS A SELF-MARRIED PERSON</h2>
-        <div class="audio-player">
-          <audio preload="auto" controls controlsList="nodownload" #selfMarriedPersonAudio>
-            <source
-              src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Fmodule18%2Faudio%2FThePathAsASelfMarriedPerson.mp3?alt=media&token=ab7de0bb-07c2-4295-8865-f535a3745e9d"
-              type="audio/mpeg">
-          </audio>
-        </div>
-      </ion-col>
-      <ion-col size="12" class="ion-padding ion-text-center">
-        <div #panelContainer class="panel-container">
-          <div #primaryPanel class="primary-panel">Primary</div>
-          <div #secondaryPanel class="secondary-panel">Secondary</div>
-          <div #tertiaryPanel class="tertiary-panel">Tertiary</div>
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid> -->
 </ion-content>

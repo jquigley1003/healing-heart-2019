@@ -21,14 +21,14 @@
 	position: relative;
 	overflow: hidden;
  	width: 100vw;
-	height: 100vh;
+	height: 80vh;
 }
 
-.primary-panel {
+.panel {
 	position: absolute;
 	width: 100%;
-	height: 100vh;
-	background-color: var(--ion-color-primary);
+	height: 80vh;
+	padding: 0px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -47,18 +47,16 @@
 	}
 }
 
+.primary-panel {
+	background-color: var(--ion-color-primary);
+}
+
 .secondary-panel {
-	position: absolute;
-	width: 100%;
-	height: 100vh;
 	background-color: var(--ion-color-secondary);
 	z-index: 2;
  }
 
  .tertiary-panel {
-	position: absolute;
-	width: 100%;
-	height: 100vh;
 	background-color: var(--ion-color-tertiary);
 	z-index: 3;
  }
@@ -71,27 +69,15 @@
 }
 
 .primary-panel2 {
-	position: absolute;
-	width: 100%;
-	height: 100vh;
 	background-color: var(--ion-color-primary);
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .secondary-panel2 {
-	position: absolute;	
-	width: 100%;
-	height: 100vh;
 	background-color: var(--ion-color-secondary);
 	z-index: 2;
  }
 
  .tertiary-panel2 {
-	position: absolute;
-	width: 100%;
-	height: 100vh;
 	background-color: var(--ion-color-tertiary);
 	z-index: 3;
  }
@@ -136,4 +122,45 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
+}
+
+.footer {
+	font-size: 1rem;
+	position: fixed;     
+  text-align: center;    
+  bottom: 0px; 
+  width: 100%;
+}
+
+section {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  position: relative;
+  --scaleX: 0;
+}
+
+h1::before {
+  width: calc(100% + 200px);
+  height: calc(100% + 100px);
+  background: #42a6e0;
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  content: "";
+  z-index: -1;
+  transform: scaleX(var(--scaleX));
+  transform-origin: top left;
+}
+
+
+span {
+  position: relative;
+  display: inline-block;
+}
+.spacer {
+  height: 40vh;
 }
