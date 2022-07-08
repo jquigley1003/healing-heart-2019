@@ -18,6 +18,8 @@ export class Module05Page implements OnInit, AfterViewInit {
   @ViewChild('devaEngagementVimeo') devaEngagementVimeoRef: ElementRef;
   @ViewChild('bodyPostureVimeo') bodyPostureVimeoRef: ElementRef;
   @ViewChild('dustinEngagementVimeo') dustinEngagementVimeoRef: ElementRef;
+  @ViewChild('scottEngagementVimeo') scottEngagementVimeoRef: ElementRef;
+  @ViewChild('commitmentMudraFlowVimeo') commitmentMudraFlowVimeoRef: ElementRef;
 
   completedModule: boolean;
   showCompleteBtn: boolean;
@@ -31,6 +33,8 @@ export class Module05Page implements OnInit, AfterViewInit {
   devaEngagementVimeoPlayer: Player;
   bodyPostureVimeoPlayer: Player;
   dustinEngagementVimeoPlayer: Player;
+  scottEngagementVimeoPlayer: Player;
+  commitmentMudraFlowVimeoPlayer: Player;
   
 
   constructor() { }
@@ -39,6 +43,8 @@ export class Module05Page implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    this.initializeYoutubePlayerPluginWeb();
+    this.initializeVimeoPlayer();
     this.firstAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration0501 = this.firstAudioRef.nativeElement.duration;
     };
@@ -61,8 +67,6 @@ export class Module05Page implements OnInit, AfterViewInit {
     const result1 = await YoutubePlayerWeb.initialize(player1);
     const player2 = {playerId: 'youtube-player0502', playerSize: {width: 640, height: 360}, videoId: 'LBk5I4nSXBo'};
     const result2 = await YoutubePlayerWeb.initialize(player2);
-    const player3 = {playerId: 'youtube-player0503', playerSize: {width: 640, height: 360}, videoId: 'aeKYip-sBjM'};
-    const result3 = await YoutubePlayerWeb.initialize(player3);
   }
 
   async initializeVimeoPlayer() {
@@ -71,7 +75,7 @@ export class Module05Page implements OnInit, AfterViewInit {
       height: 350
     });
     this.devaEngagementVimeoPlayer = new Player(this.devaEngagementVimeoRef.nativeElement, {
-      id: 652593403,
+      id: 727944026,
       height: 350
     });
     this.bodyPostureVimeoPlayer = new Player(this.bodyPostureVimeoRef.nativeElement, {
@@ -82,12 +86,19 @@ export class Module05Page implements OnInit, AfterViewInit {
       id: 717671517,
       height: 350
     });
+    this.scottEngagementVimeoPlayer = new Player(this.scottEngagementVimeoRef.nativeElement, {
+      id: 727941076,
+      height: 350
+    });
+    this.commitmentMudraFlowVimeoPlayer = new Player(this.commitmentMudraFlowVimeoRef.nativeElement, {
+      id: 727924271,
+      height: 350
+    });
   }
 
   async destroyYoutubePlayerPluginWeb() {
     const result1 = await YoutubePlayerWeb.destroy('youtube-player0501');
     const result2 = await YoutubePlayerWeb.destroy('youtube-player0502');
-    const result3 = await YoutubePlayerWeb.destroy('youtube-player0503');
   }
 
   onToggle() {

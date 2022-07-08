@@ -250,12 +250,18 @@ audio {
 }
 
 .video-container {
+  // height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .video-player {
+  background-image: url('./assets/workshop1/general/videoWillLoadBubble.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  // background: #42e317;
+  min-height: 350px;
 	margin: 0px auto;
 	width: 85vw;
 	overflow: scroll;
@@ -336,11 +342,12 @@ audio {
 
 .border-quote blockquote{
 	background-color: #fff;
-    border: solid 2px #757575;
-    display: inline-block;
-    margin: 0;
-    padding: 1em;
-    position: relative;
+  border: solid 2px #757575;
+  display: inline-block;
+  text-align: left;
+  margin: 0;
+  padding: 1em;
+  position: relative;
 }
 
 .border-quote blockquote cite {

@@ -14,6 +14,7 @@ export class Module04Page implements OnInit, AfterViewInit {
   @ViewChild('guidedImageryAudio') guidedImageryAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('practice03Audio') practice03AudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('whoIAmVimeo') whoIAmVimeoRef: ElementRef;
+  @ViewChild('whoYouAreVimeo') whoYouAreVimeoRef: ElementRef;
 
   completedModule: boolean;
   showCompleteBtn: boolean;
@@ -23,6 +24,7 @@ export class Module04Page implements OnInit, AfterViewInit {
   audioDuration0403: number;
   audioDuration0404: number;
   whoIAmVimeoPlayer: Player;
+  whoYouAreVimeoPlayer: Player;
 
   constructor() { }
 
@@ -31,6 +33,7 @@ export class Module04Page implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.initializeYoutubePlayerPluginWeb();
+    this.initializeVimeoPlayer();
     this.onBeingAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration0401 = this.onBeingAudioRef.nativeElement.duration;
     };
@@ -43,8 +46,15 @@ export class Module04Page implements OnInit, AfterViewInit {
     this.practice03AudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration0404 = this.practice03AudioRef.nativeElement.duration;
     };
+  }
+
+  async initializeVimeoPlayer() {
     this.whoIAmVimeoPlayer = new Player(this.whoIAmVimeoRef.nativeElement, {
       id: 706233941,
+      height: 350
+    });
+    this.whoYouAreVimeoPlayer = new Player(this.whoYouAreVimeoRef.nativeElement, {
+      id: 727921564,
       height: 350
     });
   }

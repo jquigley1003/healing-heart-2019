@@ -47,13 +47,14 @@ export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
 
     this.tlOne
     .from(this.primaryPanel.nativeElement, {
-      scale: 0.0, xPercent: 100
+      scale: 0.0
     })
     // .from(this.secondaryPanel.nativeElement, {xPercent: -100})
     // .from(this.tertiaryPanel.nativeElement, {yPercent: -100});
     this.tlTwo
     .from(this.secondaryPanel.nativeElement, {
-      scale: 0.0, xPercent: -100});
+      scale: 0.0
+    });
 
     // this.tlTwo
     // .from(this.primaryPanel2.nativeElement, {xPercent: 105})
@@ -73,7 +74,7 @@ export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
       start: 'top 70%',
       end: 'bottom bottom',
       scrub: 0.5,
-      markers: true
+      // markers: true
     });
 
     ScrollTrigger.create({
@@ -85,10 +86,10 @@ export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
       scrub: 0.5,
       // pin: true,
       // anticipatePin: 1,
-      markers: {
-        startColor: '#6434eb',
-        endColor: '#eba434'
-      }
+      // markers: {
+      //   startColor: '#6434eb',
+      //   endColor: '#eba434'
+      // }
     })
 
     ScrollTrigger.create({
@@ -100,10 +101,10 @@ export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
       scrub: true,
       pin: true,
       anticipatePin: 1,
-      markers: {
-        startColor: 'black',
-        endColor: 'pink'
-      }
+      // markers: {
+      //   startColor: 'black',
+      //   endColor: 'pink'
+      // }
     })
 
     this.initializeVimeoPlayers();
