@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
+import Player from '@vimeo/player';
 
 @Component({
   selector: 'app-module03',
@@ -17,6 +18,7 @@ export class Module03Page implements OnInit, AfterViewInit {
   @ViewChild('myExperienceAudio') myExperienceAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('assignmentYourStoryAudio') assignmentYourStoryAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('embarkingOnMYJAudio') embarkingOnMYJAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('codependencyFunnyVimeo') codependencyFunnyVimeoRef: ElementRef;
 
   completedModule: boolean;
   showCompleteBtn: boolean;
@@ -31,6 +33,7 @@ export class Module03Page implements OnInit, AfterViewInit {
   audioDuration0308: number;
   audioDuration0309: number;
   audioDuration0310: number;
+  codependencyFunnyVimeoPlayer: Player;
 
   constructor() { }
 
@@ -39,6 +42,7 @@ export class Module03Page implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.initializeYoutubePlayerPluginWeb();
+    this.initializeVimeoPlayer();
     this.codependencyAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration0301 = this.codependencyAudioRef.nativeElement.duration;
     };
@@ -66,6 +70,13 @@ export class Module03Page implements OnInit, AfterViewInit {
     this.embarkingOnMYJAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration0310 = this.embarkingOnMYJAudioRef.nativeElement.duration;
     };
+  }
+
+  async initializeVimeoPlayer() {
+    this.codependencyFunnyVimeoPlayer = new Player(this.codependencyFunnyVimeoRef.nativeElement, {
+      id: 727901158,
+      height: 350
+    });
   }
 
   async initializeYoutubePlayerPluginWeb() {

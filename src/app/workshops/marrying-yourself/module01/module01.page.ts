@@ -19,6 +19,7 @@ export class Module01Page implements OnInit, AfterViewInit {
   @ViewChild('practices01Audio') practices01AudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('communityVimeo') communityVimeoRef: ElementRef;
   @ViewChild('letsRevelVimeo') letsRevelVimeoRef: ElementRef;
+  @ViewChild('lynnWelcomingVimeo') lynnWelcomingVimeoRef: ElementRef;
 
   config: SwiperOptions = {
     pagination: true,
@@ -38,6 +39,7 @@ export class Module01Page implements OnInit, AfterViewInit {
   audioDuration07: number;
   communityVimeoPlayer: Player;
   letsRevelVimeoPlayer: Player;
+  lynnWelcomingVimeoPlayer: Player;
 
   constructor() { }
 
@@ -73,6 +75,10 @@ export class Module01Page implements OnInit, AfterViewInit {
     });
     this.letsRevelVimeoPlayer = new Player(this.letsRevelVimeoRef.nativeElement, {
       id: 700110069,
+      height: 450
+    });
+    this.lynnWelcomingVimeoPlayer = new Player(this.lynnWelcomingVimeoRef.nativeElement, {
+      id: 727866344,
       height: 450
     });
   }

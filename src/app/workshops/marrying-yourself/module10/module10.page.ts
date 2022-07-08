@@ -23,7 +23,7 @@ export class Module10Page implements OnInit, AfterViewInit {
   @ViewChild('practicesFemMascAudio') practicesFemMascAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('callAttributesVimeo') callAttributesVimeoRef: ElementRef;
   @ViewChild('tavariBrownVimeo') tavariBrownVimeoRef: ElementRef;
-
+  @ViewChild('matthewKrivanekVimeo') matthewKrivanekVimeoRef: ElementRef;
 
   completedModule: boolean;
   showCompleteBtn: boolean;
@@ -70,6 +70,7 @@ export class Module10Page implements OnInit, AfterViewInit {
   audioDuration1011: number;
   callAttributesVimeoPlayer: Player;
   tavariBrownVimeoPlayer: Player;
+  matthewKrivanekVimeoPlayer: Player;
   tl1 = null;
 
   constructor() { }
@@ -94,6 +95,8 @@ export class Module10Page implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    this.initializeYoutubePlayerPluginWeb();
+    this.initializeVimeoPlayer();
     this.introModule10AudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1001 = this.introModule10AudioRef.nativeElement.duration;
     };
@@ -127,12 +130,19 @@ export class Module10Page implements OnInit, AfterViewInit {
     this.practicesFemMascAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1011 = this.practicesFemMascAudioRef.nativeElement.duration;
     };
+  }
+
+  async initializeVimeoPlayer() {
     this.callAttributesVimeoPlayer = new Player(this.callAttributesVimeoRef.nativeElement, {
       id: 681115797,
       height: 350
     });
     this.tavariBrownVimeoPlayer = new Player(this.tavariBrownVimeoRef.nativeElement, {
       id: 681118655,
+      height: 350
+    });
+    this.matthewKrivanekVimeoPlayer = new Player(this.matthewKrivanekVimeoRef.nativeElement, {
+      id: 727942541,
       height: 350
     });
   }
