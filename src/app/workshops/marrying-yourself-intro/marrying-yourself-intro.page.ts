@@ -22,6 +22,7 @@ export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
 
   @ViewChild('panelContainer2') panelContainer2: ElementRef<HTMLDivElement>;
   @ViewChild('image1') image1: ElementRef<HTMLElement>;
+  @ViewChild('image2') image2: ElementRef<HTMLElement>;
   @ViewChild('panelContainer3') panelContainer3: ElementRef<HTMLDivElement>;
   @ViewChild('primaryPanel2') primaryPanel2: ElementRef<HTMLDivElement>;
   @ViewChild('secondaryPanel2') secondaryPanel2: ElementRef<HTMLDivElement>;
@@ -66,17 +67,17 @@ export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
     .from(this.primaryPanel2.nativeElement, {scale: 0.0})
     .from(this.image1.nativeElement, {scale: 0.0})
     .from(this.secondaryPanel2.nativeElement, {scale: 0.0})
+    .from(this.image2.nativeElement, {scale: 0.0})
     .from(this.tertiaryPanel2.nativeElement, {scale: 0.0});
 
     ScrollTrigger.create({
       animation: this.tlOne,
       trigger: this.panelContainer.nativeElement,
       scroller: this.scrollElement,
-      preventOverlaps: true,
-      start: 'top 70%',
-      end: 'bottom bottom',
+      start: 'top -400%',
+      end: 'bottom -400%',
       scrub: 0.5,
-      // markers: true
+      markers: true
     });
 
     ScrollTrigger.create({
@@ -99,14 +100,14 @@ export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
       trigger: this.panelContainer3.nativeElement,
       scroller: this.scrollElement,
       start: 'top top',
-      end: '+=4000',
+      end: '+=500%',
       scrub: true,
       pin: true,
       anticipatePin: 1,
-      // markers: {
-      //   startColor: 'black',
-      //   endColor: 'pink'
-      // }
+      markers: {
+        startColor: 'black',
+        endColor: 'pink'
+      }
     })
 
     this.initializeVimeoPlayers();

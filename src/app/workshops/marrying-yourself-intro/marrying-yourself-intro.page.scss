@@ -21,18 +21,29 @@
 	position: relative;
 	overflow: hidden;
  	width: 100vw;
-	height: 80vh;
+	height: 100vh;
+}
+
+.panel-container3 {
+	background-image: url('../../../assets/workshop1/intro/heartHandsSun.jpg');
+	background-repeat: none;
+	background-position: center;
+	position: relative;
+	overflow: hidden;
+ 	width: 100vw;
+	height: 100vh;
 }
 
 .panel {
 	position: absolute;
 	width: 100%;
-	height: 80vh;
+	height: 100vh;
 	padding: 0px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	overflow: hidden;
 	h1 {
 		font-size: 5.9vw;
 	}
@@ -45,6 +56,22 @@
 	li {
 		font-size: calc(0.75em + 1vw);
 	}
+}
+
+.panel-title {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate(50%, -50%);
+}
+
+.panel-img {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	object-fit: contain;
+	z-index: 10;
 }
 
 .primary-panel {
