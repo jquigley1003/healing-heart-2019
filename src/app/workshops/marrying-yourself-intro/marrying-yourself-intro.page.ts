@@ -21,6 +21,7 @@ export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
   @ViewChild('tertiaryPanel') tertiaryPanel: ElementRef<HTMLDivElement>;
 
   @ViewChild('panelContainer2') panelContainer2: ElementRef<HTMLDivElement>;
+  @ViewChild('image1') image1: ElementRef<HTMLElement>;
   @ViewChild('panelContainer3') panelContainer3: ElementRef<HTMLDivElement>;
   @ViewChild('primaryPanel2') primaryPanel2: ElementRef<HTMLDivElement>;
   @ViewChild('secondaryPanel2') secondaryPanel2: ElementRef<HTMLDivElement>;
@@ -63,6 +64,7 @@ export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
 
     this.tlThree
     .from(this.primaryPanel2.nativeElement, {scale: 0.0})
+    .from(this.image1.nativeElement, {scale: 0.0})
     .from(this.secondaryPanel2.nativeElement, {scale: 0.0})
     .from(this.tertiaryPanel2.nativeElement, {scale: 0.0});
 
