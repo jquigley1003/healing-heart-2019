@@ -13,27 +13,35 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
   @ViewChild(IonContent) ionContent: IonContent;
   @ViewChild('scrollContainer') scrollContainer: ElementRef;
-  @ViewChild('panelContainer') panelContainer: ElementRef<HTMLDivElement>;
-  @ViewChild('primaryPanel') primaryPanel: ElementRef<HTMLDivElement>;
-  @ViewChild('titlePrimary') titlePrimary: ElementRef<HTMLDivElement>;
-  @ViewChild('infoPrimary') infoPrimary: ElementRef<HTMLDivElement>;
-  @ViewChild('secondaryPanel') secondaryPanel: ElementRef<HTMLDivElement>;
-  @ViewChild('tertiaryPanel') tertiaryPanel: ElementRef<HTMLDivElement>;
-
-  @ViewChild('panelContainer2') panelContainer2: ElementRef<HTMLDivElement>;
+  @ViewChild('panelContainerOne') panelContainerOne: ElementRef<HTMLDivElement>;
+  @ViewChild('primaryPanelOne') primaryPanelOne: ElementRef<HTMLDivElement>;
+  @ViewChild('secondaryPanelOne') secondaryPanelOne: ElementRef<HTMLDivElement>;
+  @ViewChild('tertiaryPanelOne') tertiaryPanelOne: ElementRef<HTMLDivElement>;
   @ViewChild('image1') image1: ElementRef<HTMLElement>;
-  @ViewChild('panelContainer3') panelContainer3: ElementRef<HTMLDivElement>;
-  @ViewChild('primaryPanel2') primaryPanel2: ElementRef<HTMLDivElement>;
-  @ViewChild('secondaryPanel2') secondaryPanel2: ElementRef<HTMLDivElement>;
-  @ViewChild('tertiaryPanel2') tertiaryPanel2: ElementRef<HTMLDivElement>;
+  @ViewChild('image2') image2: ElementRef<HTMLElement>;
+  @ViewChild('image3') image3: ElementRef<HTMLElement>;
+  @ViewChild('image4') image4: ElementRef<HTMLElement>;
+
+  @ViewChild('panelContainerTwo') panelContainerTwo: ElementRef<HTMLDivElement>;
+  @ViewChild('primaryPanelTwo') primaryPanelTwo: ElementRef<HTMLDivElement>;
+
+  @ViewChild('panelContainerThree') panelContainerThree: ElementRef<HTMLDivElement>;
+  @ViewChild('secondaryPanelThree') secondaryPanelThree: ElementRef<HTMLDivElement>;
+
   @ViewChild('introMYJVimeo') introMYJVimeoRef: ElementRef;
+  @ViewChild('lindseyMYJVimeo') lindseyMYJVimeoRef: ElementRef;
+  @ViewChild('kristenMYJVimeo') kristenMYJVimeoRef: ElementRef;
+  @ViewChild('antionetteMYJVimeo') antionetteMYJVimeoRef: ElementRef;
 
   scrollElement: any;
   scrollDetail: any;
-  tlOne = gsap.timeline();
-  tlTwo = gsap.timeline();
-  tlThree = gsap.timeline();
+  tlOne1 = gsap.timeline();
+  tlTwo2 = gsap.timeline();
+  tlThree3 = gsap.timeline();
   introMYJVimeoPlayer: Player;
+  lindseyMYJVimeoPlayer: Player;
+  kristenMYJVimeoPlayer: Player;
+  antionetteMYJVimeoPlayer: Player;
 
   constructor() { }
 
@@ -44,16 +52,23 @@ export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
   async ngAfterViewInit() {
     gsap.registerPlugin (ScrollTrigger);
     this.scrollElement = await this.ionContent.getScrollElement();
-    console.log("scrollElement = ", this.scrollElement);
 
-    this.tlOne
-    .from(this.primaryPanel.nativeElement, {
+    this.tlOne1
+    .from(this.primaryPanelOne.nativeElement, {scale: 0.0})
+    .from(this.image1.nativeElement, {scale: 0.0})
+    .from(this.secondaryPanelOne.nativeElement, {scale: 0.0})
+    .from(this.image2.nativeElement, {scale: 0.0})
+    .from(this.image3.nativeElement, {scale: 0.0})
+    .from(this.image4.nativeElement, {scale: 0.0})
+    .from(this.tertiaryPanelOne.nativeElement, {scale: 0.0});
+
+    this.tlTwo2
+    .from(this.primaryPanelTwo.nativeElement, {
       scale: 0.0
-    })
-    // .from(this.secondaryPanel.nativeElement, {xPercent: -100})
-    // .from(this.tertiaryPanel.nativeElement, {yPercent: -100});
-    this.tlTwo
-    .from(this.secondaryPanel.nativeElement, {
+    });
+
+    this.tlThree3
+    .from(this.secondaryPanelThree.nativeElement, {
       scale: 0.0
     });
 
@@ -62,52 +77,42 @@ export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
     // .from(this.secondaryPanel2.nativeElement, {xPercent: -105})
     // .from(this.tertiaryPanel2.nativeElement, {yPercent: -105});
 
-    this.tlThree
-    .from(this.primaryPanel2.nativeElement, {scale: 0.0})
-    .from(this.image1.nativeElement, {scale: 0.0})
-    .from(this.secondaryPanel2.nativeElement, {scale: 0.0})
-    .from(this.tertiaryPanel2.nativeElement, {scale: 0.0});
-
     ScrollTrigger.create({
-      animation: this.tlOne,
-      trigger: this.panelContainer.nativeElement,
-      scroller: this.scrollElement,
-      preventOverlaps: true,
-      start: 'top 70%',
-      end: 'bottom bottom',
-      scrub: 0.5,
-      // markers: true
-    });
-
-    ScrollTrigger.create({
-      animation: this.tlTwo,
-      trigger: this.panelContainer2.nativeElement,
-      scroller: this.scrollElement,
-      start: 'top 60%',
-      end: 'bottom bottom',
-      scrub: 0.5,
-      // pin: true,
-      // anticipatePin: 1,
-      // markers: {
-      //   startColor: '#6434eb',
-      //   endColor: '#eba434'
-      // }
-    })
-
-    ScrollTrigger.create({
-      animation: this.tlThree,
-      trigger: this.panelContainer3.nativeElement,
+      animation: this.tlOne1,
+      trigger: this.panelContainerOne.nativeElement,
       scroller: this.scrollElement,
       start: 'top top',
-      end: '+=4000',
+      end: '+=500%',
       scrub: true,
       pin: true,
-      anticipatePin: 1,
+      anticipatePin: 1
       // markers: {
       //   startColor: 'black',
       //   endColor: 'pink'
       // }
-    })
+    });
+
+    ScrollTrigger.create({
+      animation: this.tlTwo2,
+      trigger: this.panelContainerTwo.nativeElement,
+      scroller: this.scrollElement,
+      start: 'top 80%',
+      end: 'bottom bottom',
+      scrub: 0.5
+      // markers: {
+      //   startColor: 'black',
+      //   endColor: 'pink'
+      // }
+    });
+
+    ScrollTrigger.create({
+      animation: this.tlThree3,
+      trigger: this.panelContainerThree.nativeElement,
+      scroller: this.scrollElement,
+      start: 'top 60%',
+      end: 'bottom bottom',
+      scrub: 0.5
+    });
 
     this.initializeVimeoPlayers();
   }
@@ -115,6 +120,18 @@ export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
   async initializeVimeoPlayers() {
     this.introMYJVimeoPlayer = new Player(this.introMYJVimeoRef.nativeElement, {
       id: 725062094,
+      height: 350
+    });
+    this.lindseyMYJVimeoPlayer = new Player(this.lindseyMYJVimeoRef.nativeElement, {
+      id: 716847928,
+      height: 350
+    });
+    this.kristenMYJVimeoPlayer = new Player(this.kristenMYJVimeoRef.nativeElement, {
+      id: 716847544,
+      height: 350
+    });
+    this.antionetteMYJVimeoPlayer = new Player(this.antionetteMYJVimeoRef.nativeElement, {
+      id: 727900516,
       height: 350
     });
   }

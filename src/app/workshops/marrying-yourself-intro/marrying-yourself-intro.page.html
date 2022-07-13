@@ -15,7 +15,34 @@
             <!-- To keep accurate scrolltrigger positions use img tag, not ion-img tag -->
             <img class="responsive-image" [routerLink]="['/home']" src="../../../assets/workshop1/intro/heartHandsSun.jpg">
           </div>
-          <h2 class="vimeo-title">Introduction to the Marrying Yourself Journey</h2>
+          <div #panelContainerOne class="panel-container-one">
+            <div #primaryPanelOne class="panel primary-panel-one">
+              <a href="https://www.dreamstime.com/conceptual-hand-writing-showing-who-i-question-business-photo-showcasing-asked-identity-thinking-doubt-psycology-myst-mystery-image114012216" target="blank">
+                <img class="panel-img" #image1 src="../../../assets/workshop1/intro/whoAmI.jpg" 
+                alt="who am I written on notepad - Photo 114012216 / Know Yourself © Artur Szczybylo | Dreamstime.com">
+              </a>
+              <h1 class="panel-title">To Know Yourself</h1>
+            </div>
+            <div #secondaryPanelOne class="panel secondary-panel-one">
+              <a href="https://www.dreamstime.com/dice-forms-expressions-self-love-self-care-dice-forms-expressions-self-love-self-care-image216164421" target="blank">
+                <img class="panel-img" #image2 src="../../../assets/workshop1/intro/selfCareLove.jpg" 
+                alt="self care self love - Photo 216164421 © Frank Harms | Dreamstime.com">
+              </a>
+              <a href="https://www.dreamstime.com/silhouette-narcissistic-woman-crown-her-head-hand-gesture-heart-reflection-mirror-concept-narcissism-image113503296" target="blank">
+                <img class="panel-img" #image3 src="../../../assets/workshop1/intro/loveSelfMirrorMan.jpg" 
+                alt="Photo 113503296 © Prazis | Dreamstime.com">
+              </a>
+              <a href="https://www.dreamstime.com/silhouette-narcissist-man-hand-gesture-heart-reflection-mirror-crown-his-head-concept-narcissism-selfishness-image113503360" target="blank">
+                <img class="panel-img" #image4 src="../../../assets/workshop1/intro/loveSelfMirrorWoman.jpg" 
+                alt="Photo 113503360 © Prazis | Dreamstime.com">
+              </a>
+              <h1 class="panel-title">Is To Love Yourself</h1>
+            </div>
+            <div #tertiaryPanelOne class="panel tertiary-panel-one">
+              <h1 class="panel-title-final">The Marrying Yourself Journey</h1>
+            </div>
+          </div>
+          <h2 class="vimeo-title">Introduction to The Marrying Yourself Journey</h2>
           <div class="vimeo-container">
             <div #introMYJVimeo>
             </div>
@@ -23,8 +50,8 @@
           <!-- <div class="ion-text-center">
             <p>After watching the video, scroll down!</p>
           </div> -->
-          <div #panelContainer class="panel-container">
-            <div #primaryPanel class="panel primary-panel">
+          <div #panelContainerTwo class="panel-container-two">
+            <div #primaryPanelTwo class="panel primary-panel-two">
               <div #titlePrimary>
                 <h2>There are 18 Modules to this course.</h2><br>
               </div>
@@ -53,8 +80,8 @@
               <!-- <div class="footer">Keep Scrolling Below ↓↓↓↓↓</div> -->
             </div>
           </div>
-          <div #panelContainer2 class="panel-container2">
-            <div #secondaryPanel class="panel secondary-panel">
+          <div #panelContainerThree class="panel-container-three">
+            <div #secondaryPanelThree class="panel secondary-panel-three">
               <div>
                 <h2>The best way to approach this is to make it yours.</h2>
               </div>
@@ -79,47 +106,63 @@
                 </p>
               </div>
             </div>
-            <!-- <div #tertiaryPanel class="panel tertiary-panel">
-              <div>
-                <p>Tertiary Panel</p>
+          </div>
+          <div class="panel-container-three">
+            <div class="panel tertiary-panel-four">
+              <p>Ready to sign up for this journey?</p>
+              <p>The cost is $500 for this online experience. It will take time as the goal is to take you through a year 
+                of guided inner work. It can take less, it can take more. It is YOURS. Make it yours. My suggestion is that 
+                you make a weekly date with yourself — either two hours or one hour earlier in the week and one hour later 
+                in the week. This is a deep dive. It does call upon time and energy. Some of the modules encourage you to 
+                spend time in it every few days as it takes you through different axioms, or archetypes, or the 
+                body/mind/heart/soul connection. Modules can contain audio, videos, Ted Talks, music and more. You can always listen 
+                to any of them while you take a walk.  What is most important is that you are present to the offering whatever 
+                it is. Approach it as morsels of something delicious that is meant to melt in your mouth and satisfy you.</p>
+              <p>Once you sign up, you will receive a Zoom link for group meeting on a Wednesday or Thursday evening 
+                where people can meet and share about the engagement process.
+              </p>
+            </div>
+          </div>
+          <div class="panel-container-three">
+            <div class="panel tertiary-panel-four">
+              <h1 class="panel-title-final">Testimonials</h1>
+              <div style="text-align: center;">
+                <h2 class="section-title">Lindsey</h2>
+                <div class="video-player">
+                  <div #lindseyMYJVimeo>
+                  </div>
+                </div>
+                <p><i></i></p>
               </div>
-              <div class="footer">Keep Scrolling Below ↓↓↓↓↓</div>
-            </div> -->
-          </div>
-
-          <div class="panel-next1">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi rerum quisquam placeat earum animi, beatae
-            accusamus eveniet tempora adipisci nam repellat dolorem. Molestiae cumque dignissimos nobis maxime impedit
-            velit amet?
-          </div>
-          <div class="panel-next2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum voluptatum esse, repellat fuga ad quasi
-            error molestiae excepturi deleniti saepe adipisci sint beatae dolores, minima natus commodi eius maxime?
-          </div>
-
-          <div #panelContainer3 class="panel-container2">
-            <div #primaryPanel2 class="panel primary-panel2">
-              <img #image1 src="../../../assets/WomanHidingEyes.jpg">
-              <h1>To Know Yourself</h1>
-            </div>
-            <div #secondaryPanel2 class="panel secondary-panel2">
-              <h1>Is To Love Yourself</h1>
-            </div>
-            <div #tertiaryPanel2 class="panel tertiary-panel2">
-              <h1>The Marrying Yourself Journey</h1>
             </div>
           </div>
-          <div class="panel-next3">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi rerum quisquam placeat earum animi, beatae
-            accusamus eveniet tempora adipisci nam repellat dolorem. Molestiae cumque dignissimos nobis maxime impedit
-            velit amet?
+          <div class="panel-container-three">
+            <div class="panel tertiary-panel-four">
+              <div style="text-align: center;">
+                <h2 class="section-title">Kristen</h2>
+                <div class="video-player">
+                  <div #kristenMYJVimeo>
+                  </div>
+                </div>
+                <p><i></i></p>
+              </div>
+            </div>
           </div>
-          <div class="panel-next4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum voluptatum esse, repellat fuga ad quasi
-            error molestiae excepturi deleniti saepe adipisci sint beatae dolores, minima natus commodi eius maxime?
-          </div>        
+          <div class="panel-container-three">
+            <div class="panel tertiary-panel-four">
+              <div style="text-align: center;">
+                <h2 class="section-title">Antionette</h2>
+                <div class="video-player">
+                  <div #antionetteMYJVimeo>
+                  </div>
+                </div>
+                <p><i></i></p>
+              </div>
+            </div>
+          </div>
         </div>
       </ion-col>
+      
       <ion-col class="ion-align-items-center ion-text-center">
           <ion-button [routerLink]="['/workshops']">Back to Workshops</ion-button>
       </ion-col>
