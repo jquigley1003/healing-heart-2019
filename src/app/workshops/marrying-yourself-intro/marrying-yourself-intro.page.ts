@@ -24,6 +24,24 @@ export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
 
   @ViewChild('panelContainerTwo') panelContainerTwo: ElementRef<HTMLDivElement>;
   @ViewChild('primaryPanelTwo') primaryPanelTwo: ElementRef<HTMLDivElement>;
+  @ViewChild('module01') module01: ElementRef<HTMLDivElement>;
+  @ViewChild('module02') module02: ElementRef<HTMLDivElement>;
+  @ViewChild('module03') module03: ElementRef<HTMLDivElement>;
+  @ViewChild('module04') module04: ElementRef<HTMLDivElement>;
+  @ViewChild('module05') module05: ElementRef<HTMLDivElement>;
+  @ViewChild('module06') module06: ElementRef<HTMLDivElement>;
+  @ViewChild('module07') module07: ElementRef<HTMLDivElement>;
+  @ViewChild('module08') module08: ElementRef<HTMLDivElement>;
+  @ViewChild('module09') module09: ElementRef<HTMLDivElement>;
+  @ViewChild('module10') module10: ElementRef<HTMLDivElement>;
+  @ViewChild('module11') module11: ElementRef<HTMLDivElement>;
+  @ViewChild('module12') module12: ElementRef<HTMLDivElement>;
+  @ViewChild('module13') module13: ElementRef<HTMLDivElement>;
+  @ViewChild('module14') module14: ElementRef<HTMLDivElement>;
+  @ViewChild('module15') module15: ElementRef<HTMLDivElement>;
+  @ViewChild('module16') module16: ElementRef<HTMLDivElement>;
+  @ViewChild('module17') module17: ElementRef<HTMLDivElement>;
+  @ViewChild('module18') module18: ElementRef<HTMLDivElement>;
 
   @ViewChild('panelContainerThree') panelContainerThree: ElementRef<HTMLDivElement>;
   @ViewChild('secondaryPanelThree') secondaryPanelThree: ElementRef<HTMLDivElement>;
@@ -63,9 +81,25 @@ export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
     .from(this.tertiaryPanelOne.nativeElement, {scale: 0.0});
 
     this.tlTwo2
-    .from(this.primaryPanelTwo.nativeElement, {
-      scale: 0.0
-    });
+    .from(this.primaryPanelTwo.nativeElement, {scale: 0.0})
+    .from(this.module01.nativeElement, {scale: 0.0})
+    .from(this.module02.nativeElement, {scale: 0.0})
+    .from(this.module03.nativeElement, {scale: 0.0})
+    .from(this.module04.nativeElement, {scale: 0.0})
+    .from(this.module05.nativeElement, {scale: 0.0})
+    .from(this.module06.nativeElement, {scale: 0.0})
+    .from(this.module07.nativeElement, {scale: 0.0})
+    .from(this.module08.nativeElement, {scale: 0.0})
+    .from(this.module09.nativeElement, {scale: 0.0})
+    .from(this.module10.nativeElement, {scale: 0.0})
+    .from(this.module11.nativeElement, {scale: 0.0})
+    .from(this.module12.nativeElement, {scale: 0.0})
+    .from(this.module13.nativeElement, {scale: 0.0})
+    .from(this.module14.nativeElement, {scale: 0.0})
+    .from(this.module15.nativeElement, {scale: 0.0})
+    .from(this.module16.nativeElement, {scale: 0.0})
+    .from(this.module17.nativeElement, {scale: 0.0})
+    .from(this.module18.nativeElement, {scale: 0.0});
 
     this.tlThree3
     .from(this.secondaryPanelThree.nativeElement, {
@@ -85,7 +119,8 @@ export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
       end: '+=500%',
       scrub: true,
       pin: true,
-      anticipatePin: 1
+      anticipatePin: 1,
+      pinType: 'fixed'
       // markers: {
       //   startColor: 'black',
       //   endColor: 'pink'
@@ -97,7 +132,7 @@ export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
       trigger: this.panelContainerTwo.nativeElement,
       scroller: this.scrollElement,
       start: 'top 80%',
-      end: 'bottom bottom',
+      end: 'bottom 40%',
       scrub: 0.5
       // markers: {
       //   startColor: 'black',
