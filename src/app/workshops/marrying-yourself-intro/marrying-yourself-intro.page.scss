@@ -82,9 +82,11 @@
 
 .panel-img {
 	position: absolute;
-	top: 50%;
+	display: block;
+	object-fit: fill;
+	object-position: center;
+	top: 0;
 	left: 0;
-	transform: translateY(-50%);
 	width: 100%;
   height: auto;
 	z-index: 10;
