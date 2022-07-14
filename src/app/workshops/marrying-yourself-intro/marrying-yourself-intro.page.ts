@@ -10,7 +10,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
   templateUrl: './marrying-yourself-intro.page.html',
   styleUrls: ['./marrying-yourself-intro.page.scss'],
 })
-export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
+export class MarryingYourselfIntroPage implements OnInit {
   @ViewChild(IonContent) ionContent: IonContent;
   @ViewChild('scrollContainer') scrollContainer: ElementRef;
   @ViewChild('panelContainerOne') panelContainerOne: ElementRef<HTMLDivElement>;
@@ -69,7 +69,7 @@ export class MarryingYourselfIntroPage implements OnInit, AfterViewInit {
     
   }
 
-  async ngAfterViewInit() {
+  async ionViewDidEnter() {
     gsap.registerPlugin (ScrollTrigger);
     this.scrollElement = await this.ionContent.getScrollElement();
 
