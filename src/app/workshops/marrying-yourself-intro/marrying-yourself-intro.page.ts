@@ -182,4 +182,10 @@ export class MarryingYourselfIntroPage implements OnInit {
     this.scrollDetail = ev.detail;
   }
 
+  ionViewDidLeave() {
+    this.tlOne1.kill();
+    this.tlTwo2.kill();
+    this.tlThree3.kill();
+  }
+
 }
