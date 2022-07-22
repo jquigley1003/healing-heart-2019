@@ -23,7 +23,7 @@ ol {
 
 .panel-container-one {
 	// Photo 76091613 / Beach © Radoslav Radev | Dreamstime.com - beachSunrise.jpg
-	background-image: url('../../../assets/workshop1/intro/heartHandsSun.jpg');
+	background-image: url('../../../assets/workshop1/intro/heartHandsSun1500x800.jpg');
 	margin: 0px;
 	background-repeat: none;
 	background-size: cover;
@@ -75,7 +75,7 @@ ol {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	overflow: hidden;
+	// overflow: hidden;
 	h1 {
 		font-size: 5.9vw;
 	}
@@ -101,8 +101,17 @@ ol {
 }
 
 .panel-img {
+	display: block;
+	object-fit: contain;
+	object-position: top;
 	width: 100%;
-  height: auto;
+	height: auto;
+}
+
+.logo-img-center {
+	display: block;
+	width: 25%;
+	height: 25%;
 }
 
 .transparent-panel {
@@ -112,18 +121,22 @@ ol {
 
 .primary-panel-one {
 	background-color: var(--ion-color-primary);
+	width: 100vw;
 }
 
 .secondary-panel-one {
 	background-color: var(--ion-color-secondary);
+	width: 100vw;
  }
 
 .tertiary-panel-one {
 	background-color: var(--ion-color-tertiary);
+	width: 100vw;
  }
 
  .final-panel-one {
 	background-color: none;
+	width: 100vw;
  }
 
 .primary-panel-two {

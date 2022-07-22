@@ -17,7 +17,8 @@ export class MarryingYourselfIntroPage implements OnInit {
   @ViewChild('primaryPanelOne') primaryPanelOne: ElementRef<HTMLDivElement>;
   @ViewChild('secondaryPanelOne') secondaryPanelOne: ElementRef<HTMLDivElement>;
   @ViewChild('tertiaryPanelOne') tertiaryPanelOne: ElementRef<HTMLDivElement>;
-  @ViewChild('finalPanelOne') finalPanelOne: ElementRef<HTMLDivElement>;
+  @ViewChild('finalLogo') finalLogo: ElementRef<HTMLDivElement>;
+  @ViewChild('finalTitle') finalTitle: ElementRef<HTMLDivElement>;
   @ViewChild('image1') image1: ElementRef<HTMLElement>;
   @ViewChild('image2') image2: ElementRef<HTMLElement>;
   @ViewChild('image3') image3: ElementRef<HTMLElement>;
@@ -81,7 +82,8 @@ export class MarryingYourselfIntroPage implements OnInit {
     .from(this.tertiaryPanelOne.nativeElement, {duration: 1.5, scale: 0.0})
     .from(this.image3.nativeElement, {duration: 1.5, scale: 0.0})
     .from(this.image4.nativeElement, {duration: 1.5, scale: 0.0})
-    .from(this.finalPanelOne.nativeElement, {scale: 0.0, duration: 1.5, ease: "back.out(2)"});
+    .from(this.finalLogo.nativeElement, {duration: 2.0, scale: 0.0})
+    .from(this.finalTitle.nativeElement, { scale: 0.0, duration: 2.0, ease: "back.out(2)"}, ">-1.5");
 
     this.tlTwo2
     .from(this.primaryPanelTwo.nativeElement, {scale: 0.0})
