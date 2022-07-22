@@ -74,13 +74,13 @@ export class MarryingYourselfIntroPage implements OnInit {
     this.scrollElement = await this.ionContent.getScrollElement();
 
     this.tlOne1
-    .from(this.primaryPanelOne.nativeElement, {scale: 0.0})
-    .from(this.image1.nativeElement, {scale: 0.0})
-    .from(this.secondaryPanelOne.nativeElement, {scale: 0.0})
-    .from(this.image2.nativeElement, {scale: 0.0})
-    .from(this.image3.nativeElement, {scale: 0.0})
-    .from(this.image4.nativeElement, {scale: 0.0})
-    .from(this.tertiaryPanelOne.nativeElement, {scale: 0.0});
+    .from(this.primaryPanelOne.nativeElement, {scale: 0.0, delay: 1})
+    .from(this.image1.nativeElement, {scale: 0.0, delay: 1})
+    .from(this.secondaryPanelOne.nativeElement, {scale: 0.0, delay: 1})
+    .from(this.image2.nativeElement, {scale: 0.0, delay: 0.5})
+    .from(this.image3.nativeElement, {scale: 0.0, delay: 0.5})
+    .from(this.image4.nativeElement, {scale: 0.0, delay: 0.5})
+    .from(this.tertiaryPanelOne.nativeElement, {scale: 0.0, duration: 3, delay: 0.5, ease: "back.out(2)"});
 
     this.tlTwo2
     .from(this.primaryPanelTwo.nativeElement, {scale: 0.0})
@@ -108,26 +108,23 @@ export class MarryingYourselfIntroPage implements OnInit {
       scale: 0.0
     });
 
-    // this.tlTwo
-    // .from(this.primaryPanel2.nativeElement, {xPercent: 105})
-    // .from(this.secondaryPanel2.nativeElement, {xPercent: -105})
-    // .from(this.tertiaryPanel2.nativeElement, {yPercent: -105});
+    // ScrollTrigger.create({
+    //   animation: this.tlOne1,
+    //   trigger: this.panelContainerOne.nativeElement,
+    //   scroller: this.scrollElement,
+    //   start: 'top top',
+    //   end: '+=500%',
+    //   scrub: true,
+    //   pin: true,
+    //   anticipatePin: 1,
+    //   pinType: 'fixed'
+    //   // markers: {
+    //   //   startColor: 'black',
+    //   //   endColor: 'pink'
+    //   // }
+    // });
 
-    ScrollTrigger.create({
-      animation: this.tlOne1,
-      trigger: this.panelContainerOne.nativeElement,
-      scroller: this.scrollElement,
-      start: 'top top',
-      end: '+=500%',
-      scrub: true,
-      pin: true,
-      anticipatePin: 1,
-      pinType: 'fixed'
-      // markers: {
-      //   startColor: 'black',
-      //   endColor: 'pink'
-      // }
-    });
+    this.tlOne1.play();
 
     ScrollTrigger.create({
       animation: this.tlTwo2,
