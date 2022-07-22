@@ -74,13 +74,13 @@ export class MarryingYourselfIntroPage implements OnInit {
     this.scrollElement = await this.ionContent.getScrollElement();
 
     this.tlOne1
-    .from(this.primaryPanelOne.nativeElement, {scale: 0.0, delay: 1})
-    .from(this.image1.nativeElement, {scale: 0.0, delay: 1})
-    .from(this.secondaryPanelOne.nativeElement, {scale: 0.0, delay: 1})
-    .from(this.image2.nativeElement, {scale: 0.0, delay: 0.5})
-    .from(this.image3.nativeElement, {scale: 0.0, delay: 0.5})
-    .from(this.image4.nativeElement, {scale: 0.0, delay: 0.5})
-    .from(this.tertiaryPanelOne.nativeElement, {scale: 0.0, duration: 3, delay: 0.5, ease: "back.out(2)"});
+    .from(this.primaryPanelOne.nativeElement, {duration: 1.5, scale: 0.0, delay: 1.0})
+    .from(this.image1.nativeElement, {duration: 1.5, scale: 0.0})
+    .from(this.secondaryPanelOne.nativeElement, {duration: 1.5, scale: 0.0})
+    .from(this.image2.nativeElement, {duration: 1.5, scale: 0.0})
+    .from(this.image3.nativeElement, {duration: 1.5, scale: 0.0})
+    .from(this.image4.nativeElement, {duration: 1.5, scale: 0.0})
+    .from(this.tertiaryPanelOne.nativeElement, {scale: 0.0, duration: 1.5, ease: "back.out(2)"});
 
     this.tlTwo2
     .from(this.primaryPanelTwo.nativeElement, {scale: 0.0})
