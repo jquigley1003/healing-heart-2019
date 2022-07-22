@@ -17,6 +17,7 @@ export class MarryingYourselfIntroPage implements OnInit {
   @ViewChild('primaryPanelOne') primaryPanelOne: ElementRef<HTMLDivElement>;
   @ViewChild('secondaryPanelOne') secondaryPanelOne: ElementRef<HTMLDivElement>;
   @ViewChild('tertiaryPanelOne') tertiaryPanelOne: ElementRef<HTMLDivElement>;
+  @ViewChild('finalPanelOne') finalPanelOne: ElementRef<HTMLDivElement>;
   @ViewChild('image1') image1: ElementRef<HTMLElement>;
   @ViewChild('image2') image2: ElementRef<HTMLElement>;
   @ViewChild('image3') image3: ElementRef<HTMLElement>;
@@ -66,11 +67,10 @@ export class MarryingYourselfIntroPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    
+    gsap.registerPlugin (ScrollTrigger);
   }
 
   async ionViewDidEnter() {
-    gsap.registerPlugin (ScrollTrigger);
     this.scrollElement = await this.ionContent.getScrollElement();
 
     this.tlOne1
@@ -78,9 +78,10 @@ export class MarryingYourselfIntroPage implements OnInit {
     .from(this.image1.nativeElement, {duration: 1.5, scale: 0.0})
     .from(this.secondaryPanelOne.nativeElement, {duration: 1.5, scale: 0.0})
     .from(this.image2.nativeElement, {duration: 1.5, scale: 0.0})
+    .from(this.tertiaryPanelOne.nativeElement, {duration: 1.5, scale: 0.0})
     .from(this.image3.nativeElement, {duration: 1.5, scale: 0.0})
     .from(this.image4.nativeElement, {duration: 1.5, scale: 0.0})
-    .from(this.tertiaryPanelOne.nativeElement, {scale: 0.0, duration: 1.5, ease: "back.out(2)"});
+    .from(this.finalPanelOne.nativeElement, {scale: 0.0, duration: 1.5, ease: "back.out(2)"});
 
     this.tlTwo2
     .from(this.primaryPanelTwo.nativeElement, {scale: 0.0})

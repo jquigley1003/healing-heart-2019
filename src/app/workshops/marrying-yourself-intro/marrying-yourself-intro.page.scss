@@ -31,7 +31,7 @@ ol {
 	position: relative;
 	overflow: hidden;
  	width: 100vw;
-	height: fit-content;
+	height: 100%;
 	
 }
 
@@ -91,11 +91,6 @@ ol {
 }
 
 .panel-title {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translate(50%, -50%);
-	z-index: 1;
 	color: white;
 	text-shadow: black 2px 2px 2px;
 }
@@ -124,6 +119,10 @@ ol {
  }
 
 .tertiary-panel-one {
+	background-color: var(--ion-color-tertiary);
+ }
+
+ .final-panel-one {
 	background-color: none;
  }
 
