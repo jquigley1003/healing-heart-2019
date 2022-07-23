@@ -240,9 +240,21 @@ width: 100vw;
   background-repeat: no-repeat;
   // background: #42e317;
   min-height: 350px;
-	margin: 0px auto;
-	width: 85vw;
+	// width: 0px auto;
+	// margin: 0px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	overflow: scroll;
+}
+
+.video-title {
+	text-align: center;
+	font-size: 2rem;
+  font-weight: bold;
+	color: var(--ion-color-primary);
+	text-shadow: 2px 2px 4px var(--ion-color-secondary);
 }
 
 .vimeo-title {
