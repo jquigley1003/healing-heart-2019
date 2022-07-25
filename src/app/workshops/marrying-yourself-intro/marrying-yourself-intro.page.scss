@@ -2,6 +2,10 @@ ol {
 	list-style: none;
 }
 
+.spacer-bottom {
+	margin-bottom: 2rem;
+}
+
 .responsive-image {
   width: 100%;
   height: auto;
@@ -50,18 +54,19 @@ ol {
 }
 
 .panel-container-four {
-	position: relative;
-	overflow: hidden;
- 	width: 100vw;
-	height: 100vh;
-}
-
-.panel-container-five {
-	position: relative;
-	overflow: hidden;
- 	width: 100vw;
-	height: 100vh;
-	background-color: var(--ion-color-primary);
+	background-color: var(--ion-color-tertiary);
+	h1 {
+		font-size: 5.9vw;
+	}
+	h2 {
+		font-size: 3.0vh;
+	}
+	p {
+		font-size: calc(0.75em + 1vw);
+	}
+	li {
+		font-size: calc(0.75em + 1vw);
+	}
 }
 
 .panel {
@@ -116,8 +121,6 @@ ol {
 }
 
 .logo-img-center {
-	display: block;
-	width: 25%;
 	height: 25%;
 }
 
@@ -149,8 +152,15 @@ width: 100vw;
 .module-intro {
 	font-family: 'Balthazar Regular', serif;
 	font-weight: bold;
-	font-size: 2.8vh;
-	margin: 0px 2rem;
+	margin: 10px;
+	p {
+		font-size: 3.9vh;
+	}
+}
+
+.panel-module-intro {
+	margin: 0px;
+	background-color: var(--ion-color-primary);
 }
 
 .panel-module-primary {
@@ -239,7 +249,7 @@ width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
   // background: #42e317;
-  min-height: 350px;
+  // min-height: 350px;
 	// width: 0px auto;
 	// margin: 0px auto;
 	display: flex;
@@ -265,15 +275,15 @@ width: 100vw;
 	text-shadow: 2px 2px 4px var(--ion-color-secondary);
 }
 
-.vimeo-container {
+.vimeo-container-intro {
 	height: 350px;
   position: relative;
 	div {
-		margin: 0;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		margin: 0;
 	}
 }
 

@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { IonContent } from '@ionic/angular';
 
+import {YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
 import Player from '@vimeo/player';
 import { gsap} from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -152,6 +153,12 @@ export class MarryingYourselfIntroPage implements OnInit {
     });
 
     this.initializeVimeoPlayers();
+    this.initializeYoutubePlayerPluginWeb();
+  }
+
+  async initializeYoutubePlayerPluginWeb() {
+    const options1 = {playerId: 'youtube-player0101', playerSize: {width: 640, height: 360}, videoId: 'HpvK9Af4aiA'};
+    const result1 = await YoutubePlayerWeb.initialize(options1);
   }
 
   async initializeVimeoPlayers() {
@@ -182,10 +189,15 @@ export class MarryingYourselfIntroPage implements OnInit {
     this.scrollDetail = ev.detail;
   }
 
+  async destroyYoutubePlayerPluginWeb() {
+    const result1 = await YoutubePlayerWeb.destroy('youtube-player0101');
+  }
+
   ionViewDidLeave() {
     this.tlOne1.kill();
     this.tlTwo2.kill();
     this.tlThree3.kill();
+    this.destroyYoutubePlayerPluginWeb();
   }
 
 }
