@@ -208,9 +208,28 @@ width: 100vw;
 }
 
 .secondary-panel-three {
+	background-image: url('../../../assets/workshop1/intro/caveWithBluesPurples.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
 	padding: 0px 20px;
-	background-color: var(--ion-color-secondary);
+	background-color: rgba(var(--ion-color-secondary-rgb), 0.5);
 	z-index: 2;
+	color: white;
+	font-weight: bold;
+	text-shadow: var(--ion-color-dark) 3px 3px 2px;
+ }
+
+ .light-background {
+	background-color: rgba(var(--ion-color-light-rgb), 0.5);
+	border: rgba(var(--ion-color-light-rgb), 0.5) solid 2px;
+	border-radius: 10px;
+ }
+
+ .dark-background {
+	padding: 0px 10px;
+	background-color: rgba(var(--ion-color-dark-rgb), 0.5);
+	border: rgba(var(--ion-color-light-rgb), 0.5) solid 2px;
+	border-radius: 10px;
  }
 
 .tertiary-panel-four {
