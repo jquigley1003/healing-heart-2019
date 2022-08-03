@@ -47,6 +47,11 @@
   src: url(/assets/fonts/HelveticaNeue-Light.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "Kalam Regular";
+  src: url(assets/fonts/Kalam-Regular.ttf) format("truetype");
+}
+
 
 /* custom background color change animation */
 
@@ -185,6 +190,11 @@ audio {
 .film-cryptic {
 	font-family: 'Film Cryptic', serif;
 	font-size: 2em;
+}
+
+.kalam {
+	font-family: 'Kalam Regular', sans-serif;
+	font-size: 1.4em;
 }
 
 .large-font {

@@ -126,12 +126,17 @@ ol {
 }
 
 .logo-img-center {
+	padding-right: 0.7rem;
 	height: 25%;
 }
 
 .transparent-panel {
 	background: transparent;
 	margin: 0px 2rem;
+	p {
+		font-weight: bold;
+		color: var(--ion-color-primary);
+	}
 }
 
 .primary-panel-one {
