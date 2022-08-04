@@ -2,6 +2,10 @@ ol {
 	list-style: none;
 }
 
+.spacer-top {
+	margin-top: 2rem;
+}
+
 .spacer-bottom {
 	margin-bottom: 2rem;
 }
@@ -44,6 +48,9 @@ ol {
 	overflow: hidden;
  	width: 100vw;
 	height: 100%;
+	background-image: url('../../../assets/workshop1/intro/caveWithBluesPurples.jpg');
+	background-repeat: repeat-y;
+	background-size: contain;
 }
 
 .panel-container-three {
@@ -126,8 +133,8 @@ ol {
 }
 
 .logo-img-center {
-	padding-right: 0.7rem;
-	height: 25%;
+	margin-top: 7.5vw;
+	height: 14vw;
 }
 
 .transparent-panel {

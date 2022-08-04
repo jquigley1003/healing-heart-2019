@@ -52,6 +52,11 @@
   src: url(assets/fonts/Kalam-Regular.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "Manrope";
+  src: url(assets/fonts/Manrope-VariableFont_wght.ttf) format("truetype");
+}
+
 
 /* custom background color change animation */
 
@@ -194,6 +199,11 @@ audio {
 
 .kalam {
 	font-family: 'Kalam Regular', sans-serif;
+	font-size: 1.4em;
+}
+
+.manrope {
+	font-family: 'Manrope', sans-serif;
 	font-size: 1.4em;
 }
 
