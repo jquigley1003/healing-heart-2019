@@ -54,6 +54,9 @@ ol {
 }
 
 .panel-container-three {
+	background-image: url('../../../assets/workshop1/intro/caveWithBluesPurples.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
 	position: relative;
 	overflow: hidden;
  	width: 100vw;
@@ -173,6 +176,14 @@ width: 100vw;
 	p {
 		font-size: 3.9vh;
 	}
+	ion-list {
+		background: transparent;
+	}
+	ion-item {
+		--background: transparent;
+		font-family: 'Balthazar Regular', serif;
+		font-size: 3.9vh;
+	}
 }
 
 .panel-module-intro {
@@ -182,10 +193,11 @@ width: 100vw;
 
 .panel-module-primary {
 	margin: 0px;
-	height: 30vh;
+	height: -moz-fit-content;
+	height: fit-content;
 	background-color: var(--ion-color-primary);
 	padding: 0px 10px;
-	h3 {
+	p {
 		text-align: center;
 		font-family: 'Balthazar Regular', serif;
   	font-weight: bold;
@@ -195,10 +207,11 @@ width: 100vw;
 
 .panel-module-secondary {
 	margin: 0px;
-	height: 30vh;
+	height: -moz-fit-content;
+	height: fit-content;
 	background-color: var(--ion-color-secondary);
 	padding: 0px 10px;
-	h3 {
+	p {
 		text-align: center;
 		font-family: 'Balthazar Regular', serif;
   	font-weight: bold;
@@ -208,10 +221,11 @@ width: 100vw;
 
 .panel-module-tertiary {
 	margin: 0px;
-	height: 30vh;
+	height: -moz-fit-content;
+	height: fit-content;
 	background-color: var(--ion-color-tertiary);
 	padding: 0px 10px;
-	h3 {
+	p {
 		text-align: center;
 		font-family: 'Balthazar Regular', serif;
   	font-weight: bold;
@@ -220,11 +234,8 @@ width: 100vw;
 }
 
 .secondary-panel-three {
-	background-image: url('../../../assets/workshop1/intro/caveWithBluesPurples.jpg');
-	background-repeat: no-repeat;
-	background-position: center;
 	padding: 0px 20px;
-	background-color: rgba(var(--ion-color-secondary-rgb), 0.5);
+	
 	z-index: 2;
 	color: white;
 	font-weight: bold;

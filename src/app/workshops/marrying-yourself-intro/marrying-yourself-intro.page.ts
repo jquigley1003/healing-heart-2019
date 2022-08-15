@@ -86,24 +86,24 @@ export class MarryingYourselfIntroPage implements OnInit {
 
     this.tlTwo2
     .from(this.primaryPanelTwo.nativeElement, {scale: 0.0, duration: 3.0})
-    .from(this.module01.nativeElement, {x: -4000, duration: 2.0}, ">-1.5")
-    .from(this.module02.nativeElement, {x: 4000, duration: 2.0})
-    .from(this.module03.nativeElement, {x: -4000, duration: 2.0})
-    .from(this.module04.nativeElement, {x: 4000, duration: 2.0})
-    .from(this.module05.nativeElement, {x: -4000, duration: 2.0})
-    .from(this.module06.nativeElement, {x: 4000, duration: 2.0})
-    .from(this.module07.nativeElement, {x: -4000, duration: 2.0})
-    .from(this.module08.nativeElement, {x: 4000, duration: 2.0})
-    .from(this.module09.nativeElement, {x: -4000, duration: 2.0})
-    .from(this.module10.nativeElement, {x: 4000, duration: 2.0})
-    .from(this.module11.nativeElement, {x: -4000, duration: 2.0})
-    .from(this.module12.nativeElement, {x: 4000, duration: 2.0})
-    .from(this.module13.nativeElement, {x: -4000, duration: 2.0})
-    .from(this.module14.nativeElement, {x: 4000, duration: 2.0})
-    .from(this.module15.nativeElement, {x: -4000, duration: 2.0})
-    .from(this.module16.nativeElement, {x: 4000, duration: 2.0})
-    .from(this.module17.nativeElement, {x: -4000, duration: 2.0})
-    .from(this.module18.nativeElement, {x: 4000, duration: 2.0});
+    .from(this.module01.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0, delay: 3.0})
+    .from(this.module02.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0})
+    .from(this.module03.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0})
+    .from(this.module04.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0})
+    .from(this.module05.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0})
+    .from(this.module06.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0})
+    .from(this.module07.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0})
+    .from(this.module08.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0})
+    .from(this.module09.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0})
+    .from(this.module10.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0})
+    .from(this.module11.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0})
+    .from(this.module12.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0})
+    .from(this.module13.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0})
+    .from(this.module14.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0})
+    .from(this.module15.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0})
+    .from(this.module16.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0})
+    .from(this.module17.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0})
+    .from(this.module18.nativeElement, {scale: 0.0, opacity:0.0, duration: 2.0});
 
     this.tlThree3
     .from(this.secondaryPanelThree.nativeElement, {
@@ -133,7 +133,7 @@ export class MarryingYourselfIntroPage implements OnInit {
       trigger: this.panelContainerTwo.nativeElement,
       scroller: this.scrollElement,
       start: 'top 80%',
-      end: 'bottom 60%',
+      end: 'bottom 30%',
       scrub: 0.5
       // markers: {
       //   startColor: 'black',
