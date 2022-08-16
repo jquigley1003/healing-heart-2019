@@ -107,7 +107,7 @@ ol {
 		font-size: 5.9vw;
 	}
 	h2 {
-		font-size: 3.0vh;
+		font-size: 5.0vh;
 	}
 	p {
 		font-size: calc(0.75em + 1vw);
@@ -129,8 +129,16 @@ ol {
 	}
 }
 
+.buy-title {
+	margin-bottom: 2rem;
+	text-align: center;
+  font-weight: bold;
+	text-shadow: 2px 2px 4px var(--ion-color-secondary);
+}
+
 .price-cut {
-	text-decoration: red line-through 1px;
+	-webkit-text-decoration-line: red line-through 1px;
+	text-decoration-line: red line-through 1px;
 }
 
 .buy-course {
