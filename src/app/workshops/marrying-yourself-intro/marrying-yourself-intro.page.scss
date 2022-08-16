@@ -1,3 +1,19 @@
+ion-card-title {
+  color: var(ion-color-dark);
+  height: 2rem;
+}
+
+ion-card-subtitle {
+  color: var(ion-color-dark);
+  height: 8rem;
+}
+
+ion-card-content {
+  color: var(ion-color-dark);
+  text-align: center;
+  height: 10rem;
+}
+
 ol {
 	list-style: none;
 }
@@ -82,6 +98,49 @@ ol {
 .panel-container-five {
 	padding: 1rem;
 	background-color: rgb(209, 234, 243);
+}
+
+.panel-container-buy {
+	padding: 1rem;
+	background-color: var(--ion-color-primary);
+	h1 {
+		font-size: 5.9vw;
+	}
+	h2 {
+		font-size: 3.0vh;
+	}
+	p {
+		font-size: calc(0.75em + 1vw);
+	}
+	li {
+		font-size: calc(0.75em + 1vw);
+	}
+}
+
+.buy-option-container {
+	border: 2mm ridge rgba(var(--ion-color-secondary-rgb, 0.6));
+	border-radius: 10px;
+	padding: 0px 10px;
+	ion-list {
+		background: transparent;
+	}
+	ion-item {
+		--background: transparent;
+	}
+}
+
+.price-cut {
+	text-decoration: red line-through 1px;
+}
+
+.buy-course {
+	color: var(--ion-color-primary);
+	text-shadow: 1px 1px 1px black;
+}
+
+.buy-course-plus {
+	color: #cea13c;
+	text-shadow: 1px 1px 1px black;
 }
 
 .panel {

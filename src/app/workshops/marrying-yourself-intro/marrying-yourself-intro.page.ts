@@ -133,7 +133,7 @@ export class MarryingYourselfIntroPage implements OnInit {
       trigger: this.panelContainerTwo.nativeElement,
       scroller: this.scrollElement,
       start: 'top 80%',
-      end: 'bottom 30%',
+      end: 'bottom 50%',
       scrub: 0.5
       // markers: {
       //   startColor: 'black',
@@ -145,7 +145,7 @@ export class MarryingYourselfIntroPage implements OnInit {
       animation: this.tlThree3,
       trigger: this.panelContainerThree.nativeElement,
       scroller: this.scrollElement,
-      start: 'top 60%',
+      start: 'top 40%',
       end: 'bottom bottom',
       scrub: 0.5
     });
