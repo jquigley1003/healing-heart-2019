@@ -81,12 +81,6 @@ ol {
 
 .panel-container-four {
 	background-color: var(--ion-color-tertiary);
-	h1 {
-		font-size: 5.9vw;
-	}
-	h2 {
-		font-size: 3.0vh;
-	}
 	p {
 		font-size: calc(0.75em + 1vw);
 	}
@@ -97,7 +91,6 @@ ol {
 
 .panel-container-five {
 	padding: 1rem;
-	background-color: rgb(209, 234, 243);
 }
 
 .panel-container-buy {
@@ -403,8 +396,8 @@ width: 100vw;
 }
 
 .testimonial-container {
-	background-color: rgb(209, 234, 243);
-	border: 2mm ridge rgba(var(--ion-color-tertiary-rgb, 0.6));
+	// background-color: rgb(209, 234, 243);
+	border: 2mm ridge rgba(var(--ion-color-primary-rgb, 0.6));
 	border-radius: 10px;
 	padding: 0px 10px;
 }
