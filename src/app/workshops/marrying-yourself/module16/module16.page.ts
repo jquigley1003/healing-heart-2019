@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 import { YoutubePlayerWeb } from 'capacitor-youtube-player'; // Web version
+import Player from '@vimeo/player';
 import { gsap } from 'gsap';
 
 @Component({
@@ -14,6 +15,7 @@ export class Module16Page implements OnInit, AfterViewInit {
   @ViewChild('preparingAudio') preparingAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('ideasCeremonyAudio') ideasCeremonyAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('futureMarriedAudio') futureMarriedAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('lynnVowsVimeo') lynnVowsVimeoRef: ElementRef;
 
   completedModule: boolean;
   showCompleteBtn: boolean;
@@ -24,6 +26,7 @@ export class Module16Page implements OnInit, AfterViewInit {
   audioDuration1604: number;
   audioDuration1605: number;
   assignment1601: boolean;
+  lynnVowsVimeoPlayer: Player;
   tl1 = null;
 
   constructor() { }
@@ -63,6 +66,23 @@ export class Module16Page implements OnInit, AfterViewInit {
     this.futureMarriedAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1605 = this.futureMarriedAudioRef.nativeElement.duration;
     };
+  }
+
+  ionViewDidEnter() {
+    this.initializeYoutubePlayerPluginWeb();
+    this.initializeVimeoPlayer();
+    gsap.set(".dark", {opacity:1});
+    gsap.set(".title", {scale:1});
+    if(this.tl1 != null) {
+      this.tl1.restart();
+    }
+  }
+
+  initializeVimeoPlayer() {
+    this.lynnVowsVimeoPlayer = new Player(this.lynnVowsVimeoRef.nativeElement, {
+      id: 727859576,
+      height: 350
+    });
   }
 
   async initializeYoutubePlayerPluginWeb() {
@@ -112,14 +132,5 @@ export class Module16Page implements OnInit, AfterViewInit {
 
   ionViewWillLeave() {
     this.destroyYoutubePlayerPluginWeb();
-  }
-
-  ionViewDidEnter() {
-    this.initializeYoutubePlayerPluginWeb();
-    gsap.set(".dark", {opacity:1});
-    gsap.set(".title", {scale:1});
-    if(this.tl1 != null) {
-      this.tl1.restart();
-    }
   }
 }

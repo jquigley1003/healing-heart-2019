@@ -20,7 +20,6 @@ export class Module15Page implements OnInit, AfterViewInit {
   @ViewChild('guidedLoveAudio') guidedLoveAudioRef: ElementRef<HTMLAudioElement>;
 
   @ViewChild('chavonneVerticalVimeo') chavonneVerticalVimeoRef: ElementRef;
-  @ViewChild('moreThoughtsVimeo') moreThoughtsVimeoRef: ElementRef;
 
 
   completedModule: boolean;
@@ -84,6 +83,19 @@ export class Module15Page implements OnInit, AfterViewInit {
     this.guidedLoveAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1508 = this.guidedLoveAudioRef.nativeElement.duration;
     };
+  }
+
+  ionViewDidEnter() {
+    this.initializeYoutubePlayerPluginWeb();
+    this.initializeVimeoPlayer();
+    gsap.set(".dark", {opacity:1});
+    gsap.set(".title", {scale:1});
+    if(this.tl1 != null) {
+      this.tl1.restart();
+    }
+  }
+
+  initializeVimeoPlayer() {
     this.chavonneVerticalVimeoPlayer = new Player(this.chavonneVerticalVimeoRef.nativeElement, {
       id: 696593721,
       height: 350
@@ -142,17 +154,7 @@ export class Module15Page implements OnInit, AfterViewInit {
     this.showCompleteBtn = false;
     this.showIncompleteBtn = true;
   }
-
   ionViewWillLeave() {
     this.destroyYoutubePlayerPluginWeb();
-  }
-
-  ionViewDidEnter() {
-    this.initializeYoutubePlayerPluginWeb();
-    gsap.set(".dark", {opacity:1});
-    gsap.set(".title", {scale:1});
-    if(this.tl1 != null) {
-      this.tl1.restart();
-    }
   }
 }
