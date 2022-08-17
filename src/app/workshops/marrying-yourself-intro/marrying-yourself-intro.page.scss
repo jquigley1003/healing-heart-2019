@@ -137,8 +137,9 @@ ol {
 }
 
 .price-cut {
-	-webkit-text-decoration-line: red line-through 1px;
-	text-decoration-line: red line-through 1px;
+	text-decoration-line: line-through;
+	text-decoration-thickness: 1px;
+	text-decoration-color: red;
 }
 
 .buy-course {
@@ -268,7 +269,7 @@ width: 100vw;
 		text-align: center;
 		font-family: 'Balthazar Regular', serif;
   	font-weight: bold;
-		font-size: 5vh;
+		font-size: 3vh;
 	}
 }
 
@@ -282,7 +283,7 @@ width: 100vw;
 		text-align: center;
 		font-family: 'Balthazar Regular', serif;
   	font-weight: bold;
-		font-size: 5vh;
+		font-size: 3vh;
 	}
 }
 
@@ -296,7 +297,7 @@ width: 100vw;
 		text-align: center;
 		font-family: 'Balthazar Regular', serif;
   	font-weight: bold;
-		font-size: 5vh;
+		font-size: 3vh;
 	}
 }
 
@@ -317,7 +318,7 @@ width: 100vw;
 
  .dark-background {
 	padding: 0px 10px;
-	background-color: rgba(var(--ion-color-dark-rgb), 0.5);
+	background-color: rgba(var(--ion-color-dark-rgb), 0.8);
 	border: rgba(var(--ion-color-light-rgb), 0.5) solid 2px;
 	border-radius: 10px;
  }
