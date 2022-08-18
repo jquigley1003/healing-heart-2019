@@ -33,6 +33,8 @@ export class Module13Page implements OnInit, AfterViewInit {
   @ViewChild('acknowledgeAudio') acknowledgeAudioRef: ElementRef<HTMLAudioElement>;
 
   @ViewChild('settingLimitsVimeo') settingLimitsVimeoRef: ElementRef;
+  @ViewChild('antionetteVimeo') antionetteVimeoRef: ElementRef;
+  @ViewChild('devasClosingVimeo') devasClosingVimeoRef: ElementRef;
   // @ViewChild('moreThoughtsVimeo') moreThoughtsVimeoRef: ElementRef;
 
 
@@ -73,6 +75,8 @@ export class Module13Page implements OnInit, AfterViewInit {
   audioDuration1320: number;
   
   settingLimitsVimeoPlayer: Player;
+  antionetteVimeoPlayer: Player;
+  devasClosingVimeoPlayer: Player;
   // moreThoughtsVimeoPlayer: Player;
   tl1 = null;
 
@@ -161,16 +165,31 @@ export class Module13Page implements OnInit, AfterViewInit {
     this.acknowledgeAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1320 = this.acknowledgeAudioRef.nativeElement.duration;
     };
-    
-    
+  }
+
+  ionViewDidEnter() {
+    this.initializeYoutubePlayerPluginWeb();
+    this.initializeVimeoPlayer();
+    gsap.set(".dark", {opacity:1});
+    gsap.set(".title", {scale:1});
+    if(this.tl1 != null) {
+      this.tl1.restart();
+    }
+  }
+
+  initializeVimeoPlayer() {
+    this.antionetteVimeoPlayer = new Player(this.antionetteVimeoRef.nativeElement, {
+      id: 727900181,
+      height: 450
+    });
     this.settingLimitsVimeoPlayer = new Player(this.settingLimitsVimeoRef.nativeElement, {
       id: 691963781,
       height: 450
     });
-    // this.moreThoughtsVimeoPlayer = new Player(this.moreThoughtsVimeoRef.nativeElement, {
-    //   id: 691095098,
-    //   height: 350
-    // });
+    this.devasClosingVimeoPlayer = new Player(this.devasClosingVimeoRef.nativeElement, {
+      id: 692252780,
+      height: 450
+    });
   }
 
   async initializeYoutubePlayerPluginWeb() {
@@ -216,14 +235,5 @@ export class Module13Page implements OnInit, AfterViewInit {
 
   ionViewWillLeave() {
     this.destroyYoutubePlayerPluginWeb();
-  }
-
-  ionViewDidEnter() {
-    this.initializeYoutubePlayerPluginWeb();
-    gsap.set(".dark", {opacity:1});
-    gsap.set(".title", {scale:1});
-    if(this.tl1 != null) {
-      this.tl1.restart();
-    }
   }
 }
