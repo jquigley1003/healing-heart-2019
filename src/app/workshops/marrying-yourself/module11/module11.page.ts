@@ -174,16 +174,38 @@ export class Module11Page implements OnInit, AfterViewInit {
     };
   }
 
+  ionViewDidEnter() {
+    this.initializeYoutubePlayerPluginWeb();
+    gsap.set(".dark", {opacity:1});
+    gsap.set(".title", {scale:1});
+    if(this.tl1 != null) {
+      this.tl1.restart();
+    }
+  }
+
   async initializeYoutubePlayerPluginWeb() {
     const player1 = {playerId: 'youtube-player1101', playerSize: {width: 640, height: 360}, videoId: 'AmPZH5HRpZg'};
     const result1 = await YoutubePlayerWeb.initialize(player1);
     const player2 = {playerId: 'youtube-player1102', playerSize: {width: 640, height: 360}, videoId: '5rT--p_cLOc'};
     const result2 = await YoutubePlayerWeb.initialize(player2);
+    const player3 = {playerId: 'youtube-player1103', playerSize: {width: 640, height: 360}, videoId: 'NOis3-phW8Q'};
+    const result3 = await YoutubePlayerWeb.initialize(player3);
+    const player4 = {playerId: 'youtube-player1104', playerSize: {width: 640, height: 360}, videoId: 'UlKuE7jm0WM'};
+    const result4 = await YoutubePlayerWeb.initialize(player4);
+    const player5 = {playerId: 'youtube-player1105', playerSize: {width: 640, height: 360}, videoId: '4unDD4OUUNQ'};
+    const result5 = await YoutubePlayerWeb.initialize(player5);
+    const player6 = {playerId: 'youtube-player1106', playerSize: {width: 640, height: 360}, videoId: '1pOnHjRK7BU'};
+    const result6 = await YoutubePlayerWeb.initialize(player6);
+
   }
 
   async destroyYoutubePlayerPluginWeb() {
     const result1 = await YoutubePlayerWeb.destroy('youtube-player1101');
     const result2 = await YoutubePlayerWeb.destroy('youtube-player1102');
+    const result3 = await YoutubePlayerWeb.destroy('youtube-player1103');
+    const result4 = await YoutubePlayerWeb.destroy('youtube-player1104');
+    const result5 = await YoutubePlayerWeb.destroy('youtube-player1105');
+    const result6 = await YoutubePlayerWeb.destroy('youtube-player1106');
   }
 
   onToggle() {
@@ -202,14 +224,5 @@ export class Module11Page implements OnInit, AfterViewInit {
 
   ionViewWillLeave() {
     this.destroyYoutubePlayerPluginWeb();
-  }
-
-  ionViewDidEnter() {
-    this.initializeYoutubePlayerPluginWeb();
-    gsap.set(".dark", {opacity:1});
-    gsap.set(".title", {scale:1});
-    if(this.tl1 != null) {
-      this.tl1.restart();
-    }
   }
 }
