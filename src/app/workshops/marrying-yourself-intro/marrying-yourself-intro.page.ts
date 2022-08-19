@@ -138,11 +138,11 @@ export class MarryingYourselfIntroPage implements OnInit {
       scroller: this.scrollElement,
       start: 'top 35%',
       end: 'bottom 30%',
-      scrub: 0.5,
-      markers: {
-        startColor: 'black',
-        endColor: 'pink'
-      }
+      scrub: 0.5
+      // markers: {
+      //   startColor: 'black',
+      //   endColor: 'pink'
+      // }
     });
 
     ScrollTrigger.create({
