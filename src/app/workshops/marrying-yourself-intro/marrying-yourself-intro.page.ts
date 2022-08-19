@@ -53,6 +53,8 @@ export class MarryingYourselfIntroPage implements OnInit {
   @ViewChild('kristenMYJVimeo') kristenMYJVimeoRef: ElementRef;
   @ViewChild('arturoMYJVimeo') arturoMYJVimeoRef: ElementRef;
   @ViewChild('antionetteMYJVimeo') antionetteMYJVimeoRef: ElementRef;
+  @ViewChild('codependencyVimeo') codependencyVimeoRef: ElementRef;
+  @ViewChild('giftOfArtistsVimeo') giftOfArtistsVimeoRef: ElementRef;
 
   scrollElement: any;
   scrollDetail: any;
@@ -64,6 +66,8 @@ export class MarryingYourselfIntroPage implements OnInit {
   kristenMYJVimeoPlayer: Player;
   arturoMYJVimeoPlayer: Player;
   antionetteMYJVimeoPlayer: Player;
+  codependencyVimeoPlayer: Player;
+  giftOfArtistsVimeoPlayer: Player;
 
   constructor() { }
 
@@ -178,6 +182,14 @@ export class MarryingYourselfIntroPage implements OnInit {
     });
     this.antionetteMYJVimeoPlayer = new Player(this.antionetteMYJVimeoRef.nativeElement, {
       id: 727900516,
+      height: 350
+    });
+    this.codependencyVimeoPlayer = new Player(this.codependencyVimeoRef.nativeElement, {
+      id: 727945018,
+      height: 350
+    });
+    this.giftOfArtistsVimeoPlayer = new Player(this.giftOfArtistsVimeoRef.nativeElement, {
+      id: 727947024,
       height: 350
     });
   }

@@ -14,6 +14,7 @@ export class Module12Page implements OnInit, AfterViewInit {
   @ViewChild('romancingYourselfVimeo') romancingYourselfVimeoRef: ElementRef;
   @ViewChild('moreThoughtsVimeo') moreThoughtsVimeoRef: ElementRef;
   @ViewChild('tynerRushingVimeo') tynerRushingVimeoRef: ElementRef;
+  @ViewChild('lindseyCaldwellVimeo') lindseyCaldwellVimeoRef: ElementRef;
 
 
   completedModule: boolean;
@@ -23,6 +24,7 @@ export class Module12Page implements OnInit, AfterViewInit {
   romancingYourselfVimeoPlayer: Player;
   moreThoughtsVimeoPlayer: Player;
   tynerRushingVimeoPlayer: Player;
+  lindseyCaldwellVimeoPlayer: Player;
   tl1 = null;
 
   constructor() { }
@@ -78,6 +80,10 @@ export class Module12Page implements OnInit, AfterViewInit {
     });
     this.tynerRushingVimeoPlayer = new Player(this.tynerRushingVimeoRef.nativeElement, {
       id: 716497074,
+      height: 350
+    });
+    this.lindseyCaldwellVimeoPlayer = new Player(this.lindseyCaldwellVimeoRef.nativeElement, {
+      id: 694064119,
       height: 350
     });
   }

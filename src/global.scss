@@ -315,6 +315,14 @@ audio {
 	text-shadow: 2px 2px 4px var(--ion-color-tertiary);
 }
 
+.sharings-from-men {
+	border: 2mm ridge rgba(var(--ion-color-tertiary-rgb, 0.6));
+	border-radius: 10px;
+	padding: 0px 10px;
+  margin-bottom: 1em;
+	// color: var(--ion-color-primary);
+}
+
 .practices {
 	background-color: rgb(209, 234, 243);
 	border: 2mm ridge rgba(var(--ion-color-tertiary-rgb, 0.6));
