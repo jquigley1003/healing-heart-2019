@@ -71,8 +71,9 @@ ol {
 
 .panel-container-three {
 	background-image: url('../../../assets/workshop1/intro/caveWithBluesPurples.jpg');
-	background-repeat: no-repeat;
+	background-repeat: repeat-y;
 	background-position: center;
+	background-color: var(--ion-color-secondary);
 	position: relative;
 	overflow: hidden;
  	width: 100vw;
