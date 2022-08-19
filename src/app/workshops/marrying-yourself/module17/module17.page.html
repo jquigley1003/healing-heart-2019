@@ -32,6 +32,16 @@
         <h1>Module 17<br>Wedding Time</h1>
       </ion-col>
       <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
+        <h2 class="section-title">Embarking on Your Wedding Time</h2>
+        <div class="video-container">
+          <div class="video-player">
+            <div #devaEmbarkVimeo>
+            </div>
+          </div>
+        </div>
+        <p><i></i></p>
+      </ion-col>
+      <ion-col size="12" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
         <h2 class="section-title">Wedding Day Testimonial</h2>
         <div class="video-container">
           <div class="video-player">
@@ -39,7 +49,6 @@
             </div>
           </div>
         </div>
-        
         <p><i></i></p>
       </ion-col>
       <ion-col size="12" class="ion-padding ion-text-center">
@@ -129,7 +138,7 @@
       <!-- BEGINNING OF MODULE SECTION Congratulations -->
       <ion-col size="12">
         <div *ngIf="!showRemainingModule" class="hideCongrats">
-          <p>This hides the congratulations until user clicks the "I DO" button</p>
+          <p></p>
         </div>
         <ion-row class="section-container">
           <!-- <ion-col size="12" class="img-container ion-padding ion-text-center">
@@ -195,8 +204,8 @@
       </ion-col>
       <!-- END OF MODULE SECTION Congratulations -->
       <!-- BEGINNING OF MODULE SECTION Examples of People Marrying Themselves -->
-      <ion-col size="12">
-        <ion-row class="section-container">
+      <ion-col size="12" class="ion-text-center">
+        <ion-row class="section-container ion-justify-content-center">
           <ion-col size="12" class="ion-margin-right ion-padding">
             <p>Here are some examples of people marrying themselves:           
             </p>
@@ -209,7 +218,7 @@
             </div>
             <p><i></i></p>
           </ion-col>
-          <ion-col size-xs="12" size-md="6" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
+          <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
             <h2 class="section-title">Sonata's Wedding</h2>
             <div class="video-container">
               <div class="video-player">
@@ -219,11 +228,21 @@
             </div>
             <p><i></i></p>
           </ion-col>
-          <ion-col size-xs="12" size-md="6" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
+          <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
             <h2 class="section-title">Susan's Wedding</h2>
             <div class="video-container">
               <div class="video-player">
                 <div #susansWeddingVimeo>
+                </div>
+              </div>
+            </div>
+            <p><i></i></p>
+          </ion-col>
+          <ion-col size-xs="12" size-sm="6" size-md="4" class="ion-padding-right ion-padding-left ion-text-center ion-margin-bottom">
+            <h2 class="section-title">Lindsey's Wedding</h2>
+            <div class="video-container">
+              <div class="video-player">
+                <div #lindseyWeddingVimeo>
                 </div>
               </div>
             </div>
@@ -239,12 +258,6 @@
         </p>
       </ion-col>
       <ion-col size="12" class="ion-padding ion-text-center">
-        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/redDressOrchids1.jpg">
-        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/whiteDressOrchids1.jpg">
-        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/whiteDressOrchids2.jpg">
-        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/goldDress1.jpg">
-        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/goldDress2.jpg">
-        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/goldDress3.jpg">
         <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/IMG_4447.jpg">
         <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/IMG_4453.jpg">
         <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/IMG_4460.jpg">
@@ -278,6 +291,47 @@
         <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/IMG_4789.jpg">
         <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/IMG_4857.jpg">
         <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/IMG_4826.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/whiteDressOrchids1.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/whiteDressOrchids2.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/goldDress1.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/goldDress2.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/goldDress3.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ01.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ03.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ04.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ05.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ06.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ07.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ08.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ09.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ10.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ11.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ12.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ13.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ14.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ15.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ16.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ17.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ18.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ19.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ20.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ21.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ22.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ23.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ24.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ25.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ26.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ27.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ28.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ29.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ30.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ31.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ32.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ33.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ34.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ35.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ36.jpg">
+        <img class="collage" src="../../../../assets/workshop1/module17/weddingCollage/MYJ37.jpg">
       </ion-col>
       <!-- END OF Wedding Photo Collage --> 
       <!-- BEGINNING OF COMPLETE MODULE BUTTONS -->

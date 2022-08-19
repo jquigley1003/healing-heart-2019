@@ -14,10 +14,12 @@ export class Module17Page implements OnInit, AfterViewInit {
   @ViewChild('guidedImageryAudio') guidedImageryAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('congratulationsAudio') congratulationsAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('quote1stModuleAudio') quote1stModuleAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('devaEmbarkVimeo') devaEmbarkVimeoRef: ElementRef;
   @ViewChild('weddingTestimonialVimeo') weddingTestimonialVimeoRef: ElementRef;
   @ViewChild('chavonnesWeddingVimeo') chavonnesWeddingVimeoRef: ElementRef;
   @ViewChild('sonatasWeddingVimeo') sonatasWeddingVimeoRef: ElementRef;
   @ViewChild('susansWeddingVimeo') susansWeddingVimeoRef: ElementRef;
+  @ViewChild('lindseyWeddingVimeo') lindseyWeddingVimeoRef: ElementRef;
 
   completedModule: boolean;
   showCompleteBtn: boolean;
@@ -29,10 +31,12 @@ export class Module17Page implements OnInit, AfterViewInit {
   audioDuration1605: number;
   assignment1601: boolean;
   tl1 = null;
+  devaEmbarkVimeoPlayer: Player;
   weddingTestimonialVimeoPlayer: Player;
   chavonnesWeddingVimeoPlayer: Player;
   sonatasWeddingVimeoPlayer: Player;
   susansWeddingVimeoPlayer: Player;
+  lindseyWeddingVimeoPlayer: Player;
   showRemainingModule = false;
 
   constructor() { }
@@ -69,6 +73,23 @@ export class Module17Page implements OnInit, AfterViewInit {
     this.quote1stModuleAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1704 = this.quote1stModuleAudioRef.nativeElement.duration;
     };
+  }
+
+  ionViewDidEnter() {
+    this.initializeYoutubePlayerPluginWeb();
+    this.initializeVimeoPlayer();
+    gsap.set(".dark", {opacity:1});
+    gsap.set(".title", {scale:1});
+    if(this.tl1 != null) {
+      this.tl1.restart();
+    }
+  }
+
+  initializeVimeoPlayer() {
+    this.devaEmbarkVimeoPlayer = new Player(this.devaEmbarkVimeoRef.nativeElement, {
+      id: 727926817,
+      height: 350
+    });
     this.weddingTestimonialVimeoPlayer = new Player(this.weddingTestimonialVimeoRef.nativeElement, {
       id: 700089565,
       height: 350
@@ -83,6 +104,10 @@ export class Module17Page implements OnInit, AfterViewInit {
     });
     this.susansWeddingVimeoPlayer = new Player(this.susansWeddingVimeoRef.nativeElement, {
       id: 700089293,
+      height: 350
+    });
+    this.lindseyWeddingVimeoPlayer = new Player(this.lindseyWeddingVimeoRef.nativeElement, {
+      id: 716496779,
       height: 350
     });
   }
@@ -138,14 +163,5 @@ export class Module17Page implements OnInit, AfterViewInit {
 
   ionViewWillLeave() {
     this.destroyYoutubePlayerPluginWeb();
-  }
-
-  ionViewDidEnter() {
-    this.initializeYoutubePlayerPluginWeb();
-    gsap.set(".dark", {opacity:1});
-    gsap.set(".title", {scale:1});
-    if(this.tl1 != null) {
-      this.tl1.restart();
-    }
   }
 }

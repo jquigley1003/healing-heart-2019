@@ -11,12 +11,14 @@ import { gsap } from 'gsap';
 export class Module14Page implements OnInit, AfterViewInit {
   @ViewChild('boundariesAudio') boundariesAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('practiceBoundariesAudio') practiceBoundariesAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('selfInquiryBoundariesAudio') selfInquiryBoundariesAudioRef: ElementRef<HTMLAudioElement>;
 
   completedModule: boolean;
   showCompleteBtn: boolean;
   showIncompleteBtn = true;
   audioDuration1401: number;
   audioDuration1402: number;
+  audioDuration1403: number;
   tl1 = null;
 
   constructor() { }
@@ -46,6 +48,9 @@ export class Module14Page implements OnInit, AfterViewInit {
     };
     this.practiceBoundariesAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1402 = this.practiceBoundariesAudioRef.nativeElement.duration;
+    };
+    this.selfInquiryBoundariesAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1403 = this.selfInquiryBoundariesAudioRef.nativeElement.duration;
     };
   }
 
