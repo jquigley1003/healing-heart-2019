@@ -18,6 +18,7 @@ export class Module15Page implements OnInit, AfterViewInit {
   @ViewChild('experiencingDivineAudio') experiencingDivineAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('siddharthaAudio') siddharthaAudioRef: ElementRef<HTMLAudioElement>;
   @ViewChild('guidedLoveAudio') guidedLoveAudioRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('nurtureDailyAudio') nurtureDailyAudioRef: ElementRef<HTMLAudioElement>;
 
   @ViewChild('chavonneVerticalVimeo') chavonneVerticalVimeoRef: ElementRef;
 
@@ -33,6 +34,7 @@ export class Module15Page implements OnInit, AfterViewInit {
   audioDuration1506: number;
   audioDuration1507: number;
   audioDuration1508: number;
+  audioDuration1509: number;
   
   chavonneVerticalVimeoPlayer: Player;
   tl1 = null;
@@ -82,6 +84,9 @@ export class Module15Page implements OnInit, AfterViewInit {
     };
     this.guidedLoveAudioRef.nativeElement.onloadedmetadata = (event) => {
       this.audioDuration1508 = this.guidedLoveAudioRef.nativeElement.duration;
+    };
+    this.nurtureDailyAudioRef.nativeElement.onloadedmetadata = (event) => {
+      this.audioDuration1509 = this.nurtureDailyAudioRef.nativeElement.duration;
     };
   }
 
