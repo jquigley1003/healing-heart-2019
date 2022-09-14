@@ -1,4 +1,9 @@
+a {
+  color: var(--ion-color-dark);
+}
+
 .workshop-title {
   font-style: italic;
   cursor: pointer;
+  text-decoration: underline;
 }
