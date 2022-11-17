@@ -53,6 +53,10 @@ const routes: Routes = [
     loadChildren: () => import('./psychotherapy/life-coaching/life-coaching.module').then(m => m.LifeCoachingPageModule)
   },
   {
+    path: 'psychotherapy/ketamine',
+    loadChildren: () => import('./psychotherapy/ketamine/ketamine.module').then( m => m.KetaminePageModule)
+  },
+  {
     path: 'workshops',
     loadChildren: () => import('./workshops/workshops.module').then(m => m.WorkshopsPageModule)
   },

@@ -1,0 +1,105 @@
+<ion-header translucent="true" no-border>
+  <ion-toolbar>
+    <ion-menu-button slot="start" color="primary"></ion-menu-button>
+    <ion-title color="primary">
+      Ketamine-Assisted Psychotherapy
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xs="12" size-lg="6">
+        <ion-img src="/assets/hhc-logo-deva.png" [routerLink]="['/home']"></ion-img>
+      </ion-col>
+      <ion-col size-xs="12" size-lg="6" class="ion-align-self-center">
+        <p class="quote-font">I wish I could show you when you are lonely or in the darkness the astonishing
+          light of your own being.<br>~ Hafiz</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ket-background">
+      <ion-col size="12" class="trnsp-bkgrnd font-20">
+        <h1 class="ion-text-center">Ketamine-Assisted Psychotherapy</h1>
+        <p>I am excited to be certified to offer Ketamine-Assisted Psychotherapy.</p>
+        <p>Although Ketamine is known as an anesthesia, it is now FDA approved for the treatment of depression, 
+          alcohol and substance dependence, food addiction, OCD, PTSD and other trauma related disorders.
+        </p>
+        <p>Although it is not impactful for everyone, and to be clear it is not a cure, Ketamine treatment 
+          is opening doors to breakthroughs and healing transformations, as it exerts antidepressant effects 
+          by enhancing neuroplasticity, (meaning, the ability of brain cells to form new connections with 
+          one another and new pathways.) The glutamate pathway of ketamine is very different from that used 
+          by other psychiatric dugs, which is part of what makes its impact unlike other forms of treatment.
+        </p>
+        <p>With ketamine assisted psychotherapy, the recommended treatment involves 5 or 6 administrations of 
+          ketamine, once a week or every other week, with an integration session following each session or 
+          every other session.  This is a very different approach than the "ketamine infusion clinics" in which 
+          one goes for 6 or more weekly or bi-weekly “infusion sessions,” basically left alone in a comfortable 
+          room with a device that gradually administers a measured amount of ketamine intravenously. With this 
+          approach, there is little personal interaction between the attending physician or psychiatrist and 
+          the client or patient.
+          </p>
+          <p>I believe that ketamine treatment within the context of the psychotherapy relationship lends itself 
+            to way more healing. There is a preparation session, sitting with you while you have the experience, 
+            (a three hour session) and then an integration session, in which the therapy work reflects on the 
+            power of the experience and integrates it while the neuroplasticity is still accessible.
+          </p>
+          <p>Ketamine is a dissociative drug and thus, loosens up identification with the "default mode network" — 
+            the baseline encoded and scripted ways of thinking and feelings. One way to describe this network of 
+            thought and feeling is "the story of me" — the remarkably sturdy narratives about ourselves that we 
+            repeat with amazing consistency throughout our days. For example, stories such as "I'm not good 
+            enough," "There's something wrong with me," "Nobody ever gives me a break," "You can't trust people,"  
+            etc.
+          </p>
+          <p>When properly administered, ketamine induction has a powerfully (though temporarily) quieting effect 
+            on such ruminations — which results in a temporary (though often profound) freedom from the emotional 
+            pain and fear that so tenuously accompanies these habitual thoughts and beliefs.
+          </p>
+          <p>It is said that "ketamine is the doorway into the workshop." The psychotherapy work that follows is 
+            the workshop in which the integration of the journey can powerfully contribute to internalizing a lasting 
+            transformative impact.
+          </p>
+          <p>How does it work? If interested, we explore the idea together. If we decide this is a good idea, I will 
+            refer you to the psychiatrist that I have teamed up with for this purpose. You will meet with him and if 
+            it is decided that you are a good candidate for this treatment, you will receive a prescription of a 
+            sublingual dose. After our preparation sessions, you will bring the medicine with you to your session 
+            and I will stay with you as you ingest it in your mouth, letting it swish around your mouth and holding 
+            it for ten to fifteen minutes before swallowing. I will hold a safe container for you as you journey, 
+            which lasts for about an hour to an hour and a half. We will have plenty of time for you to come back into 
+            your body and for us to make sure you feel okay and in tact before leaving. It is recommended that on the 
+            day you take the ketamine, you do not drive that day but rather set up assistance to get home. Twenty-four 
+            or forty eight hours after the ketamine session, we will have an integration session.
+          </p>
+          <p>Thus the term "ketamine-assisted psychotherapy" (or "KAP," for short) refers to not only being with you as 
+            you have this experience but also to the process of learning to consciously and deliberately apply and 
+            integrate the expanded perspectives that arise from ketamine-induced "journeys."
+          </p>
+          <p>If you are contemplating ketamine-assisted therapy with me, please understand that, except under exceptional 
+            circumstances, the actual introduction of ketamine into our work would only be an option after at least a month 
+            or two of non-drug-assisted preparatory psychotherapy. This establishes our connection as the safe container 
+            and deepens my understanding of you so that I am better able to assist you in integrating the experience afterwards.
+          </p>
+        <ion-row (click)="flyAway()">
+          <ion-col>
+
+          </ion-col>
+          <ion-col>
+            <div class="ion-text-center">
+              <div class="tree-img">
+                <img src="../assets/go-back.png">
+              </div>
+              <div class="bird-img" *ngIf="birdPresent" [@birdState]="flyAwayState">
+                <img src="../assets/bird-left.png">
+              </div>
+            </div>
+          </ion-col>
+          <ion-col>
+
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
