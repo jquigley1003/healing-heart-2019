@@ -90,6 +90,52 @@
         <div class="snowfall-container">
           <app-my-snowfall></app-my-snowfall>
         </div>
+        <!-- BEGIN PSYCHOTHERAPY ROW -->
+        <ion-row>
+          <ion-col>
+            <div class="home-section">
+              <h2>Psychotherapy Quick Links</h2>
+              <ion-row>
+                <ion-col class="ion-text-center" size-xs="12" size-sm="4"
+                routerLink="/psychotherapy/individual">
+                  <ion-avatar class="center-img">
+                    <img src="/assets/red-tulip-among-yellow.jpg">
+                  </ion-avatar>
+                  <p>Individual</p>
+                </ion-col>
+                <ion-col class="ion-text-center" size-xs="12" size-sm="4"
+                routerLink="/psychotherapy/couples">
+                  <ion-avatar class="center-img">
+                    <img src="/assets/two-red-scarlet-macaws.jpg">
+                  </ion-avatar>
+                  <p>Couples</p>
+                </ion-col>
+                <ion-col class="ion-text-center" size-xs="12" size-sm="4"
+                routerLink="/psychotherapy/healing-exercises">
+                  <ion-avatar class="center-img">
+                    <img src="/assets/healing-exercises.jpg">
+                  </ion-avatar>
+                  <p>Healing Exercises</p>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-col>
+        </ion-row>
+        <!-- BEGIN KAP ROW -->
+        <ion-row>
+          <ion-col>
+            <div class="home-section kap-background">
+              <h2>KAP</h2>
+              <h3>(Ketamine Assisted Psychotherapy)</h3>
+              <ion-row class="ion-margin-bottom">
+                <ion-col class="ion-text-center ion-margin-bottom" size="12">
+                  <ion-button routerLink="/psychotherapy/ketamine">More Info</ion-button>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-col>
+        </ion-row>
+        <!-- BEGIN BOOKS ROW -->
         <ion-row>
           <ion-col>
             <div class="home-section">
@@ -344,44 +390,6 @@
                       <ion-icon slot="icon-only" name="book"></ion-icon>
                     </ion-button>
                   </ion-item>
-                </ion-col>
-              </ion-row>
-            </div>
-          </ion-col>
-        </ion-row>
-        <!-- BEGIN PSYCHOTHERAPY ROW -->
-        <ion-row>
-          <ion-col>
-            <div class="home-section">
-              <h2>Psychotherapy Quick Links</h2>
-              <ion-row>
-                <ion-col class="ion-text-center" size-xs="12" size-sm="3"
-                routerLink="/psychotherapy/individual">
-                  <ion-avatar class="center-img">
-                    <img src="/assets/red-tulip-among-yellow.jpg">
-                  </ion-avatar>
-                  <p>Individual</p>
-                </ion-col>
-                <ion-col class="ion-text-center" size-xs="12" size-sm="3"
-                routerLink="/psychotherapy/couples">
-                  <ion-avatar class="center-img">
-                    <img src="/assets/two-red-scarlet-macaws.jpg">
-                  </ion-avatar>
-                  <p>Couples</p>
-                </ion-col>
-                <ion-col class="ion-text-center" size-xs="12" size-sm="3"
-                routerLink="/psychotherapy/healing-exercises">
-                  <ion-avatar class="center-img">
-                    <img src="/assets/healing-exercises.jpg">
-                  </ion-avatar>
-                  <p>Healing Exercises</p>
-                </ion-col>
-                <ion-col class="ion-text-center" size-xs="12" size-sm="3"
-                routerLink="/psychotherapy/ketamine">
-                  <ion-avatar class="center-img">
-                    <img src="/assets/pinkSky2.jpg">
-                  </ion-avatar>
-                  <p>Ketamine-Assisted</p>
                 </ion-col>
               </ion-row>
             </div>
