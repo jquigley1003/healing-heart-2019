@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar class="workshop-header">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">The Summit<br>
+      Guided Imagery
+    </ion-title>
+    <ion-button routerDirection="root" [routerLink]="['/home']" slot="end">Home</ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="module-content">
+  <ion-grid>
+    <ion-row class="ion-margin-right">
+      <ion-col size="12" class="ion-padding ion-text-center">
+        <img src="../../assets/summit/sittingInNature-purple.jpg" 
+        alt="man sitting outside with purple sky - Photo by Jeremy Bishop on Unsplash">
+        <h1>The Summit<br>Guided Imagery</h1>
+      </ion-col>
+      <!-- BEGINNING OF MODULE SECTION On Being -->
+      <ion-col size="12">
+        <ion-row class="section-container">
+          <ion-col size="12" class="ion-text-center ion-padding">
+            <h2 class="section-title">GUIDED IMAGERY INTO YOUR SENSE OF WHOLENESS</h2>
+            <div class="audio-player">
+              <audio preload="auto" controls controlsList="nodownload" #onBeingAudio>
+                <source src="https://firebasestorage.googleapis.com/v0/b/healing-heart-2019.appspot.com/o/marrying-yourself%2Faudio%2FGuidedImageryInto%20YourSenseOfWholeness.mp3?alt=media&token=9d95d545-b319-4a43-b593-76d6968fa533" 
+                type="audio/mpeg">
+              </audio>
+              <p class="audio-duration">Duration: {{ audioDuration01 * 1000 | date:'mm:ss' }}</p>
+            </div>
+          </ion-col>
+          <ion-col size="12" class="img-container ion-padding ion-text-center">
+            <!-- <a href="https://unsplash.com/photos/FHiJWoBodrs" target="blank"> -->
+              <img src="../../assets/summit/followBanister.jpg"
+                alt="stairs with banister leading to brightness">
+            <!-- </a> -->
+          </ion-col>
+          <ion-col size="12" class="ion-margin-right ion-padding">
+            <p>WHO I AM</p>
+            <p>Bring true curiosity and interest to...</p>
+            <p>your self....</p>
+            <p>To knowing — you.</p>
+            <p>To clarifying who you are — to yourself.</p>
+            <p>To naming who you know yourself to be.</p>
+            <p>To experiencing breath — breath breathing into your own being... And out.</p>
+            <p>To sitting in your own self and being willing to discover what naturally arises from 
+              within your being.</p>
+            <!-- <p>We are all adult human beings who have preferences and aversions, as well as values, 
+              beliefs, principles and passions that give context, form and expression to the life energy 
+              that manifests as each one of us.</p> -->
+            <p>In the mission to grow in love with yourself and to be in solid loving relationship with 
+              yourself, you must know who you are.</p>
+            <p>Your strengths and weaknesses, your motivations and impasses, what juices your sense of aliveness 
+              and what suppresses your spirit, your sense of gender and sexuality, your creative expressions 
+              and your blocks, on and on — all to be discovered, explored, claimed and celebrated.</p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
