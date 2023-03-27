@@ -1,9 +1,11 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 import { ToastService } from 'src/app/shared/notify/toast.service';
 import { Router } from '@angular/router';
+import { SummitModalComponent } from '../shared/modal/summit-modal/summit-modal.component';
 
 @Component({
   selector: 'app-the-summit',
@@ -16,10 +18,12 @@ export class TheSummitPage implements OnInit, AfterViewInit {
 
   constructor(
     private toastService: ToastService,
+    private modalCtrl: ModalController,
     private router: Router
   ) { }
 
   ngOnInit() {
+    this.presentSummitModal();
   }
 
   ngAfterViewInit(): void {
@@ -27,5 +31,17 @@ export class TheSummitPage implements OnInit, AfterViewInit {
       this.audioDuration01 = this.onBeingAudioRef.nativeElement.duration;
     };
   }
+
+  async presentSummitModal() {
+    const modal = await this.modalCtrl.create({
+      component: SummitModalComponent,
+      componentProps: {}
+    });
+    modal.onDidDismiss().then((data) => {
+      console.log(data)
+    });
+    return await modal.present();
+  }
+
 
 }

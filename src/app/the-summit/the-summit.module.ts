@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { TheSummitPageRoutingModule } from './the-summit-routing.module';
 
 import { TheSummitPage } from './the-summit.page';
+import { SummitModalModule } from '../shared/modal/summit-modal/summit-modal.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TheSummitPageRoutingModule
+    TheSummitPageRoutingModule,
+    SummitModalModule
   ],
   declarations: [TheSummitPage]
 })

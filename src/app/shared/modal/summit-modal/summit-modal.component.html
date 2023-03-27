@@ -1,0 +1,28 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h2 class="ion-text-center">THIS PAGE REQUIRES A CODE</h2>
+        <p>Please Enter Summit Code to Access Guided Imagery</p>
+
+        <form [formGroup]="summitCodeForm" (ngSubmit)="onSummitCodeForm()">
+          <ion-item>
+            <ion-label position="floating">Summit Code</ion-label>
+            <ion-input [type]="passwordType" formControlName="summitCode" required></ion-input>
+            <ion-icon name="eye" [color]="passwordShow === true ? 'secondary' : 'primary'"
+              slot="end" (click)="togglePassword()"></ion-icon>
+          </ion-item>
+          <div *ngIf="summitCode.errors && (summitCode.dirty || summitCode.touched)" class="errors">
+            <span *ngIf="summitCode.errors?.required">Password is required</span>
+          </div>
+          <ion-row>
+            <ion-col class="ion-text-end">
+              <ion-button fill="clear" fill="solid" color="secondary" (click)="closeModal()">Cancel</ion-button>
+              <ion-button type="submit" [disabled]="!summitCodeForm.valid">Submit</ion-button>
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
