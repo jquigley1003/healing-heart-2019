@@ -45,7 +45,7 @@ export class SummitModalComponent implements OnInit {
       if (summitCode === 'summit2023') {
         this.loadingService.dismissLoading();
         await this.toastService.presentToast(
-          'You Have Signed In Successfully!',
+          'Success! Start Your Guided Imagery.',
           'middle',
           [{
             text: 'OK',
