@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -14,6 +14,12 @@ import { SummitModalComponent } from '../shared/modal/summit-modal/summit-modal.
 })
 export class TheSummitPage implements OnInit, AfterViewInit {
   @ViewChild('onBeingAudio') onBeingAudioRef: ElementRef<HTMLAudioElement>;
+  @HostListener('window:popstate', ['$event'])
+  onPopState(event) {
+    window.location.reload();
+    console.log('Back button pressed');
+  }
+  
   audioDuration01: number;
 
   constructor(
@@ -35,13 +41,9 @@ export class TheSummitPage implements OnInit, AfterViewInit {
   async presentSummitModal() {
     const modal = await this.modalCtrl.create({
       component: SummitModalComponent,
-      componentProps: {}
-    });
-    modal.onDidDismiss().then((data) => {
-      console.log(data)
+      componentProps: {},
+      cssClass: 'modal-fullscreen'
     });
     return await modal.present();
   }
-
-
 }

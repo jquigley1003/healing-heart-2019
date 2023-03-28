@@ -59,20 +59,38 @@ export class SummitModalComponent implements OnInit {
         );
       } else {
         this.loadingService.dismissLoading();
-        this.alertService.presentAlert(
-          'Code Incorrect',
-          'A Special Code is Required to Access This Page',
-          'Thank You',
+        await this.toastService.presentToast(
+          'Sorry, The Code is Incorrect - A Special Code is Required to Access This Page',
+          'middle',
           [{
-              text: 'OK',
-              cssClass: 'modal-button-primary',
-              role: 'cancel',
-              handler: () => {
-                this.router.navigate(['/home']);
-              }
+            text: 'Click here to try again',
+            role: 'cancel',
+            handler: async () => {
+              this.router.navigate(['/the-summit'])
+                .then(() => {
+                  window.location.reload();
+                });
             }
-          ]
+          }],
+          5000
         );
+        // this.alertService.presentAlert(
+        //   'Sorry, The Code is Incorrect',
+        //   'A Special Code is Required to Access This Page',
+        //   'Thank You',
+        //   [{
+        //       text: 'OK',
+        //       cssClass: 'modal-button-primary',
+        //       role: 'cancel',
+        //       handler: async () => {
+        //         this.router.navigate(['/the-summit'])
+        //           .then(() => {
+        //             window.location.reload();
+        //           });
+        //       }
+        //     }
+        //   ]
+        // );
         this.router.navigate(['/home']);
       }
     }, async err => {
@@ -99,7 +117,20 @@ export class SummitModalComponent implements OnInit {
     return this.summitCodeForm.get('summitCode');
   }
 
-  closeModal() {
+  async closeModal() {
+    await this.toastService.presentToast(
+      'Contact Deva Joy For Instructions to Obtain a Code.',
+      'middle',
+      [{
+        text: 'OK',
+        role: 'cancel',
+        handler: () => {
+          // console.log('dismiss toast message');
+        }
+      }],
+      3000
+    );
     this.modalCtrl.dismiss();
+    this.router.navigate(['/home']);
   }
 }
