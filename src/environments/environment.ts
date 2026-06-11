@@ -14,9 +14,9 @@ export const environment = {
     messagingSenderId: env.firebase.messagingSenderId,
     appId: env.firebase.appId
   },
-  blogger: {
-    apiKey: env.blogger.apiKey
-  }
+  // blogger: {
+  //   apiKey: env.blogger.apiKey
+  // }
 };
 
 /*
